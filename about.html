@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SoftCompuTech</title>
+    <meta name="description" content="Learn about SoftCompuTech - a leading provider of data engineering, analytics, and IT solutions for businesses worldwide.">
+    <meta name="keywords" content="SoftCompuTech, data engineering, data analytics, about us, tech company, AI solutions">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.png">
+    
+    <!-- Critical CSS -->
+    <style>
+        /* Preload critical styles to avoid FOUC */
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --white: #ffffff;
+        }
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #e2e8f0;
+            border-top: 5px solid #2563eb;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .header {
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 997;
+        }
+        .page-hero {
+            padding-top: 120px;
+        }
+    </style>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Google Fonts - Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <style>
+        /* Typed.js Logo Styling */
+        .typed-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+        
+        .typed-logo .green-letter {
+            color: #32CD32; /* Lime Green */
+            font-weight: 700;
+        }
+        
+        .typed-logo .cyan-letter {
+            color: #00CED1; /* Cyan Blue */
+            font-weight: 500;
+        }
+        
+        .typed-cursor {
+            color: #32CD32;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="header fixed-top" style="background-color: #1e293b;">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="assets/img/logo.svg" alt="Logo" class="logo" width="150" height="50">
+                    <span class="ms-2 d-none d-md-inline-block typed-logo"></span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1 text-primary"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="about.html"><i class="fas fa-info-circle me-1 text-primary"></i> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="our-story.html"><i class="fas fa-book me-1 text-primary"></i> Our Story</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="index.html#services" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-cogs me-1 text-primary"></i> Services
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="servicesDropdown" style="background-color: #0f172a; border-color: #2563eb;">
+                                <li><a class="dropdown-item" href="index.html#services">All Services</a></li>
+                                <li><hr class="dropdown-divider" style="border-color: #2563eb;"></li>
+                                <li><a class="dropdown-item" href="index.html#services">Machine Learning</a></li>
+                                <li><a class="dropdown-item" href="index.html#services">Deep Learning</a></li>
+                                <li><a class="dropdown-item" href="index.html#services">Computer Vision</a></li>
+                                <li><a class="dropdown-item" href="index.html#services">NLP</a></li>
+                                <li><a class="dropdown-item" href="index.html#services">Data Engineering</a></li>
+                                <li><a class="dropdown-item" href="index.html#services">Web Development</a></li>
+                                <li><a class="dropdown-item" href="index.html#services">Advanced Analytics</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#projects"><i class="fas fa-project-diagram me-1 text-primary"></i> Projects</a></li>
+                        <li class="nav-item"><a class="nav-link btn-contact" href="index.html#contact" style="background-color: #10b981; color: #fff;"><i class="fas fa-envelope me-1"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero Section -->
+    <section class="page-hero d-flex align-items-center" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.85) 0%, rgba(16, 185, 129, 0.85) 100%), url('assets/img/backgrounds/hero-bg.jpg'); background-size: cover; background-position: center; min-height: 100vh;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12" data-aos="fade-right">
+                    <div class="hero-content">
+                        <h1 class="mb-3 text-white">About SoftCompuTech</h1>
+                        <p class="lead mb-4 text-white">Pioneering the Future of AI & Data Solutions</p>
+                        <div class="hero-text mt-4">
+                            <p class="text-white">We're a team of data scientists, engineers, and analysts passionate about transforming complex data challenges into elegant, efficient solutions that drive business growth.</p>
+                        </div>
+                        <div class="hero-badges mt-4 d-flex flex-wrap">
+                            <span class="hero-badge me-2 mb-2"><i class="fas fa-check-circle"></i> Trusted by 50+ Enterprises</span>
+                            <span class="hero-badge me-2 mb-2"><i class="fas fa-award"></i> Industry Recognition</span>
+                            <span class="hero-badge me-2 mb-2"><i class="fas fa-globe"></i> Global Reach</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 mt-5 mt-lg-0" data-aos="fade-left">
+                    <div class="about-hero-image position-relative">
+                        <!-- Main image with enhanced styling -->
+                        <img src="assets/img/main1.svg" alt="About SoftCompuTech" class="img-fluid rounded-lg shadow-lg" style="border-radius: 20px; border: 4px solid rgba(255, 255, 255, 0.2); transform: perspective(1000px) rotateY(-5deg); transition: all 0.5s ease;" width="540" height="405">
+                        
+                        <!-- Decorative corner elements -->
+                        <div class="corner-element top-left" style="position: absolute; top: -15px; left: -15px; width: 50px; height: 50px; border-top: 5px solid #2563eb; border-left: 5px solid #2563eb; border-radius: 10px 0 0 0; z-index: 1;"></div>
+                        <div class="corner-element bottom-right" style="position: absolute; bottom: -15px; right: -15px; width: 50px; height: 50px; border-bottom: 5px solid #10b981; border-right: 5px solid #10b981; border-radius: 0 0 10px 0; z-index: 1;"></div>
+                        
+                        <!-- Animated data flow element -->
+                        <div class="data-flow-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%); border-radius: 20px; overflow: hidden; pointer-events: none;">
+                            <div class="data-particle particle-1" style="position: absolute; top: 20%; left: 10%; width: 8px; height: 8px; background-color: rgba(255, 255, 255, 0.7); border-radius: 50%; filter: blur(1px); animation: floatParticle 8s infinite linear;">
+                                <style>
+                                    @keyframes floatParticle {
+                                        0% { transform: translate(0, 0); opacity: 0.2; }
+                                        25% { transform: translate(100px, 50px); opacity: 0.7; }
+                                        50% { transform: translate(200px, 10px); opacity: 0.5; }
+                                        75% { transform: translate(300px, 70px); opacity: 0.7; }
+                                        100% { transform: translate(400px, 30px); opacity: 0.2; }
+                                    }
+                                    @keyframes floatParticle2 {
+                                        0% { transform: translate(0, 0); opacity: 0.2; }
+                                        25% { transform: translate(-50px, 100px); opacity: 0.7; }
+                                        50% { transform: translate(-100px, 30px); opacity: 0.5; }
+                                        75% { transform: translate(-30px, 150px); opacity: 0.7; }
+                                        100% { transform: translate(0, 80px); opacity: 0.2; }
+                                    }
+                                    @keyframes floatParticle3 {
+                                        0% { transform: translate(0, 0); opacity: 0.2; }
+                                        25% { transform: translate(70px, -50px); opacity: 0.7; }
+                                        50% { transform: translate(150px, -20px); opacity: 0.5; }
+                                        75% { transform: translate(100px, -80px); opacity: 0.7; }
+                                        100% { transform: translate(30px, -40px); opacity: 0.2; }
+                                    }
+                                    @keyframes pulseGlow {
+                                        0% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.5); }
+                                        50% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.8); }
+                                        100% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.5); }
+                                    }
+                                    @keyframes floatCard {
+                                        0% { transform: translateY(0px); }
+                                        50% { transform: translateY(-10px); }
+                                        100% { transform: translateY(0px); }
+                                    }
+                                    .floating-card {
+                                        animation: floatCard 3s ease-in-out infinite, pulseGlow 4s infinite;
+                                        backdrop-filter: blur(5px);
+                                        border: 1px solid rgba(255, 255, 255, 0.2);
+                                    }
+                                    .card-1 { animation-delay: 0s; }
+                                    .card-2 { animation-delay: 1s; }
+                                    .card-3 { animation-delay: 2s; }
+                                </style>
+                            </div>
+                            <div class="data-particle particle-2" style="position: absolute; top: 60%; left: 80%; width: 6px; height: 6px; background-color: rgba(255, 255, 255, 0.7); border-radius: 50%; filter: blur(1px); animation: floatParticle2 10s infinite linear;"></div>
+                            <div class="data-particle particle-3" style="position: absolute; top: 40%; left: 50%; width: 7px; height: 7px; background-color: rgba(255, 255, 255, 0.7); border-radius: 50%; filter: blur(1px); animation: floatParticle3 12s infinite linear;"></div>
+                            
+                            <!-- Data connection lines -->
+                            <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0; pointer-events: none;">
+                                <line x1="20%" y1="30%" x2="40%" y2="60%" stroke="rgba(37, 99, 235, 0.3)" stroke-width="1" stroke-dasharray="5,5">
+                                    <animate attributeName="stroke-dashoffset" from="0" to="100" dur="20s" repeatCount="indefinite" />
+                                </line>
+                                <line x1="40%" y1="60%" x2="70%" y2="40%" stroke="rgba(16, 185, 129, 0.3)" stroke-width="1" stroke-dasharray="5,5">
+                                    <animate attributeName="stroke-dashoffset" from="0" to="100" dur="15s" repeatCount="indefinite" />
+                                </line>
+                                <line x1="70%" y1="40%" x2="80%" y2="70%" stroke="rgba(37, 99, 235, 0.3)" stroke-width="1" stroke-dasharray="5,5">
+                                    <animate attributeName="stroke-dashoffset" from="0" to="100" dur="18s" repeatCount="indefinite" />
+                                </line>
+                            </svg>
+                        </div>
+                        
+                        <!-- Enhanced floating cards with improved styling -->
+                        <div class="floating-card card-1" style="position: absolute; top: -30px; right: 30px; background: rgba(255, 255, 255, 0.85); padding: 15px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); display: flex; align-items: center; gap: 10px; min-width: 160px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
+                            <div class="icon" style="background: linear-gradient(135deg, #2563eb, #60a5fa); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-database fa-lg text-white"></i>
+                            </div>
+                            <div class="text">
+                                <div style="font-weight: 700; font-size: 18px; line-height: 1;">200+</div>
+                                <div style="font-size: 12px; color: #64748b;">Projects</div>
+                            </div>
+                        </div>
+                        <div class="floating-card card-2" style="position: absolute; bottom: 40px; right: -20px; background: rgba(255, 255, 255, 0.85); padding: 15px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); display: flex; align-items: center; gap: 10px; min-width: 180px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
+                            <div class="icon" style="background: linear-gradient(135deg, #10b981, #34d399); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-users fa-lg text-white"></i>
+                            </div>
+                            <div class="text">
+                                <div style="font-weight: 700; font-size: 18px; line-height: 1;">50+</div>
+                                <div style="font-size: 12px; color: #64748b;">Team Members</div>
+                            </div>
+                        </div>
+                        <div class="floating-card card-3" style="position: absolute; bottom: 120px; left: -20px; background: rgba(255, 255, 255, 0.85); padding: 15px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); display: flex; align-items: center; gap: 10px; min-width: 160px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.3);">
+                            <div class="icon" style="background: linear-gradient(135deg, #2563eb, #60a5fa); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-globe-americas fa-lg text-white"></i>
+                            </div>
+                            <div class="text">
+                                <div style="font-weight: 700; font-size: 18px; line-height: 1;">15+</div>
+                                <div style="font-size: 12px; color: #64748b;">Countries</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-shape">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,165.3C672,149,768,139,864,154.7C960,171,1056,213,1152,218.7C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+    </section>
+
+    <!-- Company Overview Section -->
+    <section class="about-section section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="section-title">
+                        <h2>Our Story</h2>
+                        <p>Harnessing the Power of Data, Together</p>
+                    </div>
+                    <div class="about-content">
+                        <p class="lead mb-4">At SoftCompuTech, we believe data isn't just numbers—it's the lifeblood of innovation. But unlocking its true potential takes more than technology; it takes the <strong>right people, the right teams, and the right mindset</strong>.</p>
+                        
+                        <h5 class="mt-4 mb-3">Why We Do What We Do</h5>
+                        <p>
+                            We've seen too many organizations struggle with data. Some drown in hype, others in complexity. Some invest millions only to hit roadblocks—not because the tech failed, but because the <strong>team wasn't built for the challenge</strong>.
+                        </p>
+                        <p>
+                            We're here to change that.
+                        </p>
+                        
+                        <h5 class="mt-4 mb-3">Our Approach: The Three Pillars of Success</h5>
+                        <p>
+                            Big data isn't a one-person job. It's a symphony of expertise, and we've mastered the harmony:
+                        </p>
+                        <ol>
+                            <li><strong>The Visionaries (Data Science)</strong>
+                                <ul>
+                                    <li>They ask the bold questions: <em>What if? Why not?</em></li>
+                                    <li>They transform raw data into <strong>breakthrough insights</strong>—predicting trends, spotting opportunities, and solving problems before they arise.</li>
+                                </ul>
+                            </li>
+                            <li class="mt-2"><strong>The Builders (Data Engineering)</strong>
+                                <ul>
+                                    <li>They turn those insights into reality.</li>
+                                    <li>Their code doesn't just work—it <strong>scales, adapts, and endures</strong>, ensuring data flows seamlessly across the organization.</li>
+                                </ul>
+                            </li>
+                            <li class="mt-2"><strong>The Guardians (Operations)</strong>
+                                <ul>
+                                    <li>They keep the engine running, 24/7.</li>
+                                    <li>When others see chaos, they see <strong>order—optimizing, troubleshooting, and ensuring reliability</strong> when it matters most.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="position-relative">
+                        <img src="assets/img/office.jpg" alt="About SoftCompuTech" class="img-fluid rounded shadow-lg">
+                        <div class="experience-badge">
+                            <div class="experience-years">8+</div>
+                            <div class="experience-text">Years of Excellence</div>
+                        </div>
+                    </div>
+                    
+                    <div class="what-sets-us-apart mt-5">
+                        <h5 class="mb-3">What Sets Us Apart</h5>
+                        <div class="apart-item">
+                            <div class="apart-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="apart-content">
+                                <h6>We Speak the Language of "Can't."</h6>
+                                <p>When others hit walls—<em>"We can't process this," "We can't scale that"</em>—we see a challenge to conquer.</p>
+                            </div>
+                        </div>
+                        <div class="apart-item">
+                            <div class="apart-icon">
+                                <i class="fas fa-filter"></i>
+                            </div>
+                            <div class="apart-content">
+                                <h6>We Cut Through the Hype.</h6>
+                                <p>Not every problem needs a big data solution. We help you <strong>spend smart, not just big</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="apart-item">
+                            <div class="apart-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="apart-content">
+                                <h6>We Build Teams That Last.</h6>
+                                <p>No lone wolves. No silos. Just <strong>collaboration, trust, and results</strong>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <div class="about-cta">
+                        <h4>Join Us on the Journey</h4>
+                        <p>This isn't just our story—it's yours, too. Whether you're just starting with data or scaling its impact, we're here to help you <strong>succeed, not just survive</strong>.</p>
+                        <p class="fw-bold">Let's turn your data into your greatest asset.</p>
+                        <p class="h5 text-primary">SoftCompuTech — Where Data Meets Purpose.</p>
+                        <div class="mt-4">
+                            <a href="our-story.html" class="btn btn-primary"><i class="fas fa-book me-1"></i> Read Our Full Story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="values-section section-padding bg-light">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h2>Our Values</h2>
+                <p>The Principles That Guide Us</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Innovation</h4>
+                        <p>
+                            We continuously push the boundaries of what's possible, exploring new technologies and approaches to deliver innovative solutions that drive real business value.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Integrity</h4>
+                        <p>
+                            We believe in transparency, honesty, and ethical practices in everything we do, building trust with our clients, partners, and team members.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Excellence</h4>
+                        <p>
+                            We are committed to delivering the highest quality solutions, continuously improving our skills, processes, and technologies to exceed expectations.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Collaboration</h4>
+                        <p>
+                            We believe in the power of teamwork, fostering an environment where diverse perspectives come together to create extraordinary results.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>Impact</h4>
+                        <p>
+                            We measure our success by the tangible value and positive change we create for our clients, society, and the environment.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h4>Responsibility</h4>
+                        <p>
+                            We develop and deploy AI with a strong commitment to ethics, privacy, and security, ensuring our solutions benefit humanity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Showcase Section -->
+    <section class="company-showcase section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="section-title">
+                        <h2>Our Presence</h2>
+                        <p>Global Impact, Local Expertise</p>
+                    </div>
+                    <div class="showcase-content">
+                        <p class="lead">With a team of dedicated professionals across multiple locations, we deliver cutting-edge solutions to clients worldwide.</p>
+                        
+                        <div class="showcase-stats mt-4">
+                            <div class="row g-3">
+                                <div class="col-4">
+                                    <div class="showcase-stat-item">
+                                        <div class="icon"><i class="fas fa-database"></i></div>
+                                        <div class="text">200+ Projects</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="showcase-stat-item">
+                                        <div class="icon"><i class="fas fa-users"></i></div>
+                                        <div class="text">50+ Team Members</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="showcase-stat-item">
+                                        <div class="icon"><i class="fas fa-globe-americas"></i></div>
+                                        <div class="text">15+ Countries</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p class="mt-4">Our global footprint allows us to understand diverse market needs and deliver solutions that resonate with local requirements while maintaining international standards of excellence.</p>
+                        
+                        <div class="mt-4">
+                            <a href="#team-section" class="btn btn-outline-primary"><i class="fas fa-users me-1"></i> Meet Our Team</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="showcase-image position-relative">
+                        <img src="assets/img/office.jpg" alt="About SoftCompuTech" class="img-fluid rounded shadow-lg">
+                        <div class="shape-1"></div>
+                        <div class="shape-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones Section -->
+    <section class="milestones-section section-padding">
+        <div class="container">
+            <div class="section-title text-center mb-5" data-aos="fade-up">
+                <h2>Our Growth Journey</h2>
+                <p>Key Milestones Along The Way</p>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="milestone-card">
+                        <div class="milestone-number" data-count="200">500+</div>
+                        <div class="milestone-text">Successful Projects</div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="milestone-card">
+                        <div class="milestone-number" data-count="50">50+</div>
+                        <div class="milestone-text">Team Members</div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="milestone-card">
+                        <div class="milestone-number" data-count="15">7+</div>
+                        <div class="milestone-text">Countries Served</div>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="milestone-card">
+                        <div class="milestone-number" data-count="8">10</div>
+                        <div class="milestone-text">Years of Excellence</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="timeline" data-aos="fade-up">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2015</div>
+                            <div class="timeline-content">
+                                <h4>Company Founded</h4>
+                                <p>SoftCompuTech was founded with a vision to make AI and data science accessible to businesses of all sizes.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2017</div>
+                            <div class="timeline-content">
+                                <h4>First Major Client</h4>
+                                <p>Secured our first enterprise client, demonstrating the value of our AI solutions in the financial sector.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2019</div>
+                            <div class="timeline-content">
+                                <h4>International Expansion</h4>
+                                <p>Opened our first international office, bringing our expertise to clients across Europe and Asia.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2021</div>
+                            <div class="timeline-content">
+                                <h4>Innovation Award</h4>
+                                <p>Received industry recognition for our groundbreaking work in computer vision and natural language processing.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-date">2023</div>
+                            <div class="timeline-content">
+                                <h4>Strategic Growth</h4>
+                                <p>Expanded our service portfolio to include comprehensive IT solutions, becoming a one-stop shop for digital transformation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Team Section -->
+<section id="team-section" class="team-section section-padding" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);">
+    <div class="container">
+        <div class="section-title text-center mb-5" data-aos="fade-up">
+            <h2>Our Team</h2>
+            <p>Meet The Experts Behind Our Success</p>
+            <div class="title-underline mx-auto mt-3" style="width: 80px; height: 4px; background: linear-gradient(90deg, #2563eb, #10b981); border-radius: 2px;"></div>
+        </div>
+        
+        <div class="team-filter mb-5 text-center" data-aos="fade-up">
+            <div class="btn-group" role="group" aria-label="Team filter">
+                <button type="button" class="btn btn-outline-primary active" data-filter="all">All</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="engineering">Engineering</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="data-science">Data Science</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="devsecops">DevSecOps</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="design">Design</button>
+            </div>
+        </div>
+        
+        <div class="row g-4 team-container justify-content-center">
+            <!-- Team Member 1 -->
+            <div class="col-lg-3 col-md-6 team-item" data-category="engineering" data-aos="fade-up">
+                <div class="team-member-card">
+                    <div class="team-img-container">
+                        <div class="team-img">
+                            <img src="assets/img/team/irfan.jpg" alt="Irfan" class="img-fluid">
+                            <div class="team-overlay">
+                                <div class="team-details">
+                                    <h5>Senior Software Engineer</h5>
+                                    <p>Specializes in scalable backend systems and microservices.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-shape"></div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Irfan Gull</h4>
+                        <p>Senior Software Engineer</p>
+                        <p>CEO & Founder</p>
+                        <div class="team-social">
+                            <a href="https://www.linkedin.com/in/irfan-gul-65b58415/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/irfan-SCT" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <!-- <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+            
+            <!-- Team Member  -->
+            <div class="col-lg-3 col-md-6 team-item" data-category="data-science" data-aos="fade-up" data-aos-delay="200">
+                <div class="team-member-card">
+                    
+                    <div class="team-img-container">
+                        <div class="team-img">
+                            <img src="assets/img/team/AsifH.jpeg" alt="asif" class="img-fluid">
+                            <div class="team-overlay">
+                                <div class="team-details">
+                                    <h5>Project Manager</h5>
+                                    <p>Manages large scales projects</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-shape"></div>
+                    </div>
+                    
+                    <div class="team-info">
+                        <h4>Asif Hassan</h4>
+                        <p>Project Manager</p>
+                        <div class="team-social">
+                            <a href="http://www.linkedin.com/in/siddique-datalover" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <!-- <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+          
+              <!-- Team Member  -->
+            <div class="col-lg-3 col-md-6 team-item" data-category="data-science" data-aos="fade-up" data-aos-delay="200">
+                <div class="team-member-card">
+                    
+                    <div class="team-img-container">
+                        <div class="team-img">
+                            <img src="assets/img/team/siddique.jpg" alt="Siddique" class="img-fluid">
+                            <div class="team-overlay">
+                                <div class="team-details">
+                                    <h5>Lead Data Engineer</h5>
+                                    <p>Specializes in big data pipelines and ETL processes</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-shape"></div>
+                    </div>
+                    
+                    <div class="team-info">
+                        <h4>Siddique</h4>
+                        <p>Lead Data Engineer</p>
+                        <div class="team-social">
+                            <a href="http://www.linkedin.com/in/siddique-datalover" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/siddique-SCT" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <!-- <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+          
+            <!-- Team Member 3 -->
+            <div class="col-lg-3 col-md-6 team-item" data-category="devsecops" data-aos="fade-up">
+                <div class="team-member-card">
+                    <div class="team-img-container">
+                        <div class="team-img">
+                            <img src="assets/img/team/attiq.jpg" alt="Attiq" class="img-fluid">
+                            <div class="team-overlay">
+                                <div class="team-details">
+                                    <h5>DevSecOps</h5>
+                                    <p>Specializing in secure CI/CD automation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-shape"></div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Attiq</h4>
+                        <p>DevSecOps Engineer</p>
+                        <div class="team-social">
+                            <a href="https://www.linkedin.com/in/attiq-ur-rehman-5b221615a" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <!-- <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Member 4 -->
+            <div class="col-lg-3 col-md-6 team-item" data-category="engineering" data-aos="fade-up" data-aos-delay="100">
+                <div class="team-member-card">
+                    <div class="team-img-container">
+                        <div class="team-img">
+                            <img src="assets/img/team/fahad.jpg" alt="Fahad" class="img-fluid">
+                            <div class="team-overlay">
+                                <div class="team-details">
+                                    <h5>Frontend Developer</h5>
+                                    <p>React.js and Vue.js expert with UI/UX focus</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-shape"></div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Fahad</h4>
+                        <p>Frontend Developer</p>
+                        <div class="team-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+          
+             <!-- Team Member  -->
+            <div class="col-lg-3 col-md-6 team-item" data-category="data-science" data-aos="fade-up" data-aos-delay="200">
+                <div class="team-member-card">
+                    
+                    <div class="team-img-container">
+                        <div class="team-img">
+                            <img src="assets/img/team/AsifS.jpeg" alt="Asif" class="img-fluid">
+                            <div class="team-overlay">
+                                <div class="team-details">
+                                    <h5>Business & Data Analyst</h5>
+                                    <p>Specializes in Business & Data Analysis</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-shape"></div>
+                    </div>
+                    
+                    <div class="team-info">
+                        <h4>Asif Shabbir</h4>
+                        <p>Business & Data Analyst</p>
+                        <div class="team-social">
+                            <a href="http://www.linkedin.com/in/siddique-datalover" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <!-- <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <!-- Team Member  -->
+            <div class="col-lg-3 col-md-6 team-item" data-category="data-science" data-aos="fade-up" data-aos-delay="200">
+                <div class="team-member-card">
+                    
+                    <div class="team-img-container">
+                        <div class="team-img">
+                            <img src="assets/img/team/Mehmood.jpg" alt="mehmood" class="img-fluid">
+                            <div class="team-overlay">
+                                <div class="team-details">
+                                    <h5>Cloud Administrator</h5>
+                                    <p>Specializes in Cloud Management</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-shape"></div>
+                    </div>
+                    
+                    <div class="team-info">
+                        <h4>Muhammad Mehmood</h4>
+                        <p>Cloud Administrator</p>
+                        <div class="team-social">
+                            <a href="http://www.linkedin.com/in/siddique-datalover" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <!-- <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+
+
+               <!-- Team Member  -->
+            <div class="col-lg-3 col-md-6 team-item" data-category="data-science" data-aos="fade-up" data-aos-delay="200">
+                <div class="team-member-card">
+                    
+                    <div class="team-img-container">
+                        <div class="team-img">
+                            <img src="assets/img/team/zarafsha.jpg" alt="zarafsha" class="img-fluid">
+                            <div class="team-overlay">
+                                <div class="team-details">
+                                    <h5>Data Analyst</h5>
+                                    <p>Specializes in Data Analysis</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-shape"></div>
+                    </div>
+                    
+                    <div class="team-info">
+                        <h4>Zarafsha</h4>
+                        <p>Data Analyst</p>
+                        <div class="team-social">
+                            <a href="http://www.linkedin.com/in/siddique-datalover" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <!-- <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+        
+        <div class="text-center mt-5" data-aos="fade-up">
+            <a href="#" class="btn btn-primary btn-lg px-4 py-2" style="border-radius: 50px; box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);">
+                <i class="fas fa-users me-2"></i> View All Team Members
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Team Section Styles */
+.team-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-filter {
+    margin-bottom: 30px;
+}
+
+.team-filter .btn {
+    margin: 0 5px;
+    border-radius: 50px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.team-filter .btn.active {
+    background: linear-gradient(135deg, #2563eb, #10b981);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.team-member-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.team-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.2);
+}
+
+.team-img-container {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.team-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 5px solid #f0f9ff;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.15);
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.team-member-card:hover .team-img {
+    border-color: rgba(37, 99, 235, 0.5);
+    transform: scale(1.05);
+}
+
+.team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-member-card:hover .team-img img {
+    transform: scale(1.1);
+}
+
+.team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(37, 99, 235, 0.85);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform: scale(0.8);
+    padding: 20px;
+}
+
+.team-member-card:hover .team-overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.team-details {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.team-details h5 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.team-details p {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    opacity: 0.9;
+}
+
+.team-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+    border-radius: 15px;
+    z-index: -1;
+    transform: scale(0.95);
+    transition: all 0.4s ease;
+}
+
+.team-member-card:hover .team-shape {
+    transform: scale(1);
+}
+
+.team-info {
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid #2563eb;
+}
+
+.team-info h4 {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #1e293b;
+}
+
+.team-info p {
+    color: #64748b;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.team-social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
+    transition: all 0.3s ease;
+}
+
+.team-social a:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Filter animation */
+.team-item {
+    transition: all 0.5s ease;
+    display: block !important;
+}
+
+.team-item.hide {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    transform: scale(0.5);
+    transition: all 0.5s ease;
+}
+
+/* Center last row */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .team-img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 767px) {
+    .team-filter .btn {
+        margin-bottom: 10px;
+    }
+    
+    .team-img {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .team-container {
+        justify-content: center;
+    }
+}
+
+/* Special styling for last two cards to center them */
+@media (min-width: 992px) {
+    .team-item:nth-last-child(-n+2) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Team filter functionality
+    const filterButtons = document.querySelectorAll('.team-filter button');
+    const teamItems = document.querySelectorAll('.team-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filterValue = this.getAttribute('data-filter');
+            
+            // Filter team members
+            teamItems.forEach(item => {
+                if (filterValue === 'all') {
+                    item.classList.remove('hide');
+                } else {
+                    if (item.getAttribute('data-category') === filterValue) {
+                        item.classList.remove('hide');
+                    } else {
+                        item.classList.add('hide');
+                    }
+                }
+            });
+            
+            // Center the last row after filtering
+            centerLastRow();
+            
+            // Reinitialize AOS for newly visible items
+            AOS.refresh();
+        });
+    });
+    
+    // Function to center the last row
+    function centerLastRow() {
+        const visibleItems = document.querySelectorAll('.team-item:not(.hide)');
+        const itemsPerRow = Math.floor(window.innerWidth / 300); // Approximate items per row
+        
+        if (visibleItems.length % itemsPerRow === 1) {
+            // Only one item in last row - center it
+            const lastItem = visibleItems[visibleItems.length - 1];
+            lastItem.style.marginLeft = 'auto';
+            lastItem.style.marginRight = 'auto';
+        }
+    }
+    
+    // Initial centering check
+    centerLastRow();
+    
+    // Re-center on window resize
+    window.addEventListener('resize', centerLastRow);
+    
+    // Add hover effect for team cards
+    const teamCards = document.querySelectorAll('.team-member-card');
+    teamCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+        });
+    });
+});
+</script>
+
+    <!-- CTA Section -->
+    <section class="cta-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="cta-box text-center" data-aos="fade-up">
+                        <h2>Ready to Transform Your Business?</h2>
+                        <p class="lead">Let's discuss how our AI and data solutions can help your business thrive in the digital age.</p>
+                        <div class="cta-buttons">
+                            <a href="index.html#contact" class="btn btn-primary btn-lg me-3"><i class="fas fa-envelope me-1"></i> Contact Us</a>
+                            <a href="index.html#services" class="btn btn-outline-primary btn-lg"><i class="fas fa-cogs me-1"></i> Our Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top" style="background-color: #1e293b; color: #f8fafc; padding: 60px 0 40px;">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Company Info -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <div class="footer-logo mb-4 d-flex align-items-center">
+                                <img src="assets/img/logo.svg" alt="SoftCompuTech Logo" class="img-fluid flip-logo" width="150" height="50">
+                            </div>
+                            <p class="mb-4 text-light">SoftCompuTech - Transforming data into actionable insights with modern AI and analytics solutions for businesses worldwide.</p>
+                            <div class="footer-social">
+                                <a href="#" class="social-icon" aria-label="LinkedIn" style="background: rgba(37, 99, 235, 0.2); color: #fff; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin-right: 10px; transition: all 0.3s ease;"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon" aria-label="Twitter" style="background: rgba(37, 99, 235, 0.2); color: #fff; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin-right: 10px; transition: all 0.3s ease;"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon" aria-label="Facebook" style="background: rgba(37, 99, 235, 0.2); color: #fff; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin-right: 10px; transition: all 0.3s ease;"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon" aria-label="Instagram" style="background: rgba(37, 99, 235, 0.2); color: #fff; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin-right: 10px; transition: all 0.3s ease;"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon" aria-label="GitHub" style="background: rgba(37, 99, 235, 0.2); color: #fff; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; margin-right: 10px; transition: all 0.3s ease;"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-links">
+                            <h4 class="text-white mb-4 fw-semibold">Quick Links</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="index.html" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Home</a></li>
+                                <li class="mb-2"><a href="about.html" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>About</a></li>
+                                <li class="mb-2"><a href="our-story.html" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Our Story</a></li>
+                                <li class="mb-2"><a href="index.html#mission" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Mission</a></li>
+                                <li class="mb-2"><a href="index.html#services" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Services</a></li>
+                                <li class="mb-2"><a href="index.html#projects" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Projects</a></li>
+                                <li class="mb-2"><a href="index.html#process" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Process</a></li>
+                                <li class="mb-2"><a href="index.html#testimonials" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Testimonials</a></li>
+                                <li class="mb-2"><a href="index.html#blog" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Services -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-links">
+                            <h4 class="text-white mb-4 fw-semibold">Our Services</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="index.html#services" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Machine Learning</a></li>
+                                <li class="mb-2"><a href="index.html#services" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Deep Learning</a></li>
+                                <li class="mb-2"><a href="index.html#services" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Computer Vision</a></li>
+                                <li class="mb-2"><a href="index.html#services" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>NLP</a></li>
+                                <li class="mb-2"><a href="index.html#services" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Data Engineering</a></li>
+                                <li class="mb-2"><a href="index.html#services" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Web Development</a></li>
+                                <li class="mb-2"><a href="index.html#services" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Advanced Analytics</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-contact">
+                            <h4 class="text-white mb-4 fw-semibold">Contact Us</h4>
+                            <ul class="list-unstyled">
+                                <li class="d-flex align-items-start mb-3">
+                                    <i class="fas fa-map-marker-alt mt-1 me-2 text-primary"></i>
+                                    <span class="text-light">Office F-50, 2nd Floor, Gold Point Plaza, Main Murree Road, Rawalpindi, Pakistan</span>
+                                </li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-phone me-2 text-primary"></i>
+                                    <span class="text-light">+ 92 332 5503654</span>
+                                </li>
+                                <li class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-envelope me-2 text-primary"></i>
+                                    <span class="text-light">info@softcomputech.com</span>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <i class="fas fa-clock me-2 text-primary"></i>
+                                    <span class="text-light">Mon - Fri: 9AM - 6PM</span>
+                                </li>
+                            </ul>
+                            <div class="mt-4">
+                                <a href="index.html#contact" class="btn btn-outline-primary btn-sm"><i class="fas fa-envelope me-1"></i> Send Message</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-newsletter">
+                            <h4 class="text-white mb-4 fw-semibold">Subscribe to Our Newsletter</h4>
+                            <p class="text-light">Stay updated with our latest insights, news, and trends in data engineering and analytics.</p>
+                            <form class="mt-3">
+                                <div class="input-group mb-3">
+                                    <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email" required>
+                                    <button class="btn btn-primary" type="submit">Subscribe</button>
+                                </div>
+                            </form>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="privacyCheck" required>
+                                <label class="form-check-label small text-light" for="privacyCheck">
+                                    I agree to the <a href="#" class="text-primary">privacy policy</a>
+                                </label>
+                            </div>
+                            <div class="mt-4">
+                                <h5 class="h6 text-white">Download Our Brochure</h5>
+                                <a href="#" class="btn btn-sm btn-outline-primary me-2 mb-2"><i class="fas fa-file-pdf me-1"></i> Company Profile</a>
+                                <a href="#" class="btn btn-sm btn-outline-primary mb-2"><i class="fas fa-file-alt me-1"></i> Services</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-middle py-4" style="background-color: #0f172a; color: #e2e8f0; padding: 30px 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <h5 class="text-white mb-3">Industries We Serve</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Healthcare</a></li>
+                                    <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Finance</a></li>
+                                    <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Retail</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Manufacturing</a></li>
+                                    <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Education</a></li>
+                                    <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Logistics</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <h5 class="text-white mb-3">Resources</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Case Studies</a></li>
+                                    <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>White Papers</a></li>
+                                    <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Webinars</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>FAQ</a></li>
+                                    <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>Documentation</a></li>
+                                    <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-link"><i class="fas fa-chevron-right me-2 text-primary"></i>API Reference</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="text-white mb-3">We Accept</h5>
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa fa-2x me-2 text-light"></i>
+                            <i class="fab fa-cc-mastercard fa-2x me-2 text-light"></i>
+                            <i class="fab fa-cc-paypal fa-2x me-2 text-light"></i>
+                            <i class="fab fa-cc-stripe fa-2x text-light"></i>
+                        </div>
+                        <div class="mt-4">
+                            <h5 class="text-white mb-3">App Coming Soon</h5>
+                            <div class="app-badges">
+                                <a href="#" class="me-2"><img src="assets/img/app-store.png" alt="App Store" width="120" height="40"></a>
+                                <a href="#"><img src="assets/img/google-play.png" alt="Google Play" width="120" height="40"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom" style="background-color: #0a0f1a; color: #cbd5e1; padding: 20px 0;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="copyright">
+                            <p class="mb-0">&copy; <span id="copyright-year">2023</span> SoftCompuTech. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-bottom-links text-md-end">
+                            <a href="#" class="text-light text-decoration-none mx-2 hover-link">Privacy Policy</a>
+                            <a href="#" class="text-light text-decoration-none mx-2 hover-link">Terms of Service</a>
+                            <a href="#" class="text-light text-decoration-none mx-2 hover-link">Cookie Policy</a>
+                            <a href="#" class="text-light text-decoration-none mx-2 hover-link">Sitemap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+    .footer {
+        color: #f8fafc;
+    }
+    .footer h4, .footer h5 {
+        position: relative;
+        padding-bottom: 12px;
+    }
+    .footer h4:after, .footer h5:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 50px;
+        background: linear-gradient(90deg, #2563eb, #10b981);
+        border-radius: 3px;
+    }
+    .hover-link {
+        transition: all 0.3s ease;
+    }
+    .hover-link:hover {
+        color: #60a5fa !important;
+        transform: translateX(5px);
+    }
+    .social-icon:hover {
+        background: #2563eb !important;
+        transform: translateY(-3px);
+    }
+    
+    /* Logo Flip Animation */
+    .flip-logo {
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+        animation: logoFlip 5s infinite;
+    }
+    
+    @keyframes logoFlip {
+        0% {
+            transform: rotateY(0);
+        }
+        45% {
+            transform: rotateY(0);
+        }
+        50% {
+            transform: rotateY(180deg);
+        }
+        95% {
+            transform: rotateY(180deg);
+        }
+        100% {
+            transform: rotateY(360deg);
+        }
+    }
+    </style>
+
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js" defer></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js" defer></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year for copyright
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            
+            // Initialize typed.js for logo
+            const typedLogo = new Typed('.typed-logo', {
+                strings: [
+                    '<span class="green-letter">S</span><span class="cyan-letter">oft</span><span class="green-letter">C</span><span class="cyan-letter">ompu</span><span class="green-letter">T</span><span class="cyan-letter">ech</span>'
+                ],
+                typeSpeed: 80,
+                backSpeed: 50,
+                loop: true,
+                backDelay: 1500,
+                smartBackspace: true,
+                showCursor: true,
+                cursorChar: '|'
+            });
+            
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+            
+            // Header scroll effect
+            const header = document.querySelector('.header');
+            const backToTopButton = document.querySelector('.back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                // Header scroll effect
+                if (window.scrollY > 50) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+                
+                // Back to top button visibility
+                if (backToTopButton && window.scrollY > 300) {
+                    backToTopButton.classList.add('active');
+                } else if (backToTopButton) {
+                    backToTopButton.classList.remove('active');
+                }
+            });
+            
+            // Back to top button click event
+            if (backToTopButton) {
+                backToTopButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
