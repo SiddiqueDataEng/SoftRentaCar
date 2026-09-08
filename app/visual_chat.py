@@ -49,8 +49,13 @@ VISUAL_PATTERNS = [
     (r"top\s*(\d+)?\s*driver",                       "top_drivers"),
     (r"best\s*(performing)?\s*driver",                "top_drivers"),
     (r"safest\s*driver",                              "top_drivers"),
-    (r"worst\s*(driver|performing)",                  "worst_drivers"),
+    (r"worst\s*(driver|performing|\d)",               "worst_drivers"),
+    (r"bottom\s*(\d+)?\s*driver",                     "worst_drivers"),
     (r"risky\s*driver",                               "worst_drivers"),
+    (r"need.*coach",                                  "worst_drivers"),
+    (r"coach.*driver",                                "worst_drivers"),
+    (r"dangerous.*driver",                            "worst_drivers"),
+    (r"low.*score.*driver",                           "worst_drivers"),
 
     # City demand
     (r"(city|cities).*(demand|trip|revenue|busiest)", "city_demand"),
@@ -67,9 +72,9 @@ VISUAL_PATTERNS = [
     (r"fleet\s*(usage|occupancy|performance)",        "utilisation"),
 
     # Fuel
-    (r"fuel\s*(efficiency|consumption|cost)",         "fuel_efficiency"),
     (r"fuel",                                          "fuel_efficiency"),
-    (r"efficiency\s*(trend|by)",                       "fuel_efficiency"),
+    (r"efficiency",                                    "fuel_efficiency"),
+    (r"fuel\s*(efficiency|consumption|cost|trend)",    "fuel_efficiency"),
 
     # Maintenance
     (r"maintenance\s*(cost|spend|type)",              "maintenance_cost"),
@@ -400,15 +405,7 @@ def _utilisation(dfs: dict, question: str) -> dict:
 
 
 def _fuel_efficiency(dfs: dict, question: str) -> dict:
-    fuel = dfs["fuel_logs"]
-    veh  = dfs["vehicles"]
-    g = (
-        fuel.merge(veh[["vehicle_id", "make", "fuel_type"]], on="vehicle_id", how="left")
-        .groupby(["fill_month", "fuel_type"])
-        .agg(avg_eff=("fuel_efficiency_kmpl", "mean"), total_cost=("fuel_cost_pkr", "sum"))
-        .reset_index()
-        .sort_values("fill_month")
-    )
+    fuel = dfs["fuel_logs"].copy()
 
     monthly = (
         fuel.groupby("fill_month")
@@ -421,7 +418,7 @@ def _fuel_efficiency(dfs: dict, question: str) -> dict:
 
     return {
         "type":    "area",
-        "title":   "Monthly Fuel Efficiency (km/l) & Cost",
+        "title":   "Monthly Fuel Efficiency (km/l) & Cost (PKR)",
         "df":      monthly,
         "x":       "fill_month",
         "y":       ["avg_eff", "total_cost"],
