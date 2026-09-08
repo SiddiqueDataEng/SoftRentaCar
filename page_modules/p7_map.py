@@ -1,4 +1,4 @@
-"""Demand Map — with Carto authenticated tiles"""
+"""Demand Map — Plotly 6 map API (Scattermap, not Scattermapbox)"""
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
@@ -13,7 +13,6 @@ inject()
 dfs   = get_data()
 trips = dfs["trips"]
 
-# ── Resolve Carto key ──────────────────────────────────────────────────
 CARTO_KEY = get_carto_key()
 
 st.markdown(
@@ -26,18 +25,17 @@ st.markdown(
 )
 st.markdown("<hr style='border-color:#1e2f44;margin:6px 0 12px 0'>", unsafe_allow_html=True)
 
-# ── Filters + map style ────────────────────────────────────────────────
+# ── Filters ────────────────────────────────────────────────────────────
 cf = st.columns(4)
 yrs    = ["All"] + sorted(trips["pickup_year"].dropna().unique().astype(int).tolist(), reverse=True)
 sel_yr = cf[0].selectbox("Year",         yrs,                             key="map_yr")
 bts    = ["All"] + sorted(trips["booking_type"].unique().tolist())
 sel_bt = cf[1].selectbox("Booking Type", bts,                             key="map_bt")
 sel_st = cf[2].selectbox("Status",       ["All","Completed","Cancelled"], key="map_st")
-sel_style = cf[3].selectbox("🗺️ Map Style", list(CARTO_STYLES.keys()),    key="map_style")
+sel_style = cf[3].selectbox("Map Style", list(CARTO_STYLES.keys()),       key="map_style")
 
-map_style = CARTO_STYLES[sel_style]   # e.g. "carto-darkmatter"
+map_style = CARTO_STYLES[sel_style]
 
-# ── Filter data ────────────────────────────────────────────────────────
 t = trips.copy()
 if sel_yr != "All": t = t[t["pickup_year"] == int(sel_yr)]
 if sel_bt != "All": t = t[t["booking_type"] == sel_bt]
@@ -45,11 +43,10 @@ if sel_st != "All": t = t[t["status"] == sel_st]
 comp = t[t["status"] == "Completed"]
 
 
-# ── Helper: apply mapbox layout ────────────────────────────────────────
-def _mapbox_layout(fig, title, zoom=4.5, height=460):
+def _map_layout(fig, title, zoom=4.5, height=460):
+    """Apply Plotly 6 map layout (map= not mapbox=)."""
     fig.update_layout(
-        mapbox=dict(
-            accesstoken=CARTO_KEY,
+        map=dict(
             style=map_style,
             center=dict(lat=30.3753, lon=69.3451),
             zoom=zoom,
@@ -68,20 +65,15 @@ sec("📍 Trip Density — Pakistan")
 
 cg = (
     comp.groupby(["pickup_city", "pickup_lat", "pickup_lon"])
-    .size()
-    .reset_index(name="trips")
-)
-cg["revenue"] = (
-    comp.groupby(["pickup_city", "pickup_lat", "pickup_lon"])["revenue_pkr"]
-    .sum()
-    .values
+    .agg(trips=("trip_id","count"), revenue=("revenue_pkr","sum"))
+    .reset_index()
 )
 
-fig1 = go.Figure(go.Scattermapbox(
+fig1 = go.Figure(go.Scattermap(
     lat=cg["pickup_lat"],
     lon=cg["pickup_lon"],
     mode="markers",
-    marker=go.scattermapbox.Marker(
+    marker=dict(
         size=cg["trips"].apply(lambda x: min(55, max(12, x / 40))),
         color=cg["trips"],
         colorscale=[[0, NAVY], [0.4, STEEL], [0.75, AMBER], [1, BRAND]],
@@ -90,8 +82,6 @@ fig1 = go.Figure(go.Scattermapbox(
         colorbar=dict(
             title=dict(text="Trips", font=dict(color=TEXT, size=11)),
             tickfont=dict(color=TEXT, size=9),
-            bgcolor="rgba(15,17,23,.7)",
-            bordercolor=GRID,
         ),
     ),
     text=cg.apply(
@@ -100,10 +90,9 @@ fig1 = go.Figure(go.Scattermapbox(
     ),
     hoverinfo="text",
 ))
-_mapbox_layout(fig1, f"Demand Heat Map — Pakistan ({sel_style})", zoom=4.5, height=480)
-st.plotly_chart(fig1, width='stretch')
+_map_layout(fig1, f"Demand Heat Map — Pakistan ({sel_style})", zoom=4.5, height=480)
+st.plotly_chart(fig1, use_container_width=True)
 
-# City demand insight
 txt_c, sub_c, lvl_c = city_demand_insight(comp)
 insight(txt_c, "🏙️", lvl_c, sub_c)
 
@@ -127,7 +116,7 @@ for i, (_, r) in enumerate(city_stats.head(8).iterrows()):
   <div style="font-size:.7rem;color:#4a6a84;">Avg PKR {r['avg_fare']:,.0f}</div>
 </div>""", unsafe_allow_html=True)
 
-# ── 3. Route Lines Map (intercity) ─────────────────────────────────────
+# ── 3. Route Lines Map ─────────────────────────────────────────────────
 sec("✈️ Intercity Route Map")
 
 ic = comp[comp["pickup_city"] != comp["dropoff_city"]].copy()
@@ -142,9 +131,9 @@ route_stats = (
 
 fig_routes = go.Figure()
 for _, row in route_stats.iterrows():
-    opacity = min(0.9, max(0.2, row["trips"] / route_stats["trips"].max()))
-    width   = max(1.5, min(6, row["trips"] / route_stats["trips"].max() * 6))
-    fig_routes.add_trace(go.Scattermapbox(
+    opacity = min(0.9, max(0.2, row["trips"] / max(route_stats["trips"].max(), 1)))
+    width   = max(1.5, min(6, row["trips"] / max(route_stats["trips"].max(), 1) * 6))
+    fig_routes.add_trace(go.Scattermap(
         lat=[row["pickup_lat"],  row["dropoff_lat"]],
         lon=[row["pickup_lon"],  row["dropoff_lon"]],
         mode="lines",
@@ -155,25 +144,23 @@ for _, row in route_stats.iterrows():
         showlegend=False,
     ))
 
-# Add city dots on top
-fig_routes.add_trace(go.Scattermapbox(
+fig_routes.add_trace(go.Scattermap(
     lat=cg["pickup_lat"], lon=cg["pickup_lon"],
     mode="markers+text",
-    marker=go.scattermapbox.Marker(size=9, color=AMBER, opacity=0.9),
+    marker=dict(size=9, color=AMBER, opacity=0.9),
     text=cg["pickup_city"],
     textfont=dict(size=9, color=TEXT),
     textposition="top right",
     hoverinfo="text",
     name="Cities",
 ))
-_mapbox_layout(fig_routes, "Top 20 Intercity Routes", zoom=4.5, height=460)
-st.plotly_chart(fig_routes, width='stretch')
+_map_layout(fig_routes, "Top 20 Intercity Routes", zoom=4.5, height=460)
+st.plotly_chart(fig_routes, use_container_width=True)
 
-# Route insight
 txt_r, sub_r, lvl_r = route_insight(comp)
 insight(txt_r, "✈️", lvl_r, sub_r)
 
-# ── 4. Sankey intercity flow ───────────────────────────────────────────
+# ── 4. Sankey flow ─────────────────────────────────────────────────────
 sec("🔀 Intercity Flow (Sankey)")
 top_cities = ic["pickup_city"].value_counts().head(8).index.tolist()
 flow       = ic[ic["pickup_city"].isin(top_cities) & ic["dropoff_city"].isin(top_cities)]
@@ -183,7 +170,7 @@ valid      = mx[mx["pickup_city"].isin(top_cities) & mx["dropoff_city"].isin(top
 if len(valid) > 0:
     s_vals = [top_cities.index(r) for r in valid["pickup_city"]]
     t_vals = [len(top_cities) + top_cities.index(r) for r in valid["dropoff_city"]]
-    fig2 = go.Figure(go.Sankey(
+    fig2   = go.Figure(go.Sankey(
         node=dict(pad=15, thickness=20,
                   label=top_cities + top_cities,
                   color=[BRAND]*len(top_cities) + [STEEL]*len(top_cities)),
@@ -193,11 +180,11 @@ if len(valid) > 0:
     fig2.update_layout(
         paper_bgcolor=BG, font=dict(color=TEXT, size=11),
         margin=dict(l=14,r=14,t=40,b=14), height=400,
-        title=dict(text="Intercity Trip Flow — Top 8 Cities", font=dict(color=TEXT, size=13)),
+        title=dict(text="Intercity Trip Flow — Top 8 Cities", font=dict(color=TEXT,size=13)),
     )
-    st.plotly_chart(fig2, width='stretch')
+    st.plotly_chart(fig2, use_container_width=True)
 
-# ── 5. Pickup vs Dropoff balance ───────────────────────────────────────
+# ── 5. Pickup vs Dropoff ───────────────────────────────────────────────
 sec("⚖️ Pickup vs Dropoff Balance")
 pu  = t.groupby("pickup_city").size().reset_index(name="pickups")
 do  = t.groupby("dropoff_city").size().reset_index(name="dropoffs")
@@ -212,43 +199,33 @@ fig3.add_trace(go.Bar(name="Pickups",  x=bal["city"], y=bal["pickups"],  marker_
 fig3.add_trace(go.Bar(name="Dropoffs", x=bal["city"], y=bal["dropoffs"], marker_color=STEEL, opacity=.85))
 fig3.update_layout(barmode="group")
 dark_layout(fig3, "Pickup vs Dropoff by City", height=320)
-st.plotly_chart(fig3, width='stretch')
+st.plotly_chart(fig3, use_container_width=True)
 
-# ── 6. GPS density scatter (sample) ────────────────────────────────────
+# ── 6. GPS scatter ─────────────────────────────────────────────────────
 sec("📡 GPS Pickup Density")
 sample = (
     comp.dropna(subset=["pickup_lat","pickup_lon"])
     .sample(min(3000, len(comp)), random_state=42)
 )
 
-# Colour by booking type
 btype_colors = {bt: COLORS[i % len(COLORS)]
                 for i, bt in enumerate(sample["booking_type"].unique())}
 
 fig4 = go.Figure()
 for btype, grp in sample.groupby("booking_type"):
-    fig4.add_trace(go.Scattermapbox(
+    fig4.add_trace(go.Scattermap(
         lat=grp["pickup_lat"],
         lon=grp["pickup_lon"],
         mode="markers",
         name=btype,
-        marker=go.scattermapbox.Marker(
-            size=5,
-            color=btype_colors.get(btype, BRAND),
-            opacity=0.45,
-        ),
+        marker=dict(size=5, color=btype_colors.get(btype, BRAND), opacity=0.45),
         text=grp["pickup_city"],
         hoverinfo="text+name",
     ))
+_map_layout(fig4, "GPS Pickup Points by Booking Type (sample 3,000)", zoom=4.8, height=460)
+st.plotly_chart(fig4, use_container_width=True)
 
-_mapbox_layout(fig4, "GPS Pickup Points by Booking Type (sample 3,000)", zoom=4.8, height=460)
-fig4.update_layout(legend=dict(
-    bgcolor="rgba(20,32,46,.85)", font=dict(color=TEXT, size=10),
-    bordercolor=GRID, borderwidth=1,
-))
-st.plotly_chart(fig4, width='stretch')
-
-# ── 7. Revenue choropleth by city (bubble) ─────────────────────────────
+# ── 7. Revenue Bubble Map ──────────────────────────────────────────────
 sec("💰 Revenue Bubble Map")
 rev_city = (
     comp.groupby(["pickup_city","pickup_lat","pickup_lon"])["revenue_pkr"]
@@ -256,11 +233,11 @@ rev_city = (
 )
 rev_city["rev_m"] = (rev_city["revenue_pkr"] / 1e6).round(2)
 
-fig5 = go.Figure(go.Scattermapbox(
+fig5 = go.Figure(go.Scattermap(
     lat=rev_city["pickup_lat"],
     lon=rev_city["pickup_lon"],
     mode="markers+text",
-    marker=go.scattermapbox.Marker(
+    marker=dict(
         size=rev_city["rev_m"].apply(lambda x: min(60, max(15, x * 3))),
         color=rev_city["rev_m"],
         colorscale=[[0, NAVY], [0.5, AMBER], [1, BRAND]],
@@ -269,7 +246,6 @@ fig5 = go.Figure(go.Scattermapbox(
         colorbar=dict(
             title=dict(text="PKR M", font=dict(color=TEXT, size=11)),
             tickfont=dict(color=TEXT, size=9),
-            bgcolor="rgba(15,17,23,.7)",
         ),
     ),
     text=rev_city["pickup_city"],
@@ -279,6 +255,5 @@ fig5 = go.Figure(go.Scattermapbox(
     ),
     hoverinfo="text",
 ))
-_mapbox_layout(fig5, "Revenue Bubble Map (PKR M per City)", zoom=4.3, height=460)
-st.plotly_chart(fig5, width='stretch')
-
+_map_layout(fig5, "Revenue Bubble Map (PKR M per City)", zoom=4.3, height=460)
+st.plotly_chart(fig5, use_container_width=True)
