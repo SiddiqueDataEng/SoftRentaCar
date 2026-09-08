@@ -7,6 +7,7 @@ from page_modules._shared import (
     inject, get_data, fmt, kpi, sec, alert_box, dark_layout,
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS
 )
+from app.storytelling import insight, driver_safety_insight
 
 inject()
 dfs = get_data()
@@ -68,7 +69,7 @@ with col1:
     fig.add_hline(y=70, line_dash="dash", line_color=GREEN,
                   annotation_text="Target 70", annotation_font_color=GREEN)
     dark_layout(fig, "Safety Score vs KM (bubble = trip count)", height=360)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
 with col2:
     fig2 = go.Figure(go.Histogram(x=tel["safety_score"], nbinsx=30,
@@ -78,10 +79,15 @@ with col2:
     fig2.add_vline(x=avg_score, line_dash="dot", line_color=AMBER,
                    annotation_text=f"Mean {avg_score:.1f}", annotation_font_color=AMBER)
     dark_layout(fig2, "Safety Score Distribution", height=360)
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width='stretch')
+
+# Driver safety insight
+txt, sub, lvl = driver_safety_insight(tel, drv)
+insight(txt, "🚦", lvl, sub)
 
 # ── Profile breakdown ───────────────────────────────────────────────────
 sec("👤 Behavior Profile Breakdown")
+insight(txt, "🚦", lvl, sub)
 col3, col4 = st.columns(2)
 
 with col3:
@@ -91,7 +97,7 @@ with col3:
         marker_color=[prof_colors.get(p,BRAND) for p in pc["profile"]],
         text=pc["count"], textposition="outside", textfont=dict(color=TEXT)))
     dark_layout(fig3, "Driver Behavior Profile Count", height=320)
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(fig3, width='stretch')
 
 with col4:
     merged = tel.merge(drv[["driver_id","behavior_profile"]], on="driver_id", how="left")
@@ -100,7 +106,7 @@ with col4:
         fig4.add_trace(go.Box(y=grp["safety_score"], name=prof.capitalize(),
             marker_color=prof_colors.get(prof,BRAND), boxmean=True))
     dark_layout(fig4, "Safety Score by Profile", height=320)
-    st.plotly_chart(fig4, use_container_width=True)
+    st.plotly_chart(fig4, width='stretch')
 
 # ── Individual driver detail ────────────────────────────────────────────
 sec("🔍 Individual Driver Deep-Dive")
@@ -140,7 +146,7 @@ if len(row):
                    angularaxis=dict(gridcolor=GRID,tickfont=dict(color=TEXT,size=10))),
         paper_bgcolor=BG, font=dict(color=TEXT), margin=dict(l=40,r=40,t=60,b=40),
         showlegend=False, title=dict(text=f"KPI Radar — {sel_drv}", font=dict(color=TEXT,size=12)), height=380)
-    st.plotly_chart(fig5, use_container_width=True)
+    st.plotly_chart(fig5, width='stretch')
 
     # Safety trend for this driver
     drv_tel = tel[tel["driver_id"]==row["driver_id"]].sort_values("trip_date")
@@ -152,7 +158,7 @@ if len(row):
         fig6.add_hline(y=70, line_dash="dash", line_color=GREEN,
                        annotation_text="Target 70", annotation_font_color=GREEN)
         dark_layout(fig6, "Trip-by-Trip Safety Score", height=280)
-        st.plotly_chart(fig6, use_container_width=True)
+        st.plotly_chart(fig6, width='stretch')
 
 # ── AI Risk Predictor ─────────────────────────────────────────────────
 st.markdown("<hr style='border-color:#1e2f44;margin:14px 0'>", unsafe_allow_html=True)
@@ -190,7 +196,7 @@ if st.button("🔍 Predict Profile", type="primary", key="drv_predict"):
   <div style="font-size:.82rem;color:#8eaac4;margin-top:4px;">Predicted Behavior Profile</div>
 </div>""", unsafe_allow_html=True)
     prob_df = pd.DataFrame(list(probs.items()), columns=["Profile","Probability %"]).sort_values("Probability %",ascending=False)
-    st.dataframe(prob_df, use_container_width=True, hide_index=True)
+    st.dataframe(prob_df, width='stretch', hide_index=True)
 
 # Feature importance
 sec("📊 Model Feature Importance")
@@ -199,4 +205,5 @@ fig_fi = go.Figure(go.Bar(x=feat_imp.values, y=feat_imp.index, orientation="h",
     textposition="outside", textfont=dict(color=TEXT,size=9)))
 dark_layout(fig_fi, f"Feature Importance — Accuracy {report.get('accuracy',0)*100:.1f}%", height=300)
 fig_fi.update_yaxes(autorange="reversed")
-st.plotly_chart(fig_fi, use_container_width=True)
+st.plotly_chart(fig_fi, width='stretch')
+

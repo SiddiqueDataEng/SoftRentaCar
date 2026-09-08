@@ -6,6 +6,7 @@ from page_modules._shared import (
     inject, get_data, fmt, kpi, sec, alert_box, dark_layout,
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS
 )
+from app.storytelling import insight, chart_header, trips_insight, city_demand_insight, route_insight
 
 inject()
 dfs = get_data()
@@ -56,13 +57,19 @@ with col1:
         marker=dict(color=[cmap.get(s,BRAND) for s in sc["status"]]),
         textinfo="value+percent initial", textfont=dict(color="#fff")))
     dark_layout(fig, "Trip Status Funnel", height=320)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
 with col2:
     cg = t.groupby("pickup_city").size().reset_index(name="n").sort_values("n",ascending=False).head(12)
     fig2 = go.Figure(go.Bar(x=cg["pickup_city"], y=cg["n"], marker_color=BRAND, opacity=.85))
     dark_layout(fig2, "Trips by Pickup City", height=320)
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width='stretch')
+
+# Trips + city insight
+txt, sub, lvl = trips_insight(t)
+insight(txt, "🚗", lvl, sub)
+txt2, sub2, lvl2 = city_demand_insight(t)
+insight(txt2, "🏙️", lvl2, sub2)
 
 # ── Demand heatmap ─────────────────────────────────────────────────────
 sec("⏰ Demand Heatmap — Hour × Day of Week")
@@ -74,7 +81,7 @@ fig3 = go.Figure(go.Heatmap(
     z=mx.values, x=[f"{h:02d}:00" for h in mx.columns], y=mx.index.tolist(),
     colorscale=[[0,"#0f1117"],[0.4,NAVY],[0.75,STEEL],[1,BRAND]], showscale=True))
 dark_layout(fig3, "Bookings by Hour & Day", height=280)
-st.plotly_chart(fig3, use_container_width=True)
+st.plotly_chart(fig3, width='stretch')
 
 # ── Booking type monthly trend ─────────────────────────────────────────
 sec("📊 Booking Type Trend")
@@ -87,7 +94,7 @@ with col3:
         fig4.add_trace(go.Scatter(x=sub["pickup_month"], y=sub["n"], name=bt,
             stackgroup="one", fill="tonexty", line=dict(color=COLORS[i%len(COLORS)],width=1)))
     dark_layout(fig4, "Monthly Bookings by Type", xangle=-45)
-    st.plotly_chart(fig4, use_container_width=True)
+    st.plotly_chart(fig4, width='stretch')
 
 with col4:
     gr = comp.groupby("booking_type")["revenue_pkr"].sum().reset_index().sort_values("revenue_pkr")
@@ -95,7 +102,7 @@ with col4:
         marker_color=BRAND, text=[f"{v:.1f}M" for v in gr["revenue_pkr"]/1e6],
         textposition="outside", textfont=dict(color=TEXT, size=9)))
     dark_layout(fig5, "Revenue by Booking Type (PKR M)")
-    st.plotly_chart(fig5, use_container_width=True)
+    st.plotly_chart(fig5, width='stretch')
 
 # ── Intercity routes ───────────────────────────────────────────────────
 sec("🛣️ Top Intercity Routes")
@@ -109,7 +116,9 @@ fig6 = go.Figure(go.Bar(x=rts["trips"], y=rts["route"], orientation="h",
 fig6.update_layout(margin=dict(l=160,r=60,t=44,b=12))
 dark_layout(fig6, "Top 15 Routes by Trip Count", height=420)
 fig6.update_yaxes(autorange="reversed")
-st.plotly_chart(fig6, use_container_width=True)
+st.plotly_chart(fig6, width='stretch')
+txt3, sub3, lvl3 = route_insight(t)
+insight(txt3, "🛣️", lvl3, sub3)
 
 # ── Distance & duration histograms ─────────────────────────────────────
 sec("📏 Distance & Duration Distribution")
@@ -117,14 +126,15 @@ col5, col6 = st.columns(2)
 with col5:
     fig7 = go.Figure(go.Histogram(x=comp["distance_km"], nbinsx=40, marker_color=BRAND, opacity=.8))
     dark_layout(fig7, "Trip Distance Distribution (km)", height=280)
-    st.plotly_chart(fig7, use_container_width=True)
+    st.plotly_chart(fig7, width='stretch')
 with col6:
     fig8 = go.Figure(go.Histogram(x=comp["duration_days"].clip(0,15), nbinsx=30, marker_color=STEEL, opacity=.8))
     dark_layout(fig8, "Trip Duration Distribution (days)", height=280)
-    st.plotly_chart(fig8, use_container_width=True)
+    st.plotly_chart(fig8, width='stretch')
 
 # ── Raw trips table ────────────────────────────────────────────────────
 sec("📋 Trip Records")
 show = ["trip_id","booking_type","pickup_city","dropoff_city","pickup_datetime",
         "duration_days","distance_km","revenue_pkr","status","with_driver"]
-st.dataframe(t[show].head(500).reset_index(drop=True), use_container_width=True, height=300)
+st.dataframe(t[show].head(500).reset_index(drop=True), width='stretch', height=300)
+

@@ -6,6 +6,7 @@ from page_modules._shared import (
     inject, get_data, fmt, kpi, sec, alert_box, dark_layout,
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS
 )
+from app.storytelling import insight
 
 inject()
 dfs = get_data()
@@ -25,7 +26,7 @@ def _tbl(df, title, cols, level, empty_msg):
         alert_box(empty_msg, "success" if "✅" in empty_msg else "info")
     else:
         avail = [c for c in cols if c in df.columns]
-        st.dataframe(df[avail].reset_index(drop=True), use_container_width=True, height=200)
+        st.dataframe(df[avail].reset_index(drop=True), width='stretch', height=200)
 
 
 st.markdown(f'<div style="font-size:1.5rem;font-weight:800;color:{BRAND};margin-bottom:4px;">⚠️ Alerts & Watchlist</div>', unsafe_allow_html=True)
@@ -53,6 +54,23 @@ kpi(c[0], str(total_critical),              "Critical Alerts",       "Immediate 
 kpi(c[1], str(total_warn),                  "Warnings",              "Within 30 days",   total_warn==0)
 kpi(c[2], fmt(total_out),                   "Overdue Receivables",   f"{len(overdue_inv):,} invoices", total_out==0)
 kpi(c[3], str(len(overdue_maint)),          "Overdue Services",      "Scheduled pending",len(overdue_maint)==0)
+
+# Risk summary insight
+_total_issues = total_critical + total_warn + len(overdue_maint)
+_level = "bad" if total_critical > 3 else ("warn" if _total_issues > 5 else "good")
+insight(
+    f"Fleet has <strong>{total_critical} critical</strong> and "
+    f"<strong>{total_warn} warning</strong> items requiring attention. "
+    f"<strong>{len(expired_ins)} vehicles</strong> with expired insurance are legally non-compliant "
+    f"and must be grounded immediately. "
+    f"<strong>PKR {total_out/1e6:.1f}M</strong> in overdue receivables across "
+    f"{len(overdue_inv):,} invoices is outstanding. "
+    f"<strong>{len(dangerous_drv)} dangerous-profile drivers</strong> are actively operating — "
+    f"high accident liability risk.",
+    "⚠️", _level,
+    "🔴 Address all critical items within 24 hours to stay legally compliant and reduce liability." if total_critical > 0
+    else "✅ No critical issues — continue monitoring warnings."
+)
 
 st.markdown("<hr style='border-color:#1e2f44;margin:14px 0'>", unsafe_allow_html=True)
 
@@ -97,7 +115,7 @@ with tabs[2]:
                                      on="customer_id",how="left")
         st.dataframe(show_inv[["invoice_id","full_name","customer_type","invoice_date","due_date",
                                 "total_amount_pkr","outstanding_pkr","payment_method"]]
-                     .reset_index(drop=True), use_container_width=True, height=300)
+                     .reset_index(drop=True), width='stretch', height=300)
     else:
         alert_box("✅ No overdue invoices.", "success")
 
@@ -105,7 +123,7 @@ with tabs[2]:
     fig1 = go.Figure(go.Pie(labels=ps["s"], values=ps["n"], hole=0.5,
         marker=dict(colors=[GREEN,AMBER,ORANGE], line=dict(color="#0f1117",width=2))))
     dark_layout(fig1, "Invoice Payment Status", height=300)
-    st.plotly_chart(fig1, use_container_width=True)
+    st.plotly_chart(fig1, width='stretch')
 
 # ── DRIVER RISK ────────────────────────────────────────────────────────
 with tabs[3]:
@@ -126,7 +144,7 @@ with tabs[3]:
             text=[f"{r:.0f}" for r in top15["risk_score"]],
             textposition="outside", textfont=dict(color=TEXT,size=9)))
         dark_layout(fig2, "Top 15 Highest Risk Drivers", xangle=-45, height=360)
-        st.plotly_chart(fig2, use_container_width=True)
+        st.plotly_chart(fig2, width='stretch')
     with col2:
         at = tel[tel["accident_occurred"]==True].copy()
         if len(at):
@@ -134,13 +152,13 @@ with tabs[3]:
             am = at.groupby("month").size().reset_index(name="n")
             fig3 = go.Figure(go.Bar(x=am["month"], y=am["n"], marker_color=ORANGE))
             dark_layout(fig3, "Accidents by Month", xangle=-45, height=360)
-            st.plotly_chart(fig3, use_container_width=True)
+            st.plotly_chart(fig3, width='stretch')
         else:
             st.info("No accident events in telematics.")
 
     st.dataframe(dr[["driver_id","full_name","behavior_profile","risk_score",
                       "harsh_brake_rate","harsh_accel_rate","speeding_pct","accidents_count"]]
-                 .head(30).reset_index(drop=True), use_container_width=True, height=260)
+                 .head(30).reset_index(drop=True), width='stretch', height=260)
 
 # ── MAINTENANCE ────────────────────────────────────────────────────────
 with tabs[4]:
@@ -157,7 +175,7 @@ with tabs[4]:
         fill="tozeroy", fillcolor="rgba(231,111,81,.12)", line=dict(color=ORANGE,width=2),
         mode="lines+markers", marker=dict(size=4)))
     dark_layout(fig4, "Monthly Maintenance Cost (PKR K)", xangle=-45, height=300)
-    st.plotly_chart(fig4, use_container_width=True)
+    st.plotly_chart(fig4, width='stretch')
 
 # ── OVERVIEW ──────────────────────────────────────────────────────────
 with tabs[5]:
@@ -172,4 +190,5 @@ with tabs[5]:
     fig5.add_trace(go.Bar(name="Warning",  x=cats, y=warns, marker_color=AMBER))
     fig5.update_layout(barmode="stack")
     dark_layout(fig5, "Risk Summary by Category", height=340)
-    st.plotly_chart(fig5, use_container_width=True)
+    st.plotly_chart(fig5, width='stretch')
+

@@ -149,7 +149,7 @@ st.markdown('<div style="font-size:.72rem;color:#8eaac4;margin-bottom:5px;">⚡ 
             unsafe_allow_html=True)
 bc = st.columns(6)
 for i, (label, q) in enumerate(QUICK):
-    if bc[i % 6].button(label, key=f"qp_{i}", use_container_width=True):
+    if bc[i % 6].button(label, key=f"qp_{i}", width='stretch'):
         with st.spinner("Analysing …"):
             from app.visual_chat import chat_with_visual
             text, visual = chat_with_visual(q, dfs, history=st.session_state.chat_history)
@@ -224,7 +224,7 @@ def _render_visual(visual: dict, key_suffix: str):
             f'<div style="font-size:.78rem;font-weight:700;color:#c8dff0;margin-bottom:6px;">{title}</div>',
             unsafe_allow_html=True,
         )
-        st.dataframe(df, use_container_width=True, hide_index=True, height=320)
+        st.dataframe(df, width='stretch', hide_index=True, height=320)
 
     elif vtype == "horizontal_bar":
         y_vals = df[y_col].tolist()
@@ -294,7 +294,7 @@ def _render_visual(visual: dict, key_suffix: str):
         dark_layout(fig, title, height=300)
 
     if fig:
-        st.plotly_chart(fig, use_container_width=True, key=f"vc_{key_suffix}")
+        st.plotly_chart(fig, width='stretch', key=f"vc_{key_suffix}")
 
     # ── Data table (collapsible) ───────────────────────────────────────
     with st.expander("📋 View data table", expanded=False):
@@ -306,7 +306,7 @@ def _render_visual(visual: dict, key_suffix: str):
                     else (f"PKR {float(v)/1e3:.1f}K" if float(v) >= 1e3
                           else f"PKR {float(v):,.0f}")
                 )
-        st.dataframe(display_df, use_container_width=True, hide_index=True)
+        st.dataframe(display_df, width='stretch', hide_index=True)
 
     # ── Insight bar ────────────────────────────────────────────────────
     if insight:
@@ -367,7 +367,7 @@ with st.form(key="chat_form", clear_on_submit=True):
         label_visibility="collapsed",
         key="chat_input_field",
     )
-    send = bc2.form_submit_button("Send ▶", use_container_width=True)
+    send = bc2.form_submit_button("Send ▶", width='stretch')
 
 if send and user_input.strip():
     with st.spinner("Analysing …"):
@@ -385,10 +385,10 @@ if send and user_input.strip():
 # ── Footer ─────────────────────────────────────────────────────────────
 if st.session_state.chat_history:
     f1, f2, _ = st.columns([1, 1, 5])
-    if f1.button("🗑️ Clear", key="chat_clear", use_container_width=True):
+    if f1.button("🗑️ Clear", key="chat_clear", width='stretch'):
         st.session_state.chat_history = []
         st.rerun()
-    if f2.button("📋 Export", key="chat_export", use_container_width=True):
+    if f2.button("📋 Export", key="chat_export", width='stretch'):
         import json
         safe = [{k: v for k, v in t.items() if k != "visual"}
                 for t in st.session_state.chat_history]
@@ -421,3 +421,4 @@ with st.sidebar:
     st.markdown("---")
     st.markdown('<div style="font-size:.7rem;color:#3a5a74;">💡 All other questions get text answers via GPT-4o</div>',
                 unsafe_allow_html=True)
+

@@ -7,6 +7,7 @@ from page_modules._shared import (
     inject, get_data, fmt, sec, alert_box, dark_layout,
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS,
 )
+from app.storytelling import insight
 
 inject()
 dfs = get_data()
@@ -1656,7 +1657,7 @@ sql_code = st.text_area(
 )
 
 run_col, dl_col, _ = st.columns([1, 1, 5])
-run_btn = run_col.button("▶ Run Query", type="primary", key="sql_run", use_container_width=True)
+run_btn = run_col.button("▶ Run Query", type="primary", key="sql_run", width='stretch')
 
 # ── Execute ────────────────────────────────────────────────────────────
 if run_btn and sql_code.strip():
@@ -1684,7 +1685,7 @@ if "sql_result" in st.session_state:
             f"{sel_query[:30]}.csv",
             "text/csv",
             key="sql_dl",
-            use_container_width=True,
+            width='stretch',
         )
 
         # Smart auto-visualisation
@@ -1714,10 +1715,26 @@ if "sql_result" in st.session_state:
                     line=dict(color=BRAND,width=2.5)))
             dark_layout(fig, f"{y_col} by {x_col}", height=340)
             fig.update_xaxes(tickangle=-35)
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width='stretch')
 
         # Table
-        st.dataframe(df_res, use_container_width=True, height=380)
+        st.dataframe(df_res, width='stretch', height=380)
+
+        # Query context insight
+        cat = query_meta.get("category","")
+        desc = query_meta.get("description","")
+        rows = len(df_res)
+        num_cols_count = len(df_res.select_dtypes("number").columns)
+        insight(
+            f"Query <strong>{sel_query}</strong> returned <strong>{rows:,} rows</strong> × "
+            f"{len(df_res.columns)} columns. "
+            f"<strong>Category:</strong> {cat}. "
+            f"{desc} "
+            f"Use the chart selector above to visualise the {num_cols_count} numeric column(s). "
+            f"Download CSV to use in Excel, Power BI or dbt.",
+            "🔍", "info",
+            "💡 Combine this with another query using a CTE for deeper cross-table analysis."
+        )
 
 # ── Category quick-launch grid ─────────────────────────────────────────
 st.markdown("<hr style='border-color:#1e2f44;margin:20px 0'>", unsafe_allow_html=True)
@@ -1733,3 +1750,4 @@ for cat in categories:
   <div style="font-size:.82rem;font-weight:600;color:#c8dff0;">{qname}</div>
   <div style="font-size:.74rem;color:#5a7a96;">{qmeta['description']}</div>
 </div>""", unsafe_allow_html=True)
+

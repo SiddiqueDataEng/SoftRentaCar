@@ -6,6 +6,7 @@ from page_modules._shared import (
     inject, get_data, fmt, kpi, sec, alert_box, dark_layout,
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS
 )
+from app.storytelling import insight, chart_header, revenue_insight, customer_insight
 
 inject()
 dfs = get_data()
@@ -68,7 +69,10 @@ with col1:
     fig.add_trace(go.Scatter(x=mr["_m"], y=mr["outs"]/1e6, name="Outstanding",
         line=dict(color=ORANGE,width=1.5,dash="dot")))
     dark_layout(fig, "Monthly Revenue (PKR M)", xangle=-45)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
+    # Revenue insight below trend chart
+    txt, sub, lvl = revenue_insight(inv_f)
+    insight(txt, "💰", lvl, sub)
 
 with col2:
     trips_f = trips if sel_fl=="All" else trips[trips["fleet_id"]==fid]
@@ -77,7 +81,7 @@ with col2:
         marker=dict(color=g["revenue_pkr"], colorscale=[[0,NAVY],[0.5,STEEL],[1,BRAND]]),
         text=[f"{v:.1f}M" for v in g["revenue_pkr"]/1e6], textposition="outside", textfont=dict(color=TEXT,size=9)))
     dark_layout(fig2, "Revenue by Booking Type (PKR M)")
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width='stretch')
 
 # ── Payment methods + Fleet share ──────────────────────────────────────
 sec("💳 Payment Analytics")
@@ -88,7 +92,7 @@ with col3:
         marker_color=COLORS[:len(pm)],
         text=[f"{v:.1f}M" for v in pm["total_amount_pkr"]/1e6], textposition="outside", textfont=dict(color=TEXT,size=9)))
     dark_layout(fig3, "Revenue by Payment Method (PKR M)")
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(fig3, width='stretch')
 
 with col4:
     fleet_rev = trips[trips["status"]=="Completed"].groupby("fleet_id")["revenue_pkr"].sum().reset_index()
@@ -96,7 +100,7 @@ with col4:
     fig4 = go.Figure(go.Pie(labels=fleet_rev["fleet_name"], values=fleet_rev["revenue_pkr"], hole=0.52,
         marker=dict(colors=COLORS, line=dict(color="#0f1117",width=2)), textfont=dict(color="#fff",size=10)))
     dark_layout(fig4, "Revenue Share by Fleet", height=340)
-    st.plotly_chart(fig4, use_container_width=True)
+    st.plotly_chart(fig4, width='stretch')
 
 # ── P&L Waterfall ──────────────────────────────────────────────────────
 sec("📊 P&L Waterfall")
@@ -117,7 +121,21 @@ fig5 = go.Figure(go.Waterfall(
     text=[f"PKR {abs(v)/1e6:.1f}M" for v in [billed,-fuel_c,-maint_c,-sal_c,-other_c,profit]],
     textposition="outside", textfont=dict(color=TEXT)))
 dark_layout(fig5, "Profit & Loss Waterfall (PKR)", height=380)
-st.plotly_chart(fig5, use_container_width=True)
+st.plotly_chart(fig5, width='stretch')
+
+# P&L insight
+margin = profit/billed*100 if billed else 0
+fuel_pct = fuel_c/billed*100 if billed else 0
+sal_pct  = sal_c/billed*100 if billed else 0
+insight(
+    f"Net profit margin is <strong>{margin:.1f}%</strong> of billed revenue. "
+    f"Fuel costs consume <strong>{fuel_pct:.1f}%</strong> of revenue — "
+    f"the single largest variable cost. Salaries represent <strong>{sal_pct:.1f}%</strong>. "
+    f"A 2 km/l fuel efficiency improvement across the fleet would save "
+    f"<strong>PKR {fuel_c*0.15/1e6:.1f}M</strong> annually, directly boosting margin.",
+    "📊", "good" if margin > 20 else ("warn" if margin > 5 else "bad"),
+    f"{'✅ Healthy margin above 20%.' if margin > 20 else f'⚠️ Margin {margin:.1f}% needs improvement — target fuel and idle reduction first.'}"
+)
 
 # ── OpEx stacked bar ───────────────────────────────────────────────────
 sec("🏢 Monthly Operating Expenses")
@@ -130,7 +148,7 @@ for i, col in enumerate(pivot.columns):
     fig6.add_trace(go.Bar(x=pivot.index, y=pivot[col]/1e3, name=col, marker_color=COLORS[i%len(COLORS)]))
 fig6.update_layout(barmode="stack")
 dark_layout(fig6, "Monthly OpEx by Category (PKR K)", xangle=-45, height=360)
-st.plotly_chart(fig6, use_container_width=True)
+st.plotly_chart(fig6, width='stretch')
 
 # ── AR Aging ───────────────────────────────────────────────────────────
 sec("📋 Accounts Receivable Aging")
@@ -142,7 +160,7 @@ aging = unpaid.groupby("bucket", observed=True).agg(
     invoices=("invoice_id","count"), outstanding=("outstanding_pkr","sum")).reset_index()
 aging["outstanding"] = aging["outstanding"].apply(fmt)
 col_a, _ = st.columns([2,1])
-col_a.dataframe(aging, use_container_width=True, hide_index=True)
+col_a.dataframe(aging, width='stretch', hide_index=True)
 
 # ── Top customers ──────────────────────────────────────────────────────
 sec("🏆 Top 10 Customers by Revenue")
@@ -151,4 +169,5 @@ tc = inv_f.merge(dfs["customers"][["customer_id","full_name","customer_type"]],o
            .nlargest(10,"total_amount_pkr")
 tc["total_amount_pkr"] = tc["total_amount_pkr"].apply(fmt)
 tc.columns = ["Customer","Type","Revenue"]
-st.dataframe(tc, use_container_width=True, hide_index=True)
+st.dataframe(tc, width='stretch', hide_index=True)
+

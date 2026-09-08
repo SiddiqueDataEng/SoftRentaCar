@@ -7,6 +7,7 @@ from page_modules._shared import (
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS,
 )
 from app.carto import get_carto_key, CARTO_STYLES
+from app.storytelling import insight, city_demand_insight, route_insight
 
 inject()
 dfs   = get_data()
@@ -100,7 +101,11 @@ fig1 = go.Figure(go.Scattermapbox(
     hoverinfo="text",
 ))
 _mapbox_layout(fig1, f"Demand Heat Map — Pakistan ({sel_style})", zoom=4.5, height=480)
-st.plotly_chart(fig1, use_container_width=True)
+st.plotly_chart(fig1, width='stretch')
+
+# City demand insight
+txt_c, sub_c, lvl_c = city_demand_insight(comp)
+insight(txt_c, "🏙️", lvl_c, sub_c)
 
 # ── 2. City KPI grid ───────────────────────────────────────────────────
 sec("🏙️ City Performance")
@@ -162,7 +167,11 @@ fig_routes.add_trace(go.Scattermapbox(
     name="Cities",
 ))
 _mapbox_layout(fig_routes, "Top 20 Intercity Routes", zoom=4.5, height=460)
-st.plotly_chart(fig_routes, use_container_width=True)
+st.plotly_chart(fig_routes, width='stretch')
+
+# Route insight
+txt_r, sub_r, lvl_r = route_insight(comp)
+insight(txt_r, "✈️", lvl_r, sub_r)
 
 # ── 4. Sankey intercity flow ───────────────────────────────────────────
 sec("🔀 Intercity Flow (Sankey)")
@@ -186,7 +195,7 @@ if len(valid) > 0:
         margin=dict(l=14,r=14,t=40,b=14), height=400,
         title=dict(text="Intercity Trip Flow — Top 8 Cities", font=dict(color=TEXT, size=13)),
     )
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width='stretch')
 
 # ── 5. Pickup vs Dropoff balance ───────────────────────────────────────
 sec("⚖️ Pickup vs Dropoff Balance")
@@ -203,7 +212,7 @@ fig3.add_trace(go.Bar(name="Pickups",  x=bal["city"], y=bal["pickups"],  marker_
 fig3.add_trace(go.Bar(name="Dropoffs", x=bal["city"], y=bal["dropoffs"], marker_color=STEEL, opacity=.85))
 fig3.update_layout(barmode="group")
 dark_layout(fig3, "Pickup vs Dropoff by City", height=320)
-st.plotly_chart(fig3, use_container_width=True)
+st.plotly_chart(fig3, width='stretch')
 
 # ── 6. GPS density scatter (sample) ────────────────────────────────────
 sec("📡 GPS Pickup Density")
@@ -237,7 +246,7 @@ fig4.update_layout(legend=dict(
     bgcolor="rgba(20,32,46,.85)", font=dict(color=TEXT, size=10),
     bordercolor=GRID, borderwidth=1,
 ))
-st.plotly_chart(fig4, use_container_width=True)
+st.plotly_chart(fig4, width='stretch')
 
 # ── 7. Revenue choropleth by city (bubble) ─────────────────────────────
 sec("💰 Revenue Bubble Map")
@@ -271,4 +280,5 @@ fig5 = go.Figure(go.Scattermapbox(
     hoverinfo="text",
 ))
 _mapbox_layout(fig5, "Revenue Bubble Map (PKR M per City)", zoom=4.3, height=460)
-st.plotly_chart(fig5, use_container_width=True)
+st.plotly_chart(fig5, width='stretch')
+

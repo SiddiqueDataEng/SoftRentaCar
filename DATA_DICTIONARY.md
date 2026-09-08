@@ -1,7 +1,7 @@
 # Pakistan Rent-a-Car – Data Dictionary
 
 Generated dataset for Data Engineering, Analytical Engineering, and ML/AI projects.
-Modeled after real Pakistani operators: **Hassan Rent a Car**, **RentKA**, **Haxn Rent a Car**, **Cars Rental 247**.
+Modeled after real Pakistani operators.
 
 ---
 

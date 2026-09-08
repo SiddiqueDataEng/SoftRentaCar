@@ -103,7 +103,7 @@ with center:
         )
         submit = st.form_submit_button(
             "🔐 Sign In",
-            use_container_width=True,
+            width='stretch',
             type="primary",
         )
 
@@ -151,3 +151,4 @@ with center:
 """, unsafe_allow_html=True)
 
     st.markdown("</div>", unsafe_allow_html=True)  # close login-wrap
+
