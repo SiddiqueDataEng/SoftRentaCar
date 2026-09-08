@@ -200,6 +200,74 @@ div[data-testid="stRadio"] > div {{
     gap:2px !important;
 }}
 
+/* ── Force sidebar always visible & properly sized ── */
+[data-testid="stSidebar"] {{
+    min-width: 240px !important;
+    max-width: 280px !important;
+    width: 260px !important;
+}}
+[data-testid="stSidebar"][aria-expanded="false"] {{
+    min-width: 240px !important;
+    width: 260px !important;
+    transform: none !important;
+}}
+
+/* ── Sidebar nav links — highlight active ── */
+[data-testid="stSidebarNav"] a {{
+    color: {txt} !important;
+    font-size: .84rem !important;
+    padding: 6px 12px !important;
+    border-radius: 8px !important;
+    margin: 1px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    transition: background .15s !important;
+}}
+[data-testid="stSidebarNav"] a:hover {{
+    background: {a}18 !important;
+    color: {a} !important;
+}}
+[data-testid="stSidebarNav"] a[aria-current="page"] {{
+    background: {a}22 !important;
+    color: {a} !important;
+    border-left: 3px solid {a} !important;
+    font-weight: 700 !important;
+}}
+[data-testid="stSidebarNavSeparator"] {{
+    border-color: {cb} !important;
+}}
+
+/* ── Hide collapse button on desktop, show on mobile ── */
+@media (min-width: 768px) {{
+    button[data-testid="stSidebarCollapseButton"] {{
+        display: none !important;
+    }}
+}}
+
+/* ── Mobile responsive ── */
+@media (max-width: 767px) {{
+    [data-testid="stSidebar"] {{
+        min-width: 0 !important;
+        width: 100vw !important;
+        position: fixed !important;
+        z-index: 999 !important;
+        top: 0 !important;
+        left: 0 !important;
+        height: 100vh !important;
+    }}
+    [data-testid="stSidebar"][aria-expanded="false"] {{
+        transform: translateX(-100%) !important;
+        width: 100vw !important;
+    }}
+    .main .block-container {{
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }}
+    .kpi-card {{ padding: 10px 12px !important; }}
+    .kpi-val  {{ font-size: 1.3rem !important; }}
+}}
+
 /* ── Footer ── */
 .dev-footer {{
     position:fixed; bottom:0; left:0; right:0; z-index:9999;
