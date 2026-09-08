@@ -1,6 +1,0 @@
-faker
-pandas
-numpy
-pyarrow
-rich
-python-dateutil
