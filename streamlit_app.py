@@ -39,6 +39,7 @@ pg = st.navigation(
         "Tools": [
             st.Page("page_modules/p9_chat.py",       title="AI Chat Assistant",    icon="🤖"),
             st.Page("page_modules/p10_alerts.py",    title="Alerts & Watchlist",   icon="⚠️"),
+            st.Page("page_modules/p11_sql.py",       title="SQL Analytics",        icon="🔍"),
         ],
     },
     position="sidebar",
