@@ -458,11 +458,11 @@ def demand_map(trips_df: pd.DataFrame) -> go.Figure:
         ["pickup_city", "pickup_lat", "pickup_lon"]
     ).size().reset_index(name="trips")
 
-    fig = go.Figure(go.Scattermapbox(
+    fig = go.Figure(go.Scattermap(
         lat=g["pickup_lat"],
         lon=g["pickup_lon"],
         mode="markers",
-        marker=go.scattermapbox.Marker(
+        marker=dict(
             size=g["trips"].apply(lambda x: min(50, max(10, x / 50))),
             color=g["trips"],
             colorscale=[[0, BRAND_DARK], [0.5, BRAND_ACCENT], [1, BRAND_COLOR]],
@@ -473,7 +473,7 @@ def demand_map(trips_df: pd.DataFrame) -> go.Figure:
         hoverinfo="text",
     ))
     fig.update_layout(
-        mapbox=dict(
+        map=dict(
             style="carto-darkmatter",
             center=dict(lat=30.3753, lon=69.3451),
             zoom=4.5,
