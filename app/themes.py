@@ -191,6 +191,15 @@ hr {{ border-color:{cb} !important; }}
     background:{bg} !important;
 }}
 
+/* ── Theme radio as clean list ── */
+div[data-testid="stRadio"] label {{
+    font-size:.76rem !important; padding:3px 0 !important;
+    color:{txt} !important; cursor:pointer;
+}}
+div[data-testid="stRadio"] > div {{
+    gap:2px !important;
+}}
+
 /* ── Footer ── */
 .dev-footer {{
     position:fixed; bottom:0; left:0; right:0; z-index:9999;
@@ -233,21 +242,21 @@ hr {{ border-color:{cb} !important; }}
 FOOTER_HTML = """
 <div class="dev-footer">
   <div class="dev-footer-left">
-    <span style="font-size:1.1rem;">🚗</span>
+    <span style="font-size:1rem;">🚗</span>
     <span class="dev-footer-brand">Soft Rent a Car</span>
-    <span class="dev-footer-sep">|</span>
-    <span>Developed by <strong style="color:inherit;">Muhammad Siddique</strong></span>
-    <span class="dev-footer-sep">|</span>
-    <a href="tel:+923229948042" class="dev-footer-link">📞 +92 322 9948042</a>
-    <span class="dev-footer-sep">|</span>
+    <span class="dev-footer-sep">·</span>
+    <span>Built by <strong>Muhammad Siddique</strong></span>
+    <span class="dev-footer-sep">·</span>
+    <a href="tel:+923229948042"   class="dev-footer-link">📞 +92 322 9948042</a>
+    <span class="dev-footer-sep">·</span>
     <a href="mailto:siddique.dea@gmail.com" class="dev-footer-link">✉️ siddique.dea@gmail.com</a>
-    <span class="dev-footer-sep">|</span>
+    <span class="dev-footer-sep">·</span>
     <a href="https://www.datawithms.top" target="_blank" class="dev-footer-link">🌐 datawithms.top</a>
-    <span class="dev-footer-sep">|</span>
+    <span class="dev-footer-sep">·</span>
     <a href="https://www.linkedin.com/in/siddique-datalover" target="_blank" class="dev-footer-link">💼 LinkedIn</a>
   </div>
-  <div class="dev-footer-right">
-    <span class="dev-footer-copy">© 2026 Soft Rent a Car · Fleet Intelligence Platform</span>
+  <div style="font-size:.65rem;" class="dev-footer-copy">
+    © 2026 Soft Rent a Car · Fleet Intelligence Platform
   </div>
 </div>
 """
