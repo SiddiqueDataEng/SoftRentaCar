@@ -1,0 +1,19 @@
+vehicle_type_id,category,sub_type,make,seats,fuel_type,transmission,daily_rate_min_pkr,daily_rate_max_pkr,hourly_rate_pkr,km_rate_pkr,fuel_eff_min_kmpl,fuel_eff_max_kmpl,security_deposit_pkr
+VT001,Economy,Mini,Suzuki,5,Petrol,Manual,3500,5000,400,12,16,22,10000
+VT002,Economy,Hatchback,Suzuki,5,Petrol,Automatic,4500,6000,500,14,14,18,15000
+VT003,Economy,Sedan,Toyota,5,Petrol,Automatic,5000,9000,700,18,12,16,20000
+VT004,Economy,Sedan,Honda,5,Petrol,Automatic,6000,8000,650,17,12,15,20000
+VT005,Executive,Sedan,Honda,5,Petrol,Automatic,9000,12000,1000,22,11,14,30000
+VT006,Executive,Crossover,Honda,7,Petrol,Automatic,6000,8500,800,20,12,15,25000
+VT007,Executive,SUV,Hyundai,5,Petrol,Automatic,12000,15000,1200,28,10,13,40000
+VT008,Executive,SUV,MG,5,Petrol,Automatic,12000,16000,1200,28,10,13,40000
+VT009,Premium_4x4,Pickup_4x4,Toyota,5,Diesel,Automatic,16000,20000,1800,35,9,13,50000
+VT010,Premium_4x4,SUV,Toyota,7,Diesel,Automatic,17000,22000,2000,38,9,12,55000
+VT011,Luxury_4x4,SUV,Toyota,7,Petrol,Automatic,22000,28000,2500,50,7,10,80000
+VT012,Luxury_4x4,Full-Size_SUV,Toyota,8,Diesel,Automatic,25000,40000,3500,70,6,9,100000
+VT013,Luxury_Sedan,Sedan,Audi,5,Petrol,Automatic,28000,35000,3000,60,8,11,100000
+VT014,Luxury_Sedan,Sedan,Mercedes-Benz,5,Petrol,Automatic,35000,80000,5000,80,8,10,150000
+VT015,Ultra_Luxury,SUV,Land Rover,5,Petrol,Automatic,100000,175000,12000,200,5,8,300000
+VT016,Van_Minibus,MPV,Suzuki,8,Petrol,Manual,5000,7000,600,15,11,14,20000
+VT017,Van_Minibus,Grand_Cabin,Toyota,14,Diesel,Manual,10000,16000,1100,25,9,12,40000
+VT018,Van_Minibus,Coaster,Toyota,30,Diesel,Manual,15000,20000,1800,35,7,10,50000

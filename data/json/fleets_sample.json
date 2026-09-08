@@ -1,0 +1,50 @@
+[
+  {
+    "fleet_id":"FL001",
+    "fleet_name":"Hassan Rent a Car",
+    "city":"Gujrat",
+    "website":"hassanrentacargujrat.com.pk",
+    "secp_registered":true,
+    "ntn_registered":true,
+    "established_year":2010,
+    "focus_segment":"economy_and_luxury",
+    "total_vehicles":46,
+    "active":true
+  },
+  {
+    "fleet_id":"FL002",
+    "fleet_name":"RentKA",
+    "city":"Islamabad",
+    "website":"rentka.co",
+    "secp_registered":true,
+    "ntn_registered":true,
+    "established_year":2018,
+    "focus_segment":"chauffeur_driven",
+    "total_vehicles":30,
+    "active":true
+  },
+  {
+    "fleet_id":"FL003",
+    "fleet_name":"Haxn Rent a Car",
+    "city":"Islamabad",
+    "website":"haxnrentacar.com",
+    "secp_registered":false,
+    "ntn_registered":true,
+    "established_year":2015,
+    "focus_segment":"corporate_and_wedding",
+    "total_vehicles":31,
+    "active":true
+  },
+  {
+    "fleet_id":"FL004",
+    "fleet_name":"Cars Rental 247",
+    "city":"Islamabad",
+    "website":"carsrental247.com",
+    "secp_registered":true,
+    "ntn_registered":true,
+    "established_year":2019,
+    "focus_segment":"self_drive",
+    "total_vehicles":13,
+    "active":true
+  }
+]

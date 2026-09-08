@@ -1,0 +1,4502 @@
+[
+  {
+    "line_id":"LI0000001",
+    "invoice_id":"INV000001",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.93 day(s)",
+    "qty":0.93,
+    "unit_price":17704.3010752688,
+    "amount_pkr":16465.0
+  },
+  {
+    "line_id":"LI0000002",
+    "invoice_id":"INV000002",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.33 day(s)",
+    "qty":0.33,
+    "unit_price":37736.3636363636,
+    "amount_pkr":12453.0
+  },
+  {
+    "line_id":"LI0000003",
+    "invoice_id":"INV000002",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000004",
+    "invoice_id":"INV000002",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":1245.0,
+    "amount_pkr":1245.0
+  },
+  {
+    "line_id":"LI0000005",
+    "invoice_id":"INV000003",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.36 day(s)",
+    "qty":0.36,
+    "unit_price":32552.7777777778,
+    "amount_pkr":11719.0
+  },
+  {
+    "line_id":"LI0000006",
+    "invoice_id":"INV000003",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000007",
+    "invoice_id":"INV000004",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.66 day(s)",
+    "qty":0.66,
+    "unit_price":38790.9090909091,
+    "amount_pkr":25602.0
+  },
+  {
+    "line_id":"LI0000008",
+    "invoice_id":"INV000005",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.49 day(s)",
+    "qty":0.49,
+    "unit_price":21453.0612244898,
+    "amount_pkr":10512.0
+  },
+  {
+    "line_id":"LI0000009",
+    "invoice_id":"INV000005",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000010",
+    "invoice_id":"INV000005",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":1051.0,
+    "amount_pkr":1051.0
+  },
+  {
+    "line_id":"LI0000011",
+    "invoice_id":"INV000005",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":1000.0,
+    "amount_pkr":1000.0
+  },
+  {
+    "line_id":"LI0000012",
+    "invoice_id":"INV000005",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":5000.0,
+    "amount_pkr":5000.0
+  },
+  {
+    "line_id":"LI0000013",
+    "invoice_id":"INV000006",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.35 day(s)",
+    "qty":0.35,
+    "unit_price":35925.7142857143,
+    "amount_pkr":12574.0
+  },
+  {
+    "line_id":"LI0000014",
+    "invoice_id":"INV000007",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 2.84 day(s)",
+    "qty":2.84,
+    "unit_price":14228.5211267606,
+    "amount_pkr":40409.0
+  },
+  {
+    "line_id":"LI0000015",
+    "invoice_id":"INV000007",
+    "charge_type":"Surcharge",
+    "description":"Security Deposit",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000016",
+    "invoice_id":"INV000008",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.31 day(s)",
+    "qty":2.31,
+    "unit_price":66221.2121212121,
+    "amount_pkr":152971.0
+  },
+  {
+    "line_id":"LI0000017",
+    "invoice_id":"INV000008",
+    "charge_type":"Surcharge",
+    "description":"Fuel Surcharge",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000018",
+    "invoice_id":"INV000009",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.3 day(s)",
+    "qty":0.3,
+    "unit_price":73980.0,
+    "amount_pkr":22194.0
+  },
+  {
+    "line_id":"LI0000019",
+    "invoice_id":"INV000009",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000020",
+    "invoice_id":"INV000009",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000021",
+    "invoice_id":"INV000010",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.93 day(s)",
+    "qty":0.93,
+    "unit_price":16733.3333333333,
+    "amount_pkr":15562.0
+  },
+  {
+    "line_id":"LI0000022",
+    "invoice_id":"INV000010",
+    "charge_type":"Surcharge",
+    "description":"Waiting Charges",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000023",
+    "invoice_id":"INV000011",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 1.53 day(s)",
+    "qty":1.53,
+    "unit_price":19700.0,
+    "amount_pkr":30141.0
+  },
+  {
+    "line_id":"LI0000024",
+    "invoice_id":"INV000011",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000025",
+    "invoice_id":"INV000012",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.38 day(s)",
+    "qty":0.38,
+    "unit_price":28486.8421052632,
+    "amount_pkr":10825.0
+  },
+  {
+    "line_id":"LI0000026",
+    "invoice_id":"INV000012",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000027",
+    "invoice_id":"INV000012",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-1662.0,
+    "amount_pkr":-1662.0
+  },
+  {
+    "line_id":"LI0000028",
+    "invoice_id":"INV000013",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.83 day(s)",
+    "qty":0.83,
+    "unit_price":4473.4939759036,
+    "amount_pkr":3713.0
+  },
+  {
+    "line_id":"LI0000029",
+    "invoice_id":"INV000014",
+    "charge_type":"Base Rental Fare",
+    "description":"Event \u2013 1.7 day(s)",
+    "qty":1.7,
+    "unit_price":13694.7058823529,
+    "amount_pkr":23281.0
+  },
+  {
+    "line_id":"LI0000030",
+    "invoice_id":"INV000014",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":2328.0,
+    "amount_pkr":2328.0
+  },
+  {
+    "line_id":"LI0000031",
+    "invoice_id":"INV000015",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.47 day(s)",
+    "qty":0.47,
+    "unit_price":4174.4680851064,
+    "amount_pkr":1962.0
+  },
+  {
+    "line_id":"LI0000032",
+    "invoice_id":"INV000015",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  },
+  {
+    "line_id":"LI0000033",
+    "invoice_id":"INV000016",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.92 day(s)",
+    "qty":0.92,
+    "unit_price":14015.2173913043,
+    "amount_pkr":12894.0
+  },
+  {
+    "line_id":"LI0000034",
+    "invoice_id":"INV000016",
+    "charge_type":"Surcharge",
+    "description":"Fuel Surcharge",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000035",
+    "invoice_id":"INV000017",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.36 day(s)",
+    "qty":0.36,
+    "unit_price":11400.0,
+    "amount_pkr":4104.0
+  },
+  {
+    "line_id":"LI0000036",
+    "invoice_id":"INV000017",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000037",
+    "invoice_id":"INV000017",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":410.0,
+    "amount_pkr":410.0
+  },
+  {
+    "line_id":"LI0000038",
+    "invoice_id":"INV000017",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  },
+  {
+    "line_id":"LI0000039",
+    "invoice_id":"INV000018",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 7.06 day(s)",
+    "qty":7.06,
+    "unit_price":24656.2322946176,
+    "amount_pkr":174073.0
+  },
+  {
+    "line_id":"LI0000040",
+    "invoice_id":"INV000018",
+    "charge_type":"Surcharge",
+    "description":"Extra Hours",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  },
+  {
+    "line_id":"LI0000041",
+    "invoice_id":"INV000019",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.32 day(s)",
+    "qty":0.32,
+    "unit_price":13656.25,
+    "amount_pkr":4370.0
+  },
+  {
+    "line_id":"LI0000042",
+    "invoice_id":"INV000020",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.46 day(s)",
+    "qty":0.46,
+    "unit_price":5806.5217391304,
+    "amount_pkr":2671.0
+  },
+  {
+    "line_id":"LI0000043",
+    "invoice_id":"INV000020",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000044",
+    "invoice_id":"INV000021",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.57 day(s)",
+    "qty":2.57,
+    "unit_price":16567.7042801556,
+    "amount_pkr":42579.0
+  },
+  {
+    "line_id":"LI0000045",
+    "invoice_id":"INV000021",
+    "charge_type":"Surcharge",
+    "description":"Waiting Charges",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000046",
+    "invoice_id":"INV000022",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 2.79 day(s)",
+    "qty":2.79,
+    "unit_price":8325.0896057348,
+    "amount_pkr":23227.0
+  },
+  {
+    "line_id":"LI0000047",
+    "invoice_id":"INV000022",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":2323.0,
+    "amount_pkr":2323.0
+  },
+  {
+    "line_id":"LI0000048",
+    "invoice_id":"INV000023",
+    "charge_type":"Base Rental Fare",
+    "description":"Monthly Contract \u2013 31.99 day(s)",
+    "qty":31.99,
+    "unit_price":2426.9146608315,
+    "amount_pkr":77637.0
+  },
+  {
+    "line_id":"LI0000049",
+    "invoice_id":"INV000023",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":7764.0,
+    "amount_pkr":7764.0
+  },
+  {
+    "line_id":"LI0000050",
+    "invoice_id":"INV000024",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.11 day(s)",
+    "qty":0.11,
+    "unit_price":8381.8181818182,
+    "amount_pkr":922.0
+  },
+  {
+    "line_id":"LI0000051",
+    "invoice_id":"INV000024",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000052",
+    "invoice_id":"INV000025",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.3 day(s)",
+    "qty":0.3,
+    "unit_price":22353.3333333333,
+    "amount_pkr":6706.0
+  },
+  {
+    "line_id":"LI0000053",
+    "invoice_id":"INV000025",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000054",
+    "invoice_id":"INV000026",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.29 day(s)",
+    "qty":0.29,
+    "unit_price":172462.0689655172,
+    "amount_pkr":50014.0
+  },
+  {
+    "line_id":"LI0000055",
+    "invoice_id":"INV000026",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000056",
+    "invoice_id":"INV000026",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-6149.0,
+    "amount_pkr":-6149.0
+  },
+  {
+    "line_id":"LI0000057",
+    "invoice_id":"INV000027",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.12 day(s)",
+    "qty":2.12,
+    "unit_price":19226.8867924528,
+    "amount_pkr":40761.0
+  },
+  {
+    "line_id":"LI0000058",
+    "invoice_id":"INV000028",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 1.96 day(s)",
+    "qty":1.96,
+    "unit_price":6061.2244897959,
+    "amount_pkr":11880.0
+  },
+  {
+    "line_id":"LI0000059",
+    "invoice_id":"INV000028",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000060",
+    "invoice_id":"INV000028",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-810.0,
+    "amount_pkr":-810.0
+  },
+  {
+    "line_id":"LI0000061",
+    "invoice_id":"INV000029",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.55 day(s)",
+    "qty":0.55,
+    "unit_price":13272.7272727273,
+    "amount_pkr":7300.0
+  },
+  {
+    "line_id":"LI0000062",
+    "invoice_id":"INV000030",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.22 day(s)",
+    "qty":0.22,
+    "unit_price":56800.0,
+    "amount_pkr":12496.0
+  },
+  {
+    "line_id":"LI0000063",
+    "invoice_id":"INV000030",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000064",
+    "invoice_id":"INV000031",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.58 day(s)",
+    "qty":0.58,
+    "unit_price":6970.6896551724,
+    "amount_pkr":4043.0
+  },
+  {
+    "line_id":"LI0000065",
+    "invoice_id":"INV000031",
+    "charge_type":"Surcharge",
+    "description":"Fuel Surcharge",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000066",
+    "invoice_id":"INV000031",
+    "charge_type":"Surcharge",
+    "description":"Fuel Surcharge",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000067",
+    "invoice_id":"INV000032",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.54 day(s)",
+    "qty":1.54,
+    "unit_price":7677.9220779221,
+    "amount_pkr":11824.0
+  },
+  {
+    "line_id":"LI0000068",
+    "invoice_id":"INV000032",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":1182.0,
+    "amount_pkr":1182.0
+  },
+  {
+    "line_id":"LI0000069",
+    "invoice_id":"INV000033",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.1 day(s)",
+    "qty":0.1,
+    "unit_price":29800.0,
+    "amount_pkr":2980.0
+  },
+  {
+    "line_id":"LI0000070",
+    "invoice_id":"INV000033",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000071",
+    "invoice_id":"INV000033",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":1000.0,
+    "amount_pkr":1000.0
+  },
+  {
+    "line_id":"LI0000072",
+    "invoice_id":"INV000034",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.65 day(s)",
+    "qty":1.65,
+    "unit_price":20735.1515151515,
+    "amount_pkr":34213.0
+  },
+  {
+    "line_id":"LI0000073",
+    "invoice_id":"INV000034",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000074",
+    "invoice_id":"INV000035",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.72 day(s)",
+    "qty":1.72,
+    "unit_price":21650.5813953488,
+    "amount_pkr":37239.0
+  },
+  {
+    "line_id":"LI0000075",
+    "invoice_id":"INV000036",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.36 day(s)",
+    "qty":0.36,
+    "unit_price":189552.7777777778,
+    "amount_pkr":68239.0
+  },
+  {
+    "line_id":"LI0000076",
+    "invoice_id":"INV000036",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":5000.0,
+    "amount_pkr":5000.0
+  },
+  {
+    "line_id":"LI0000077",
+    "invoice_id":"INV000037",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.19 day(s)",
+    "qty":2.19,
+    "unit_price":18560.2739726027,
+    "amount_pkr":40647.0
+  },
+  {
+    "line_id":"LI0000078",
+    "invoice_id":"INV000037",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000079",
+    "invoice_id":"INV000038",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.33 day(s)",
+    "qty":0.33,
+    "unit_price":163190.9090909091,
+    "amount_pkr":53853.0
+  },
+  {
+    "line_id":"LI0000080",
+    "invoice_id":"INV000038",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000081",
+    "invoice_id":"INV000038",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000082",
+    "invoice_id":"INV000039",
+    "charge_type":"Base Rental Fare",
+    "description":"Event \u2013 1.93 day(s)",
+    "qty":1.93,
+    "unit_price":21083.9378238342,
+    "amount_pkr":40692.0
+  },
+  {
+    "line_id":"LI0000083",
+    "invoice_id":"INV000039",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000084",
+    "invoice_id":"INV000039",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000085",
+    "invoice_id":"INV000040",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 8.86 day(s)",
+    "qty":8.86,
+    "unit_price":16087.8103837472,
+    "amount_pkr":142538.0
+  },
+  {
+    "line_id":"LI0000086",
+    "invoice_id":"INV000041",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.38 day(s)",
+    "qty":0.38,
+    "unit_price":53121.0526315789,
+    "amount_pkr":20186.0
+  },
+  {
+    "line_id":"LI0000087",
+    "invoice_id":"INV000041",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000088",
+    "invoice_id":"INV000042",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.58 day(s)",
+    "qty":2.58,
+    "unit_price":11341.8604651163,
+    "amount_pkr":29262.0
+  },
+  {
+    "line_id":"LI0000089",
+    "invoice_id":"INV000042",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000090",
+    "invoice_id":"INV000042",
+    "charge_type":"Surcharge",
+    "description":"Extra Hours",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000091",
+    "invoice_id":"INV000043",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 4.46 day(s)",
+    "qty":4.46,
+    "unit_price":26700.2242152466,
+    "amount_pkr":119083.0
+  },
+  {
+    "line_id":"LI0000092",
+    "invoice_id":"INV000043",
+    "charge_type":"Surcharge",
+    "description":"Extra Hours",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  },
+  {
+    "line_id":"LI0000093",
+    "invoice_id":"INV000043",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-18951.0,
+    "amount_pkr":-18951.0
+  },
+  {
+    "line_id":"LI0000094",
+    "invoice_id":"INV000044",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.92 day(s)",
+    "qty":0.92,
+    "unit_price":7688.0434782609,
+    "amount_pkr":7073.0
+  },
+  {
+    "line_id":"LI0000095",
+    "invoice_id":"INV000044",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000096",
+    "invoice_id":"INV000045",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.5 day(s)",
+    "qty":0.5,
+    "unit_price":2224.0,
+    "amount_pkr":1112.0
+  },
+  {
+    "line_id":"LI0000097",
+    "invoice_id":"INV000046",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.43 day(s)",
+    "qty":0.43,
+    "unit_price":171846.511627907,
+    "amount_pkr":73894.0
+  },
+  {
+    "line_id":"LI0000098",
+    "invoice_id":"INV000046",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000099",
+    "invoice_id":"INV000047",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.33 day(s)",
+    "qty":0.33,
+    "unit_price":12081.8181818182,
+    "amount_pkr":3987.0
+  },
+  {
+    "line_id":"LI0000100",
+    "invoice_id":"INV000047",
+    "charge_type":"Surcharge",
+    "description":"Fuel Surcharge",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000101",
+    "invoice_id":"INV000048",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 5.56 day(s)",
+    "qty":5.56,
+    "unit_price":20829.4964028777,
+    "amount_pkr":115812.0
+  },
+  {
+    "line_id":"LI0000102",
+    "invoice_id":"INV000048",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000103",
+    "invoice_id":"INV000049",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.81 day(s)",
+    "qty":0.81,
+    "unit_price":43295.0617283951,
+    "amount_pkr":35069.0
+  },
+  {
+    "line_id":"LI0000104",
+    "invoice_id":"INV000049",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":3507.0,
+    "amount_pkr":3507.0
+  },
+  {
+    "line_id":"LI0000105",
+    "invoice_id":"INV000049",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000106",
+    "invoice_id":"INV000050",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.19 day(s)",
+    "qty":0.19,
+    "unit_price":68900.0,
+    "amount_pkr":13091.0
+  },
+  {
+    "line_id":"LI0000107",
+    "invoice_id":"INV000050",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000108",
+    "invoice_id":"INV000051",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 2.19 day(s)",
+    "qty":2.19,
+    "unit_price":16404.1095890411,
+    "amount_pkr":35925.0
+  },
+  {
+    "line_id":"LI0000109",
+    "invoice_id":"INV000051",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-5579.0,
+    "amount_pkr":-5579.0
+  },
+  {
+    "line_id":"LI0000110",
+    "invoice_id":"INV000052",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 6.43 day(s)",
+    "qty":6.43,
+    "unit_price":11321.4618973561,
+    "amount_pkr":72797.0
+  },
+  {
+    "line_id":"LI0000111",
+    "invoice_id":"INV000052",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000112",
+    "invoice_id":"INV000052",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-9003.0,
+    "amount_pkr":-9003.0
+  },
+  {
+    "line_id":"LI0000113",
+    "invoice_id":"INV000053",
+    "charge_type":"Base Rental Fare",
+    "description":"Event \u2013 1.59 day(s)",
+    "qty":1.59,
+    "unit_price":18156.6037735849,
+    "amount_pkr":28869.0
+  },
+  {
+    "line_id":"LI0000114",
+    "invoice_id":"INV000053",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  },
+  {
+    "line_id":"LI0000115",
+    "invoice_id":"INV000053",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-4327.0,
+    "amount_pkr":-4327.0
+  },
+  {
+    "line_id":"LI0000116",
+    "invoice_id":"INV000054",
+    "charge_type":"Base Rental Fare",
+    "description":"Event \u2013 1.41 day(s)",
+    "qty":1.41,
+    "unit_price":20013.475177305,
+    "amount_pkr":28219.0
+  },
+  {
+    "line_id":"LI0000117",
+    "invoice_id":"INV000054",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":2822.0,
+    "amount_pkr":2822.0
+  },
+  {
+    "line_id":"LI0000118",
+    "invoice_id":"INV000055",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.98 day(s)",
+    "qty":0.98,
+    "unit_price":10896.9387755102,
+    "amount_pkr":10679.0
+  },
+  {
+    "line_id":"LI0000119",
+    "invoice_id":"INV000055",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":1068.0,
+    "amount_pkr":1068.0
+  },
+  {
+    "line_id":"LI0000120",
+    "invoice_id":"INV000055",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":1000.0,
+    "amount_pkr":1000.0
+  },
+  {
+    "line_id":"LI0000121",
+    "invoice_id":"INV000055",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-2088.0,
+    "amount_pkr":-2088.0
+  },
+  {
+    "line_id":"LI0000122",
+    "invoice_id":"INV000056",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.89 day(s)",
+    "qty":0.89,
+    "unit_price":20886.5168539326,
+    "amount_pkr":18589.0
+  },
+  {
+    "line_id":"LI0000123",
+    "invoice_id":"INV000057",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.83 day(s)",
+    "qty":0.83,
+    "unit_price":8701.2048192771,
+    "amount_pkr":7222.0
+  },
+  {
+    "line_id":"LI0000124",
+    "invoice_id":"INV000057",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  },
+  {
+    "line_id":"LI0000125",
+    "invoice_id":"INV000058",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.64 day(s)",
+    "qty":0.64,
+    "unit_price":21004.6875,
+    "amount_pkr":13443.0
+  },
+  {
+    "line_id":"LI0000126",
+    "invoice_id":"INV000058",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-1406.0,
+    "amount_pkr":-1406.0
+  },
+  {
+    "line_id":"LI0000127",
+    "invoice_id":"INV000059",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.57 day(s)",
+    "qty":0.57,
+    "unit_price":212636.8421052632,
+    "amount_pkr":121203.0
+  },
+  {
+    "line_id":"LI0000128",
+    "invoice_id":"INV000060",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 1.2 day(s)",
+    "qty":1.2,
+    "unit_price":13494.1666666667,
+    "amount_pkr":16193.0
+  },
+  {
+    "line_id":"LI0000129",
+    "invoice_id":"INV000060",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":1619.0,
+    "amount_pkr":1619.0
+  },
+  {
+    "line_id":"LI0000130",
+    "invoice_id":"INV000060",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000131",
+    "invoice_id":"INV000061",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.37 day(s)",
+    "qty":0.37,
+    "unit_price":8313.5135135135,
+    "amount_pkr":3076.0
+  },
+  {
+    "line_id":"LI0000132",
+    "invoice_id":"INV000061",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000133",
+    "invoice_id":"INV000062",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.34 day(s)",
+    "qty":0.34,
+    "unit_price":38305.8823529412,
+    "amount_pkr":13024.0
+  },
+  {
+    "line_id":"LI0000134",
+    "invoice_id":"INV000062",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000135",
+    "invoice_id":"INV000062",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-853.0,
+    "amount_pkr":-853.0
+  },
+  {
+    "line_id":"LI0000136",
+    "invoice_id":"INV000063",
+    "charge_type":"Base Rental Fare",
+    "description":"Event \u2013 0.86 day(s)",
+    "qty":0.86,
+    "unit_price":23839.5348837209,
+    "amount_pkr":20502.0
+  },
+  {
+    "line_id":"LI0000137",
+    "invoice_id":"INV000063",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000138",
+    "invoice_id":"INV000063",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000139",
+    "invoice_id":"INV000064",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 1.33 day(s)",
+    "qty":1.33,
+    "unit_price":7981.2030075188,
+    "amount_pkr":10615.0
+  },
+  {
+    "line_id":"LI0000140",
+    "invoice_id":"INV000064",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":1062.0,
+    "amount_pkr":1062.0
+  },
+  {
+    "line_id":"LI0000141",
+    "invoice_id":"INV000064",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000142",
+    "invoice_id":"INV000065",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.42 day(s)",
+    "qty":0.42,
+    "unit_price":48809.5238095238,
+    "amount_pkr":20500.0
+  },
+  {
+    "line_id":"LI0000143",
+    "invoice_id":"INV000065",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000144",
+    "invoice_id":"INV000065",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":2050.0,
+    "amount_pkr":2050.0
+  },
+  {
+    "line_id":"LI0000145",
+    "invoice_id":"INV000066",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.75 day(s)",
+    "qty":2.75,
+    "unit_price":2123.6363636364,
+    "amount_pkr":5840.0
+  },
+  {
+    "line_id":"LI0000146",
+    "invoice_id":"INV000066",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":584.0,
+    "amount_pkr":584.0
+  },
+  {
+    "line_id":"LI0000147",
+    "invoice_id":"INV000066",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":1000.0,
+    "amount_pkr":1000.0
+  },
+  {
+    "line_id":"LI0000148",
+    "invoice_id":"INV000067",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.62 day(s)",
+    "qty":0.62,
+    "unit_price":7777.4193548387,
+    "amount_pkr":4822.0
+  },
+  {
+    "line_id":"LI0000149",
+    "invoice_id":"INV000068",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 9.26 day(s)",
+    "qty":9.26,
+    "unit_price":14638.8768898488,
+    "amount_pkr":135556.0
+  },
+  {
+    "line_id":"LI0000150",
+    "invoice_id":"INV000068",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000151",
+    "invoice_id":"INV000069",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.53 day(s)",
+    "qty":1.53,
+    "unit_price":10761.4379084967,
+    "amount_pkr":16465.0
+  },
+  {
+    "line_id":"LI0000152",
+    "invoice_id":"INV000069",
+    "charge_type":"Surcharge",
+    "description":"Extra Hours",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000153",
+    "invoice_id":"INV000069",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000154",
+    "invoice_id":"INV000070",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.56 day(s)",
+    "qty":0.56,
+    "unit_price":7064.2857142857,
+    "amount_pkr":3956.0
+  },
+  {
+    "line_id":"LI0000155",
+    "invoice_id":"INV000071",
+    "charge_type":"Base Rental Fare",
+    "description":"Event \u2013 1.91 day(s)",
+    "qty":1.91,
+    "unit_price":16051.832460733,
+    "amount_pkr":30659.0
+  },
+  {
+    "line_id":"LI0000156",
+    "invoice_id":"INV000072",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.84 day(s)",
+    "qty":0.84,
+    "unit_price":9184.5238095238,
+    "amount_pkr":7715.0
+  },
+  {
+    "line_id":"LI0000157",
+    "invoice_id":"INV000072",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":1000.0,
+    "amount_pkr":1000.0
+  },
+  {
+    "line_id":"LI0000158",
+    "invoice_id":"INV000073",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.45 day(s)",
+    "qty":1.45,
+    "unit_price":23301.3793103448,
+    "amount_pkr":33787.0
+  },
+  {
+    "line_id":"LI0000159",
+    "invoice_id":"INV000074",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 2.69 day(s)",
+    "qty":2.69,
+    "unit_price":16223.4200743494,
+    "amount_pkr":43641.0
+  },
+  {
+    "line_id":"LI0000160",
+    "invoice_id":"INV000074",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-5342.0,
+    "amount_pkr":-5342.0
+  },
+  {
+    "line_id":"LI0000161",
+    "invoice_id":"INV000075",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 4.85 day(s)",
+    "qty":4.85,
+    "unit_price":20474.4329896907,
+    "amount_pkr":99301.0
+  },
+  {
+    "line_id":"LI0000162",
+    "invoice_id":"INV000076",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.11 day(s)",
+    "qty":0.11,
+    "unit_price":89600.0,
+    "amount_pkr":9856.0
+  },
+  {
+    "line_id":"LI0000163",
+    "invoice_id":"INV000076",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000164",
+    "invoice_id":"INV000077",
+    "charge_type":"Base Rental Fare",
+    "description":"Monthly Contract \u2013 30.32 day(s)",
+    "qty":30.32,
+    "unit_price":15167.5131926121,
+    "amount_pkr":459879.0
+  },
+  {
+    "line_id":"LI0000165",
+    "invoice_id":"INV000077",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000166",
+    "invoice_id":"INV000078",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 2.7 day(s)",
+    "qty":2.7,
+    "unit_price":116580.7407407407,
+    "amount_pkr":314768.0
+  },
+  {
+    "line_id":"LI0000167",
+    "invoice_id":"INV000078",
+    "charge_type":"Surcharge",
+    "description":"Fuel Surcharge",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000168",
+    "invoice_id":"INV000079",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.52 day(s)",
+    "qty":2.52,
+    "unit_price":23267.0634920635,
+    "amount_pkr":58633.0
+  },
+  {
+    "line_id":"LI0000169",
+    "invoice_id":"INV000079",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000170",
+    "invoice_id":"INV000080",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.57 day(s)",
+    "qty":0.57,
+    "unit_price":28591.2280701754,
+    "amount_pkr":16297.0
+  },
+  {
+    "line_id":"LI0000171",
+    "invoice_id":"INV000081",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.65 day(s)",
+    "qty":0.65,
+    "unit_price":10901.5384615385,
+    "amount_pkr":7086.0
+  },
+  {
+    "line_id":"LI0000172",
+    "invoice_id":"INV000082",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 1.65 day(s)",
+    "qty":1.65,
+    "unit_price":4867.8787878788,
+    "amount_pkr":8032.0
+  },
+  {
+    "line_id":"LI0000173",
+    "invoice_id":"INV000083",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.25 day(s)",
+    "qty":0.25,
+    "unit_price":302148.0,
+    "amount_pkr":75537.0
+  },
+  {
+    "line_id":"LI0000174",
+    "invoice_id":"INV000083",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000175",
+    "invoice_id":"INV000083",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000176",
+    "invoice_id":"INV000084",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 6.18 day(s)",
+    "qty":6.18,
+    "unit_price":19907.928802589,
+    "amount_pkr":123031.0
+  },
+  {
+    "line_id":"LI0000177",
+    "invoice_id":"INV000085",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 1.59 day(s)",
+    "qty":1.59,
+    "unit_price":6247.1698113208,
+    "amount_pkr":9933.0
+  },
+  {
+    "line_id":"LI0000178",
+    "invoice_id":"INV000085",
+    "charge_type":"Surcharge",
+    "description":"Security Deposit",
+    "qty":1.0,
+    "unit_price":5000.0,
+    "amount_pkr":5000.0
+  },
+  {
+    "line_id":"LI0000179",
+    "invoice_id":"INV000086",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.48 day(s)",
+    "qty":0.48,
+    "unit_price":15750.0,
+    "amount_pkr":7560.0
+  },
+  {
+    "line_id":"LI0000180",
+    "invoice_id":"INV000086",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000181",
+    "invoice_id":"INV000086",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":756.0,
+    "amount_pkr":756.0
+  },
+  {
+    "line_id":"LI0000182",
+    "invoice_id":"INV000087",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.44 day(s)",
+    "qty":0.44,
+    "unit_price":6865.9090909091,
+    "amount_pkr":3021.0
+  },
+  {
+    "line_id":"LI0000183",
+    "invoice_id":"INV000087",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000184",
+    "invoice_id":"INV000088",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 1.4 day(s)",
+    "qty":1.4,
+    "unit_price":25265.7142857143,
+    "amount_pkr":35372.0
+  },
+  {
+    "line_id":"LI0000185",
+    "invoice_id":"INV000088",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-8212.0,
+    "amount_pkr":-8212.0
+  },
+  {
+    "line_id":"LI0000186",
+    "invoice_id":"INV000089",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.18 day(s)",
+    "qty":0.18,
+    "unit_price":7127.7777777778,
+    "amount_pkr":1283.0
+  },
+  {
+    "line_id":"LI0000187",
+    "invoice_id":"INV000089",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000188",
+    "invoice_id":"INV000089",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-192.0,
+    "amount_pkr":-192.0
+  },
+  {
+    "line_id":"LI0000189",
+    "invoice_id":"INV000090",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 7.06 day(s)",
+    "qty":7.06,
+    "unit_price":18565.5807365439,
+    "amount_pkr":131073.0
+  },
+  {
+    "line_id":"LI0000190",
+    "invoice_id":"INV000091",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.0 day(s)",
+    "qty":2.0,
+    "unit_price":4393.5,
+    "amount_pkr":8787.0
+  },
+  {
+    "line_id":"LI0000191",
+    "invoice_id":"INV000092",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 6.03 day(s)",
+    "qty":6.03,
+    "unit_price":7822.8855721393,
+    "amount_pkr":47172.0
+  },
+  {
+    "line_id":"LI0000192",
+    "invoice_id":"INV000093",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 2.88 day(s)",
+    "qty":2.88,
+    "unit_price":7677.4305555556,
+    "amount_pkr":22111.0
+  },
+  {
+    "line_id":"LI0000193",
+    "invoice_id":"INV000093",
+    "charge_type":"Surcharge",
+    "description":"Waiting Charges",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  },
+  {
+    "line_id":"LI0000194",
+    "invoice_id":"INV000094",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 5.97 day(s)",
+    "qty":5.97,
+    "unit_price":4444.2211055276,
+    "amount_pkr":26532.0
+  },
+  {
+    "line_id":"LI0000195",
+    "invoice_id":"INV000095",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 3.96 day(s)",
+    "qty":3.96,
+    "unit_price":5862.8787878788,
+    "amount_pkr":23217.0
+  },
+  {
+    "line_id":"LI0000196",
+    "invoice_id":"INV000096",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.11 day(s)",
+    "qty":0.11,
+    "unit_price":1068527.2727272727,
+    "amount_pkr":117538.0
+  },
+  {
+    "line_id":"LI0000197",
+    "invoice_id":"INV000096",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000198",
+    "invoice_id":"INV000097",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.2 day(s)",
+    "qty":0.2,
+    "unit_price":57710.0,
+    "amount_pkr":11542.0
+  },
+  {
+    "line_id":"LI0000199",
+    "invoice_id":"INV000097",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000200",
+    "invoice_id":"INV000097",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  },
+  {
+    "line_id":"LI0000201",
+    "invoice_id":"INV000098",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.1 day(s)",
+    "qty":1.1,
+    "unit_price":14650.9090909091,
+    "amount_pkr":16116.0
+  },
+  {
+    "line_id":"LI0000202",
+    "invoice_id":"INV000098",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":1612.0,
+    "amount_pkr":1612.0
+  },
+  {
+    "line_id":"LI0000203",
+    "invoice_id":"INV000099",
+    "charge_type":"Base Rental Fare",
+    "description":"Monthly Contract \u2013 29.8 day(s)",
+    "qty":29.8,
+    "unit_price":4853.255033557,
+    "amount_pkr":144627.0
+  },
+  {
+    "line_id":"LI0000204",
+    "invoice_id":"INV000100",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.93 day(s)",
+    "qty":0.93,
+    "unit_price":5727.9569892473,
+    "amount_pkr":5327.0
+  },
+  {
+    "line_id":"LI0000205",
+    "invoice_id":"INV000101",
+    "charge_type":"Base Rental Fare",
+    "description":"Event \u2013 1.08 day(s)",
+    "qty":1.08,
+    "unit_price":14078.7037037037,
+    "amount_pkr":15205.0
+  },
+  {
+    "line_id":"LI0000206",
+    "invoice_id":"INV000101",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-1048.0,
+    "amount_pkr":-1048.0
+  },
+  {
+    "line_id":"LI0000207",
+    "invoice_id":"INV000102",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 1.9 day(s)",
+    "qty":1.9,
+    "unit_price":17296.8421052632,
+    "amount_pkr":32864.0
+  },
+  {
+    "line_id":"LI0000208",
+    "invoice_id":"INV000102",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000209",
+    "invoice_id":"INV000102",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000210",
+    "invoice_id":"INV000103",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 3.41 day(s)",
+    "qty":3.41,
+    "unit_price":11464.5161290323,
+    "amount_pkr":39094.0
+  },
+  {
+    "line_id":"LI0000211",
+    "invoice_id":"INV000103",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000212",
+    "invoice_id":"INV000103",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000213",
+    "invoice_id":"INV000103",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-6285.0,
+    "amount_pkr":-6285.0
+  },
+  {
+    "line_id":"LI0000214",
+    "invoice_id":"INV000104",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 4.19 day(s)",
+    "qty":4.19,
+    "unit_price":15889.7374701671,
+    "amount_pkr":66578.0
+  },
+  {
+    "line_id":"LI0000215",
+    "invoice_id":"INV000105",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.59 day(s)",
+    "qty":0.59,
+    "unit_price":39477.9661016949,
+    "amount_pkr":23292.0
+  },
+  {
+    "line_id":"LI0000216",
+    "invoice_id":"INV000105",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":2329.0,
+    "amount_pkr":2329.0
+  },
+  {
+    "line_id":"LI0000217",
+    "invoice_id":"INV000106",
+    "charge_type":"Base Rental Fare",
+    "description":"Event \u2013 1.79 day(s)",
+    "qty":1.79,
+    "unit_price":3965.3631284916,
+    "amount_pkr":7098.0
+  },
+  {
+    "line_id":"LI0000218",
+    "invoice_id":"INV000106",
+    "charge_type":"Surcharge",
+    "description":"Fuel Surcharge",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000219",
+    "invoice_id":"INV000107",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 9.12 day(s)",
+    "qty":9.12,
+    "unit_price":1138.3771929825,
+    "amount_pkr":10382.0
+  },
+  {
+    "line_id":"LI0000220",
+    "invoice_id":"INV000107",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000221",
+    "invoice_id":"INV000108",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 2.55 day(s)",
+    "qty":2.55,
+    "unit_price":16516.0784313725,
+    "amount_pkr":42116.0
+  },
+  {
+    "line_id":"LI0000222",
+    "invoice_id":"INV000108",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000223",
+    "invoice_id":"INV000109",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.24 day(s)",
+    "qty":0.24,
+    "unit_price":234620.8333333333,
+    "amount_pkr":56309.0
+  },
+  {
+    "line_id":"LI0000224",
+    "invoice_id":"INV000109",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000225",
+    "invoice_id":"INV000109",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":5631.0,
+    "amount_pkr":5631.0
+  },
+  {
+    "line_id":"LI0000226",
+    "invoice_id":"INV000110",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 4.93 day(s)",
+    "qty":4.93,
+    "unit_price":4269.3711967546,
+    "amount_pkr":21048.0
+  },
+  {
+    "line_id":"LI0000227",
+    "invoice_id":"INV000111",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 1.79 day(s)",
+    "qty":1.79,
+    "unit_price":10451.9553072626,
+    "amount_pkr":18709.0
+  },
+  {
+    "line_id":"LI0000228",
+    "invoice_id":"INV000111",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000229",
+    "invoice_id":"INV000111",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-1700.0,
+    "amount_pkr":-1700.0
+  },
+  {
+    "line_id":"LI0000230",
+    "invoice_id":"INV000112",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 5.0 day(s)",
+    "qty":5.0,
+    "unit_price":17556.4,
+    "amount_pkr":87782.0
+  },
+  {
+    "line_id":"LI0000231",
+    "invoice_id":"INV000112",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":1000.0,
+    "amount_pkr":1000.0
+  },
+  {
+    "line_id":"LI0000232",
+    "invoice_id":"INV000113",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.49 day(s)",
+    "qty":0.49,
+    "unit_price":10657.1428571429,
+    "amount_pkr":5222.0
+  },
+  {
+    "line_id":"LI0000233",
+    "invoice_id":"INV000113",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000234",
+    "invoice_id":"INV000113",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000235",
+    "invoice_id":"INV000114",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.49 day(s)",
+    "qty":0.49,
+    "unit_price":22306.1224489796,
+    "amount_pkr":10930.0
+  },
+  {
+    "line_id":"LI0000236",
+    "invoice_id":"INV000114",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000237",
+    "invoice_id":"INV000115",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 1.03 day(s)",
+    "qty":1.03,
+    "unit_price":6769.9029126214,
+    "amount_pkr":6973.0
+  },
+  {
+    "line_id":"LI0000238",
+    "invoice_id":"INV000116",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.16 day(s)",
+    "qty":1.16,
+    "unit_price":52684.4827586207,
+    "amount_pkr":61114.0
+  },
+  {
+    "line_id":"LI0000239",
+    "invoice_id":"INV000116",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":1000.0,
+    "amount_pkr":1000.0
+  },
+  {
+    "line_id":"LI0000240",
+    "invoice_id":"INV000116",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000241",
+    "invoice_id":"INV000117",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.87 day(s)",
+    "qty":0.87,
+    "unit_price":31435.632183908,
+    "amount_pkr":27349.0
+  },
+  {
+    "line_id":"LI0000242",
+    "invoice_id":"INV000117",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000243",
+    "invoice_id":"INV000118",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.4 day(s)",
+    "qty":0.4,
+    "unit_price":14490.0,
+    "amount_pkr":5796.0
+  },
+  {
+    "line_id":"LI0000244",
+    "invoice_id":"INV000118",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000245",
+    "invoice_id":"INV000119",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 2.63 day(s)",
+    "qty":2.63,
+    "unit_price":21550.1901140684,
+    "amount_pkr":56677.0
+  },
+  {
+    "line_id":"LI0000246",
+    "invoice_id":"INV000120",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 4.59 day(s)",
+    "qty":4.59,
+    "unit_price":8349.6732026144,
+    "amount_pkr":38325.0
+  },
+  {
+    "line_id":"LI0000247",
+    "invoice_id":"INV000120",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000248",
+    "invoice_id":"INV000120",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000249",
+    "invoice_id":"INV000120",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-3169.0,
+    "amount_pkr":-3169.0
+  },
+  {
+    "line_id":"LI0000250",
+    "invoice_id":"INV000121",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 3.93 day(s)",
+    "qty":3.93,
+    "unit_price":6413.7404580153,
+    "amount_pkr":25206.0
+  },
+  {
+    "line_id":"LI0000251",
+    "invoice_id":"INV000121",
+    "charge_type":"Surcharge",
+    "description":"Waiting Charges",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000252",
+    "invoice_id":"INV000122",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.22 day(s)",
+    "qty":0.22,
+    "unit_price":469786.3636363636,
+    "amount_pkr":103353.0
+  },
+  {
+    "line_id":"LI0000253",
+    "invoice_id":"INV000122",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000254",
+    "invoice_id":"INV000122",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":1000.0,
+    "amount_pkr":1000.0
+  },
+  {
+    "line_id":"LI0000255",
+    "invoice_id":"INV000123",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.57 day(s)",
+    "qty":0.57,
+    "unit_price":3826.3157894737,
+    "amount_pkr":2181.0
+  },
+  {
+    "line_id":"LI0000256",
+    "invoice_id":"INV000124",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.19 day(s)",
+    "qty":0.19,
+    "unit_price":31663.1578947368,
+    "amount_pkr":6016.0
+  },
+  {
+    "line_id":"LI0000257",
+    "invoice_id":"INV000124",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000258",
+    "invoice_id":"INV000124",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000259",
+    "invoice_id":"INV000125",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 1.71 day(s)",
+    "qty":1.71,
+    "unit_price":15367.2514619883,
+    "amount_pkr":26278.0
+  },
+  {
+    "line_id":"LI0000260",
+    "invoice_id":"INV000125",
+    "charge_type":"Surcharge",
+    "description":"Waiting Charges",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000261",
+    "invoice_id":"INV000126",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.89 day(s)",
+    "qty":0.89,
+    "unit_price":8553.9325842697,
+    "amount_pkr":7613.0
+  },
+  {
+    "line_id":"LI0000262",
+    "invoice_id":"INV000126",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-391.0,
+    "amount_pkr":-391.0
+  },
+  {
+    "line_id":"LI0000263",
+    "invoice_id":"INV000127",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.79 day(s)",
+    "qty":0.79,
+    "unit_price":2129.1139240506,
+    "amount_pkr":1682.0
+  },
+  {
+    "line_id":"LI0000264",
+    "invoice_id":"INV000127",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000265",
+    "invoice_id":"INV000127",
+    "charge_type":"Surcharge",
+    "description":"Extra Hours",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000266",
+    "invoice_id":"INV000127",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-101.0,
+    "amount_pkr":-101.0
+  },
+  {
+    "line_id":"LI0000267",
+    "invoice_id":"INV000128",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 1.22 day(s)",
+    "qty":1.22,
+    "unit_price":30672.131147541,
+    "amount_pkr":37420.0
+  },
+  {
+    "line_id":"LI0000268",
+    "invoice_id":"INV000128",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":3742.0,
+    "amount_pkr":3742.0
+  },
+  {
+    "line_id":"LI0000269",
+    "invoice_id":"INV000128",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-5730.0,
+    "amount_pkr":-5730.0
+  },
+  {
+    "line_id":"LI0000270",
+    "invoice_id":"INV000129",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 8.24 day(s)",
+    "qty":8.24,
+    "unit_price":22445.145631068,
+    "amount_pkr":184948.0
+  },
+  {
+    "line_id":"LI0000271",
+    "invoice_id":"INV000129",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000272",
+    "invoice_id":"INV000130",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 1.64 day(s)",
+    "qty":1.64,
+    "unit_price":36688.4146341463,
+    "amount_pkr":60169.0
+  },
+  {
+    "line_id":"LI0000273",
+    "invoice_id":"INV000131",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.91 day(s)",
+    "qty":0.91,
+    "unit_price":23740.6593406593,
+    "amount_pkr":21604.0
+  },
+  {
+    "line_id":"LI0000274",
+    "invoice_id":"INV000131",
+    "charge_type":"Surcharge",
+    "description":"Fuel Surcharge",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000275",
+    "invoice_id":"INV000131",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-1600.0,
+    "amount_pkr":-1600.0
+  },
+  {
+    "line_id":"LI0000276",
+    "invoice_id":"INV000132",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.79 day(s)",
+    "qty":0.79,
+    "unit_price":11331.6455696203,
+    "amount_pkr":8952.0
+  },
+  {
+    "line_id":"LI0000277",
+    "invoice_id":"INV000132",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":1000.0,
+    "amount_pkr":1000.0
+  },
+  {
+    "line_id":"LI0000278",
+    "invoice_id":"INV000133",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.9 day(s)",
+    "qty":0.9,
+    "unit_price":106631.1111111111,
+    "amount_pkr":95968.0
+  },
+  {
+    "line_id":"LI0000279",
+    "invoice_id":"INV000134",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.95 day(s)",
+    "qty":0.95,
+    "unit_price":59962.1052631579,
+    "amount_pkr":56964.0
+  },
+  {
+    "line_id":"LI0000280",
+    "invoice_id":"INV000135",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.25 day(s)",
+    "qty":0.25,
+    "unit_price":2668.0,
+    "amount_pkr":667.0
+  },
+  {
+    "line_id":"LI0000281",
+    "invoice_id":"INV000135",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000282",
+    "invoice_id":"INV000136",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 2.34 day(s)",
+    "qty":2.34,
+    "unit_price":11076.9230769231,
+    "amount_pkr":25920.0
+  },
+  {
+    "line_id":"LI0000283",
+    "invoice_id":"INV000136",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":2592.0,
+    "amount_pkr":2592.0
+  },
+  {
+    "line_id":"LI0000284",
+    "invoice_id":"INV000137",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.45 day(s)",
+    "qty":0.45,
+    "unit_price":13953.3333333333,
+    "amount_pkr":6279.0
+  },
+  {
+    "line_id":"LI0000285",
+    "invoice_id":"INV000137",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000286",
+    "invoice_id":"INV000138",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.75 day(s)",
+    "qty":2.75,
+    "unit_price":861.4545454545,
+    "amount_pkr":2369.0
+  },
+  {
+    "line_id":"LI0000287",
+    "invoice_id":"INV000138",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000288",
+    "invoice_id":"INV000139",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 4.54 day(s)",
+    "qty":4.54,
+    "unit_price":13927.9735682819,
+    "amount_pkr":63233.0
+  },
+  {
+    "line_id":"LI0000289",
+    "invoice_id":"INV000140",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.62 day(s)",
+    "qty":2.62,
+    "unit_price":10688.5496183206,
+    "amount_pkr":28004.0
+  },
+  {
+    "line_id":"LI0000290",
+    "invoice_id":"INV000140",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000291",
+    "invoice_id":"INV000141",
+    "charge_type":"Base Rental Fare",
+    "description":"Event \u2013 1.03 day(s)",
+    "qty":1.03,
+    "unit_price":14155.3398058252,
+    "amount_pkr":14580.0
+  },
+  {
+    "line_id":"LI0000292",
+    "invoice_id":"INV000141",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000293",
+    "invoice_id":"INV000142",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.51 day(s)",
+    "qty":2.51,
+    "unit_price":25421.1155378486,
+    "amount_pkr":63807.0
+  },
+  {
+    "line_id":"LI0000294",
+    "invoice_id":"INV000143",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 2.85 day(s)",
+    "qty":2.85,
+    "unit_price":6442.1052631579,
+    "amount_pkr":18360.0
+  },
+  {
+    "line_id":"LI0000295",
+    "invoice_id":"INV000144",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.59 day(s)",
+    "qty":0.59,
+    "unit_price":8654.2372881356,
+    "amount_pkr":5106.0
+  },
+  {
+    "line_id":"LI0000296",
+    "invoice_id":"INV000145",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 8.48 day(s)",
+    "qty":8.48,
+    "unit_price":7331.25,
+    "amount_pkr":62169.0
+  },
+  {
+    "line_id":"LI0000297",
+    "invoice_id":"INV000145",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":6217.0,
+    "amount_pkr":6217.0
+  },
+  {
+    "line_id":"LI0000298",
+    "invoice_id":"INV000145",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":5000.0,
+    "amount_pkr":5000.0
+  },
+  {
+    "line_id":"LI0000299",
+    "invoice_id":"INV000146",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.45 day(s)",
+    "qty":0.45,
+    "unit_price":20857.7777777778,
+    "amount_pkr":9386.0
+  },
+  {
+    "line_id":"LI0000300",
+    "invoice_id":"INV000146",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000301",
+    "invoice_id":"INV000147",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.76 day(s)",
+    "qty":0.76,
+    "unit_price":27855.2631578947,
+    "amount_pkr":21170.0
+  },
+  {
+    "line_id":"LI0000302",
+    "invoice_id":"INV000147",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000303",
+    "invoice_id":"INV000147",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-1222.0,
+    "amount_pkr":-1222.0
+  },
+  {
+    "line_id":"LI0000304",
+    "invoice_id":"INV000148",
+    "charge_type":"Base Rental Fare",
+    "description":"Monthly Contract \u2013 29.97 day(s)",
+    "qty":29.97,
+    "unit_price":4244.1441441441,
+    "amount_pkr":127197.0
+  },
+  {
+    "line_id":"LI0000305",
+    "invoice_id":"INV000148",
+    "charge_type":"Surcharge",
+    "description":"Fuel Surcharge",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000306",
+    "invoice_id":"INV000149",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.23 day(s)",
+    "qty":0.23,
+    "unit_price":10295.652173913,
+    "amount_pkr":2368.0
+  },
+  {
+    "line_id":"LI0000307",
+    "invoice_id":"INV000149",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000308",
+    "invoice_id":"INV000149",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-235.0,
+    "amount_pkr":-235.0
+  },
+  {
+    "line_id":"LI0000309",
+    "invoice_id":"INV000150",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.26 day(s)",
+    "qty":0.26,
+    "unit_price":299657.6923076923,
+    "amount_pkr":77911.0
+  },
+  {
+    "line_id":"LI0000310",
+    "invoice_id":"INV000150",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000311",
+    "invoice_id":"INV000150",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":7791.0,
+    "amount_pkr":7791.0
+  },
+  {
+    "line_id":"LI0000312",
+    "invoice_id":"INV000150",
+    "charge_type":"Surcharge",
+    "description":"Waiting Charges",
+    "qty":1.0,
+    "unit_price":1000.0,
+    "amount_pkr":1000.0
+  },
+  {
+    "line_id":"LI0000313",
+    "invoice_id":"INV000150",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000314",
+    "invoice_id":"INV000151",
+    "charge_type":"Base Rental Fare",
+    "description":"Monthly Contract \u2013 32.08 day(s)",
+    "qty":32.08,
+    "unit_price":3053.7718204489,
+    "amount_pkr":97965.0
+  },
+  {
+    "line_id":"LI0000315",
+    "invoice_id":"INV000151",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000316",
+    "invoice_id":"INV000152",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.22 day(s)",
+    "qty":1.22,
+    "unit_price":48800.0,
+    "amount_pkr":59536.0
+  },
+  {
+    "line_id":"LI0000317",
+    "invoice_id":"INV000153",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.89 day(s)",
+    "qty":1.89,
+    "unit_price":11934.9206349206,
+    "amount_pkr":22557.0
+  },
+  {
+    "line_id":"LI0000318",
+    "invoice_id":"INV000154",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.89 day(s)",
+    "qty":0.89,
+    "unit_price":32987.6404494382,
+    "amount_pkr":29359.0
+  },
+  {
+    "line_id":"LI0000319",
+    "invoice_id":"INV000154",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000320",
+    "invoice_id":"INV000154",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-4993.0,
+    "amount_pkr":-4993.0
+  },
+  {
+    "line_id":"LI0000321",
+    "invoice_id":"INV000155",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.98 day(s)",
+    "qty":0.98,
+    "unit_price":115493.8775510204,
+    "amount_pkr":113184.0
+  },
+  {
+    "line_id":"LI0000322",
+    "invoice_id":"INV000155",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  },
+  {
+    "line_id":"LI0000323",
+    "invoice_id":"INV000156",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 1.78 day(s)",
+    "qty":1.78,
+    "unit_price":7250.0,
+    "amount_pkr":12905.0
+  },
+  {
+    "line_id":"LI0000324",
+    "invoice_id":"INV000156",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":1290.0,
+    "amount_pkr":1290.0
+  },
+  {
+    "line_id":"LI0000325",
+    "invoice_id":"INV000157",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 2.21 day(s)",
+    "qty":2.21,
+    "unit_price":6370.1357466063,
+    "amount_pkr":14078.0
+  },
+  {
+    "line_id":"LI0000326",
+    "invoice_id":"INV000158",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.88 day(s)",
+    "qty":0.88,
+    "unit_price":50573.8636363636,
+    "amount_pkr":44505.0
+  },
+  {
+    "line_id":"LI0000327",
+    "invoice_id":"INV000159",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.13 day(s)",
+    "qty":0.13,
+    "unit_price":21207.6923076923,
+    "amount_pkr":2757.0
+  },
+  {
+    "line_id":"LI0000328",
+    "invoice_id":"INV000159",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000329",
+    "invoice_id":"INV000160",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 4.28 day(s)",
+    "qty":4.28,
+    "unit_price":18175.9345794393,
+    "amount_pkr":77793.0
+  },
+  {
+    "line_id":"LI0000330",
+    "invoice_id":"INV000161",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.83 day(s)",
+    "qty":0.83,
+    "unit_price":39863.8554216867,
+    "amount_pkr":33087.0
+  },
+  {
+    "line_id":"LI0000331",
+    "invoice_id":"INV000161",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000332",
+    "invoice_id":"INV000162",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.1 day(s)",
+    "qty":0.1,
+    "unit_price":29610.0,
+    "amount_pkr":2961.0
+  },
+  {
+    "line_id":"LI0000333",
+    "invoice_id":"INV000162",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000334",
+    "invoice_id":"INV000163",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.41 day(s)",
+    "qty":1.41,
+    "unit_price":12303.5460992908,
+    "amount_pkr":17348.0
+  },
+  {
+    "line_id":"LI0000335",
+    "invoice_id":"INV000163",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":1735.0,
+    "amount_pkr":1735.0
+  },
+  {
+    "line_id":"LI0000336",
+    "invoice_id":"INV000163",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000337",
+    "invoice_id":"INV000164",
+    "charge_type":"Base Rental Fare",
+    "description":"Monthly Contract \u2013 31.41 day(s)",
+    "qty":31.41,
+    "unit_price":5053.7726838586,
+    "amount_pkr":158739.0
+  },
+  {
+    "line_id":"LI0000338",
+    "invoice_id":"INV000165",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.4 day(s)",
+    "qty":0.4,
+    "unit_price":7717.5,
+    "amount_pkr":3087.0
+  },
+  {
+    "line_id":"LI0000339",
+    "invoice_id":"INV000165",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000340",
+    "invoice_id":"INV000165",
+    "charge_type":"Surcharge",
+    "description":"Extra Hours",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  },
+  {
+    "line_id":"LI0000341",
+    "invoice_id":"INV000166",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.28 day(s)",
+    "qty":0.28,
+    "unit_price":43296.4285714286,
+    "amount_pkr":12123.0
+  },
+  {
+    "line_id":"LI0000342",
+    "invoice_id":"INV000166",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000343",
+    "invoice_id":"INV000166",
+    "charge_type":"Surcharge",
+    "description":"Fuel Surcharge",
+    "qty":1.0,
+    "unit_price":5000.0,
+    "amount_pkr":5000.0
+  },
+  {
+    "line_id":"LI0000344",
+    "invoice_id":"INV000167",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.33 day(s)",
+    "qty":0.33,
+    "unit_price":106709.0909090909,
+    "amount_pkr":35214.0
+  },
+  {
+    "line_id":"LI0000345",
+    "invoice_id":"INV000167",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000346",
+    "invoice_id":"INV000168",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.3 day(s)",
+    "qty":2.3,
+    "unit_price":6506.0869565217,
+    "amount_pkr":14964.0
+  },
+  {
+    "line_id":"LI0000347",
+    "invoice_id":"INV000168",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-1733.0,
+    "amount_pkr":-1733.0
+  },
+  {
+    "line_id":"LI0000348",
+    "invoice_id":"INV000169",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 1.58 day(s)",
+    "qty":1.58,
+    "unit_price":23233.5443037975,
+    "amount_pkr":36709.0
+  },
+  {
+    "line_id":"LI0000349",
+    "invoice_id":"INV000170",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 1.61 day(s)",
+    "qty":1.61,
+    "unit_price":34951.5527950311,
+    "amount_pkr":56272.0
+  },
+  {
+    "line_id":"LI0000350",
+    "invoice_id":"INV000170",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000351",
+    "invoice_id":"INV000170",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-13751.0,
+    "amount_pkr":-13751.0
+  },
+  {
+    "line_id":"LI0000352",
+    "invoice_id":"INV000171",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.42 day(s)",
+    "qty":0.42,
+    "unit_price":8716.6666666667,
+    "amount_pkr":3661.0
+  },
+  {
+    "line_id":"LI0000353",
+    "invoice_id":"INV000171",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000354",
+    "invoice_id":"INV000171",
+    "charge_type":"Surcharge",
+    "description":"Waiting Charges",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  },
+  {
+    "line_id":"LI0000355",
+    "invoice_id":"INV000171",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000356",
+    "invoice_id":"INV000171",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-266.0,
+    "amount_pkr":-266.0
+  },
+  {
+    "line_id":"LI0000357",
+    "invoice_id":"INV000172",
+    "charge_type":"Base Rental Fare",
+    "description":"Event \u2013 1.59 day(s)",
+    "qty":1.59,
+    "unit_price":5806.9182389937,
+    "amount_pkr":9233.0
+  },
+  {
+    "line_id":"LI0000358",
+    "invoice_id":"INV000173",
+    "charge_type":"Base Rental Fare",
+    "description":"Monthly Contract \u2013 30.96 day(s)",
+    "qty":30.96,
+    "unit_price":7611.1434108527,
+    "amount_pkr":235641.0
+  },
+  {
+    "line_id":"LI0000359",
+    "invoice_id":"INV000173",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000360",
+    "invoice_id":"INV000174",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 5.01 day(s)",
+    "qty":5.01,
+    "unit_price":1326.9461077844,
+    "amount_pkr":6648.0
+  },
+  {
+    "line_id":"LI0000361",
+    "invoice_id":"INV000174",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":665.0,
+    "amount_pkr":665.0
+  },
+  {
+    "line_id":"LI0000362",
+    "invoice_id":"INV000174",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000363",
+    "invoice_id":"INV000175",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.3 day(s)",
+    "qty":0.3,
+    "unit_price":20493.3333333333,
+    "amount_pkr":6148.0
+  },
+  {
+    "line_id":"LI0000364",
+    "invoice_id":"INV000175",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000365",
+    "invoice_id":"INV000176",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.37 day(s)",
+    "qty":0.37,
+    "unit_price":93205.4054054054,
+    "amount_pkr":34486.0
+  },
+  {
+    "line_id":"LI0000366",
+    "invoice_id":"INV000176",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000367",
+    "invoice_id":"INV000176",
+    "charge_type":"Surcharge",
+    "description":"Security Deposit",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000368",
+    "invoice_id":"INV000177",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.81 day(s)",
+    "qty":1.81,
+    "unit_price":8358.0110497238,
+    "amount_pkr":15128.0
+  },
+  {
+    "line_id":"LI0000369",
+    "invoice_id":"INV000178",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 6.85 day(s)",
+    "qty":6.85,
+    "unit_price":15909.7810218978,
+    "amount_pkr":108982.0
+  },
+  {
+    "line_id":"LI0000370",
+    "invoice_id":"INV000179",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.34 day(s)",
+    "qty":0.34,
+    "unit_price":24867.6470588235,
+    "amount_pkr":8455.0
+  },
+  {
+    "line_id":"LI0000371",
+    "invoice_id":"INV000179",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000372",
+    "invoice_id":"INV000179",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":846.0,
+    "amount_pkr":846.0
+  },
+  {
+    "line_id":"LI0000373",
+    "invoice_id":"INV000179",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000374",
+    "invoice_id":"INV000179",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000375",
+    "invoice_id":"INV000179",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-1248.0,
+    "amount_pkr":-1248.0
+  },
+  {
+    "line_id":"LI0000376",
+    "invoice_id":"INV000180",
+    "charge_type":"Base Rental Fare",
+    "description":"Monthly Contract \u2013 31.42 day(s)",
+    "qty":31.42,
+    "unit_price":11693.0299172502,
+    "amount_pkr":367395.0
+  },
+  {
+    "line_id":"LI0000377",
+    "invoice_id":"INV000181",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.48 day(s)",
+    "qty":0.48,
+    "unit_price":8977.0833333333,
+    "amount_pkr":4309.0
+  },
+  {
+    "line_id":"LI0000378",
+    "invoice_id":"INV000182",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.34 day(s)",
+    "qty":0.34,
+    "unit_price":60397.0588235294,
+    "amount_pkr":20535.0
+  },
+  {
+    "line_id":"LI0000379",
+    "invoice_id":"INV000182",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000380",
+    "invoice_id":"INV000183",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.48 day(s)",
+    "qty":0.48,
+    "unit_price":23747.9166666667,
+    "amount_pkr":11399.0
+  },
+  {
+    "line_id":"LI0000381",
+    "invoice_id":"INV000184",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 1.37 day(s)",
+    "qty":1.37,
+    "unit_price":541.6058394161,
+    "amount_pkr":742.0
+  },
+  {
+    "line_id":"LI0000382",
+    "invoice_id":"INV000185",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 8.34 day(s)",
+    "qty":8.34,
+    "unit_price":28590.8872901679,
+    "amount_pkr":238448.0
+  },
+  {
+    "line_id":"LI0000383",
+    "invoice_id":"INV000186",
+    "charge_type":"Base Rental Fare",
+    "description":"Monthly Contract \u2013 31.88 day(s)",
+    "qty":31.88,
+    "unit_price":22588.8331242158,
+    "amount_pkr":720132.0
+  },
+  {
+    "line_id":"LI0000384",
+    "invoice_id":"INV000186",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000385",
+    "invoice_id":"INV000187",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.59 day(s)",
+    "qty":0.59,
+    "unit_price":2183.0508474576,
+    "amount_pkr":1288.0
+  },
+  {
+    "line_id":"LI0000386",
+    "invoice_id":"INV000187",
+    "charge_type":"Surcharge",
+    "description":"Security Deposit",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  },
+  {
+    "line_id":"LI0000387",
+    "invoice_id":"INV000188",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.36 day(s)",
+    "qty":0.36,
+    "unit_price":74611.1111111111,
+    "amount_pkr":26860.0
+  },
+  {
+    "line_id":"LI0000388",
+    "invoice_id":"INV000188",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000389",
+    "invoice_id":"INV000188",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":2686.0,
+    "amount_pkr":2686.0
+  },
+  {
+    "line_id":"LI0000390",
+    "invoice_id":"INV000189",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.57 day(s)",
+    "qty":0.57,
+    "unit_price":8492.9824561404,
+    "amount_pkr":4841.0
+  },
+  {
+    "line_id":"LI0000391",
+    "invoice_id":"INV000189",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":5000.0,
+    "amount_pkr":5000.0
+  },
+  {
+    "line_id":"LI0000392",
+    "invoice_id":"INV000190",
+    "charge_type":"Base Rental Fare",
+    "description":"Monthly Contract \u2013 28.18 day(s)",
+    "qty":28.18,
+    "unit_price":15814.8332150461,
+    "amount_pkr":445662.0
+  },
+  {
+    "line_id":"LI0000393",
+    "invoice_id":"INV000190",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":44566.0,
+    "amount_pkr":44566.0
+  },
+  {
+    "line_id":"LI0000394",
+    "invoice_id":"INV000191",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 2.1 day(s)",
+    "qty":2.1,
+    "unit_price":25953.8095238095,
+    "amount_pkr":54503.0
+  },
+  {
+    "line_id":"LI0000395",
+    "invoice_id":"INV000192",
+    "charge_type":"Base Rental Fare",
+    "description":"Monthly Contract \u2013 31.81 day(s)",
+    "qty":31.81,
+    "unit_price":7208.3935869224,
+    "amount_pkr":229299.0
+  },
+  {
+    "line_id":"LI0000396",
+    "invoice_id":"INV000192",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":22930.0,
+    "amount_pkr":22930.0
+  },
+  {
+    "line_id":"LI0000397",
+    "invoice_id":"INV000193",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.18 day(s)",
+    "qty":0.18,
+    "unit_price":291366.6666666667,
+    "amount_pkr":52446.0
+  },
+  {
+    "line_id":"LI0000398",
+    "invoice_id":"INV000193",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000399",
+    "invoice_id":"INV000193",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":5000.0,
+    "amount_pkr":5000.0
+  },
+  {
+    "line_id":"LI0000400",
+    "invoice_id":"INV000194",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.27 day(s)",
+    "qty":2.27,
+    "unit_price":39805.2863436123,
+    "amount_pkr":90358.0
+  },
+  {
+    "line_id":"LI0000401",
+    "invoice_id":"INV000195",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.13 day(s)",
+    "qty":0.13,
+    "unit_price":43161.5384615385,
+    "amount_pkr":5611.0
+  },
+  {
+    "line_id":"LI0000402",
+    "invoice_id":"INV000195",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000403",
+    "invoice_id":"INV000195",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000404",
+    "invoice_id":"INV000195",
+    "charge_type":"Surcharge",
+    "description":"Outstation Surcharge",
+    "qty":1.0,
+    "unit_price":2500.0,
+    "amount_pkr":2500.0
+  },
+  {
+    "line_id":"LI0000405",
+    "invoice_id":"INV000195",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-1152.0,
+    "amount_pkr":-1152.0
+  },
+  {
+    "line_id":"LI0000406",
+    "invoice_id":"INV000196",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.61 day(s)",
+    "qty":2.61,
+    "unit_price":179270.1149425287,
+    "amount_pkr":467895.0
+  },
+  {
+    "line_id":"LI0000407",
+    "invoice_id":"INV000196",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-106238.0,
+    "amount_pkr":-106238.0
+  },
+  {
+    "line_id":"LI0000408",
+    "invoice_id":"INV000197",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.4 day(s)",
+    "qty":0.4,
+    "unit_price":6165.0,
+    "amount_pkr":2466.0
+  },
+  {
+    "line_id":"LI0000409",
+    "invoice_id":"INV000197",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000410",
+    "invoice_id":"INV000198",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.44 day(s)",
+    "qty":0.44,
+    "unit_price":229034.0909090909,
+    "amount_pkr":100775.0
+  },
+  {
+    "line_id":"LI0000411",
+    "invoice_id":"INV000198",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000412",
+    "invoice_id":"INV000198",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000413",
+    "invoice_id":"INV000199",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.27 day(s)",
+    "qty":0.27,
+    "unit_price":12292.5925925926,
+    "amount_pkr":3319.0
+  },
+  {
+    "line_id":"LI0000414",
+    "invoice_id":"INV000199",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000415",
+    "invoice_id":"INV000200",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.41 day(s)",
+    "qty":0.41,
+    "unit_price":48531.7073170732,
+    "amount_pkr":19898.0
+  },
+  {
+    "line_id":"LI0000416",
+    "invoice_id":"INV000200",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000417",
+    "invoice_id":"INV000200",
+    "charge_type":"Surcharge",
+    "description":"Fuel Surcharge",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000418",
+    "invoice_id":"INV000200",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000419",
+    "invoice_id":"INV000200",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-1302.0,
+    "amount_pkr":-1302.0
+  },
+  {
+    "line_id":"LI0000420",
+    "invoice_id":"INV000201",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.97 day(s)",
+    "qty":2.97,
+    "unit_price":16886.8686868687,
+    "amount_pkr":50154.0
+  },
+  {
+    "line_id":"LI0000421",
+    "invoice_id":"INV000201",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":5000.0,
+    "amount_pkr":5000.0
+  },
+  {
+    "line_id":"LI0000422",
+    "invoice_id":"INV000201",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000423",
+    "invoice_id":"INV000201",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-2986.0,
+    "amount_pkr":-2986.0
+  },
+  {
+    "line_id":"LI0000424",
+    "invoice_id":"INV000202",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.39 day(s)",
+    "qty":2.39,
+    "unit_price":18590.3765690377,
+    "amount_pkr":44431.0
+  },
+  {
+    "line_id":"LI0000425",
+    "invoice_id":"INV000202",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":5000.0,
+    "amount_pkr":5000.0
+  },
+  {
+    "line_id":"LI0000426",
+    "invoice_id":"INV000203",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 6.39 day(s)",
+    "qty":6.39,
+    "unit_price":30648.200312989,
+    "amount_pkr":195842.0
+  },
+  {
+    "line_id":"LI0000427",
+    "invoice_id":"INV000203",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":19584.0,
+    "amount_pkr":19584.0
+  },
+  {
+    "line_id":"LI0000428",
+    "invoice_id":"INV000204",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.57 day(s)",
+    "qty":0.57,
+    "unit_price":35977.1929824561,
+    "amount_pkr":20507.0
+  },
+  {
+    "line_id":"LI0000429",
+    "invoice_id":"INV000205",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 2.36 day(s)",
+    "qty":2.36,
+    "unit_price":20691.1016949153,
+    "amount_pkr":48831.0
+  },
+  {
+    "line_id":"LI0000430",
+    "invoice_id":"INV000206",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.37 day(s)",
+    "qty":0.37,
+    "unit_price":12686.4864864865,
+    "amount_pkr":4694.0
+  },
+  {
+    "line_id":"LI0000431",
+    "invoice_id":"INV000207",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.64 day(s)",
+    "qty":0.64,
+    "unit_price":17171.875,
+    "amount_pkr":10990.0
+  },
+  {
+    "line_id":"LI0000432",
+    "invoice_id":"INV000208",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.55 day(s)",
+    "qty":2.55,
+    "unit_price":19413.7254901961,
+    "amount_pkr":49505.0
+  },
+  {
+    "line_id":"LI0000433",
+    "invoice_id":"INV000208",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000434",
+    "invoice_id":"INV000209",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.34 day(s)",
+    "qty":2.34,
+    "unit_price":22675.641025641,
+    "amount_pkr":53061.0
+  },
+  {
+    "line_id":"LI0000435",
+    "invoice_id":"INV000209",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-3809.0,
+    "amount_pkr":-3809.0
+  },
+  {
+    "line_id":"LI0000436",
+    "invoice_id":"INV000210",
+    "charge_type":"Base Rental Fare",
+    "description":"Event \u2013 1.58 day(s)",
+    "qty":1.58,
+    "unit_price":32277.2151898734,
+    "amount_pkr":50998.0
+  },
+  {
+    "line_id":"LI0000437",
+    "invoice_id":"INV000211",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.26 day(s)",
+    "qty":2.26,
+    "unit_price":39385.3982300885,
+    "amount_pkr":89011.0
+  },
+  {
+    "line_id":"LI0000438",
+    "invoice_id":"INV000211",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":8901.0,
+    "amount_pkr":8901.0
+  },
+  {
+    "line_id":"LI0000439",
+    "invoice_id":"INV000211",
+    "charge_type":"Surcharge",
+    "description":"Waiting Charges",
+    "qty":1.0,
+    "unit_price":1000.0,
+    "amount_pkr":1000.0
+  },
+  {
+    "line_id":"LI0000440",
+    "invoice_id":"INV000211",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":5000.0,
+    "amount_pkr":5000.0
+  },
+  {
+    "line_id":"LI0000441",
+    "invoice_id":"INV000212",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 6.82 day(s)",
+    "qty":6.82,
+    "unit_price":3233.724340176,
+    "amount_pkr":22054.0
+  },
+  {
+    "line_id":"LI0000442",
+    "invoice_id":"INV000213",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 2.08 day(s)",
+    "qty":2.08,
+    "unit_price":27625.0,
+    "amount_pkr":57460.0
+  },
+  {
+    "line_id":"LI0000443",
+    "invoice_id":"INV000214",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.35 day(s)",
+    "qty":1.35,
+    "unit_price":789.6296296296,
+    "amount_pkr":1066.0
+  },
+  {
+    "line_id":"LI0000444",
+    "invoice_id":"INV000214",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":107.0,
+    "amount_pkr":107.0
+  },
+  {
+    "line_id":"LI0000445",
+    "invoice_id":"INV000214",
+    "charge_type":"Surcharge",
+    "description":"Extra Hours",
+    "qty":1.0,
+    "unit_price":1000.0,
+    "amount_pkr":1000.0
+  },
+  {
+    "line_id":"LI0000446",
+    "invoice_id":"INV000215",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.27 day(s)",
+    "qty":0.27,
+    "unit_price":29540.7407407407,
+    "amount_pkr":7976.0
+  },
+  {
+    "line_id":"LI0000447",
+    "invoice_id":"INV000215",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":3500.0,
+    "amount_pkr":3500.0
+  },
+  {
+    "line_id":"LI0000448",
+    "invoice_id":"INV000215",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-1324.0,
+    "amount_pkr":-1324.0
+  },
+  {
+    "line_id":"LI0000449",
+    "invoice_id":"INV000216",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.32 day(s)",
+    "qty":0.32,
+    "unit_price":31631.25,
+    "amount_pkr":10122.0
+  },
+  {
+    "line_id":"LI0000450",
+    "invoice_id":"INV000216",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4000.0,
+    "amount_pkr":4000.0
+  },
+  {
+    "line_id":"LI0000451",
+    "invoice_id":"INV000216",
+    "charge_type":"Surcharge",
+    "description":"Fuel Surcharge",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000452",
+    "invoice_id":"INV000216",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-1057.0,
+    "amount_pkr":-1057.0
+  },
+  {
+    "line_id":"LI0000453",
+    "invoice_id":"INV000217",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 4.76 day(s)",
+    "qty":4.76,
+    "unit_price":44710.7142857143,
+    "amount_pkr":212823.0
+  },
+  {
+    "line_id":"LI0000454",
+    "invoice_id":"INV000217",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":21282.0,
+    "amount_pkr":21282.0
+  },
+  {
+    "line_id":"LI0000455",
+    "invoice_id":"INV000218",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.66 day(s)",
+    "qty":0.66,
+    "unit_price":6801.5151515152,
+    "amount_pkr":4489.0
+  },
+  {
+    "line_id":"LI0000456",
+    "invoice_id":"INV000218",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":449.0,
+    "amount_pkr":449.0
+  },
+  {
+    "line_id":"LI0000457",
+    "invoice_id":"INV000218",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000458",
+    "invoice_id":"INV000219",
+    "charge_type":"Base Rental Fare",
+    "description":"Corporate \u2013 6.87 day(s)",
+    "qty":6.87,
+    "unit_price":29831.2954876274,
+    "amount_pkr":204941.0
+  },
+  {
+    "line_id":"LI0000459",
+    "invoice_id":"INV000219",
+    "charge_type":"Surcharge",
+    "description":"Extra Hours",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  },
+  {
+    "line_id":"LI0000460",
+    "invoice_id":"INV000219",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-10373.0,
+    "amount_pkr":-10373.0
+  },
+  {
+    "line_id":"LI0000461",
+    "invoice_id":"INV000220",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.85 day(s)",
+    "qty":2.85,
+    "unit_price":18585.9649122807,
+    "amount_pkr":52970.0
+  },
+  {
+    "line_id":"LI0000462",
+    "invoice_id":"INV000221",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.96 day(s)",
+    "qty":1.96,
+    "unit_price":13944.8979591837,
+    "amount_pkr":27332.0
+  },
+  {
+    "line_id":"LI0000463",
+    "invoice_id":"INV000221",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":5000.0,
+    "amount_pkr":5000.0
+  },
+  {
+    "line_id":"LI0000464",
+    "invoice_id":"INV000222",
+    "charge_type":"Base Rental Fare",
+    "description":"Airport Transfer \u2013 0.4 day(s)",
+    "qty":0.4,
+    "unit_price":26312.5,
+    "amount_pkr":10525.0
+  },
+  {
+    "line_id":"LI0000465",
+    "invoice_id":"INV000222",
+    "charge_type":"Surcharge",
+    "description":"Airport Pickup\/Drop",
+    "qty":1.0,
+    "unit_price":4500.0,
+    "amount_pkr":4500.0
+  },
+  {
+    "line_id":"LI0000466",
+    "invoice_id":"INV000223",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.95 day(s)",
+    "qty":0.95,
+    "unit_price":17361.0526315789,
+    "amount_pkr":16493.0
+  },
+  {
+    "line_id":"LI0000467",
+    "invoice_id":"INV000223",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":1649.0,
+    "amount_pkr":1649.0
+  },
+  {
+    "line_id":"LI0000468",
+    "invoice_id":"INV000223",
+    "charge_type":"Surcharge",
+    "description":"Peak Season Premium",
+    "qty":1.0,
+    "unit_price":1500.0,
+    "amount_pkr":1500.0
+  },
+  {
+    "line_id":"LI0000469",
+    "invoice_id":"INV000224",
+    "charge_type":"Base Rental Fare",
+    "description":"Tourism \/ Northern Areas \u2013 4.85 day(s)",
+    "qty":4.85,
+    "unit_price":7755.6701030928,
+    "amount_pkr":37615.0
+  },
+  {
+    "line_id":"LI0000470",
+    "invoice_id":"INV000225",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 1.51 day(s)",
+    "qty":1.51,
+    "unit_price":26923.8410596026,
+    "amount_pkr":40655.0
+  },
+  {
+    "line_id":"LI0000471",
+    "invoice_id":"INV000225",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-9276.0,
+    "amount_pkr":-9276.0
+  },
+  {
+    "line_id":"LI0000472",
+    "invoice_id":"INV000226",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.67 day(s)",
+    "qty":0.67,
+    "unit_price":16732.8358208955,
+    "amount_pkr":11211.0
+  },
+  {
+    "line_id":"LI0000473",
+    "invoice_id":"INV000226",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-2765.0,
+    "amount_pkr":-2765.0
+  },
+  {
+    "line_id":"LI0000474",
+    "invoice_id":"INV000227",
+    "charge_type":"Base Rental Fare",
+    "description":"Wedding \u2013 2.35 day(s)",
+    "qty":2.35,
+    "unit_price":18691.0638297872,
+    "amount_pkr":43924.0
+  },
+  {
+    "line_id":"LI0000475",
+    "invoice_id":"INV000227",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000476",
+    "invoice_id":"INV000228",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.19 day(s)",
+    "qty":1.19,
+    "unit_price":13090.756302521,
+    "amount_pkr":15578.0
+  },
+  {
+    "line_id":"LI0000477",
+    "invoice_id":"INV000229",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.61 day(s)",
+    "qty":1.61,
+    "unit_price":19440.3726708075,
+    "amount_pkr":31299.0
+  },
+  {
+    "line_id":"LI0000478",
+    "invoice_id":"INV000229",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":1000.0,
+    "amount_pkr":1000.0
+  },
+  {
+    "line_id":"LI0000479",
+    "invoice_id":"INV000229",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":500.0,
+    "amount_pkr":500.0
+  },
+  {
+    "line_id":"LI0000480",
+    "invoice_id":"INV000230",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.84 day(s)",
+    "qty":2.84,
+    "unit_price":141577.8169014085,
+    "amount_pkr":402081.0
+  },
+  {
+    "line_id":"LI0000481",
+    "invoice_id":"INV000231",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.98 day(s)",
+    "qty":2.98,
+    "unit_price":40031.8791946309,
+    "amount_pkr":119295.0
+  },
+  {
+    "line_id":"LI0000482",
+    "invoice_id":"INV000232",
+    "charge_type":"Base Rental Fare",
+    "description":"Event \u2013 0.82 day(s)",
+    "qty":0.82,
+    "unit_price":22093.9024390244,
+    "amount_pkr":18117.0
+  },
+  {
+    "line_id":"LI0000483",
+    "invoice_id":"INV000232",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":1812.0,
+    "amount_pkr":1812.0
+  },
+  {
+    "line_id":"LI0000484",
+    "invoice_id":"INV000233",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.81 day(s)",
+    "qty":0.81,
+    "unit_price":43429.6296296296,
+    "amount_pkr":35178.0
+  },
+  {
+    "line_id":"LI0000485",
+    "invoice_id":"INV000233",
+    "charge_type":"Surcharge",
+    "description":"Security Deposit",
+    "qty":1.0,
+    "unit_price":1000.0,
+    "amount_pkr":1000.0
+  },
+  {
+    "line_id":"LI0000486",
+    "invoice_id":"INV000234",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.49 day(s)",
+    "qty":0.49,
+    "unit_price":9034.693877551,
+    "amount_pkr":4427.0
+  },
+  {
+    "line_id":"LI0000487",
+    "invoice_id":"INV000234",
+    "charge_type":"Surcharge",
+    "description":"Extra KM",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  },
+  {
+    "line_id":"LI0000488",
+    "invoice_id":"INV000234",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-990.0,
+    "amount_pkr":-990.0
+  },
+  {
+    "line_id":"LI0000489",
+    "invoice_id":"INV000235",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.2 day(s)",
+    "qty":2.2,
+    "unit_price":6090.4545454545,
+    "amount_pkr":13399.0
+  },
+  {
+    "line_id":"LI0000490",
+    "invoice_id":"INV000235",
+    "charge_type":"Discount",
+    "description":"Promotional \/ Loyalty Discount",
+    "qty":1.0,
+    "unit_price":-1663.0,
+    "amount_pkr":-1663.0
+  },
+  {
+    "line_id":"LI0000491",
+    "invoice_id":"INV000236",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.52 day(s)",
+    "qty":0.52,
+    "unit_price":7388.4615384615,
+    "amount_pkr":3842.0
+  },
+  {
+    "line_id":"LI0000492",
+    "invoice_id":"INV000236",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":384.0,
+    "amount_pkr":384.0
+  },
+  {
+    "line_id":"LI0000493",
+    "invoice_id":"INV000237",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 2.65 day(s)",
+    "qty":2.65,
+    "unit_price":38667.5471698113,
+    "amount_pkr":102469.0
+  },
+  {
+    "line_id":"LI0000494",
+    "invoice_id":"INV000238",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.81 day(s)",
+    "qty":0.81,
+    "unit_price":58238.2716049383,
+    "amount_pkr":47173.0
+  },
+  {
+    "line_id":"LI0000495",
+    "invoice_id":"INV000239",
+    "charge_type":"Base Rental Fare",
+    "description":"City Ride \u2013 0.65 day(s)",
+    "qty":0.65,
+    "unit_price":12567.6923076923,
+    "amount_pkr":8169.0
+  },
+  {
+    "line_id":"LI0000496",
+    "invoice_id":"INV000239",
+    "charge_type":"Surcharge",
+    "description":"Toll Charges",
+    "qty":1.0,
+    "unit_price":3000.0,
+    "amount_pkr":3000.0
+  },
+  {
+    "line_id":"LI0000497",
+    "invoice_id":"INV000240",
+    "charge_type":"Base Rental Fare",
+    "description":"Monthly Contract \u2013 33.22 day(s)",
+    "qty":33.22,
+    "unit_price":15426.9717037929,
+    "amount_pkr":512484.0
+  },
+  {
+    "line_id":"LI0000498",
+    "invoice_id":"INV000241",
+    "charge_type":"Base Rental Fare",
+    "description":"Intercity \u2013 1.3 day(s)",
+    "qty":1.3,
+    "unit_price":75656.1538461538,
+    "amount_pkr":98353.0
+  },
+  {
+    "line_id":"LI0000499",
+    "invoice_id":"INV000241",
+    "charge_type":"Surcharge",
+    "description":"Night Surcharge",
+    "qty":1.0,
+    "unit_price":9835.0,
+    "amount_pkr":9835.0
+  },
+  {
+    "line_id":"LI0000500",
+    "invoice_id":"INV000241",
+    "charge_type":"Surcharge",
+    "description":"Fuel Surcharge",
+    "qty":1.0,
+    "unit_price":2000.0,
+    "amount_pkr":2000.0
+  }
+]

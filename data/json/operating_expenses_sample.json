@@ -1,0 +1,4502 @@
+[
+  {
+    "expense_id":"EX0000001",
+    "fleet_id":"FL001",
+    "expense_month":"2022-01-01",
+    "category":"Staff Salaries",
+    "amount_pkr":617767.0,
+    "description":"Staff Salaries for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000002",
+    "fleet_id":"FL001",
+    "expense_month":"2022-01-01",
+    "category":"Driver Salaries",
+    "amount_pkr":553679.0,
+    "description":"Driver Salaries for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000003",
+    "fleet_id":"FL001",
+    "expense_month":"2022-01-01",
+    "category":"Office Rent",
+    "amount_pkr":106178.0,
+    "description":"Office Rent for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000004",
+    "fleet_id":"FL001",
+    "expense_month":"2022-01-01",
+    "category":"Utilities",
+    "amount_pkr":23616.0,
+    "description":"Utilities for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000005",
+    "fleet_id":"FL001",
+    "expense_month":"2022-01-01",
+    "category":"Marketing",
+    "amount_pkr":45654.0,
+    "description":"Marketing for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000006",
+    "fleet_id":"FL001",
+    "expense_month":"2022-01-01",
+    "category":"Insurance Premium",
+    "amount_pkr":66569.0,
+    "description":"Insurance Premium for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000007",
+    "fleet_id":"FL001",
+    "expense_month":"2022-01-01",
+    "category":"Depreciation",
+    "amount_pkr":80573.0,
+    "description":"Depreciation for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000008",
+    "fleet_id":"FL001",
+    "expense_month":"2022-01-01",
+    "category":"Miscellaneous",
+    "amount_pkr":40495.0,
+    "description":"Miscellaneous for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000009",
+    "fleet_id":"FL001",
+    "expense_month":"2022-01-01",
+    "category":"Communication",
+    "amount_pkr":27038.0,
+    "description":"Communication for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000010",
+    "fleet_id":"FL001",
+    "expense_month":"2022-01-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":62797.0,
+    "description":"Parking \/ Garage for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000011",
+    "fleet_id":"FL002",
+    "expense_month":"2022-01-01",
+    "category":"Staff Salaries",
+    "amount_pkr":510865.0,
+    "description":"Staff Salaries for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000012",
+    "fleet_id":"FL002",
+    "expense_month":"2022-01-01",
+    "category":"Driver Salaries",
+    "amount_pkr":826443.0,
+    "description":"Driver Salaries for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000013",
+    "fleet_id":"FL002",
+    "expense_month":"2022-01-01",
+    "category":"Office Rent",
+    "amount_pkr":88032.0,
+    "description":"Office Rent for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000014",
+    "fleet_id":"FL002",
+    "expense_month":"2022-01-01",
+    "category":"Utilities",
+    "amount_pkr":25184.0,
+    "description":"Utilities for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000015",
+    "fleet_id":"FL002",
+    "expense_month":"2022-01-01",
+    "category":"Marketing",
+    "amount_pkr":58628.0,
+    "description":"Marketing for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000016",
+    "fleet_id":"FL002",
+    "expense_month":"2022-01-01",
+    "category":"Insurance Premium",
+    "amount_pkr":89512.0,
+    "description":"Insurance Premium for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000017",
+    "fleet_id":"FL002",
+    "expense_month":"2022-01-01",
+    "category":"Depreciation",
+    "amount_pkr":122941.0,
+    "description":"Depreciation for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000018",
+    "fleet_id":"FL002",
+    "expense_month":"2022-01-01",
+    "category":"Miscellaneous",
+    "amount_pkr":54367.0,
+    "description":"Miscellaneous for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000019",
+    "fleet_id":"FL002",
+    "expense_month":"2022-01-01",
+    "category":"Communication",
+    "amount_pkr":29444.0,
+    "description":"Communication for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000020",
+    "fleet_id":"FL002",
+    "expense_month":"2022-01-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":74548.0,
+    "description":"Parking \/ Garage for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000021",
+    "fleet_id":"FL003",
+    "expense_month":"2022-01-01",
+    "category":"Staff Salaries",
+    "amount_pkr":614648.0,
+    "description":"Staff Salaries for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000022",
+    "fleet_id":"FL003",
+    "expense_month":"2022-01-01",
+    "category":"Driver Salaries",
+    "amount_pkr":881971.0,
+    "description":"Driver Salaries for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000023",
+    "fleet_id":"FL003",
+    "expense_month":"2022-01-01",
+    "category":"Office Rent",
+    "amount_pkr":123381.0,
+    "description":"Office Rent for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000024",
+    "fleet_id":"FL003",
+    "expense_month":"2022-01-01",
+    "category":"Utilities",
+    "amount_pkr":30715.0,
+    "description":"Utilities for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000025",
+    "fleet_id":"FL003",
+    "expense_month":"2022-01-01",
+    "category":"Marketing",
+    "amount_pkr":58990.0,
+    "description":"Marketing for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000026",
+    "fleet_id":"FL003",
+    "expense_month":"2022-01-01",
+    "category":"Insurance Premium",
+    "amount_pkr":86632.0,
+    "description":"Insurance Premium for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000027",
+    "fleet_id":"FL003",
+    "expense_month":"2022-01-01",
+    "category":"Depreciation",
+    "amount_pkr":115461.0,
+    "description":"Depreciation for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000028",
+    "fleet_id":"FL003",
+    "expense_month":"2022-01-01",
+    "category":"Miscellaneous",
+    "amount_pkr":65503.0,
+    "description":"Miscellaneous for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000029",
+    "fleet_id":"FL003",
+    "expense_month":"2022-01-01",
+    "category":"Communication",
+    "amount_pkr":34358.0,
+    "description":"Communication for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000030",
+    "fleet_id":"FL003",
+    "expense_month":"2022-01-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":98661.0,
+    "description":"Parking \/ Garage for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000031",
+    "fleet_id":"FL004",
+    "expense_month":"2022-01-01",
+    "category":"Staff Salaries",
+    "amount_pkr":440673.0,
+    "description":"Staff Salaries for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000032",
+    "fleet_id":"FL004",
+    "expense_month":"2022-01-01",
+    "category":"Driver Salaries",
+    "amount_pkr":938862.0,
+    "description":"Driver Salaries for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000033",
+    "fleet_id":"FL004",
+    "expense_month":"2022-01-01",
+    "category":"Office Rent",
+    "amount_pkr":101958.0,
+    "description":"Office Rent for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000034",
+    "fleet_id":"FL004",
+    "expense_month":"2022-01-01",
+    "category":"Utilities",
+    "amount_pkr":32483.0,
+    "description":"Utilities for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000035",
+    "fleet_id":"FL004",
+    "expense_month":"2022-01-01",
+    "category":"Marketing",
+    "amount_pkr":58278.0,
+    "description":"Marketing for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000036",
+    "fleet_id":"FL004",
+    "expense_month":"2022-01-01",
+    "category":"Insurance Premium",
+    "amount_pkr":73280.0,
+    "description":"Insurance Premium for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000037",
+    "fleet_id":"FL004",
+    "expense_month":"2022-01-01",
+    "category":"Depreciation",
+    "amount_pkr":110097.0,
+    "description":"Depreciation for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000038",
+    "fleet_id":"FL004",
+    "expense_month":"2022-01-01",
+    "category":"Miscellaneous",
+    "amount_pkr":55768.0,
+    "description":"Miscellaneous for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000039",
+    "fleet_id":"FL004",
+    "expense_month":"2022-01-01",
+    "category":"Communication",
+    "amount_pkr":27803.0,
+    "description":"Communication for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000040",
+    "fleet_id":"FL004",
+    "expense_month":"2022-01-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":86914.0,
+    "description":"Parking \/ Garage for January 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000041",
+    "fleet_id":"FL001",
+    "expense_month":"2022-02-01",
+    "category":"Staff Salaries",
+    "amount_pkr":622473.0,
+    "description":"Staff Salaries for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000042",
+    "fleet_id":"FL001",
+    "expense_month":"2022-02-01",
+    "category":"Driver Salaries",
+    "amount_pkr":521279.0,
+    "description":"Driver Salaries for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000043",
+    "fleet_id":"FL001",
+    "expense_month":"2022-02-01",
+    "category":"Office Rent",
+    "amount_pkr":100699.0,
+    "description":"Office Rent for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000044",
+    "fleet_id":"FL001",
+    "expense_month":"2022-02-01",
+    "category":"Utilities",
+    "amount_pkr":19517.0,
+    "description":"Utilities for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000045",
+    "fleet_id":"FL001",
+    "expense_month":"2022-02-01",
+    "category":"Marketing",
+    "amount_pkr":49177.0,
+    "description":"Marketing for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000046",
+    "fleet_id":"FL001",
+    "expense_month":"2022-02-01",
+    "category":"Insurance Premium",
+    "amount_pkr":78542.0,
+    "description":"Insurance Premium for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000047",
+    "fleet_id":"FL001",
+    "expense_month":"2022-02-01",
+    "category":"Depreciation",
+    "amount_pkr":84091.0,
+    "description":"Depreciation for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000048",
+    "fleet_id":"FL001",
+    "expense_month":"2022-02-01",
+    "category":"Miscellaneous",
+    "amount_pkr":55065.0,
+    "description":"Miscellaneous for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000049",
+    "fleet_id":"FL001",
+    "expense_month":"2022-02-01",
+    "category":"Communication",
+    "amount_pkr":27350.0,
+    "description":"Communication for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000050",
+    "fleet_id":"FL001",
+    "expense_month":"2022-02-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":61459.0,
+    "description":"Parking \/ Garage for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000051",
+    "fleet_id":"FL002",
+    "expense_month":"2022-02-01",
+    "category":"Staff Salaries",
+    "amount_pkr":504132.0,
+    "description":"Staff Salaries for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000052",
+    "fleet_id":"FL002",
+    "expense_month":"2022-02-01",
+    "category":"Driver Salaries",
+    "amount_pkr":833528.0,
+    "description":"Driver Salaries for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000053",
+    "fleet_id":"FL002",
+    "expense_month":"2022-02-01",
+    "category":"Office Rent",
+    "amount_pkr":124992.0,
+    "description":"Office Rent for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000054",
+    "fleet_id":"FL002",
+    "expense_month":"2022-02-01",
+    "category":"Utilities",
+    "amount_pkr":31474.0,
+    "description":"Utilities for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000055",
+    "fleet_id":"FL002",
+    "expense_month":"2022-02-01",
+    "category":"Marketing",
+    "amount_pkr":48741.0,
+    "description":"Marketing for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000056",
+    "fleet_id":"FL002",
+    "expense_month":"2022-02-01",
+    "category":"Insurance Premium",
+    "amount_pkr":87434.0,
+    "description":"Insurance Premium for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000057",
+    "fleet_id":"FL002",
+    "expense_month":"2022-02-01",
+    "category":"Depreciation",
+    "amount_pkr":91417.0,
+    "description":"Depreciation for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000058",
+    "fleet_id":"FL002",
+    "expense_month":"2022-02-01",
+    "category":"Miscellaneous",
+    "amount_pkr":54569.0,
+    "description":"Miscellaneous for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000059",
+    "fleet_id":"FL002",
+    "expense_month":"2022-02-01",
+    "category":"Communication",
+    "amount_pkr":29274.0,
+    "description":"Communication for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000060",
+    "fleet_id":"FL002",
+    "expense_month":"2022-02-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":82368.0,
+    "description":"Parking \/ Garage for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000061",
+    "fleet_id":"FL003",
+    "expense_month":"2022-02-01",
+    "category":"Staff Salaries",
+    "amount_pkr":598204.0,
+    "description":"Staff Salaries for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000062",
+    "fleet_id":"FL003",
+    "expense_month":"2022-02-01",
+    "category":"Driver Salaries",
+    "amount_pkr":883147.0,
+    "description":"Driver Salaries for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000063",
+    "fleet_id":"FL003",
+    "expense_month":"2022-02-01",
+    "category":"Office Rent",
+    "amount_pkr":111625.0,
+    "description":"Office Rent for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000064",
+    "fleet_id":"FL003",
+    "expense_month":"2022-02-01",
+    "category":"Utilities",
+    "amount_pkr":31163.0,
+    "description":"Utilities for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000065",
+    "fleet_id":"FL003",
+    "expense_month":"2022-02-01",
+    "category":"Marketing",
+    "amount_pkr":62793.0,
+    "description":"Marketing for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000066",
+    "fleet_id":"FL003",
+    "expense_month":"2022-02-01",
+    "category":"Insurance Premium",
+    "amount_pkr":96923.0,
+    "description":"Insurance Premium for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000067",
+    "fleet_id":"FL003",
+    "expense_month":"2022-02-01",
+    "category":"Depreciation",
+    "amount_pkr":107284.0,
+    "description":"Depreciation for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000068",
+    "fleet_id":"FL003",
+    "expense_month":"2022-02-01",
+    "category":"Miscellaneous",
+    "amount_pkr":59311.0,
+    "description":"Miscellaneous for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000069",
+    "fleet_id":"FL003",
+    "expense_month":"2022-02-01",
+    "category":"Communication",
+    "amount_pkr":31030.0,
+    "description":"Communication for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000070",
+    "fleet_id":"FL003",
+    "expense_month":"2022-02-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":92159.0,
+    "description":"Parking \/ Garage for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000071",
+    "fleet_id":"FL004",
+    "expense_month":"2022-02-01",
+    "category":"Staff Salaries",
+    "amount_pkr":438069.0,
+    "description":"Staff Salaries for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000072",
+    "fleet_id":"FL004",
+    "expense_month":"2022-02-01",
+    "category":"Driver Salaries",
+    "amount_pkr":908325.0,
+    "description":"Driver Salaries for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000073",
+    "fleet_id":"FL004",
+    "expense_month":"2022-02-01",
+    "category":"Office Rent",
+    "amount_pkr":91077.0,
+    "description":"Office Rent for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000074",
+    "fleet_id":"FL004",
+    "expense_month":"2022-02-01",
+    "category":"Utilities",
+    "amount_pkr":31473.0,
+    "description":"Utilities for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000075",
+    "fleet_id":"FL004",
+    "expense_month":"2022-02-01",
+    "category":"Marketing",
+    "amount_pkr":62469.0,
+    "description":"Marketing for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000076",
+    "fleet_id":"FL004",
+    "expense_month":"2022-02-01",
+    "category":"Insurance Premium",
+    "amount_pkr":71545.0,
+    "description":"Insurance Premium for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000077",
+    "fleet_id":"FL004",
+    "expense_month":"2022-02-01",
+    "category":"Depreciation",
+    "amount_pkr":100340.0,
+    "description":"Depreciation for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000078",
+    "fleet_id":"FL004",
+    "expense_month":"2022-02-01",
+    "category":"Miscellaneous",
+    "amount_pkr":53636.0,
+    "description":"Miscellaneous for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000079",
+    "fleet_id":"FL004",
+    "expense_month":"2022-02-01",
+    "category":"Communication",
+    "amount_pkr":27592.0,
+    "description":"Communication for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000080",
+    "fleet_id":"FL004",
+    "expense_month":"2022-02-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":98460.0,
+    "description":"Parking \/ Garage for February 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000081",
+    "fleet_id":"FL001",
+    "expense_month":"2022-03-01",
+    "category":"Staff Salaries",
+    "amount_pkr":602511.0,
+    "description":"Staff Salaries for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000082",
+    "fleet_id":"FL001",
+    "expense_month":"2022-03-01",
+    "category":"Driver Salaries",
+    "amount_pkr":549337.0,
+    "description":"Driver Salaries for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000083",
+    "fleet_id":"FL001",
+    "expense_month":"2022-03-01",
+    "category":"Office Rent",
+    "amount_pkr":98982.0,
+    "description":"Office Rent for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000084",
+    "fleet_id":"FL001",
+    "expense_month":"2022-03-01",
+    "category":"Utilities",
+    "amount_pkr":24795.0,
+    "description":"Utilities for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000085",
+    "fleet_id":"FL001",
+    "expense_month":"2022-03-01",
+    "category":"Marketing",
+    "amount_pkr":43125.0,
+    "description":"Marketing for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000086",
+    "fleet_id":"FL001",
+    "expense_month":"2022-03-01",
+    "category":"Insurance Premium",
+    "amount_pkr":62471.0,
+    "description":"Insurance Premium for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000087",
+    "fleet_id":"FL001",
+    "expense_month":"2022-03-01",
+    "category":"Depreciation",
+    "amount_pkr":81659.0,
+    "description":"Depreciation for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000088",
+    "fleet_id":"FL001",
+    "expense_month":"2022-03-01",
+    "category":"Miscellaneous",
+    "amount_pkr":43407.0,
+    "description":"Miscellaneous for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000089",
+    "fleet_id":"FL001",
+    "expense_month":"2022-03-01",
+    "category":"Communication",
+    "amount_pkr":25827.0,
+    "description":"Communication for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000090",
+    "fleet_id":"FL001",
+    "expense_month":"2022-03-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":59516.0,
+    "description":"Parking \/ Garage for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000091",
+    "fleet_id":"FL002",
+    "expense_month":"2022-03-01",
+    "category":"Staff Salaries",
+    "amount_pkr":481924.0,
+    "description":"Staff Salaries for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000092",
+    "fleet_id":"FL002",
+    "expense_month":"2022-03-01",
+    "category":"Driver Salaries",
+    "amount_pkr":831276.0,
+    "description":"Driver Salaries for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000093",
+    "fleet_id":"FL002",
+    "expense_month":"2022-03-01",
+    "category":"Office Rent",
+    "amount_pkr":88622.0,
+    "description":"Office Rent for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000094",
+    "fleet_id":"FL002",
+    "expense_month":"2022-03-01",
+    "category":"Utilities",
+    "amount_pkr":30522.0,
+    "description":"Utilities for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000095",
+    "fleet_id":"FL002",
+    "expense_month":"2022-03-01",
+    "category":"Marketing",
+    "amount_pkr":60930.0,
+    "description":"Marketing for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000096",
+    "fleet_id":"FL002",
+    "expense_month":"2022-03-01",
+    "category":"Insurance Premium",
+    "amount_pkr":85793.0,
+    "description":"Insurance Premium for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000097",
+    "fleet_id":"FL002",
+    "expense_month":"2022-03-01",
+    "category":"Depreciation",
+    "amount_pkr":93085.0,
+    "description":"Depreciation for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000098",
+    "fleet_id":"FL002",
+    "expense_month":"2022-03-01",
+    "category":"Miscellaneous",
+    "amount_pkr":62492.0,
+    "description":"Miscellaneous for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000099",
+    "fleet_id":"FL002",
+    "expense_month":"2022-03-01",
+    "category":"Communication",
+    "amount_pkr":28665.0,
+    "description":"Communication for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000100",
+    "fleet_id":"FL002",
+    "expense_month":"2022-03-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":77562.0,
+    "description":"Parking \/ Garage for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000101",
+    "fleet_id":"FL003",
+    "expense_month":"2022-03-01",
+    "category":"Staff Salaries",
+    "amount_pkr":650142.0,
+    "description":"Staff Salaries for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000102",
+    "fleet_id":"FL003",
+    "expense_month":"2022-03-01",
+    "category":"Driver Salaries",
+    "amount_pkr":885837.0,
+    "description":"Driver Salaries for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000103",
+    "fleet_id":"FL003",
+    "expense_month":"2022-03-01",
+    "category":"Office Rent",
+    "amount_pkr":130854.0,
+    "description":"Office Rent for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000104",
+    "fleet_id":"FL003",
+    "expense_month":"2022-03-01",
+    "category":"Utilities",
+    "amount_pkr":27463.0,
+    "description":"Utilities for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000105",
+    "fleet_id":"FL003",
+    "expense_month":"2022-03-01",
+    "category":"Marketing",
+    "amount_pkr":52511.0,
+    "description":"Marketing for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000106",
+    "fleet_id":"FL003",
+    "expense_month":"2022-03-01",
+    "category":"Insurance Premium",
+    "amount_pkr":76071.0,
+    "description":"Insurance Premium for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000107",
+    "fleet_id":"FL003",
+    "expense_month":"2022-03-01",
+    "category":"Depreciation",
+    "amount_pkr":116603.0,
+    "description":"Depreciation for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000108",
+    "fleet_id":"FL003",
+    "expense_month":"2022-03-01",
+    "category":"Miscellaneous",
+    "amount_pkr":50716.0,
+    "description":"Miscellaneous for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000109",
+    "fleet_id":"FL003",
+    "expense_month":"2022-03-01",
+    "category":"Communication",
+    "amount_pkr":32440.0,
+    "description":"Communication for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000110",
+    "fleet_id":"FL003",
+    "expense_month":"2022-03-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":75053.0,
+    "description":"Parking \/ Garage for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000111",
+    "fleet_id":"FL004",
+    "expense_month":"2022-03-01",
+    "category":"Staff Salaries",
+    "amount_pkr":431620.0,
+    "description":"Staff Salaries for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000112",
+    "fleet_id":"FL004",
+    "expense_month":"2022-03-01",
+    "category":"Driver Salaries",
+    "amount_pkr":944446.0,
+    "description":"Driver Salaries for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000113",
+    "fleet_id":"FL004",
+    "expense_month":"2022-03-01",
+    "category":"Office Rent",
+    "amount_pkr":133104.0,
+    "description":"Office Rent for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000114",
+    "fleet_id":"FL004",
+    "expense_month":"2022-03-01",
+    "category":"Utilities",
+    "amount_pkr":24612.0,
+    "description":"Utilities for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000115",
+    "fleet_id":"FL004",
+    "expense_month":"2022-03-01",
+    "category":"Marketing",
+    "amount_pkr":51628.0,
+    "description":"Marketing for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000116",
+    "fleet_id":"FL004",
+    "expense_month":"2022-03-01",
+    "category":"Insurance Premium",
+    "amount_pkr":94966.0,
+    "description":"Insurance Premium for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000117",
+    "fleet_id":"FL004",
+    "expense_month":"2022-03-01",
+    "category":"Depreciation",
+    "amount_pkr":125140.0,
+    "description":"Depreciation for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000118",
+    "fleet_id":"FL004",
+    "expense_month":"2022-03-01",
+    "category":"Miscellaneous",
+    "amount_pkr":52995.0,
+    "description":"Miscellaneous for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000119",
+    "fleet_id":"FL004",
+    "expense_month":"2022-03-01",
+    "category":"Communication",
+    "amount_pkr":28729.0,
+    "description":"Communication for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000120",
+    "fleet_id":"FL004",
+    "expense_month":"2022-03-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":71429.0,
+    "description":"Parking \/ Garage for March 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000121",
+    "fleet_id":"FL001",
+    "expense_month":"2022-04-01",
+    "category":"Staff Salaries",
+    "amount_pkr":614984.0,
+    "description":"Staff Salaries for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000122",
+    "fleet_id":"FL001",
+    "expense_month":"2022-04-01",
+    "category":"Driver Salaries",
+    "amount_pkr":556241.0,
+    "description":"Driver Salaries for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000123",
+    "fleet_id":"FL001",
+    "expense_month":"2022-04-01",
+    "category":"Office Rent",
+    "amount_pkr":78032.0,
+    "description":"Office Rent for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000124",
+    "fleet_id":"FL001",
+    "expense_month":"2022-04-01",
+    "category":"Utilities",
+    "amount_pkr":18558.0,
+    "description":"Utilities for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000125",
+    "fleet_id":"FL001",
+    "expense_month":"2022-04-01",
+    "category":"Marketing",
+    "amount_pkr":48260.0,
+    "description":"Marketing for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000126",
+    "fleet_id":"FL001",
+    "expense_month":"2022-04-01",
+    "category":"Insurance Premium",
+    "amount_pkr":66940.0,
+    "description":"Insurance Premium for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000127",
+    "fleet_id":"FL001",
+    "expense_month":"2022-04-01",
+    "category":"Depreciation",
+    "amount_pkr":108961.0,
+    "description":"Depreciation for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000128",
+    "fleet_id":"FL001",
+    "expense_month":"2022-04-01",
+    "category":"Miscellaneous",
+    "amount_pkr":42896.0,
+    "description":"Miscellaneous for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000129",
+    "fleet_id":"FL001",
+    "expense_month":"2022-04-01",
+    "category":"Communication",
+    "amount_pkr":18408.0,
+    "description":"Communication for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000130",
+    "fleet_id":"FL001",
+    "expense_month":"2022-04-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":56957.0,
+    "description":"Parking \/ Garage for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000131",
+    "fleet_id":"FL002",
+    "expense_month":"2022-04-01",
+    "category":"Staff Salaries",
+    "amount_pkr":504740.0,
+    "description":"Staff Salaries for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000132",
+    "fleet_id":"FL002",
+    "expense_month":"2022-04-01",
+    "category":"Driver Salaries",
+    "amount_pkr":844182.0,
+    "description":"Driver Salaries for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000133",
+    "fleet_id":"FL002",
+    "expense_month":"2022-04-01",
+    "category":"Office Rent",
+    "amount_pkr":111238.0,
+    "description":"Office Rent for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000134",
+    "fleet_id":"FL002",
+    "expense_month":"2022-04-01",
+    "category":"Utilities",
+    "amount_pkr":23325.0,
+    "description":"Utilities for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000135",
+    "fleet_id":"FL002",
+    "expense_month":"2022-04-01",
+    "category":"Marketing",
+    "amount_pkr":49183.0,
+    "description":"Marketing for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000136",
+    "fleet_id":"FL002",
+    "expense_month":"2022-04-01",
+    "category":"Insurance Premium",
+    "amount_pkr":82029.0,
+    "description":"Insurance Premium for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000137",
+    "fleet_id":"FL002",
+    "expense_month":"2022-04-01",
+    "category":"Depreciation",
+    "amount_pkr":98424.0,
+    "description":"Depreciation for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000138",
+    "fleet_id":"FL002",
+    "expense_month":"2022-04-01",
+    "category":"Miscellaneous",
+    "amount_pkr":49068.0,
+    "description":"Miscellaneous for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000139",
+    "fleet_id":"FL002",
+    "expense_month":"2022-04-01",
+    "category":"Communication",
+    "amount_pkr":31382.0,
+    "description":"Communication for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000140",
+    "fleet_id":"FL002",
+    "expense_month":"2022-04-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":78181.0,
+    "description":"Parking \/ Garage for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000141",
+    "fleet_id":"FL003",
+    "expense_month":"2022-04-01",
+    "category":"Staff Salaries",
+    "amount_pkr":636792.0,
+    "description":"Staff Salaries for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000142",
+    "fleet_id":"FL003",
+    "expense_month":"2022-04-01",
+    "category":"Driver Salaries",
+    "amount_pkr":850667.0,
+    "description":"Driver Salaries for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000143",
+    "fleet_id":"FL003",
+    "expense_month":"2022-04-01",
+    "category":"Office Rent",
+    "amount_pkr":138412.0,
+    "description":"Office Rent for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000144",
+    "fleet_id":"FL003",
+    "expense_month":"2022-04-01",
+    "category":"Utilities",
+    "amount_pkr":29089.0,
+    "description":"Utilities for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000145",
+    "fleet_id":"FL003",
+    "expense_month":"2022-04-01",
+    "category":"Marketing",
+    "amount_pkr":57462.0,
+    "description":"Marketing for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000146",
+    "fleet_id":"FL003",
+    "expense_month":"2022-04-01",
+    "category":"Insurance Premium",
+    "amount_pkr":96358.0,
+    "description":"Insurance Premium for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000147",
+    "fleet_id":"FL003",
+    "expense_month":"2022-04-01",
+    "category":"Depreciation",
+    "amount_pkr":107059.0,
+    "description":"Depreciation for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000148",
+    "fleet_id":"FL003",
+    "expense_month":"2022-04-01",
+    "category":"Miscellaneous",
+    "amount_pkr":52104.0,
+    "description":"Miscellaneous for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000149",
+    "fleet_id":"FL003",
+    "expense_month":"2022-04-01",
+    "category":"Communication",
+    "amount_pkr":24090.0,
+    "description":"Communication for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000150",
+    "fleet_id":"FL003",
+    "expense_month":"2022-04-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":88331.0,
+    "description":"Parking \/ Garage for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000151",
+    "fleet_id":"FL004",
+    "expense_month":"2022-04-01",
+    "category":"Staff Salaries",
+    "amount_pkr":458608.0,
+    "description":"Staff Salaries for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000152",
+    "fleet_id":"FL004",
+    "expense_month":"2022-04-01",
+    "category":"Driver Salaries",
+    "amount_pkr":930550.0,
+    "description":"Driver Salaries for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000153",
+    "fleet_id":"FL004",
+    "expense_month":"2022-04-01",
+    "category":"Office Rent",
+    "amount_pkr":133999.0,
+    "description":"Office Rent for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000154",
+    "fleet_id":"FL004",
+    "expense_month":"2022-04-01",
+    "category":"Utilities",
+    "amount_pkr":29604.0,
+    "description":"Utilities for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000155",
+    "fleet_id":"FL004",
+    "expense_month":"2022-04-01",
+    "category":"Marketing",
+    "amount_pkr":56081.0,
+    "description":"Marketing for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000156",
+    "fleet_id":"FL004",
+    "expense_month":"2022-04-01",
+    "category":"Insurance Premium",
+    "amount_pkr":97528.0,
+    "description":"Insurance Premium for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000157",
+    "fleet_id":"FL004",
+    "expense_month":"2022-04-01",
+    "category":"Depreciation",
+    "amount_pkr":98423.0,
+    "description":"Depreciation for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000158",
+    "fleet_id":"FL004",
+    "expense_month":"2022-04-01",
+    "category":"Miscellaneous",
+    "amount_pkr":61577.0,
+    "description":"Miscellaneous for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000159",
+    "fleet_id":"FL004",
+    "expense_month":"2022-04-01",
+    "category":"Communication",
+    "amount_pkr":28752.0,
+    "description":"Communication for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000160",
+    "fleet_id":"FL004",
+    "expense_month":"2022-04-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":97655.0,
+    "description":"Parking \/ Garage for April 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000161",
+    "fleet_id":"FL001",
+    "expense_month":"2022-05-01",
+    "category":"Staff Salaries",
+    "amount_pkr":621408.0,
+    "description":"Staff Salaries for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000162",
+    "fleet_id":"FL001",
+    "expense_month":"2022-05-01",
+    "category":"Driver Salaries",
+    "amount_pkr":549781.0,
+    "description":"Driver Salaries for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000163",
+    "fleet_id":"FL001",
+    "expense_month":"2022-05-01",
+    "category":"Office Rent",
+    "amount_pkr":78057.0,
+    "description":"Office Rent for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000164",
+    "fleet_id":"FL001",
+    "expense_month":"2022-05-01",
+    "category":"Utilities",
+    "amount_pkr":20006.0,
+    "description":"Utilities for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000165",
+    "fleet_id":"FL001",
+    "expense_month":"2022-05-01",
+    "category":"Marketing",
+    "amount_pkr":39260.0,
+    "description":"Marketing for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000166",
+    "fleet_id":"FL001",
+    "expense_month":"2022-05-01",
+    "category":"Insurance Premium",
+    "amount_pkr":69013.0,
+    "description":"Insurance Premium for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000167",
+    "fleet_id":"FL001",
+    "expense_month":"2022-05-01",
+    "category":"Depreciation",
+    "amount_pkr":82144.0,
+    "description":"Depreciation for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000168",
+    "fleet_id":"FL001",
+    "expense_month":"2022-05-01",
+    "category":"Miscellaneous",
+    "amount_pkr":39192.0,
+    "description":"Miscellaneous for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000169",
+    "fleet_id":"FL001",
+    "expense_month":"2022-05-01",
+    "category":"Communication",
+    "amount_pkr":23931.0,
+    "description":"Communication for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000170",
+    "fleet_id":"FL001",
+    "expense_month":"2022-05-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":59630.0,
+    "description":"Parking \/ Garage for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000171",
+    "fleet_id":"FL002",
+    "expense_month":"2022-05-01",
+    "category":"Staff Salaries",
+    "amount_pkr":492744.0,
+    "description":"Staff Salaries for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000172",
+    "fleet_id":"FL002",
+    "expense_month":"2022-05-01",
+    "category":"Driver Salaries",
+    "amount_pkr":806028.0,
+    "description":"Driver Salaries for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000173",
+    "fleet_id":"FL002",
+    "expense_month":"2022-05-01",
+    "category":"Office Rent",
+    "amount_pkr":123249.0,
+    "description":"Office Rent for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000174",
+    "fleet_id":"FL002",
+    "expense_month":"2022-05-01",
+    "category":"Utilities",
+    "amount_pkr":21725.0,
+    "description":"Utilities for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000175",
+    "fleet_id":"FL002",
+    "expense_month":"2022-05-01",
+    "category":"Marketing",
+    "amount_pkr":46359.0,
+    "description":"Marketing for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000176",
+    "fleet_id":"FL002",
+    "expense_month":"2022-05-01",
+    "category":"Insurance Premium",
+    "amount_pkr":81739.0,
+    "description":"Insurance Premium for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000177",
+    "fleet_id":"FL002",
+    "expense_month":"2022-05-01",
+    "category":"Depreciation",
+    "amount_pkr":119838.0,
+    "description":"Depreciation for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000178",
+    "fleet_id":"FL002",
+    "expense_month":"2022-05-01",
+    "category":"Miscellaneous",
+    "amount_pkr":58882.0,
+    "description":"Miscellaneous for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000179",
+    "fleet_id":"FL002",
+    "expense_month":"2022-05-01",
+    "category":"Communication",
+    "amount_pkr":29758.0,
+    "description":"Communication for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000180",
+    "fleet_id":"FL002",
+    "expense_month":"2022-05-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":68302.0,
+    "description":"Parking \/ Garage for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000181",
+    "fleet_id":"FL003",
+    "expense_month":"2022-05-01",
+    "category":"Staff Salaries",
+    "amount_pkr":602440.0,
+    "description":"Staff Salaries for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000182",
+    "fleet_id":"FL003",
+    "expense_month":"2022-05-01",
+    "category":"Driver Salaries",
+    "amount_pkr":853335.0,
+    "description":"Driver Salaries for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000183",
+    "fleet_id":"FL003",
+    "expense_month":"2022-05-01",
+    "category":"Office Rent",
+    "amount_pkr":111536.0,
+    "description":"Office Rent for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000184",
+    "fleet_id":"FL003",
+    "expense_month":"2022-05-01",
+    "category":"Utilities",
+    "amount_pkr":29477.0,
+    "description":"Utilities for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000185",
+    "fleet_id":"FL003",
+    "expense_month":"2022-05-01",
+    "category":"Marketing",
+    "amount_pkr":55800.0,
+    "description":"Marketing for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000186",
+    "fleet_id":"FL003",
+    "expense_month":"2022-05-01",
+    "category":"Insurance Premium",
+    "amount_pkr":105289.0,
+    "description":"Insurance Premium for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000187",
+    "fleet_id":"FL003",
+    "expense_month":"2022-05-01",
+    "category":"Depreciation",
+    "amount_pkr":108368.0,
+    "description":"Depreciation for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000188",
+    "fleet_id":"FL003",
+    "expense_month":"2022-05-01",
+    "category":"Miscellaneous",
+    "amount_pkr":68381.0,
+    "description":"Miscellaneous for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000189",
+    "fleet_id":"FL003",
+    "expense_month":"2022-05-01",
+    "category":"Communication",
+    "amount_pkr":23603.0,
+    "description":"Communication for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000190",
+    "fleet_id":"FL003",
+    "expense_month":"2022-05-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":96912.0,
+    "description":"Parking \/ Garage for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000191",
+    "fleet_id":"FL004",
+    "expense_month":"2022-05-01",
+    "category":"Staff Salaries",
+    "amount_pkr":449911.0,
+    "description":"Staff Salaries for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000192",
+    "fleet_id":"FL004",
+    "expense_month":"2022-05-01",
+    "category":"Driver Salaries",
+    "amount_pkr":975666.0,
+    "description":"Driver Salaries for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000193",
+    "fleet_id":"FL004",
+    "expense_month":"2022-05-01",
+    "category":"Office Rent",
+    "amount_pkr":94480.0,
+    "description":"Office Rent for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000194",
+    "fleet_id":"FL004",
+    "expense_month":"2022-05-01",
+    "category":"Utilities",
+    "amount_pkr":29309.0,
+    "description":"Utilities for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000195",
+    "fleet_id":"FL004",
+    "expense_month":"2022-05-01",
+    "category":"Marketing",
+    "amount_pkr":53512.0,
+    "description":"Marketing for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000196",
+    "fleet_id":"FL004",
+    "expense_month":"2022-05-01",
+    "category":"Insurance Premium",
+    "amount_pkr":69438.0,
+    "description":"Insurance Premium for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000197",
+    "fleet_id":"FL004",
+    "expense_month":"2022-05-01",
+    "category":"Depreciation",
+    "amount_pkr":118256.0,
+    "description":"Depreciation for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000198",
+    "fleet_id":"FL004",
+    "expense_month":"2022-05-01",
+    "category":"Miscellaneous",
+    "amount_pkr":51818.0,
+    "description":"Miscellaneous for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000199",
+    "fleet_id":"FL004",
+    "expense_month":"2022-05-01",
+    "category":"Communication",
+    "amount_pkr":32772.0,
+    "description":"Communication for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000200",
+    "fleet_id":"FL004",
+    "expense_month":"2022-05-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":76390.0,
+    "description":"Parking \/ Garage for May 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000201",
+    "fleet_id":"FL001",
+    "expense_month":"2022-06-01",
+    "category":"Staff Salaries",
+    "amount_pkr":606083.0,
+    "description":"Staff Salaries for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000202",
+    "fleet_id":"FL001",
+    "expense_month":"2022-06-01",
+    "category":"Driver Salaries",
+    "amount_pkr":555187.0,
+    "description":"Driver Salaries for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000203",
+    "fleet_id":"FL001",
+    "expense_month":"2022-06-01",
+    "category":"Office Rent",
+    "amount_pkr":108944.0,
+    "description":"Office Rent for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000204",
+    "fleet_id":"FL001",
+    "expense_month":"2022-06-01",
+    "category":"Utilities",
+    "amount_pkr":24616.0,
+    "description":"Utilities for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000205",
+    "fleet_id":"FL001",
+    "expense_month":"2022-06-01",
+    "category":"Marketing",
+    "amount_pkr":40295.0,
+    "description":"Marketing for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000206",
+    "fleet_id":"FL001",
+    "expense_month":"2022-06-01",
+    "category":"Insurance Premium",
+    "amount_pkr":57984.0,
+    "description":"Insurance Premium for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000207",
+    "fleet_id":"FL001",
+    "expense_month":"2022-06-01",
+    "category":"Depreciation",
+    "amount_pkr":87913.0,
+    "description":"Depreciation for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000208",
+    "fleet_id":"FL001",
+    "expense_month":"2022-06-01",
+    "category":"Miscellaneous",
+    "amount_pkr":40816.0,
+    "description":"Miscellaneous for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000209",
+    "fleet_id":"FL001",
+    "expense_month":"2022-06-01",
+    "category":"Communication",
+    "amount_pkr":23459.0,
+    "description":"Communication for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000210",
+    "fleet_id":"FL001",
+    "expense_month":"2022-06-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":68737.0,
+    "description":"Parking \/ Garage for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000211",
+    "fleet_id":"FL002",
+    "expense_month":"2022-06-01",
+    "category":"Staff Salaries",
+    "amount_pkr":495464.0,
+    "description":"Staff Salaries for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000212",
+    "fleet_id":"FL002",
+    "expense_month":"2022-06-01",
+    "category":"Driver Salaries",
+    "amount_pkr":812160.0,
+    "description":"Driver Salaries for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000213",
+    "fleet_id":"FL002",
+    "expense_month":"2022-06-01",
+    "category":"Office Rent",
+    "amount_pkr":127365.0,
+    "description":"Office Rent for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000214",
+    "fleet_id":"FL002",
+    "expense_month":"2022-06-01",
+    "category":"Utilities",
+    "amount_pkr":28632.0,
+    "description":"Utilities for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000215",
+    "fleet_id":"FL002",
+    "expense_month":"2022-06-01",
+    "category":"Marketing",
+    "amount_pkr":57046.0,
+    "description":"Marketing for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000216",
+    "fleet_id":"FL002",
+    "expense_month":"2022-06-01",
+    "category":"Insurance Premium",
+    "amount_pkr":88101.0,
+    "description":"Insurance Premium for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000217",
+    "fleet_id":"FL002",
+    "expense_month":"2022-06-01",
+    "category":"Depreciation",
+    "amount_pkr":89254.0,
+    "description":"Depreciation for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000218",
+    "fleet_id":"FL002",
+    "expense_month":"2022-06-01",
+    "category":"Miscellaneous",
+    "amount_pkr":53919.0,
+    "description":"Miscellaneous for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000219",
+    "fleet_id":"FL002",
+    "expense_month":"2022-06-01",
+    "category":"Communication",
+    "amount_pkr":22034.0,
+    "description":"Communication for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000220",
+    "fleet_id":"FL002",
+    "expense_month":"2022-06-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":77047.0,
+    "description":"Parking \/ Garage for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000221",
+    "fleet_id":"FL003",
+    "expense_month":"2022-06-01",
+    "category":"Staff Salaries",
+    "amount_pkr":635923.0,
+    "description":"Staff Salaries for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000222",
+    "fleet_id":"FL003",
+    "expense_month":"2022-06-01",
+    "category":"Driver Salaries",
+    "amount_pkr":873792.0,
+    "description":"Driver Salaries for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000223",
+    "fleet_id":"FL003",
+    "expense_month":"2022-06-01",
+    "category":"Office Rent",
+    "amount_pkr":138914.0,
+    "description":"Office Rent for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000224",
+    "fleet_id":"FL003",
+    "expense_month":"2022-06-01",
+    "category":"Utilities",
+    "amount_pkr":27280.0,
+    "description":"Utilities for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000225",
+    "fleet_id":"FL003",
+    "expense_month":"2022-06-01",
+    "category":"Marketing",
+    "amount_pkr":55216.0,
+    "description":"Marketing for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000226",
+    "fleet_id":"FL003",
+    "expense_month":"2022-06-01",
+    "category":"Insurance Premium",
+    "amount_pkr":85006.0,
+    "description":"Insurance Premium for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000227",
+    "fleet_id":"FL003",
+    "expense_month":"2022-06-01",
+    "category":"Depreciation",
+    "amount_pkr":135442.0,
+    "description":"Depreciation for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000228",
+    "fleet_id":"FL003",
+    "expense_month":"2022-06-01",
+    "category":"Miscellaneous",
+    "amount_pkr":47882.0,
+    "description":"Miscellaneous for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000229",
+    "fleet_id":"FL003",
+    "expense_month":"2022-06-01",
+    "category":"Communication",
+    "amount_pkr":25167.0,
+    "description":"Communication for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000230",
+    "fleet_id":"FL003",
+    "expense_month":"2022-06-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":84540.0,
+    "description":"Parking \/ Garage for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000231",
+    "fleet_id":"FL004",
+    "expense_month":"2022-06-01",
+    "category":"Staff Salaries",
+    "amount_pkr":434670.0,
+    "description":"Staff Salaries for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000232",
+    "fleet_id":"FL004",
+    "expense_month":"2022-06-01",
+    "category":"Driver Salaries",
+    "amount_pkr":907055.0,
+    "description":"Driver Salaries for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000233",
+    "fleet_id":"FL004",
+    "expense_month":"2022-06-01",
+    "category":"Office Rent",
+    "amount_pkr":122528.0,
+    "description":"Office Rent for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000234",
+    "fleet_id":"FL004",
+    "expense_month":"2022-06-01",
+    "category":"Utilities",
+    "amount_pkr":22951.0,
+    "description":"Utilities for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000235",
+    "fleet_id":"FL004",
+    "expense_month":"2022-06-01",
+    "category":"Marketing",
+    "amount_pkr":54668.0,
+    "description":"Marketing for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000236",
+    "fleet_id":"FL004",
+    "expense_month":"2022-06-01",
+    "category":"Insurance Premium",
+    "amount_pkr":74007.0,
+    "description":"Insurance Premium for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000237",
+    "fleet_id":"FL004",
+    "expense_month":"2022-06-01",
+    "category":"Depreciation",
+    "amount_pkr":114389.0,
+    "description":"Depreciation for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000238",
+    "fleet_id":"FL004",
+    "expense_month":"2022-06-01",
+    "category":"Miscellaneous",
+    "amount_pkr":56908.0,
+    "description":"Miscellaneous for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000239",
+    "fleet_id":"FL004",
+    "expense_month":"2022-06-01",
+    "category":"Communication",
+    "amount_pkr":32138.0,
+    "description":"Communication for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000240",
+    "fleet_id":"FL004",
+    "expense_month":"2022-06-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":87383.0,
+    "description":"Parking \/ Garage for June 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000241",
+    "fleet_id":"FL001",
+    "expense_month":"2022-07-01",
+    "category":"Staff Salaries",
+    "amount_pkr":582709.0,
+    "description":"Staff Salaries for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000242",
+    "fleet_id":"FL001",
+    "expense_month":"2022-07-01",
+    "category":"Driver Salaries",
+    "amount_pkr":551262.0,
+    "description":"Driver Salaries for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000243",
+    "fleet_id":"FL001",
+    "expense_month":"2022-07-01",
+    "category":"Office Rent",
+    "amount_pkr":97233.0,
+    "description":"Office Rent for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000244",
+    "fleet_id":"FL001",
+    "expense_month":"2022-07-01",
+    "category":"Utilities",
+    "amount_pkr":20027.0,
+    "description":"Utilities for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000245",
+    "fleet_id":"FL001",
+    "expense_month":"2022-07-01",
+    "category":"Marketing",
+    "amount_pkr":52284.0,
+    "description":"Marketing for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000246",
+    "fleet_id":"FL001",
+    "expense_month":"2022-07-01",
+    "category":"Insurance Premium",
+    "amount_pkr":60771.0,
+    "description":"Insurance Premium for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000247",
+    "fleet_id":"FL001",
+    "expense_month":"2022-07-01",
+    "category":"Depreciation",
+    "amount_pkr":90331.0,
+    "description":"Depreciation for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000248",
+    "fleet_id":"FL001",
+    "expense_month":"2022-07-01",
+    "category":"Miscellaneous",
+    "amount_pkr":52207.0,
+    "description":"Miscellaneous for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000249",
+    "fleet_id":"FL001",
+    "expense_month":"2022-07-01",
+    "category":"Communication",
+    "amount_pkr":22806.0,
+    "description":"Communication for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000250",
+    "fleet_id":"FL001",
+    "expense_month":"2022-07-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":66759.0,
+    "description":"Parking \/ Garage for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000251",
+    "fleet_id":"FL002",
+    "expense_month":"2022-07-01",
+    "category":"Staff Salaries",
+    "amount_pkr":497360.0,
+    "description":"Staff Salaries for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000252",
+    "fleet_id":"FL002",
+    "expense_month":"2022-07-01",
+    "category":"Driver Salaries",
+    "amount_pkr":857566.0,
+    "description":"Driver Salaries for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000253",
+    "fleet_id":"FL002",
+    "expense_month":"2022-07-01",
+    "category":"Office Rent",
+    "amount_pkr":118972.0,
+    "description":"Office Rent for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000254",
+    "fleet_id":"FL002",
+    "expense_month":"2022-07-01",
+    "category":"Utilities",
+    "amount_pkr":27519.0,
+    "description":"Utilities for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000255",
+    "fleet_id":"FL002",
+    "expense_month":"2022-07-01",
+    "category":"Marketing",
+    "amount_pkr":55851.0,
+    "description":"Marketing for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000256",
+    "fleet_id":"FL002",
+    "expense_month":"2022-07-01",
+    "category":"Insurance Premium",
+    "amount_pkr":83578.0,
+    "description":"Insurance Premium for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000257",
+    "fleet_id":"FL002",
+    "expense_month":"2022-07-01",
+    "category":"Depreciation",
+    "amount_pkr":126087.0,
+    "description":"Depreciation for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000258",
+    "fleet_id":"FL002",
+    "expense_month":"2022-07-01",
+    "category":"Miscellaneous",
+    "amount_pkr":54816.0,
+    "description":"Miscellaneous for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000259",
+    "fleet_id":"FL002",
+    "expense_month":"2022-07-01",
+    "category":"Communication",
+    "amount_pkr":22451.0,
+    "description":"Communication for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000260",
+    "fleet_id":"FL002",
+    "expense_month":"2022-07-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":89190.0,
+    "description":"Parking \/ Garage for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000261",
+    "fleet_id":"FL003",
+    "expense_month":"2022-07-01",
+    "category":"Staff Salaries",
+    "amount_pkr":596843.0,
+    "description":"Staff Salaries for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000262",
+    "fleet_id":"FL003",
+    "expense_month":"2022-07-01",
+    "category":"Driver Salaries",
+    "amount_pkr":831914.0,
+    "description":"Driver Salaries for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000263",
+    "fleet_id":"FL003",
+    "expense_month":"2022-07-01",
+    "category":"Office Rent",
+    "amount_pkr":119008.0,
+    "description":"Office Rent for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000264",
+    "fleet_id":"FL003",
+    "expense_month":"2022-07-01",
+    "category":"Utilities",
+    "amount_pkr":29082.0,
+    "description":"Utilities for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000265",
+    "fleet_id":"FL003",
+    "expense_month":"2022-07-01",
+    "category":"Marketing",
+    "amount_pkr":68361.0,
+    "description":"Marketing for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000266",
+    "fleet_id":"FL003",
+    "expense_month":"2022-07-01",
+    "category":"Insurance Premium",
+    "amount_pkr":79134.0,
+    "description":"Insurance Premium for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000267",
+    "fleet_id":"FL003",
+    "expense_month":"2022-07-01",
+    "category":"Depreciation",
+    "amount_pkr":128338.0,
+    "description":"Depreciation for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000268",
+    "fleet_id":"FL003",
+    "expense_month":"2022-07-01",
+    "category":"Miscellaneous",
+    "amount_pkr":59692.0,
+    "description":"Miscellaneous for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000269",
+    "fleet_id":"FL003",
+    "expense_month":"2022-07-01",
+    "category":"Communication",
+    "amount_pkr":28734.0,
+    "description":"Communication for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000270",
+    "fleet_id":"FL003",
+    "expense_month":"2022-07-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":79987.0,
+    "description":"Parking \/ Garage for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000271",
+    "fleet_id":"FL004",
+    "expense_month":"2022-07-01",
+    "category":"Staff Salaries",
+    "amount_pkr":445423.0,
+    "description":"Staff Salaries for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000272",
+    "fleet_id":"FL004",
+    "expense_month":"2022-07-01",
+    "category":"Driver Salaries",
+    "amount_pkr":971467.0,
+    "description":"Driver Salaries for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000273",
+    "fleet_id":"FL004",
+    "expense_month":"2022-07-01",
+    "category":"Office Rent",
+    "amount_pkr":90091.0,
+    "description":"Office Rent for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000274",
+    "fleet_id":"FL004",
+    "expense_month":"2022-07-01",
+    "category":"Utilities",
+    "amount_pkr":30562.0,
+    "description":"Utilities for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000275",
+    "fleet_id":"FL004",
+    "expense_month":"2022-07-01",
+    "category":"Marketing",
+    "amount_pkr":59806.0,
+    "description":"Marketing for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000276",
+    "fleet_id":"FL004",
+    "expense_month":"2022-07-01",
+    "category":"Insurance Premium",
+    "amount_pkr":77510.0,
+    "description":"Insurance Premium for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000277",
+    "fleet_id":"FL004",
+    "expense_month":"2022-07-01",
+    "category":"Depreciation",
+    "amount_pkr":117578.0,
+    "description":"Depreciation for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000278",
+    "fleet_id":"FL004",
+    "expense_month":"2022-07-01",
+    "category":"Miscellaneous",
+    "amount_pkr":63349.0,
+    "description":"Miscellaneous for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000279",
+    "fleet_id":"FL004",
+    "expense_month":"2022-07-01",
+    "category":"Communication",
+    "amount_pkr":26225.0,
+    "description":"Communication for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000280",
+    "fleet_id":"FL004",
+    "expense_month":"2022-07-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":95577.0,
+    "description":"Parking \/ Garage for July 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000281",
+    "fleet_id":"FL001",
+    "expense_month":"2022-08-01",
+    "category":"Staff Salaries",
+    "amount_pkr":618180.0,
+    "description":"Staff Salaries for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000282",
+    "fleet_id":"FL001",
+    "expense_month":"2022-08-01",
+    "category":"Driver Salaries",
+    "amount_pkr":543080.0,
+    "description":"Driver Salaries for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000283",
+    "fleet_id":"FL001",
+    "expense_month":"2022-08-01",
+    "category":"Office Rent",
+    "amount_pkr":98183.0,
+    "description":"Office Rent for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000284",
+    "fleet_id":"FL001",
+    "expense_month":"2022-08-01",
+    "category":"Utilities",
+    "amount_pkr":20435.0,
+    "description":"Utilities for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000285",
+    "fleet_id":"FL001",
+    "expense_month":"2022-08-01",
+    "category":"Marketing",
+    "amount_pkr":53823.0,
+    "description":"Marketing for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000286",
+    "fleet_id":"FL001",
+    "expense_month":"2022-08-01",
+    "category":"Insurance Premium",
+    "amount_pkr":77968.0,
+    "description":"Insurance Premium for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000287",
+    "fleet_id":"FL001",
+    "expense_month":"2022-08-01",
+    "category":"Depreciation",
+    "amount_pkr":108091.0,
+    "description":"Depreciation for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000288",
+    "fleet_id":"FL001",
+    "expense_month":"2022-08-01",
+    "category":"Miscellaneous",
+    "amount_pkr":41049.0,
+    "description":"Miscellaneous for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000289",
+    "fleet_id":"FL001",
+    "expense_month":"2022-08-01",
+    "category":"Communication",
+    "amount_pkr":21090.0,
+    "description":"Communication for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000290",
+    "fleet_id":"FL001",
+    "expense_month":"2022-08-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":77575.0,
+    "description":"Parking \/ Garage for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000291",
+    "fleet_id":"FL002",
+    "expense_month":"2022-08-01",
+    "category":"Staff Salaries",
+    "amount_pkr":485660.0,
+    "description":"Staff Salaries for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000292",
+    "fleet_id":"FL002",
+    "expense_month":"2022-08-01",
+    "category":"Driver Salaries",
+    "amount_pkr":819803.0,
+    "description":"Driver Salaries for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000293",
+    "fleet_id":"FL002",
+    "expense_month":"2022-08-01",
+    "category":"Office Rent",
+    "amount_pkr":115171.0,
+    "description":"Office Rent for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000294",
+    "fleet_id":"FL002",
+    "expense_month":"2022-08-01",
+    "category":"Utilities",
+    "amount_pkr":22930.0,
+    "description":"Utilities for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000295",
+    "fleet_id":"FL002",
+    "expense_month":"2022-08-01",
+    "category":"Marketing",
+    "amount_pkr":45588.0,
+    "description":"Marketing for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000296",
+    "fleet_id":"FL002",
+    "expense_month":"2022-08-01",
+    "category":"Insurance Premium",
+    "amount_pkr":85451.0,
+    "description":"Insurance Premium for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000297",
+    "fleet_id":"FL002",
+    "expense_month":"2022-08-01",
+    "category":"Depreciation",
+    "amount_pkr":121476.0,
+    "description":"Depreciation for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000298",
+    "fleet_id":"FL002",
+    "expense_month":"2022-08-01",
+    "category":"Miscellaneous",
+    "amount_pkr":46093.0,
+    "description":"Miscellaneous for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000299",
+    "fleet_id":"FL002",
+    "expense_month":"2022-08-01",
+    "category":"Communication",
+    "amount_pkr":28015.0,
+    "description":"Communication for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000300",
+    "fleet_id":"FL002",
+    "expense_month":"2022-08-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":67518.0,
+    "description":"Parking \/ Garage for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000301",
+    "fleet_id":"FL003",
+    "expense_month":"2022-08-01",
+    "category":"Staff Salaries",
+    "amount_pkr":646067.0,
+    "description":"Staff Salaries for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000302",
+    "fleet_id":"FL003",
+    "expense_month":"2022-08-01",
+    "category":"Driver Salaries",
+    "amount_pkr":823898.0,
+    "description":"Driver Salaries for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000303",
+    "fleet_id":"FL003",
+    "expense_month":"2022-08-01",
+    "category":"Office Rent",
+    "amount_pkr":139886.0,
+    "description":"Office Rent for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000304",
+    "fleet_id":"FL003",
+    "expense_month":"2022-08-01",
+    "category":"Utilities",
+    "amount_pkr":24722.0,
+    "description":"Utilities for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000305",
+    "fleet_id":"FL003",
+    "expense_month":"2022-08-01",
+    "category":"Marketing",
+    "amount_pkr":54028.0,
+    "description":"Marketing for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000306",
+    "fleet_id":"FL003",
+    "expense_month":"2022-08-01",
+    "category":"Insurance Premium",
+    "amount_pkr":72319.0,
+    "description":"Insurance Premium for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000307",
+    "fleet_id":"FL003",
+    "expense_month":"2022-08-01",
+    "category":"Depreciation",
+    "amount_pkr":129963.0,
+    "description":"Depreciation for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000308",
+    "fleet_id":"FL003",
+    "expense_month":"2022-08-01",
+    "category":"Miscellaneous",
+    "amount_pkr":62137.0,
+    "description":"Miscellaneous for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000309",
+    "fleet_id":"FL003",
+    "expense_month":"2022-08-01",
+    "category":"Communication",
+    "amount_pkr":27033.0,
+    "description":"Communication for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000310",
+    "fleet_id":"FL003",
+    "expense_month":"2022-08-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":90482.0,
+    "description":"Parking \/ Garage for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000311",
+    "fleet_id":"FL004",
+    "expense_month":"2022-08-01",
+    "category":"Staff Salaries",
+    "amount_pkr":467370.0,
+    "description":"Staff Salaries for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000312",
+    "fleet_id":"FL004",
+    "expense_month":"2022-08-01",
+    "category":"Driver Salaries",
+    "amount_pkr":982801.0,
+    "description":"Driver Salaries for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000313",
+    "fleet_id":"FL004",
+    "expense_month":"2022-08-01",
+    "category":"Office Rent",
+    "amount_pkr":101712.0,
+    "description":"Office Rent for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000314",
+    "fleet_id":"FL004",
+    "expense_month":"2022-08-01",
+    "category":"Utilities",
+    "amount_pkr":30755.0,
+    "description":"Utilities for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000315",
+    "fleet_id":"FL004",
+    "expense_month":"2022-08-01",
+    "category":"Marketing",
+    "amount_pkr":49613.0,
+    "description":"Marketing for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000316",
+    "fleet_id":"FL004",
+    "expense_month":"2022-08-01",
+    "category":"Insurance Premium",
+    "amount_pkr":87347.0,
+    "description":"Insurance Premium for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000317",
+    "fleet_id":"FL004",
+    "expense_month":"2022-08-01",
+    "category":"Depreciation",
+    "amount_pkr":133483.0,
+    "description":"Depreciation for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000318",
+    "fleet_id":"FL004",
+    "expense_month":"2022-08-01",
+    "category":"Miscellaneous",
+    "amount_pkr":58897.0,
+    "description":"Miscellaneous for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000319",
+    "fleet_id":"FL004",
+    "expense_month":"2022-08-01",
+    "category":"Communication",
+    "amount_pkr":23505.0,
+    "description":"Communication for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000320",
+    "fleet_id":"FL004",
+    "expense_month":"2022-08-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":82750.0,
+    "description":"Parking \/ Garage for August 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000321",
+    "fleet_id":"FL001",
+    "expense_month":"2022-09-01",
+    "category":"Staff Salaries",
+    "amount_pkr":593852.0,
+    "description":"Staff Salaries for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000322",
+    "fleet_id":"FL001",
+    "expense_month":"2022-09-01",
+    "category":"Driver Salaries",
+    "amount_pkr":522088.0,
+    "description":"Driver Salaries for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000323",
+    "fleet_id":"FL001",
+    "expense_month":"2022-09-01",
+    "category":"Office Rent",
+    "amount_pkr":81781.0,
+    "description":"Office Rent for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000324",
+    "fleet_id":"FL001",
+    "expense_month":"2022-09-01",
+    "category":"Utilities",
+    "amount_pkr":25115.0,
+    "description":"Utilities for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000325",
+    "fleet_id":"FL001",
+    "expense_month":"2022-09-01",
+    "category":"Marketing",
+    "amount_pkr":36978.0,
+    "description":"Marketing for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000326",
+    "fleet_id":"FL001",
+    "expense_month":"2022-09-01",
+    "category":"Insurance Premium",
+    "amount_pkr":77889.0,
+    "description":"Insurance Premium for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000327",
+    "fleet_id":"FL001",
+    "expense_month":"2022-09-01",
+    "category":"Depreciation",
+    "amount_pkr":92526.0,
+    "description":"Depreciation for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000328",
+    "fleet_id":"FL001",
+    "expense_month":"2022-09-01",
+    "category":"Miscellaneous",
+    "amount_pkr":39476.0,
+    "description":"Miscellaneous for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000329",
+    "fleet_id":"FL001",
+    "expense_month":"2022-09-01",
+    "category":"Communication",
+    "amount_pkr":24774.0,
+    "description":"Communication for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000330",
+    "fleet_id":"FL001",
+    "expense_month":"2022-09-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":72451.0,
+    "description":"Parking \/ Garage for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000331",
+    "fleet_id":"FL002",
+    "expense_month":"2022-09-01",
+    "category":"Staff Salaries",
+    "amount_pkr":491416.0,
+    "description":"Staff Salaries for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000332",
+    "fleet_id":"FL002",
+    "expense_month":"2022-09-01",
+    "category":"Driver Salaries",
+    "amount_pkr":800008.0,
+    "description":"Driver Salaries for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000333",
+    "fleet_id":"FL002",
+    "expense_month":"2022-09-01",
+    "category":"Office Rent",
+    "amount_pkr":101267.0,
+    "description":"Office Rent for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000334",
+    "fleet_id":"FL002",
+    "expense_month":"2022-09-01",
+    "category":"Utilities",
+    "amount_pkr":27390.0,
+    "description":"Utilities for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000335",
+    "fleet_id":"FL002",
+    "expense_month":"2022-09-01",
+    "category":"Marketing",
+    "amount_pkr":45339.0,
+    "description":"Marketing for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000336",
+    "fleet_id":"FL002",
+    "expense_month":"2022-09-01",
+    "category":"Insurance Premium",
+    "amount_pkr":77187.0,
+    "description":"Insurance Premium for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000337",
+    "fleet_id":"FL002",
+    "expense_month":"2022-09-01",
+    "category":"Depreciation",
+    "amount_pkr":121759.0,
+    "description":"Depreciation for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000338",
+    "fleet_id":"FL002",
+    "expense_month":"2022-09-01",
+    "category":"Miscellaneous",
+    "amount_pkr":58539.0,
+    "description":"Miscellaneous for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000339",
+    "fleet_id":"FL002",
+    "expense_month":"2022-09-01",
+    "category":"Communication",
+    "amount_pkr":22583.0,
+    "description":"Communication for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000340",
+    "fleet_id":"FL002",
+    "expense_month":"2022-09-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":79980.0,
+    "description":"Parking \/ Garage for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000341",
+    "fleet_id":"FL003",
+    "expense_month":"2022-09-01",
+    "category":"Staff Salaries",
+    "amount_pkr":647606.0,
+    "description":"Staff Salaries for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000342",
+    "fleet_id":"FL003",
+    "expense_month":"2022-09-01",
+    "category":"Driver Salaries",
+    "amount_pkr":852456.0,
+    "description":"Driver Salaries for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000343",
+    "fleet_id":"FL003",
+    "expense_month":"2022-09-01",
+    "category":"Office Rent",
+    "amount_pkr":109700.0,
+    "description":"Office Rent for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000344",
+    "fleet_id":"FL003",
+    "expense_month":"2022-09-01",
+    "category":"Utilities",
+    "amount_pkr":25006.0,
+    "description":"Utilities for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000345",
+    "fleet_id":"FL003",
+    "expense_month":"2022-09-01",
+    "category":"Marketing",
+    "amount_pkr":68184.0,
+    "description":"Marketing for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000346",
+    "fleet_id":"FL003",
+    "expense_month":"2022-09-01",
+    "category":"Insurance Premium",
+    "amount_pkr":90254.0,
+    "description":"Insurance Premium for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000347",
+    "fleet_id":"FL003",
+    "expense_month":"2022-09-01",
+    "category":"Depreciation",
+    "amount_pkr":105487.0,
+    "description":"Depreciation for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000348",
+    "fleet_id":"FL003",
+    "expense_month":"2022-09-01",
+    "category":"Miscellaneous",
+    "amount_pkr":52041.0,
+    "description":"Miscellaneous for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000349",
+    "fleet_id":"FL003",
+    "expense_month":"2022-09-01",
+    "category":"Communication",
+    "amount_pkr":33767.0,
+    "description":"Communication for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000350",
+    "fleet_id":"FL003",
+    "expense_month":"2022-09-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":101314.0,
+    "description":"Parking \/ Garage for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000351",
+    "fleet_id":"FL004",
+    "expense_month":"2022-09-01",
+    "category":"Staff Salaries",
+    "amount_pkr":438347.0,
+    "description":"Staff Salaries for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000352",
+    "fleet_id":"FL004",
+    "expense_month":"2022-09-01",
+    "category":"Driver Salaries",
+    "amount_pkr":965389.0,
+    "description":"Driver Salaries for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000353",
+    "fleet_id":"FL004",
+    "expense_month":"2022-09-01",
+    "category":"Office Rent",
+    "amount_pkr":111887.0,
+    "description":"Office Rent for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000354",
+    "fleet_id":"FL004",
+    "expense_month":"2022-09-01",
+    "category":"Utilities",
+    "amount_pkr":26473.0,
+    "description":"Utilities for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000355",
+    "fleet_id":"FL004",
+    "expense_month":"2022-09-01",
+    "category":"Marketing",
+    "amount_pkr":53539.0,
+    "description":"Marketing for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000356",
+    "fleet_id":"FL004",
+    "expense_month":"2022-09-01",
+    "category":"Insurance Premium",
+    "amount_pkr":71106.0,
+    "description":"Insurance Premium for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000357",
+    "fleet_id":"FL004",
+    "expense_month":"2022-09-01",
+    "category":"Depreciation",
+    "amount_pkr":116884.0,
+    "description":"Depreciation for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000358",
+    "fleet_id":"FL004",
+    "expense_month":"2022-09-01",
+    "category":"Miscellaneous",
+    "amount_pkr":46640.0,
+    "description":"Miscellaneous for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000359",
+    "fleet_id":"FL004",
+    "expense_month":"2022-09-01",
+    "category":"Communication",
+    "amount_pkr":29643.0,
+    "description":"Communication for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000360",
+    "fleet_id":"FL004",
+    "expense_month":"2022-09-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":73535.0,
+    "description":"Parking \/ Garage for September 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000361",
+    "fleet_id":"FL001",
+    "expense_month":"2022-10-01",
+    "category":"Staff Salaries",
+    "amount_pkr":587166.0,
+    "description":"Staff Salaries for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000362",
+    "fleet_id":"FL001",
+    "expense_month":"2022-10-01",
+    "category":"Driver Salaries",
+    "amount_pkr":568037.0,
+    "description":"Driver Salaries for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000363",
+    "fleet_id":"FL001",
+    "expense_month":"2022-10-01",
+    "category":"Office Rent",
+    "amount_pkr":79421.0,
+    "description":"Office Rent for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000364",
+    "fleet_id":"FL001",
+    "expense_month":"2022-10-01",
+    "category":"Utilities",
+    "amount_pkr":21746.0,
+    "description":"Utilities for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000365",
+    "fleet_id":"FL001",
+    "expense_month":"2022-10-01",
+    "category":"Marketing",
+    "amount_pkr":44273.0,
+    "description":"Marketing for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000366",
+    "fleet_id":"FL001",
+    "expense_month":"2022-10-01",
+    "category":"Insurance Premium",
+    "amount_pkr":64236.0,
+    "description":"Insurance Premium for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000367",
+    "fleet_id":"FL001",
+    "expense_month":"2022-10-01",
+    "category":"Depreciation",
+    "amount_pkr":104331.0,
+    "description":"Depreciation for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000368",
+    "fleet_id":"FL001",
+    "expense_month":"2022-10-01",
+    "category":"Miscellaneous",
+    "amount_pkr":46444.0,
+    "description":"Miscellaneous for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000369",
+    "fleet_id":"FL001",
+    "expense_month":"2022-10-01",
+    "category":"Communication",
+    "amount_pkr":23004.0,
+    "description":"Communication for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000370",
+    "fleet_id":"FL001",
+    "expense_month":"2022-10-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":71818.0,
+    "description":"Parking \/ Garage for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000371",
+    "fleet_id":"FL002",
+    "expense_month":"2022-10-01",
+    "category":"Staff Salaries",
+    "amount_pkr":508580.0,
+    "description":"Staff Salaries for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000372",
+    "fleet_id":"FL002",
+    "expense_month":"2022-10-01",
+    "category":"Driver Salaries",
+    "amount_pkr":865083.0,
+    "description":"Driver Salaries for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000373",
+    "fleet_id":"FL002",
+    "expense_month":"2022-10-01",
+    "category":"Office Rent",
+    "amount_pkr":87525.0,
+    "description":"Office Rent for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000374",
+    "fleet_id":"FL002",
+    "expense_month":"2022-10-01",
+    "category":"Utilities",
+    "amount_pkr":23096.0,
+    "description":"Utilities for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000375",
+    "fleet_id":"FL002",
+    "expense_month":"2022-10-01",
+    "category":"Marketing",
+    "amount_pkr":50161.0,
+    "description":"Marketing for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000376",
+    "fleet_id":"FL002",
+    "expense_month":"2022-10-01",
+    "category":"Insurance Premium",
+    "amount_pkr":69082.0,
+    "description":"Insurance Premium for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000377",
+    "fleet_id":"FL002",
+    "expense_month":"2022-10-01",
+    "category":"Depreciation",
+    "amount_pkr":104406.0,
+    "description":"Depreciation for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000378",
+    "fleet_id":"FL002",
+    "expense_month":"2022-10-01",
+    "category":"Miscellaneous",
+    "amount_pkr":44996.0,
+    "description":"Miscellaneous for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000379",
+    "fleet_id":"FL002",
+    "expense_month":"2022-10-01",
+    "category":"Communication",
+    "amount_pkr":29897.0,
+    "description":"Communication for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000380",
+    "fleet_id":"FL002",
+    "expense_month":"2022-10-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":74479.0,
+    "description":"Parking \/ Garage for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000381",
+    "fleet_id":"FL003",
+    "expense_month":"2022-10-01",
+    "category":"Staff Salaries",
+    "amount_pkr":603220.0,
+    "description":"Staff Salaries for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000382",
+    "fleet_id":"FL003",
+    "expense_month":"2022-10-01",
+    "category":"Driver Salaries",
+    "amount_pkr":828256.0,
+    "description":"Driver Salaries for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000383",
+    "fleet_id":"FL003",
+    "expense_month":"2022-10-01",
+    "category":"Office Rent",
+    "amount_pkr":119795.0,
+    "description":"Office Rent for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000384",
+    "fleet_id":"FL003",
+    "expense_month":"2022-10-01",
+    "category":"Utilities",
+    "amount_pkr":34618.0,
+    "description":"Utilities for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000385",
+    "fleet_id":"FL003",
+    "expense_month":"2022-10-01",
+    "category":"Marketing",
+    "amount_pkr":60693.0,
+    "description":"Marketing for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000386",
+    "fleet_id":"FL003",
+    "expense_month":"2022-10-01",
+    "category":"Insurance Premium",
+    "amount_pkr":92567.0,
+    "description":"Insurance Premium for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000387",
+    "fleet_id":"FL003",
+    "expense_month":"2022-10-01",
+    "category":"Depreciation",
+    "amount_pkr":95658.0,
+    "description":"Depreciation for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000388",
+    "fleet_id":"FL003",
+    "expense_month":"2022-10-01",
+    "category":"Miscellaneous",
+    "amount_pkr":61443.0,
+    "description":"Miscellaneous for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000389",
+    "fleet_id":"FL003",
+    "expense_month":"2022-10-01",
+    "category":"Communication",
+    "amount_pkr":28981.0,
+    "description":"Communication for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000390",
+    "fleet_id":"FL003",
+    "expense_month":"2022-10-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":105170.0,
+    "description":"Parking \/ Garage for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000391",
+    "fleet_id":"FL004",
+    "expense_month":"2022-10-01",
+    "category":"Staff Salaries",
+    "amount_pkr":469161.0,
+    "description":"Staff Salaries for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000392",
+    "fleet_id":"FL004",
+    "expense_month":"2022-10-01",
+    "category":"Driver Salaries",
+    "amount_pkr":930476.0,
+    "description":"Driver Salaries for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000393",
+    "fleet_id":"FL004",
+    "expense_month":"2022-10-01",
+    "category":"Office Rent",
+    "amount_pkr":89960.0,
+    "description":"Office Rent for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000394",
+    "fleet_id":"FL004",
+    "expense_month":"2022-10-01",
+    "category":"Utilities",
+    "amount_pkr":31953.0,
+    "description":"Utilities for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000395",
+    "fleet_id":"FL004",
+    "expense_month":"2022-10-01",
+    "category":"Marketing",
+    "amount_pkr":65502.0,
+    "description":"Marketing for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000396",
+    "fleet_id":"FL004",
+    "expense_month":"2022-10-01",
+    "category":"Insurance Premium",
+    "amount_pkr":79775.0,
+    "description":"Insurance Premium for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000397",
+    "fleet_id":"FL004",
+    "expense_month":"2022-10-01",
+    "category":"Depreciation",
+    "amount_pkr":102645.0,
+    "description":"Depreciation for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000398",
+    "fleet_id":"FL004",
+    "expense_month":"2022-10-01",
+    "category":"Miscellaneous",
+    "amount_pkr":56340.0,
+    "description":"Miscellaneous for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000399",
+    "fleet_id":"FL004",
+    "expense_month":"2022-10-01",
+    "category":"Communication",
+    "amount_pkr":25685.0,
+    "description":"Communication for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000400",
+    "fleet_id":"FL004",
+    "expense_month":"2022-10-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":91854.0,
+    "description":"Parking \/ Garage for October 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000401",
+    "fleet_id":"FL001",
+    "expense_month":"2022-11-01",
+    "category":"Staff Salaries",
+    "amount_pkr":600469.0,
+    "description":"Staff Salaries for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000402",
+    "fleet_id":"FL001",
+    "expense_month":"2022-11-01",
+    "category":"Driver Salaries",
+    "amount_pkr":562756.0,
+    "description":"Driver Salaries for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000403",
+    "fleet_id":"FL001",
+    "expense_month":"2022-11-01",
+    "category":"Office Rent",
+    "amount_pkr":92454.0,
+    "description":"Office Rent for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000404",
+    "fleet_id":"FL001",
+    "expense_month":"2022-11-01",
+    "category":"Utilities",
+    "amount_pkr":18735.0,
+    "description":"Utilities for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000405",
+    "fleet_id":"FL001",
+    "expense_month":"2022-11-01",
+    "category":"Marketing",
+    "amount_pkr":49965.0,
+    "description":"Marketing for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000406",
+    "fleet_id":"FL001",
+    "expense_month":"2022-11-01",
+    "category":"Insurance Premium",
+    "amount_pkr":69273.0,
+    "description":"Insurance Premium for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000407",
+    "fleet_id":"FL001",
+    "expense_month":"2022-11-01",
+    "category":"Depreciation",
+    "amount_pkr":83393.0,
+    "description":"Depreciation for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000408",
+    "fleet_id":"FL001",
+    "expense_month":"2022-11-01",
+    "category":"Miscellaneous",
+    "amount_pkr":50518.0,
+    "description":"Miscellaneous for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000409",
+    "fleet_id":"FL001",
+    "expense_month":"2022-11-01",
+    "category":"Communication",
+    "amount_pkr":26212.0,
+    "description":"Communication for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000410",
+    "fleet_id":"FL001",
+    "expense_month":"2022-11-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":71783.0,
+    "description":"Parking \/ Garage for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000411",
+    "fleet_id":"FL002",
+    "expense_month":"2022-11-01",
+    "category":"Staff Salaries",
+    "amount_pkr":483660.0,
+    "description":"Staff Salaries for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000412",
+    "fleet_id":"FL002",
+    "expense_month":"2022-11-01",
+    "category":"Driver Salaries",
+    "amount_pkr":804290.0,
+    "description":"Driver Salaries for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000413",
+    "fleet_id":"FL002",
+    "expense_month":"2022-11-01",
+    "category":"Office Rent",
+    "amount_pkr":107624.0,
+    "description":"Office Rent for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000414",
+    "fleet_id":"FL002",
+    "expense_month":"2022-11-01",
+    "category":"Utilities",
+    "amount_pkr":31960.0,
+    "description":"Utilities for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000415",
+    "fleet_id":"FL002",
+    "expense_month":"2022-11-01",
+    "category":"Marketing",
+    "amount_pkr":50827.0,
+    "description":"Marketing for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000416",
+    "fleet_id":"FL002",
+    "expense_month":"2022-11-01",
+    "category":"Insurance Premium",
+    "amount_pkr":64256.0,
+    "description":"Insurance Premium for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000417",
+    "fleet_id":"FL002",
+    "expense_month":"2022-11-01",
+    "category":"Depreciation",
+    "amount_pkr":127225.0,
+    "description":"Depreciation for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000418",
+    "fleet_id":"FL002",
+    "expense_month":"2022-11-01",
+    "category":"Miscellaneous",
+    "amount_pkr":61146.0,
+    "description":"Miscellaneous for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000419",
+    "fleet_id":"FL002",
+    "expense_month":"2022-11-01",
+    "category":"Communication",
+    "amount_pkr":28428.0,
+    "description":"Communication for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000420",
+    "fleet_id":"FL002",
+    "expense_month":"2022-11-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":83197.0,
+    "description":"Parking \/ Garage for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000421",
+    "fleet_id":"FL003",
+    "expense_month":"2022-11-01",
+    "category":"Staff Salaries",
+    "amount_pkr":601394.0,
+    "description":"Staff Salaries for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000422",
+    "fleet_id":"FL003",
+    "expense_month":"2022-11-01",
+    "category":"Driver Salaries",
+    "amount_pkr":841009.0,
+    "description":"Driver Salaries for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000423",
+    "fleet_id":"FL003",
+    "expense_month":"2022-11-01",
+    "category":"Office Rent",
+    "amount_pkr":114266.0,
+    "description":"Office Rent for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000424",
+    "fleet_id":"FL003",
+    "expense_month":"2022-11-01",
+    "category":"Utilities",
+    "amount_pkr":34410.0,
+    "description":"Utilities for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000425",
+    "fleet_id":"FL003",
+    "expense_month":"2022-11-01",
+    "category":"Marketing",
+    "amount_pkr":62720.0,
+    "description":"Marketing for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000426",
+    "fleet_id":"FL003",
+    "expense_month":"2022-11-01",
+    "category":"Insurance Premium",
+    "amount_pkr":74749.0,
+    "description":"Insurance Premium for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000427",
+    "fleet_id":"FL003",
+    "expense_month":"2022-11-01",
+    "category":"Depreciation",
+    "amount_pkr":101309.0,
+    "description":"Depreciation for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000428",
+    "fleet_id":"FL003",
+    "expense_month":"2022-11-01",
+    "category":"Miscellaneous",
+    "amount_pkr":69302.0,
+    "description":"Miscellaneous for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000429",
+    "fleet_id":"FL003",
+    "expense_month":"2022-11-01",
+    "category":"Communication",
+    "amount_pkr":25917.0,
+    "description":"Communication for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000430",
+    "fleet_id":"FL003",
+    "expense_month":"2022-11-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":76306.0,
+    "description":"Parking \/ Garage for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000431",
+    "fleet_id":"FL004",
+    "expense_month":"2022-11-01",
+    "category":"Staff Salaries",
+    "amount_pkr":450586.0,
+    "description":"Staff Salaries for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000432",
+    "fleet_id":"FL004",
+    "expense_month":"2022-11-01",
+    "category":"Driver Salaries",
+    "amount_pkr":935043.0,
+    "description":"Driver Salaries for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000433",
+    "fleet_id":"FL004",
+    "expense_month":"2022-11-01",
+    "category":"Office Rent",
+    "amount_pkr":101531.0,
+    "description":"Office Rent for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000434",
+    "fleet_id":"FL004",
+    "expense_month":"2022-11-01",
+    "category":"Utilities",
+    "amount_pkr":30886.0,
+    "description":"Utilities for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000435",
+    "fleet_id":"FL004",
+    "expense_month":"2022-11-01",
+    "category":"Marketing",
+    "amount_pkr":49633.0,
+    "description":"Marketing for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000436",
+    "fleet_id":"FL004",
+    "expense_month":"2022-11-01",
+    "category":"Insurance Premium",
+    "amount_pkr":73491.0,
+    "description":"Insurance Premium for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000437",
+    "fleet_id":"FL004",
+    "expense_month":"2022-11-01",
+    "category":"Depreciation",
+    "amount_pkr":109288.0,
+    "description":"Depreciation for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000438",
+    "fleet_id":"FL004",
+    "expense_month":"2022-11-01",
+    "category":"Miscellaneous",
+    "amount_pkr":53340.0,
+    "description":"Miscellaneous for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000439",
+    "fleet_id":"FL004",
+    "expense_month":"2022-11-01",
+    "category":"Communication",
+    "amount_pkr":23279.0,
+    "description":"Communication for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000440",
+    "fleet_id":"FL004",
+    "expense_month":"2022-11-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":94643.0,
+    "description":"Parking \/ Garage for November 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000441",
+    "fleet_id":"FL001",
+    "expense_month":"2022-12-01",
+    "category":"Staff Salaries",
+    "amount_pkr":619053.0,
+    "description":"Staff Salaries for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000442",
+    "fleet_id":"FL001",
+    "expense_month":"2022-12-01",
+    "category":"Driver Salaries",
+    "amount_pkr":555415.0,
+    "description":"Driver Salaries for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000443",
+    "fleet_id":"FL001",
+    "expense_month":"2022-12-01",
+    "category":"Office Rent",
+    "amount_pkr":108222.0,
+    "description":"Office Rent for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000444",
+    "fleet_id":"FL001",
+    "expense_month":"2022-12-01",
+    "category":"Utilities",
+    "amount_pkr":22762.0,
+    "description":"Utilities for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000445",
+    "fleet_id":"FL001",
+    "expense_month":"2022-12-01",
+    "category":"Marketing",
+    "amount_pkr":43365.0,
+    "description":"Marketing for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000446",
+    "fleet_id":"FL001",
+    "expense_month":"2022-12-01",
+    "category":"Insurance Premium",
+    "amount_pkr":81783.0,
+    "description":"Insurance Premium for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000447",
+    "fleet_id":"FL001",
+    "expense_month":"2022-12-01",
+    "category":"Depreciation",
+    "amount_pkr":91415.0,
+    "description":"Depreciation for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000448",
+    "fleet_id":"FL001",
+    "expense_month":"2022-12-01",
+    "category":"Miscellaneous",
+    "amount_pkr":37054.0,
+    "description":"Miscellaneous for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000449",
+    "fleet_id":"FL001",
+    "expense_month":"2022-12-01",
+    "category":"Communication",
+    "amount_pkr":27066.0,
+    "description":"Communication for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000450",
+    "fleet_id":"FL001",
+    "expense_month":"2022-12-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":61619.0,
+    "description":"Parking \/ Garage for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000451",
+    "fleet_id":"FL002",
+    "expense_month":"2022-12-01",
+    "category":"Staff Salaries",
+    "amount_pkr":498770.0,
+    "description":"Staff Salaries for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000452",
+    "fleet_id":"FL002",
+    "expense_month":"2022-12-01",
+    "category":"Driver Salaries",
+    "amount_pkr":840573.0,
+    "description":"Driver Salaries for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000453",
+    "fleet_id":"FL002",
+    "expense_month":"2022-12-01",
+    "category":"Office Rent",
+    "amount_pkr":123829.0,
+    "description":"Office Rent for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000454",
+    "fleet_id":"FL002",
+    "expense_month":"2022-12-01",
+    "category":"Utilities",
+    "amount_pkr":21874.0,
+    "description":"Utilities for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000455",
+    "fleet_id":"FL002",
+    "expense_month":"2022-12-01",
+    "category":"Marketing",
+    "amount_pkr":63070.0,
+    "description":"Marketing for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000456",
+    "fleet_id":"FL002",
+    "expense_month":"2022-12-01",
+    "category":"Insurance Premium",
+    "amount_pkr":80683.0,
+    "description":"Insurance Premium for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000457",
+    "fleet_id":"FL002",
+    "expense_month":"2022-12-01",
+    "category":"Depreciation",
+    "amount_pkr":91273.0,
+    "description":"Depreciation for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000458",
+    "fleet_id":"FL002",
+    "expense_month":"2022-12-01",
+    "category":"Miscellaneous",
+    "amount_pkr":50681.0,
+    "description":"Miscellaneous for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000459",
+    "fleet_id":"FL002",
+    "expense_month":"2022-12-01",
+    "category":"Communication",
+    "amount_pkr":26992.0,
+    "description":"Communication for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000460",
+    "fleet_id":"FL002",
+    "expense_month":"2022-12-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":87800.0,
+    "description":"Parking \/ Garage for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000461",
+    "fleet_id":"FL003",
+    "expense_month":"2022-12-01",
+    "category":"Staff Salaries",
+    "amount_pkr":607457.0,
+    "description":"Staff Salaries for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000462",
+    "fleet_id":"FL003",
+    "expense_month":"2022-12-01",
+    "category":"Driver Salaries",
+    "amount_pkr":840351.0,
+    "description":"Driver Salaries for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000463",
+    "fleet_id":"FL003",
+    "expense_month":"2022-12-01",
+    "category":"Office Rent",
+    "amount_pkr":116112.0,
+    "description":"Office Rent for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000464",
+    "fleet_id":"FL003",
+    "expense_month":"2022-12-01",
+    "category":"Utilities",
+    "amount_pkr":31595.0,
+    "description":"Utilities for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000465",
+    "fleet_id":"FL003",
+    "expense_month":"2022-12-01",
+    "category":"Marketing",
+    "amount_pkr":63700.0,
+    "description":"Marketing for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000466",
+    "fleet_id":"FL003",
+    "expense_month":"2022-12-01",
+    "category":"Insurance Premium",
+    "amount_pkr":80872.0,
+    "description":"Insurance Premium for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000467",
+    "fleet_id":"FL003",
+    "expense_month":"2022-12-01",
+    "category":"Depreciation",
+    "amount_pkr":126601.0,
+    "description":"Depreciation for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000468",
+    "fleet_id":"FL003",
+    "expense_month":"2022-12-01",
+    "category":"Miscellaneous",
+    "amount_pkr":70561.0,
+    "description":"Miscellaneous for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000469",
+    "fleet_id":"FL003",
+    "expense_month":"2022-12-01",
+    "category":"Communication",
+    "amount_pkr":26585.0,
+    "description":"Communication for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000470",
+    "fleet_id":"FL003",
+    "expense_month":"2022-12-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":87980.0,
+    "description":"Parking \/ Garage for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000471",
+    "fleet_id":"FL004",
+    "expense_month":"2022-12-01",
+    "category":"Staff Salaries",
+    "amount_pkr":462026.0,
+    "description":"Staff Salaries for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000472",
+    "fleet_id":"FL004",
+    "expense_month":"2022-12-01",
+    "category":"Driver Salaries",
+    "amount_pkr":981963.0,
+    "description":"Driver Salaries for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000473",
+    "fleet_id":"FL004",
+    "expense_month":"2022-12-01",
+    "category":"Office Rent",
+    "amount_pkr":105933.0,
+    "description":"Office Rent for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000474",
+    "fleet_id":"FL004",
+    "expense_month":"2022-12-01",
+    "category":"Utilities",
+    "amount_pkr":28771.0,
+    "description":"Utilities for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000475",
+    "fleet_id":"FL004",
+    "expense_month":"2022-12-01",
+    "category":"Marketing",
+    "amount_pkr":54101.0,
+    "description":"Marketing for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000476",
+    "fleet_id":"FL004",
+    "expense_month":"2022-12-01",
+    "category":"Insurance Premium",
+    "amount_pkr":74360.0,
+    "description":"Insurance Premium for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000477",
+    "fleet_id":"FL004",
+    "expense_month":"2022-12-01",
+    "category":"Depreciation",
+    "amount_pkr":133562.0,
+    "description":"Depreciation for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000478",
+    "fleet_id":"FL004",
+    "expense_month":"2022-12-01",
+    "category":"Miscellaneous",
+    "amount_pkr":48087.0,
+    "description":"Miscellaneous for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000479",
+    "fleet_id":"FL004",
+    "expense_month":"2022-12-01",
+    "category":"Communication",
+    "amount_pkr":28049.0,
+    "description":"Communication for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000480",
+    "fleet_id":"FL004",
+    "expense_month":"2022-12-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":84344.0,
+    "description":"Parking \/ Garage for December 2022",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000481",
+    "fleet_id":"FL001",
+    "expense_month":"2023-01-01",
+    "category":"Staff Salaries",
+    "amount_pkr":588546.0,
+    "description":"Staff Salaries for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000482",
+    "fleet_id":"FL001",
+    "expense_month":"2023-01-01",
+    "category":"Driver Salaries",
+    "amount_pkr":564254.0,
+    "description":"Driver Salaries for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000483",
+    "fleet_id":"FL001",
+    "expense_month":"2023-01-01",
+    "category":"Office Rent",
+    "amount_pkr":98421.0,
+    "description":"Office Rent for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000484",
+    "fleet_id":"FL001",
+    "expense_month":"2023-01-01",
+    "category":"Utilities",
+    "amount_pkr":23950.0,
+    "description":"Utilities for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000485",
+    "fleet_id":"FL001",
+    "expense_month":"2023-01-01",
+    "category":"Marketing",
+    "amount_pkr":44441.0,
+    "description":"Marketing for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000486",
+    "fleet_id":"FL001",
+    "expense_month":"2023-01-01",
+    "category":"Insurance Premium",
+    "amount_pkr":56638.0,
+    "description":"Insurance Premium for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000487",
+    "fleet_id":"FL001",
+    "expense_month":"2023-01-01",
+    "category":"Depreciation",
+    "amount_pkr":82663.0,
+    "description":"Depreciation for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000488",
+    "fleet_id":"FL001",
+    "expense_month":"2023-01-01",
+    "category":"Miscellaneous",
+    "amount_pkr":49620.0,
+    "description":"Miscellaneous for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000489",
+    "fleet_id":"FL001",
+    "expense_month":"2023-01-01",
+    "category":"Communication",
+    "amount_pkr":21743.0,
+    "description":"Communication for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000490",
+    "fleet_id":"FL001",
+    "expense_month":"2023-01-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":80036.0,
+    "description":"Parking \/ Garage for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000491",
+    "fleet_id":"FL002",
+    "expense_month":"2023-01-01",
+    "category":"Staff Salaries",
+    "amount_pkr":482256.0,
+    "description":"Staff Salaries for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000492",
+    "fleet_id":"FL002",
+    "expense_month":"2023-01-01",
+    "category":"Driver Salaries",
+    "amount_pkr":824243.0,
+    "description":"Driver Salaries for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000493",
+    "fleet_id":"FL002",
+    "expense_month":"2023-01-01",
+    "category":"Office Rent",
+    "amount_pkr":122819.0,
+    "description":"Office Rent for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000494",
+    "fleet_id":"FL002",
+    "expense_month":"2023-01-01",
+    "category":"Utilities",
+    "amount_pkr":29838.0,
+    "description":"Utilities for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000495",
+    "fleet_id":"FL002",
+    "expense_month":"2023-01-01",
+    "category":"Marketing",
+    "amount_pkr":52971.0,
+    "description":"Marketing for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000496",
+    "fleet_id":"FL002",
+    "expense_month":"2023-01-01",
+    "category":"Insurance Premium",
+    "amount_pkr":92180.0,
+    "description":"Insurance Premium for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000497",
+    "fleet_id":"FL002",
+    "expense_month":"2023-01-01",
+    "category":"Depreciation",
+    "amount_pkr":94228.0,
+    "description":"Depreciation for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000498",
+    "fleet_id":"FL002",
+    "expense_month":"2023-01-01",
+    "category":"Miscellaneous",
+    "amount_pkr":63955.0,
+    "description":"Miscellaneous for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000499",
+    "fleet_id":"FL002",
+    "expense_month":"2023-01-01",
+    "category":"Communication",
+    "amount_pkr":22681.0,
+    "description":"Communication for January 2023",
+    "approved_by":"Fleet Manager"
+  },
+  {
+    "expense_id":"EX0000500",
+    "fleet_id":"FL002",
+    "expense_month":"2023-01-01",
+    "category":"Parking \/ Garage",
+    "amount_pkr":76793.0,
+    "description":"Parking \/ Garage for January 2023",
+    "approved_by":"Fleet Manager"
+  }
+]
