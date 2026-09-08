@@ -1,6 +1,7 @@
 """
-Soft Rent a Car — Main Streamlit Application Entry Point
-Run with:  streamlit run streamlit_app.py
+Soft Rent a Car — Main Entry Point
+Uses st.navigation() for Streamlit 1.45+ multi-page routing.
+Run with: streamlit run streamlit_app.py
 """
 
 import streamlit as st
@@ -12,63 +13,52 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-from app.style import inject_css
-inject_css()
+# ── Navigation (Streamlit 1.45+ API) ──────────────────────────────────
+pg = st.navigation(
+    {
+        "Overview": [
+            st.Page("page_modules/p1_executive.py",  title="Executive Dashboard",    icon="🏠"),
+        ],
+        "Finance": [
+            st.Page("page_modules/p2_finance.py",    title="Finance & Revenue",      icon="💰"),
+        ],
+        "Operations": [
+            st.Page("page_modules/p3_operations.py", title="Operations & Trips",     icon="🚗"),
+            st.Page("page_modules/p7_map.py",        title="Demand Map",             icon="🗺️"),
+        ],
+        "People & Safety": [
+            st.Page("page_modules/p4_drivers.py",    title="Driver Safety & AI",     icon="🚦"),
+        ],
+        "Fleet": [
+            st.Page("page_modules/p5_fleet.py",      title="Fleet Health",           icon="🔧"),
+        ],
+        "Intelligence": [
+            st.Page("page_modules/p6_forecast.py",   title="Forecasting & Trends",   icon="📈"),
+            st.Page("page_modules/p8_stories.py",    title="Data Storytelling",      icon="📖"),
+        ],
+        "Tools": [
+            st.Page("page_modules/p9_chat.py",       title="AI Chat Assistant",      icon="🤖"),
+            st.Page("page_modules/p10_alerts.py",    title="Alerts & Watchlist",     icon="⚠️"),
+        ],
+    },
+    position="sidebar",
+)
 
-from app.data_loader import load_all
-import importlib
-
-# ── Load data (globally cached) ────────────────────────────────────────
-with st.spinner("Loading fleet data …"):
-    dfs = load_all()
-
-# ── Sidebar navigation ─────────────────────────────────────────────────
+# ── Sidebar branding (shown on every page) ────────────────────────────
 with st.sidebar:
     st.markdown("""
-    <div class="logo-banner">
-        <div class="logo-icon">🚗</div>
-        <div>
-            <div class="logo-text-main">Soft Rent a Car</div>
-            <div class="logo-text-sub">Fleet Intelligence Platform</div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+section[data-testid="stSidebar"] { background: linear-gradient(160deg,#1D3557 0%,#0f1a2b 100%); }
+section[data-testid="stSidebar"] * { font-family:'Inter',sans-serif !important; }
+</style>
+<div style="padding:14px 0 18px 0; display:flex; align-items:center; gap:10px;">
+  <span style="font-size:2rem;">🚗</span>
+  <div>
+    <div style="font-size:1.25rem;font-weight:800;color:#E63946;line-height:1;">Soft Rent a Car</div>
+    <div style="font-size:0.65rem;color:#5a7a96;letter-spacing:.12em;text-transform:uppercase;">Fleet Intelligence</div>
+  </div>
+</div>
+""", unsafe_allow_html=True)
 
-    st.markdown("---")
-
-    pages = {
-        "🏠 Executive Dashboard":     "pages.p1_executive",
-        "💰 Finance & Revenue":        "pages.p2_finance",
-        "🚗 Operations & Trips":       "pages.p3_operations",
-        "🚦 Driver Safety & AI":       "pages.p4_drivers",
-        "🔧 Fleet Health":             "pages.p5_fleet",
-        "📈 Forecasting & Trends":     "pages.p6_forecast",
-        "🗺️  Demand Map":              "pages.p7_map",
-        "📖 Data Storytelling":        "pages.p8_stories",
-        "🤖 AI Chat Assistant":        "pages.p9_chat",
-        "⚠️  Alerts & Watchlist":      "pages.p10_alerts",
-    }
-
-    selected = st.radio(
-        "Navigation",
-        list(pages.keys()),
-        label_visibility="collapsed",
-    )
-
-    st.markdown("---")
-    st.markdown(
-        '<div style="font-size:0.7rem;color:#4a6a84;text-align:center;">'
-        '© 2026 Soft Rent a Car<br>Powered by AI & Analytics'
-        '</div>',
-        unsafe_allow_html=True,
-    )
-
-# ── Page router ────────────────────────────────────────────────────────
-module_name = pages[selected]
-try:
-    module = importlib.import_module(module_name)
-    module.render(dfs)
-except Exception as e:
-    st.error(f"Error loading page: {e}")
-    import traceback
-    st.code(traceback.format_exc())
+pg.run()
