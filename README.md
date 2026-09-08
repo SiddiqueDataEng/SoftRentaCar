@@ -6,6 +6,7 @@ A complete, realistic synthetic dataset for a **Pakistani car rental business**,
 - **Analytical Engineering** – dbt models, KPI dashboards, OLAP cubes
 - **ML / AI** – Driver Behavior Analytics, Demand Prediction, Dynamic Pricing, Predictive Maintenance
 
+Modeled from real operators: [RentKA](https://rentka.co), [Haxn Rent a Car](https://haxnrentacar.com), [Cars Rental 247](https://carsrental247.com), Hassan Rent a Car Gujrat.
 
 ---
 
