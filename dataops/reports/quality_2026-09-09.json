@@ -1,0 +1,65 @@
+{
+  "run_date": "2026-09-09",
+  "run_timestamp": "2026-09-09T05:54:40.512551",
+  "summary": {
+    "passed": 84,
+    "warnings": 1,
+    "critical": 0
+  },
+  "critical_failures": [],
+  "warnings": [
+    "telematics: avg_speed_kmh: 0.83% out of range [0, 300]"
+  ],
+  "tables": {
+    "fleets": {
+      "table": "fleets",
+      "checks": [],
+      "issues": []
+    },
+    "vehicle_types": {
+      "table": "vehicle_types",
+      "checks": [],
+      "issues": []
+    },
+    "vehicles": {
+      "table": "vehicles",
+      "checks": [],
+      "issues": []
+    },
+    "drivers": {
+      "table": "drivers",
+      "checks": [],
+      "issues": []
+    },
+    "customers": {
+      "table": "customers",
+      "checks": [],
+      "issues": []
+    },
+    "trips": {
+      "table": "trips",
+      "checks": [],
+      "issues": []
+    },
+    "telematics": {
+      "table": "telematics",
+      "checks": [],
+      "issues": []
+    },
+    "invoices": {
+      "table": "invoices",
+      "checks": [],
+      "issues": []
+    },
+    "fuel_logs": {
+      "table": "fuel_logs",
+      "checks": [],
+      "issues": []
+    },
+    "maintenance": {
+      "table": "maintenance",
+      "checks": [],
+      "issues": []
+    }
+  }
+}

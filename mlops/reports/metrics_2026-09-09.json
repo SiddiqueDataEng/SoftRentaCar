@@ -1,0 +1,33 @@
+{
+  "run_timestamp": "2026-09-09T05:56:17.416979",
+  "overall_status": "PASS",
+  "models": {
+    "driver_safety": {
+      "accuracy": 0.8073,
+      "status": "PASS"
+    },
+    "demand_forecast": {
+      "mae": 0.85,
+      "r2": 0.396,
+      "status": "PASS"
+    },
+    "dynamic_pricing": {
+      "mae_pkr": 26474.0,
+      "r2": 0.208,
+      "status": "PASS"
+    },
+    "maintenance": {
+      "accuracy": 1.0,
+      "status": "PASS"
+    },
+    "revenue_forecast": {
+      "next_month_pkr": 66895592.0,
+      "periods": 6,
+      "status": "PASS"
+    },
+    "fuel_anomaly": {
+      "anomalies_detected": 282,
+      "status": "PASS"
+    }
+  }
+}

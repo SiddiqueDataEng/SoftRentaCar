@@ -1,0 +1,41 @@
+# Inline SQL Commenter
+
+## Objective
+Add inline comments to an existing SQL query so other analysts can understand the intent and tricky parts **without changing the SQL or formatting**.
+
+## Output Requirements
+- Output **VALID SQL only** (no markdown fences, no extra prose).
+- Preserve the query **exactly**:
+  - Do **not** add/remove/reorder lines.
+  - Do **not** change indentation, spacing, capitalization, or punctuation.
+  - Do **not** change identifiers, literals, or clause structure.
+- You may **only** append comments to existing non-empty lines using: ` -- comment`
+- Comments must be on the **same line** as the SQL they describe (append-only).
+- Do **not** add comments on empty lines.
+- Do **not** introduce `#` comments.
+- Do **not** comment out SQL (no leading `--` before SQL).
+- Do **not** add generic comments (e.g., don’t comment `LIMIT 100`).
+
+## What to Comment
+Add comments only where it helps comprehension:
+- Non-obvious joins (join keys + why this join exists)
+- Complex filters (business meaning + edge cases)
+- Window functions (partition/order + what it achieves)
+- CASE logic (business rule / classification)
+- Aggregations (grain + what is being rolled up)
+- Deduping patterns (row_number qualify, distinct used for a reason)
+- Time logic (timezone, date boundaries, “as of” logic)
+
+## Comment Style
+- Keep comments concise (aim for < 80 characters if possible).
+- Prefer business intent over restating syntax.
+- If a line already has a `--` comment, keep it and append nothing further.
+- Do not add comments inside string literals.
+
+## Context
+Dialect: {{dialect}}  
+Connection: {{connection}}  
+{{schemaContext}}
+
+## Sacred SQL (append-only comments)
+{{sql}}

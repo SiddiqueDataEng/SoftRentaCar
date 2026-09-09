@@ -1,0 +1,35 @@
+{
+  "driver_safety": {
+    "accuracy":         0.807,
+    "min_acceptable":   0.75,
+    "description":      "Random Forest multi-class classifier — behavior profile"
+  },
+  "demand_forecast": {
+    "mae":              0.85,
+    "r2":               0.396,
+    "max_mae":          2.0,
+    "min_r2":           0.10,
+    "description":      "Gradient Boosting daily trip count predictor"
+  },
+  "dynamic_pricing": {
+    "mae_pkr":          26474,
+    "r2":               0.208,
+    "max_mae_pkr":      60000,
+    "min_r2":           0.05,
+    "description":      "Gradient Boosting daily rate recommender"
+  },
+  "maintenance": {
+    "accuracy":         0.92,
+    "min_acceptable":   0.80,
+    "description":      "Random Forest binary classifier — needs service within 14 days"
+  },
+  "revenue_forecast": {
+    "periods":          6,
+    "description":      "Exponential Smoothing with trend + seasonality"
+  },
+  "fuel_anomaly": {
+    "description":      "Z-score based anomaly detection — no accuracy baseline",
+    "min_anomalies":    0,
+    "max_anomalies":    1000
+  }
+}

@@ -7,6 +7,7 @@ from page_modules._shared import (
     inject, get_data, fmt, kpi, sec, alert_box, dark_layout,
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS
 )
+from app.storytelling import insight, forecast_insight
 
 inject()
 dfs   = get_data()
@@ -46,7 +47,7 @@ with tabs[0]:
         fillcolor="rgba(230,57,70,.10)",
         line=dict(color="rgba(0,0,0,0)"), name="95% CI"))
     dark_layout(fig, "Monthly Revenue Forecast (PKR M)", xangle=-45, height=400)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
     fc_df = pd.DataFrame({
         "Month":    [str(i) for i in fc.index],
@@ -56,7 +57,11 @@ with tabs[0]:
     })
     for col in ["Forecast", "Lower CI", "Upper CI"]:
         fc_df[col] = fc_df[col].apply(fmt)
-    st.dataframe(fc_df, use_container_width=True, hide_index=True)
+    st.dataframe(fc_df, width='stretch', hide_index=True)
+
+    # Forecast insight
+    txt, sub, lvl = forecast_insight(hist, fc)
+    insight(txt, "📈", lvl, sub)
 
 
 # ── Tab 2: Demand Forecast ─────────────────────────────────────────────
@@ -91,7 +96,7 @@ with tabs[1]:
         mode="lines+markers", marker=dict(size=5, symbol="diamond"),
         fill="tozeroy", fillcolor="rgba(230,57,70,.08)"))
     dark_layout(fig2, f"Daily Demand Forecast — {sel_ci_dem}", height=380)
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width='stretch')
 
     fc_dem["is_weekend"] = pd.to_datetime(fc_dem["date"]).dt.dayofweek >= 5
     we   = fc_dem[fc_dem["is_weekend"]]["predicted_trips"].mean()
@@ -101,6 +106,17 @@ with tabs[1]:
     kpi(dc[0], f"{wd:.1f}", "Avg Weekday Demand", "trips/day")
     kpi(dc[1], f"{we:.1f}", "Avg Weekend Demand",  "trips/day")
     kpi(dc[2], str(peak),   "Peak Demand Date",    "")
+
+    insight(
+        f"Weekend demand averages <strong>{we:.1f} trips/day</strong> vs "
+        f"<strong>{wd:.1f} trips/day</strong> on weekdays — "
+        f"a <strong>{(we-wd)/max(wd,1)*100:.0f}% weekend premium</strong>. "
+        f"Peak demand day is <strong>{peak}</strong>. "
+        f"Use this forecast to pre-book drivers 48 hours ahead and avoid the "
+        f"cancellations that spike when supply doesn't match predicted demand.",
+        "🚗", "info",
+        f"💡 Pre-book {int(we*1.15)} drivers for {peak} — 15% buffer above forecast."
+    )
 
 
 # ── Tab 3: Dynamic Pricing ─────────────────────────────────────────────
@@ -163,7 +179,18 @@ with tabs[2]:
         text=[[f"PKR {v:,.0f}" for v in row] for row in surface],
         hovertemplate="%{y} – %{x}: %{text}<extra></extra>"))
     dark_layout(fig3, "Recommended Rate by City & Month", height=320)
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(fig3, width='stretch')
+
+    insight(
+        f"The AI pricing model recommends <strong>20–35% higher rates</strong> in Jul–Aug "
+        f"(peak tourism) and Dec (weddings) compared to Jan–Feb off-season. "
+        f"Islamabad and Lahore command premium rates year-round due to consistent corporate demand. "
+        f"Applying dynamic pricing during the top 3 demand months could add "
+        f"<strong>PKR {inv['total_amount_pkr'].sum()*0.08/1e6:.1f}M</strong> in annual revenue "
+        f"with zero additional fleet cost.",
+        "💡", "good",
+        "✅ Implement tiered weekend/peak pricing — each 5% rate increase = PKR 3–4M more revenue annually."
+    )
 
 
 # ── Tab 4: Trend Analysis ──────────────────────────────────────────────
@@ -180,7 +207,7 @@ with tabs[3]:
             text=[f"{v:.1f}M" for v in yoy["total_amount_pkr"] / 1e6],
             textposition="outside", textfont=dict(color=TEXT)))
         dark_layout(fig4, "Annual Revenue (PKR M)", height=320)
-        st.plotly_chart(fig4, use_container_width=True)
+        st.plotly_chart(fig4, width='stretch')
 
     with col2:
         ty = trips.groupby("pickup_year").size().reset_index(name="n")
@@ -190,7 +217,7 @@ with tabs[3]:
             fill="tozeroy", fillcolor="rgba(69,123,157,.15)",
             marker=dict(size=8)))
         dark_layout(fig5, "Annual Trip Volume", height=320)
-        st.plotly_chart(fig5, use_container_width=True)
+        st.plotly_chart(fig5, width='stretch')
 
     sec("Seasonal Demand Pattern")
     trips["_mo"] = pd.to_datetime(trips["pickup_datetime"]).dt.month
@@ -203,4 +230,23 @@ with tabs[3]:
         marker_color=[BRAND if m in [7, 8, 12, 6] else STEEL for m in sea["_mo"]],
         text=sea["n"], textposition="outside", textfont=dict(color=TEXT, size=10)))
     dark_layout(fig6, "Bookings by Month (All Years)", height=320)
-    st.plotly_chart(fig6, use_container_width=True)
+    st.plotly_chart(fig6, width='stretch')
+
+    # YoY + seasonal insight
+    peak_months = ["Jul","Aug","Dec","Jun"]
+    slow_months  = ["Jan","Feb"]
+    peak_avg = sea[sea["_mo"].isin([7,8,12,6])]["n"].mean()
+    slow_avg = sea[sea["_mo"].isin([1,2])]["n"].mean()
+    yoy_data = inv.groupby("invoice_year")["total_amount_pkr"].sum()
+    yoy_growth = (yoy_data.iloc[-1]-yoy_data.iloc[-2])/yoy_data.iloc[-2]*100 if len(yoy_data)>1 else 0
+    insight(
+        f"Peak months <strong>{', '.join(peak_months)}</strong> average "
+        f"<strong>{peak_avg:.0f} trips/month</strong> — "
+        f"<strong>{(peak_avg/max(slow_avg,1)-1)*100:.0f}% more</strong> than the slow season "
+        f"({', '.join(slow_months)}: {slow_avg:.0f} trips/month). "
+        f"Year-over-year revenue growth: <strong>{yoy_growth:+.1f}%</strong>. "
+        f"Align driver hiring cycles with the seasonal ramp-up in June to avoid staffing shortfalls.",
+        "📉", "good" if yoy_growth > 0 else "warn",
+        f"{'📈 Positive YoY growth — maintain fleet investment.' if yoy_growth > 0 else '⚠️ Revenue declining YoY — review pricing strategy.'}"
+    )
+

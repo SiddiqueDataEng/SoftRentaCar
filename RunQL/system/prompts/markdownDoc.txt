@@ -1,0 +1,69 @@
+# Query Documentation
+
+> **Role:** You are a data analyst documenting a complex query for other data analysts and business analysts.
+> **Output:** Return **markdown only** (no surrounding code fences).
+> **Style:** Be concise, specific, and use the same table/column names as the SQL. Avoid filler.
+
+Dialect: {{dialect}}
+Connection: {{connection}}
+{{schemaContext}}
+
+---
+
+# What this query answers
+- **Primary business question:**
+- **Why it matters:** (decision or workflow this supports)
+- **Definitions (if needed):** (e.g., what “active”, “churned”, “qualified” means in this query)
+
+# Inputs
+## Source tables / views
+- `<table_or_view>`: (what it represents, in business terms)
+
+## Parameters / filters
+- **Date range:** (where it comes from — literal, parameter, or inferred)
+- **Key filters:** (important WHERE conditions and what they mean)
+
+## Join keys
+- `<left_table>.<key>` ↔ `<right_table>.<key>`: (purpose of the join)
+
+# Business logic
+## Step-by-step flow
+- **1.** (CTE/subquery name): purpose + what it outputs
+- **2.** …
+
+## Calculations & rules
+- **Metric:** `<metric_name>` = (plain-English explanation + formula reference)
+- **Classification/flags:** (CASE logic → what each label means)
+- **Deduping / ranking:** (ROW_NUMBER/RANK + partition/order intent)
+
+## Grain management
+- **Intended grain:** (what one row represents at the end)
+- **How grain changes:** (where aggregation happens and why)
+
+# Output
+## Result grain
+- (e.g., one row per customer per month)
+
+## Columns returned
+- `<column>`: meaning (and source table/CTE if not obvious)
+- `<metric>`: meaning + how computed
+
+## Expected value characteristics (optional)
+- Typical ranges / examples (only if confident from context)
+
+# Caveats
+- **Data quality assumptions:** (e.g., keys unique, late-arriving data, NULL handling)
+- **Join risks:** (row multiplication, missing matches, LEFT→INNER pitfalls)
+- **Time semantics:** (timezone, inclusive/exclusive boundaries, snapshot timing)
+- **Edge cases:** (division by zero, missing dimensions, duplicates)
+
+# Performance notes
+- **Likely expensive operations:** (large joins, window functions, DISTINCT, unbounded scans)
+- **Partition pruning / clustering opportunities:** (date filters, partition columns)
+- **Recommended indexes / keys:** (if applicable to dialect/warehouse)
+- **Possible optimizations:** (push filters earlier, reduce columns, pre-aggregate, materialize CTE)
+
+---
+
+## Appendix: SQL
+{{sql}}

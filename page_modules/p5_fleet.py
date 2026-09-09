@@ -6,6 +6,7 @@ from page_modules._shared import (
     inject, get_data, fmt, kpi, sec, alert_box, dark_layout,
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS
 )
+from app.storytelling import insight, fleet_utilisation_insight, fuel_insight, maintenance_insight
 
 inject()
 dfs = get_data()
@@ -66,7 +67,7 @@ with col1:
                     line=dict(color="#0f1117",width=2)),
         textfont=dict(color="#fff",size=10)))
     dark_layout(fig1, "Vehicle Status", height=320)
-    st.plotly_chart(fig1, use_container_width=True)
+    st.plotly_chart(fig1, width='stretch')
 
 with col2:
     mg = mf.groupby("maintenance_type")["total_cost_pkr"].sum().reset_index().sort_values("total_cost_pkr").tail(10)
@@ -74,7 +75,7 @@ with col2:
         marker_color=BRAND, text=[f"{v:.0f}K" for v in mg["total_cost_pkr"]/1e3],
         textposition="outside", textfont=dict(color=TEXT,size=9)))
     dark_layout(fig2, "Maintenance Cost by Type (PKR K)")
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width='stretch')
 
 # ── Fuel efficiency trend ───────────────────────────────────────────────
 sec("⛽ Fuel Performance")
@@ -89,7 +90,7 @@ with col3:
         marker_color="rgba(230,57,70,.4)", yaxis="y2"))
     fig3.update_layout(yaxis2=dict(overlaying="y", side="right", gridcolor=GRID, tickfont=dict(color=TEXT)))
     dark_layout(fig3, "Efficiency vs Cost Trend", xangle=-45)
-    st.plotly_chart(fig3, use_container_width=True)
+    st.plotly_chart(fig3, width='stretch')
 
 with col4:
     ft = ff.groupby("fuel_type").agg(cost=("fuel_cost_pkr","sum"), litres=("litres_filled","sum")).reset_index()
@@ -98,7 +99,19 @@ with col4:
         text=[f"{v:.1f}M" for v in ft["cost"]/1e6],
         textposition="outside", textfont=dict(color=TEXT)))
     dark_layout(fig4, "Fuel Cost by Type (PKR M)", height=320)
-    st.plotly_chart(fig4, use_container_width=True)
+    st.plotly_chart(fig4, width='stretch')
+
+# Fuel insight
+txt_f, sub_f, lvl_f = fuel_insight(ff)
+insight(txt_f, "⛽", lvl_f, sub_f)
+
+# Maintenance insight
+txt_m, sub_m, lvl_m = maintenance_insight(mf)
+insight(txt_m, "🔧", lvl_m, sub_m)
+
+# Fleet utilisation insight
+txt_u, sub_u, lvl_u = fleet_utilisation_insight(dfs["trips"], veh)
+insight(txt_u, "🚗", lvl_u, sub_u)
 
 # ── Age & mileage ──────────────────────────────────────────────────────
 sec("📅 Fleet Age & Mileage")
@@ -108,12 +121,12 @@ with col5:
     fig5.add_vline(x=100000, line_dash="dash", line_color=AMBER,
                    annotation_text="100K mark", annotation_font_color=AMBER)
     dark_layout(fig5, "Odometer Distribution (km)", height=280)
-    st.plotly_chart(fig5, use_container_width=True)
+    st.plotly_chart(fig5, width='stretch')
 with col6:
     ag = vf.groupby("year").size().reset_index(name="n")
     fig6 = go.Figure(go.Bar(x=ag["year"].astype(str), y=ag["n"], marker_color=BRAND, opacity=.85))
     dark_layout(fig6, "Fleet by Model Year", height=280)
-    st.plotly_chart(fig6, use_container_width=True)
+    st.plotly_chart(fig6, width='stretch')
 
 # ── Fuel Anomaly Detection ──────────────────────────────────────────────
 st.markdown("<hr style='border-color:#1e2f44;margin:14px 0'>", unsafe_allow_html=True)
@@ -126,7 +139,7 @@ if len(anoms):
     alert_box(f"⚠️ {len(anoms)} fuel anomalies detected.", "warning")
     st.dataframe(anoms[["vehicle_id","trip_id","fill_date","fuel_type","fuel_efficiency_kmpl",
                          "veh_mean_eff","z_score","km_driven"]].head(50).reset_index(drop=True),
-                 use_container_width=True, height=260)
+                 width='stretch', height=260)
 else:
     alert_box("✅ No fuel anomalies detected.", "success")
 
@@ -159,7 +172,7 @@ if len(hi_risk):
     alert_box(f"🔴 {len(hi_risk)} vehicles flagged for upcoming maintenance.", "critical")
     st.dataframe(hi_risk[["vehicle_id","make","model","year","odometer_km",
                            "days_since_last","risk_pct","status"]].reset_index(drop=True),
-                 use_container_width=True, height=260)
+                 width='stretch', height=260)
 else:
     alert_box("✅ No vehicles flagged as high-risk.", "success")
 
@@ -167,4 +180,5 @@ else:
 sec("📋 Vehicle Register")
 show = ["vehicle_id","make","model","year","registration_no","status",
         "condition_rating","odometer_km","fuel_type","gps_enabled","telematics_enabled"]
-st.dataframe(vf[show].reset_index(drop=True), use_container_width=True, height=300)
+st.dataframe(vf[show].reset_index(drop=True), width='stretch', height=300)
+

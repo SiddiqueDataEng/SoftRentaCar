@@ -1,0 +1,138 @@
+# DataOps Pipeline Configuration — Soft Rent a Car
+# Controls data freshness SLAs, quality thresholds, alerting
+
+pipeline:
+  name: soft-rentacar-data-pipeline
+  version: "1.0"
+  owner: Muhammad Siddique <siddique.dea@gmail.com>
+  environment: production
+
+# ── Data Sources ─────────────────────────────────────────────────────
+sources:
+  synthetic_generator:
+    type: python_script
+    script: generate_data.py
+    schedule: "0 1 * * *"        # 01:00 UTC daily
+    output: data/parquet/
+
+  # Future: real data sources
+  booking_api:
+    type: rest_api
+    enabled: false
+    endpoint: https://api.softrentacar.com/v1/bookings
+    auth: bearer_token
+    schedule: "*/15 * * * *"     # Every 15 minutes
+
+  telematics_stream:
+    type: kafka
+    enabled: false
+    topic: vehicle-telematics
+    broker: kafka:9092
+    schema_registry: http://schema-registry:8081
+
+# ── Transformations ───────────────────────────────────────────────────
+transformations:
+  - name: parse_dates
+    tables: [trips, invoices, fuel_logs, maintenance, telematics, vehicles, drivers]
+    type: datetime_cast
+
+  - name: derive_trip_features
+    table: trips
+    columns:
+      pickup_year:  "dt.year"
+      pickup_month: "dt.to_period('M')"
+      pickup_hour:  "dt.hour"
+      pickup_dow:   "dt.day_name()"
+      is_weekend:   "dt.dayofweek >= 5"
+      revenue_pkr:  "trip_fare_pkr.astype(float)"
+
+  - name: derive_invoice_features
+    table: invoices
+    columns:
+      invoice_year:  "dt.year"
+      invoice_month: "dt.to_period('M')"
+
+  - name: derive_fuel_features
+    table: fuel_logs
+    columns:
+      fill_month: "dt.to_period('M')"
+
+# ── Quality Checks ────────────────────────────────────────────────────
+quality_checks:
+  script: dataops/data_quality.py
+
+  thresholds:
+    max_null_pct:      5.0     # % — fail if any required column exceeds
+    max_duplicate_pk:  0       # absolute count
+    max_orphan_fk_pct: 1.0    # % of FK values with no parent
+    min_rows:                  # minimum expected rows per table
+      trips:              10000
+      invoices:           10000
+      telematics:          5000
+      fuel_logs:           5000
+      vehicles:             100
+      drivers:               50
+      customers:           1000
+      maintenance:          500
+
+  value_checks:
+    telematics.safety_score:     {min: 0,    max: 100}
+    trips.distance_km:           {min: 0,    max: 5000}
+    invoices.total_amount_pkr:   {min: 0}
+    fuel_logs.fuel_cost_pkr:     {min: 0}
+    vehicles.year:               {min: 2010, max: 2027}
+
+# ── Data Freshness SLAs ───────────────────────────────────────────────
+freshness_sla:
+  trips:              {max_age_hours: 24,  severity: critical}
+  invoices:           {max_age_hours: 1,   severity: critical}
+  telematics:         {max_age_hours: 24,  severity: high}
+  fuel_logs:          {max_age_hours: 48,  severity: medium}
+  maintenance:        {max_age_hours: 168, severity: low}    # 1 week
+  vehicles:           {max_age_hours: 168, severity: low}
+  drivers:            {max_age_hours: 168, severity: low}
+
+# ── Destinations ─────────────────────────────────────────────────────
+destinations:
+  local_parquet:
+    path: data/parquet/
+    format: parquet
+    compression: snappy
+
+  s3_serving:
+    enabled: false
+    bucket: softrentacar-data-${AWS_ACCOUNT_ID}
+    prefix: parquet/
+    region: us-east-1
+
+  adls_serving:
+    enabled: false
+    account: softrentacaradls
+    container: processed
+    prefix: parquet/
+
+# ── Alerting ─────────────────────────────────────────────────────────
+alerting:
+  channels:
+    slack:
+      enabled: false
+      webhook_env: SLACK_WEBHOOK
+      notify_on: [critical, high]
+
+    email:
+      enabled: false
+      to: siddique.dea@gmail.com
+      notify_on: [critical]
+
+    github_issues:
+      enabled: true
+      notify_on: [critical]
+      labels: [dataops, bug]
+
+# ── Retention Policies ────────────────────────────────────────────────
+retention:
+  quality_reports:     90   # days
+  ml_metrics:         180   # days
+  drift_reports:       90   # days
+  model_artifacts:    365   # days
+  raw_backups:         30   # days
