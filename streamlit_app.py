@@ -138,7 +138,8 @@ NAV_GROUPS = [
     ("People & Safety", [("drivers","🚦","Driver Safety & AI")]),
     ("Fleet",           [("fleet","🔧","Fleet Health")]),
     ("Intelligence",    [("forecast","📈","Forecasting & Trends"),
-                         ("stories","📖","Data Storytelling")]),
+                         ("stories","📖","Data Storytelling"),
+                         ("reports","📊","Advanced Reports")]),
     ("Tools",           [("chat","🤖","AI Chat Assistant"),
                          ("alerts","⚠️","Alerts & Watchlist"),
                          ("sql","🔍","SQL Analytics"),
@@ -158,6 +159,7 @@ PAGE_FILES = {
     "alerts":    "page_modules/p10_alerts.py",
     "sql":       "page_modules/p11_sql.py",
     "settings":  "page_modules/p12_settings.py",
+    "reports":   "page_modules/p13_reports.py",
 }
 
 # ── Sidebar CSS ────────────────────────────────────────────────────────
