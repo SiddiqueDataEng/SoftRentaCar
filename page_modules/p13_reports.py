@@ -1247,7 +1247,7 @@ Collections totalled <strong>{fmt(collected)}</strong> PKR, representing a colle
 <h3>2.2 Operational Performance</h3>
 <p>The fleet recorded <strong>{n_trips:,}</strong> bookings of which
 <strong>{n_comp:,} ({comp_rate}%)</strong> were completed successfully.
-Cancellations accounted for <strong>{n_canc:,} ({canc_r}%)</strong>.
+Cancellations accounted for <strong>{n_canc:,} ({canc_rate}%)</strong>.
 The average completed trip generated <strong>{fmt(avg_fare)}</strong> PKR over
 <strong>{avg_dist:.0f} km</strong>.</p>
 
