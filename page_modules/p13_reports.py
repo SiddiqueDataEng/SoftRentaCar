@@ -1569,4 +1569,519 @@ Total fuel spend: <strong>{fmt(fuel_c)}</strong> PKR.
                 unsafe_allow_html=True
             )
 
+
+# ══════════════════════════════════════════════════════════════════════
+#  AI SECTION — Enhanced Narrative + Custom Report Generator
+# ══════════════════════════════════════════════════════════════════════
+st.markdown("<hr style='border-color:#1e2f44;margin:24px 0 16px 0'>", unsafe_allow_html=True)
+st.markdown(f"""
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+  <span style="font-size:1.6rem;">🤖</span>
+  <div>
+    <div style="font-size:1.1rem;font-weight:800;color:{BRAND};">AI Report Intelligence</div>
+    <div style="font-size:.76rem;color:#5a7a96;">
+      GPT-4o powered · Enhanced narrative · Custom report generator · Export to PDF
+    </div>
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
+# ── resolve key ────────────────────────────────────────────────────────
+from app.ai_chat import _resolve_key
+_ai_key = _resolve_key()
+
+if not _ai_key:
+    st.markdown(f"""
+<div style="background:rgba(230,57,70,.08);border:1px solid {BRAND}44;
+            border-radius:10px;padding:12px 16px;margin:8px 0 14px;">
+  <div style="font-size:.82rem;color:{TEXT};">
+    🔑 <strong>OpenAI API key required</strong> for AI features.<br>
+    <span style="color:#5a7a96;font-size:.75rem;">
+      Add it in <strong>⚙️ Settings &amp; API Keys</strong> or enter it below.
+    </span>
+  </div>
+</div>""", unsafe_allow_html=True)
+    tmp_key = st.text_input("Enter OpenAI API key to enable AI features",
+                             type="password", placeholder="sk-...",
+                             key="rpt_tmp_key", label_visibility="collapsed")
+    if tmp_key and len(tmp_key) > 20:
+        import os; os.environ["OPENAI_API_KEY"] = tmp_key
+        _ai_key = tmp_key
+
+_ai_available = bool(_ai_key)
+
+badge_html = (
+    '<span style="background:linear-gradient(90deg,#10a37f,#1a7f5a);color:#fff;'
+    'font-size:.62rem;font-weight:700;padding:2px 8px;border-radius:12px;'
+    'letter-spacing:.05em;">✦ GPT-4o ACTIVE</span>'
+    if _ai_available else
+    '<span style="background:rgba(90,122,150,.2);color:#8eaac4;'
+    'font-size:.62rem;font-weight:600;padding:2px 8px;border-radius:12px;'
+    'border:1px solid #2d4a6b;">⚡ NO KEY — AI DISABLED</span>'
+)
+st.markdown(badge_html, unsafe_allow_html=True)
+
+# ── shared GPT caller ──────────────────────────────────────────────────
+def _call_gpt(system_prompt: str, user_prompt: str,
+              max_tokens: int = 2000, temperature: float = 0.4) -> str:
+    """Call GPT-4o and return the text response."""
+    try:
+        import openai
+        client = openai.OpenAI(api_key=_ai_key)
+        resp = client.chat.completions.create(
+            model="gpt-4o",
+            messages=[
+                {"role": "system",  "content": system_prompt},
+                {"role": "user",    "content": user_prompt},
+            ],
+            max_tokens=max_tokens,
+            temperature=temperature,
+        )
+        return resp.choices[0].message.content.strip()
+    except Exception as e:
+        return f"⚠️ GPT error: {e}"
+
+
+# ── build fleet context snapshot for AI ────────────────────────────────
+def _build_context() -> str:
+    """Compact but rich data snapshot passed to every AI call."""
+    lines = [
+        f"REPORT: {report_label}",
+        f"PERIOD: {start_dt.strftime('%d %b %Y')} to {end_dt.strftime('%d %b %Y')} ({period_days} days)",
+        f"FLEET: {sel_fleet}",
+        "",
+        "=== PERIOD DATA SUMMARY ===",
+    ]
+
+    # trips
+    if not t_p.empty:
+        n_t = len(t_p)
+        n_c = int((t_p["status"] == "Completed").sum())
+        n_x = int((t_p["status"] == "Cancelled").sum())
+        avg_f = tc_p["trip_fare_pkr"].mean() if not tc_p.empty else 0
+        lines += [
+            f"Trips: {n_t:,} total | {n_c:,} completed ({n_c/max(n_t,1)*100:.1f}%) "
+            f"| {n_x:,} cancelled ({n_x/max(n_t,1)*100:.1f}%)",
+            f"Avg fare: PKR {avg_f:,.0f} | Avg distance: "
+            f"{tc_p['distance_km'].mean() if not tc_p.empty else 0:.0f} km",
+        ]
+        top_city = (tc_p.groupby("pickup_city")["trip_fare_pkr"].sum()
+                    .idxmax() if not tc_p.empty else "N/A")
+        top_type = (tc_p.groupby("booking_type")["trip_fare_pkr"].sum()
+                    .idxmax() if not tc_p.empty else "N/A")
+        lines += [f"Top city: {top_city} | Top booking type: {top_type}"]
+
+    # invoices
+    if not i_p.empty:
+        billed_c = i_p["total_amount_pkr"].sum()
+        coll_c   = i_p["paid_amount_pkr"].sum()
+        outs_c   = i_p["outstanding_pkr"].sum()
+        lines += [
+            f"Revenue: PKR {billed_c/1e6:.2f}M billed | "
+            f"PKR {coll_c/1e6:.2f}M collected ({coll_c/max(billed_c,1)*100:.1f}%)",
+            f"Outstanding: PKR {outs_c/1e6:.2f}M",
+        ]
+
+    # fuel
+    if not f_p.empty:
+        lines += [
+            f"Fuel: PKR {f_p['fuel_cost_pkr'].sum()/1e3:,.0f}K total | "
+            f"Avg {f_p[f_p['fuel_efficiency_kmpl']>0]['fuel_efficiency_kmpl'].mean():.1f} km/l efficiency",
+        ]
+
+    # maintenance
+    if not m_p.empty:
+        lines += [f"Maintenance: PKR {m_p['total_cost_pkr'].sum()/1e3:,.0f}K | "
+                  f"{len(m_p)} service events"]
+
+    # telematics
+    if not tel_p.empty:
+        avg_ss = tel_p["safety_score"].mean()
+        n_acc  = int(tel_p["accident_occurred"].astype(int).sum())
+        lines += [
+            f"Safety: avg score {avg_ss:.1f}/100 | {n_acc} accidents | "
+            f"{int(tel_p['complaint_filed'].astype(int).sum())} complaints",
+        ]
+
+    # fleet / vehicles
+    n_avail = int((veh["status"] == "Available").sum())
+    n_trip  = int((veh["status"] == "On Trip").sum())
+    n_maint = int((veh["status"] == "Under Maintenance").sum())
+    ins_exp = int((pd.to_datetime(veh["insurance_expiry"], errors="coerce") < TODAY).sum())
+    lines += [
+        f"Fleet: {len(veh)} vehicles | {n_avail} available | "
+        f"{n_trip} on trip | {n_maint} in maintenance | {ins_exp} expired insurance",
+    ]
+
+    # drivers
+    n_danger = int(drv["behavior_profile"].isin(["dangerous", "poor"]).sum())
+    lines += [f"Drivers: {len(drv)} total | {n_danger} poor/dangerous profile"]
+
+    return "\n".join(lines)
+
+
+_SYS = """You are a senior fleet management analyst writing professional business reports for
+Soft Rent a Car — a Pakistani vehicle rental company operating 4 fleets with 120 vehicles.
+Write in English. Be specific, data-driven, and authoritative.
+Reference international standards where relevant (IFRS, GAAP, DVSA, IAM, Saudi Traffic Law, BVRLA, ATA).
+Use markdown: **bold** for numbers, *italic* for assessments, ## for sections, ### for sub-sections.
+Never invent numbers not provided. Be concise but thorough. Avoid filler phrases."""
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  TAB 1 — AI-ENHANCED NARRATIVE for current report
+# ══════════════════════════════════════════════════════════════════════
 st.markdown("<br>", unsafe_allow_html=True)
+tab_enhance, tab_custom = st.tabs(
+    ["🔬  AI-Enhanced Report Narrative", "✍️  Custom AI Report Generator"]
+)
+
+with tab_enhance:
+    st.markdown(f"""
+<div style="font-size:.82rem;color:#5a7a96;margin-bottom:12px;">
+  GPT-4o reads your <strong>{report_label}</strong> data snapshot and writes a deeper,
+  contextual narrative — management commentary, risk flags, benchmarks, and recommendations
+  beyond what the static report shows.
+</div>""", unsafe_allow_html=True)
+
+    enhance_btn = st.button(
+        f"🚀  Generate AI-Enhanced Narrative for {report_label}",
+        type="primary", key="ai_enhance_btn",
+        disabled=not _ai_available
+    )
+
+    if not _ai_available:
+        st.info("Add an OpenAI API key above to enable this feature.")
+    elif enhance_btn or "ai_enhanced_text" in st.session_state:
+        if enhance_btn:
+            ctx = _build_context()
+            with st.spinner("GPT-4o is analysing your fleet data and writing the report…"):
+                _prompt = f"""
+You have been given a data snapshot for a {report_label}.
+Write a comprehensive, professional management narrative with these sections:
+
+## Executive Summary
+One paragraph summarising the period's performance.
+
+## Key Findings
+Bullet points of the 5–7 most significant observations from the data.
+
+## Detailed Analysis
+Sub-sections for each relevant area (revenue, operations, safety, costs, fleet).
+For each section: state the metric, benchmark it against industry standards, and explain the implication.
+
+## Risk Assessment
+A table: | Risk | Severity | Likelihood | Recommended Action |
+
+## Strategic Recommendations
+Numbered list of 5–7 specific, actionable recommendations with expected impact.
+
+## Outlook
+One paragraph on what to watch for in the next period.
+
+DATA SNAPSHOT:
+{ctx}
+"""
+                result = _call_gpt(_SYS, _prompt, max_tokens=2500, temperature=0.35)
+            st.session_state.ai_enhanced_text = result
+
+        if "ai_enhanced_text" in st.session_state:
+            result = st.session_state.ai_enhanced_text
+            st.markdown(f"""
+<div style="background:linear-gradient(135deg,#0f1e2e,#121c2a);
+            border:1px solid #1e3a55;border-radius:12px;
+            padding:20px 24px;margin:10px 0;">
+  <div style="font-size:.68rem;font-weight:700;color:#10a37f;
+              text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px;">
+    ✦ GPT-4o ENHANCED NARRATIVE
+  </div>
+  <div style="font-size:.87rem;line-height:1.75;color:{TEXT};">
+  {result.replace(chr(10), '<br>').replace('**', '<strong>').replace('##', '<br><strong style=&quot;font-size:.95rem;color:{BRAND};&quot;>').replace('###', '<br><strong style=&quot;font-size:.88rem;color:{STEEL};&quot;>')}
+  </div>
+</div>""", unsafe_allow_html=True)
+
+            # raw markdown view
+            with st.expander("📄 View raw markdown (for copy-paste into Word/Google Docs)"):
+                st.code(result, language="markdown")
+
+            # export enhanced narrative as HTML
+            enh_html = f"""<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<title>AI-Enhanced {report_label}</title>
+<style>
+  body{{font-family:'Segoe UI',Arial,sans-serif;max-width:860px;margin:40px auto;
+        color:#1a1a2e;font-size:10.5pt;line-height:1.65;}}
+  h1{{color:#E63946;font-size:20pt;border-bottom:3px solid #E63946;padding-bottom:8px;}}
+  h2{{color:#1D3557;font-size:13pt;border-left:4px solid #E63946;padding-left:8px;margin-top:20px;}}
+  h3{{color:#457B9D;font-size:11pt;margin-top:14px;}}
+  strong{{color:#1D3557;}}
+  table{{border-collapse:collapse;width:100%;margin:10px 0;font-size:9pt;}}
+  th{{background:#1D3557;color:white;padding:6px 10px;text-align:left;}}
+  td{{border:1px solid #ccc;padding:5px 10px;}}
+  tr:nth-child(even){{background:#f5f8fc;}}
+  .footer{{border-top:2px solid #E63946;margin-top:30px;padding-top:10px;
+           font-size:8pt;color:#777;display:flex;justify-content:space-between;}}
+</style></head><body>
+<h1>AI-Enhanced {report_label}</h1>
+<p style="color:#666;font-size:9pt;">
+  {sel_fleet} &nbsp;|&nbsp; {period_label} &nbsp;|&nbsp;
+  {start_dt.strftime('%d %b %Y')} — {end_dt.strftime('%d %b %Y')} &nbsp;|&nbsp;
+  Generated by GPT-4o on {TODAY.strftime('%d %B %Y')}
+</p>
+<hr style="border-color:#E63946;">
+{result.replace(chr(10),'<br>').replace('## ','<h2>').replace('### ','<h3>').replace('**','<strong>').replace('*','<em>')}
+<div class="footer">
+  <span>Soft Rent a Car · Fleet Intelligence Platform</span>
+  <span>Muhammad Siddique · datawithms.top</span>
+  <span>CONFIDENTIAL</span>
+</div>
+</body></html>"""
+
+            st.download_button(
+                "⬇️ Download AI-Enhanced Report (HTML → PDF)",
+                data=enh_html.encode("utf-8"),
+                file_name=f"{base}_AI_Enhanced.html",
+                mime="text/html",
+                use_container_width=True,
+                key="dl_enhanced"
+            )
+
+        if st.button("🔄 Regenerate", key="regen_btn", disabled=not _ai_available):
+            if "ai_enhanced_text" in st.session_state:
+                del st.session_state["ai_enhanced_text"]
+            st.rerun()
+
+
+# ══════════════════════════════════════════════════════════════════════
+#  TAB 2 — CUSTOM AI REPORT GENERATOR
+# ══════════════════════════════════════════════════════════════════════
+with tab_custom:
+    st.markdown(f"""
+<div style="font-size:.82rem;color:#5a7a96;margin-bottom:10px;">
+  Describe any report you need in plain English. GPT-4o will generate a full,
+  professional report using your fleet data — no predefined templates required.
+</div>""", unsafe_allow_html=True)
+
+    # Example prompts
+    EXAMPLES = [
+        "Write a board-level quarterly performance report comparing Q3 vs Q2 2026",
+        "Generate a driver risk assessment report highlighting who needs immediate intervention",
+        "Create a fuel economy analysis report with cost-saving recommendations",
+        "Write a fleet renewal and retirement plan based on vehicle age and maintenance costs",
+        "Produce a customer segmentation report showing which customer types generate the most revenue",
+        "Write a cash flow and collections health report for the CFO",
+        "Generate a compliance status report covering insurance, fitness certs, and driver licences",
+        "Create a city-wise demand analysis report for marketing and fleet deployment",
+        "Write an operational efficiency report comparing self-drive vs chauffeur-driven performance",
+        "Generate a maintenance budget forecast report based on historical spending patterns",
+    ]
+
+    st.markdown('<div style="font-size:.72rem;color:#8eaac4;margin-bottom:6px;">💡 Example prompts — click to use:</div>',
+                unsafe_allow_html=True)
+    ex_cols = st.columns(2)
+    for i, ex in enumerate(EXAMPLES):
+        if ex_cols[i % 2].button(f"📋 {ex[:55]}…" if len(ex) > 55 else f"📋 {ex}",
+                                  key=f"ex_{i}", use_container_width=True):
+            st.session_state.custom_rpt_prompt = ex
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    custom_prompt = st.text_area(
+        "✍️  Describe your report",
+        value=st.session_state.get("custom_rpt_prompt", ""),
+        height=100,
+        placeholder=(
+            "e.g. Write a comprehensive quarterly performance report for Q3 2026 "
+            "covering revenue, operations, safety, and fleet health with executive "
+            "commentary and strategic recommendations..."
+        ),
+        key="custom_rpt_input",
+    )
+
+    # Options row
+    oc1, oc2, oc3 = st.columns(3)
+    rpt_depth   = oc1.selectbox("Report depth",
+                                 ["Concise (1 page)", "Standard (2–3 pages)", "Comprehensive (4–5 pages)"],
+                                 index=1, key="ai_depth")
+    rpt_audience= oc2.selectbox("Audience",
+                                 ["Board / C-Suite", "Operations Manager", "Finance Team",
+                                  "Fleet Manager", "HR / Safety Officer"],
+                                 index=0, key="ai_audience")
+    rpt_tone    = oc3.selectbox("Tone",
+                                 ["Formal / Corporate", "Analytical / Technical", "Concise / Bullet-focused"],
+                                 index=0, key="ai_tone")
+
+    depth_map = {
+        "Concise (1 page)":       (800,  "Be concise. 1 page equivalent."),
+        "Standard (2–3 pages)":   (2000, "Standard depth. 2-3 pages equivalent."),
+        "Comprehensive (4–5 pages)":(3500,"Be thorough. 4-5 pages equivalent. Include all sub-sections."),
+    }
+    max_tok, depth_instr = depth_map[rpt_depth]
+
+    gen_custom_btn = st.button(
+        "🚀  Generate Custom AI Report",
+        type="primary", key="ai_custom_btn",
+        disabled=not _ai_available or not custom_prompt.strip()
+    )
+
+    if not _ai_available:
+        st.info("Add an OpenAI API key above to enable this feature.")
+    elif not custom_prompt.strip():
+        st.info("Enter a report description above to generate.")
+    elif gen_custom_btn or "ai_custom_result" in st.session_state:
+
+        if gen_custom_btn:
+            ctx = _build_context()
+            sys_custom = f"""{_SYS}
+
+AUDIENCE: {rpt_audience}
+TONE: {rpt_tone}
+{depth_instr}
+
+Always include:
+- An executive summary paragraph
+- Key metrics with industry benchmarks
+- Management commentary with specific data points
+- Risk flags where applicable
+- Actionable recommendations
+- A professional closing statement
+
+Format with clear ## section headers and ### sub-headers.
+Use **bold** for important numbers and metrics.
+"""
+            user_custom = f"""USER REQUEST: {custom_prompt}
+
+FLEET DATA SNAPSHOT:
+{ctx}
+
+Generate the complete report now. Do not include any preamble — start directly with the report content."""
+
+            with st.spinner("GPT-4o is generating your custom report…"):
+                custom_result = _call_gpt(sys_custom, user_custom,
+                                          max_tokens=max_tok, temperature=0.38)
+            st.session_state.ai_custom_result   = custom_result
+            st.session_state.ai_custom_prompt   = custom_prompt
+            st.session_state.ai_custom_audience = rpt_audience
+            st.session_state.ai_custom_depth    = rpt_depth
+
+        if "ai_custom_result" in st.session_state:
+            custom_result   = st.session_state.ai_custom_result
+            saved_prompt    = st.session_state.get("ai_custom_prompt", custom_prompt)
+            saved_audience  = st.session_state.get("ai_custom_audience", rpt_audience)
+
+            st.success(f"✅ Custom report generated for: *{saved_audience}*")
+
+            st.markdown(f"""
+<div style="background:linear-gradient(135deg,#0a1a14,#0f2018);
+            border:1px solid #1a4a2a;border-radius:12px;
+            padding:20px 24px;margin:12px 0;">
+  <div style="font-size:.68rem;font-weight:700;color:#10a37f;
+              text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;">
+    ✦ GPT-4o CUSTOM REPORT
+  </div>
+  <div style="font-size:.72rem;color:#5a7a96;margin-bottom:12px;">
+    Prompt: <em>"{saved_prompt[:120]}{'…' if len(saved_prompt)>120 else ''}"</em>
+  </div>
+</div>""", unsafe_allow_html=True)
+
+            # render the markdown nicely
+            import re as _re
+            rendered = custom_result
+            # h3 before h2 to avoid double-replacing
+            rendered = _re.sub(r"^### (.+)$",
+                r'<h3 style="color:#457B9D;font-size:.9rem;font-weight:700;'
+                r'margin:14px 0 4px;border-bottom:1px solid #1e3044;padding-bottom:3px;">\1</h3>',
+                rendered, flags=_re.MULTILINE)
+            rendered = _re.sub(r"^## (.+)$",
+                r'<h2 style="color:#E63946;font-size:1rem;font-weight:800;'
+                r'margin:18px 0 6px;border-left:4px solid #E63946;padding-left:8px;">\1</h2>',
+                rendered, flags=_re.MULTILINE)
+            rendered = _re.sub(r"^# (.+)$",
+                r'<h1 style="color:#E63946;font-size:1.15rem;font-weight:800;'
+                r'margin:10px 0 8px;">\1</h1>',
+                rendered, flags=_re.MULTILINE)
+            rendered = _re.sub(r"\*\*(.+?)\*\*",
+                r'<strong style="color:#c8dff0;">\1</strong>', rendered)
+            rendered = _re.sub(r"\*(.+?)\*",
+                r'<em style="color:#8eaac4;">\1</em>', rendered)
+            rendered = _re.sub(r"^- (.+)$",
+                r'<li style="margin:3px 0;color:#c8dff0;">\1</li>',
+                rendered, flags=_re.MULTILINE)
+            rendered = rendered.replace("\n\n", '<br><br>').replace("\n", "<br>")
+
+            st.markdown(f"""
+<div style="background:linear-gradient(135deg,#0f1e2e,#111c2a);
+            border:1px solid #1e3044;border-radius:12px;
+            padding:20px 26px;margin:0 0 14px;">
+  <div style="font-size:.87rem;line-height:1.8;color:{TEXT};">
+    {rendered}
+  </div>
+</div>""", unsafe_allow_html=True)
+
+            with st.expander("📄 View raw markdown"):
+                st.code(custom_result, language="markdown")
+
+            # ── export ─────────────────────────────────────────────────
+            cust_base = saved_prompt[:40].strip().replace(" ", "_").replace("/", "-")
+            cust_html = f"""<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<title>Custom Report — {saved_prompt[:60]}</title>
+<style>
+  body{{font-family:'Segoe UI',Arial,sans-serif;max-width:860px;margin:40px auto;
+        color:#1a1a2e;font-size:10.5pt;line-height:1.7;}}
+  h1{{color:#E63946;font-size:18pt;border-bottom:3px solid #E63946;padding-bottom:6px;}}
+  h2{{color:#1D3557;font-size:13pt;border-left:4px solid #E63946;padding-left:8px;margin-top:22px;}}
+  h3{{color:#457B9D;font-size:11pt;margin-top:16px;}}
+  strong{{color:#1D3557;}}
+  table{{border-collapse:collapse;width:100%;margin:10px 0;font-size:9pt;}}
+  th{{background:#1D3557;color:white;padding:7px 10px;text-align:left;}}
+  td{{border:1px solid #ccc;padding:5px 10px;}}
+  tr:nth-child(even){{background:#f5f8fc;}}
+  li{{margin:4px 0;}}
+  .meta{{font-size:9pt;color:#666;margin-bottom:12px;}}
+  .footer{{border-top:2px solid #E63946;margin-top:32px;padding-top:10px;
+           font-size:8pt;color:#777;display:flex;justify-content:space-between;}}
+</style></head><body>
+<h1>Custom AI Report</h1>
+<div class="meta">
+  <strong>Prompt:</strong> {saved_prompt}<br>
+  <strong>Audience:</strong> {saved_audience} &nbsp;|&nbsp;
+  <strong>Fleet:</strong> {sel_fleet} &nbsp;|&nbsp;
+  <strong>Period:</strong> {start_dt.strftime('%d %b %Y')} — {end_dt.strftime('%d %b %Y')} &nbsp;|&nbsp;
+  <strong>Generated:</strong> {TODAY.strftime('%d %B %Y')} by GPT-4o
+</div>
+<hr style="border-color:#E63946;">
+{custom_result.replace(chr(10),'<br>').replace('## ','<h2>').replace('### ','<h3>').replace('**','<strong>').replace('*','<em>')}
+<div class="footer">
+  <span>Soft Rent a Car · Fleet Intelligence Platform</span>
+  <span>Muhammad Siddique · datawithms.top</span>
+  <span>CONFIDENTIAL</span>
+</div>
+</body></html>"""
+
+            dc1, dc2 = st.columns(2)
+            dc1.download_button(
+                "⬇️ Download Report (HTML → PDF)",
+                data=cust_html.encode("utf-8"),
+                file_name=f"CustomReport_{cust_base}_{ts}.html",
+                mime="text/html",
+                use_container_width=True,
+                key="dl_custom_html",
+            )
+            dc2.download_button(
+                "⬇️ Download Raw Markdown",
+                data=custom_result.encode("utf-8"),
+                file_name=f"CustomReport_{cust_base}_{ts}.md",
+                mime="text/markdown",
+                use_container_width=True,
+                key="dl_custom_md",
+            )
+
+        if st.button("🔄 New Report", key="clear_custom"):
+            for k in ["ai_custom_result", "ai_custom_prompt",
+                      "ai_custom_audience", "ai_custom_depth", "custom_rpt_prompt"]:
+                st.session_state.pop(k, None)
+            st.rerun()
+
+st.markdown("<br>", unsafe_allow_html=True)
+
