@@ -1,0 +1,5 @@
+fleet_id,fleet_name,city,website,secp_registered,ntn_registered,established_year,focus_segment,total_vehicles,active
+FL001,Hassan Rent a Car,Gujrat,hassanrentacargujrat.com.pk,True,True,2010,economy_and_luxury,46,True
+FL002,RentKA,Islamabad,rentka.co,True,True,2018,chauffeur_driven,30,True
+FL003,Haxn Rent a Car,Islamabad,haxnrentacar.com,False,True,2015,corporate_and_wedding,31,True
+FL004,Cars Rental 247,Islamabad,carsrental247.com,True,True,2019,self_drive,13,True

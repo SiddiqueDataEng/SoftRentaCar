@@ -1,0 +1,9 @@
+booking_type_id,type_name,requires_driver,typical_duration_days,description
+BT001,Airport Transfer,True,0.1,Airport pickup and drop-off service
+BT002,City Ride,True,0.1,Short urban trips within a single city
+BT003,Corporate,True,1.0,Business travel for corporate clients
+BT004,Event,True,0.5,Vehicle hire for events and functions
+BT005,Intercity,True,1.5,Long-distance travel between cities
+BT006,Monthly Contract,False,30.0,Long-term monthly vehicle rental contract
+BT007,Tourism / Northern Areas,True,5.0,Tourism trips to northern Pakistan
+BT008,Wedding,True,1.0,Bridal and wedding convoy hire
