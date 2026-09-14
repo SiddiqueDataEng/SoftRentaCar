@@ -1,0 +1,121 @@
+vehicle_id,fleet_id,vehicle_type_id,make,model,year,registration_no,color,fuel_type,transmission,seats,odometer_km,purchase_date,daily_rate_pkr,hourly_rate_pkr,km_rate_pkr,insurance_expiry,fitness_cert_expiry,status,condition_rating,gps_enabled,telematics_enabled,ac_working
+VH00001,FL002,VT001,Suzuki,Alto VXR,2022,ISB-FTS-9035,Dark Blue,Petrol,Manual,5,120604,2022-02-19,3547,400,12,2023-02-19,2026-10-01,Available,Excellent,True,False,True
+VH00002,FL002,VT012,Toyota,Land Cruiser ZX LC300,2023,ISB-VTN-6301,Silver,Diesel,Automatic,8,86854,2023-02-18,37441,3500,70,2026-02-18,2026-01-01,On Trip,Good,False,False,True
+VH00003,FL001,VT008,MG,HS Essence,2021,PKR-KZR-9225,White,Petrol,Automatic,5,95008,2021-04-22,15371,1200,28,2022-04-22,2026-06-01,Available,Good,True,False,True
+VH00004,FL002,VT013,Audi,Audi A5 Sportback,2021,ISB-ZDM-871,Red,Petrol,Automatic,5,174481,2021-02-05,29119,3000,60,2025-02-05,2026-07-01,On Trip,Good,True,True,True
+VH00005,FL003,VT009,Toyota,Hilux Rocco,2020,ISB-XWH-8417,Dark Blue,Diesel,Automatic,5,50065,2020-10-07,17495,1800,35,2022-10-07,2026-01-01,Available,Good,True,True,True
+VH00006,FL002,VT018,Toyota,Coaster HZB50 22-Seater,2017,ISB-NQZ-8935,Brown,Diesel,Manual,30,62730,2017-12-23,18564,1800,35,2021-12-23,2026-06-01,Retired,Good,True,True,True
+VH00007,FL001,VT016,Suzuki,APV GL,2020,PKR-TXP-4081,Beige,Petrol,Manual,8,116708,2020-08-26,5380,600,15,2021-08-26,2026-07-01,On Trip,Good,False,True,True
+VH00008,FL004,VT015,Land Rover,Range Rover Autobiography,2024,ISB-BZW-1628,White,Petrol,Automatic,5,116539,2024-04-06,136423,12000,200,2026-04-06,2026-03-01,Under Maintenance,Good,False,True,True
+VH00009,FL002,VT017,Toyota,Hiace Grand Cabin,2020,ISB-ZBE-9849,White,Diesel,Manual,14,71657,2020-02-22,12422,1100,25,2022-02-22,2026-10-01,On Trip,Excellent,True,False,True
+VH00010,FL002,VT004,Honda,City Aspire,2019,ISB-FGY-1227,Brown,Petrol,Automatic,5,84707,2019-04-12,6315,650,17,2022-04-12,2026-09-01,On Trip,Excellent,False,True,True
+VH00011,FL001,VT002,Suzuki,Cultus VXL,2018,PKR-VBJ-2243,Silver,Petrol,Automatic,5,52357,2018-11-09,5611,500,14,2022-11-09,2026-02-01,On Trip,Needs Attention,True,True,True
+VH00012,FL001,VT004,Honda,City Aspire,2023,PKR-XKQ-2632,White,Petrol,Automatic,5,52598,2023-04-28,7952,650,17,2025-04-28,2026-03-01,Reserved,Good,True,False,True
+VH00013,FL003,VT013,Audi,Audi A6 3.0T,2021,ISB-WZG-8446,Graphite Grey,Petrol,Automatic,5,150565,2021-07-22,30318,3000,60,2022-07-22,2026-03-01,Available,Good,False,True,True
+VH00014,FL004,VT018,Toyota,Coaster HZB50 30-Seater,2025,ISB-JBR-5509,Brown,Diesel,Manual,30,42669,2025-10-11,18598,1800,35,2028-10-11,2026-07-01,Available,Good,True,False,True
+VH00015,FL002,VT007,Hyundai,Tucson 1.6T AWD,2024,ISB-VZT-1489,Midnight Black,Petrol,Automatic,5,175921,2024-05-17,13857,1200,28,2025-05-17,2026-11-01,Under Maintenance,Good,False,True,True
+VH00016,FL001,VT004,Honda,City 1.2 MT,2024,PKR-EYN-922,Dark Blue,Petrol,Automatic,5,41813,2024-09-08,6912,650,17,2028-09-08,2026-10-01,On Trip,Good,False,True,True
+VH00017,FL001,VT003,Toyota,Corolla XLI,2022,PKR-GHN-2367,Red,Petrol,Automatic,5,110410,2022-03-08,7775,700,18,2024-03-08,2026-06-01,Available,Good,True,True,True
+VH00018,FL003,VT008,MG,HS 1.5T,2023,ISB-GMK-6724,Golden,Petrol,Automatic,5,132523,2023-12-06,15678,1200,28,2024-12-06,2026-10-01,Reserved,Good,True,True,True
+VH00019,FL001,VT001,Suzuki,Alto VXL,2018,PKR-FBY-759,Blue,Petrol,Manual,5,62261,2018-01-08,4758,400,12,2020-01-08,2026-11-01,Available,Excellent,False,True,True
+VH00020,FL003,VT003,Toyota,Corolla GLI 1.3,2021,ISB-SHS-2083,Silver,Petrol,Automatic,5,20766,2021-10-26,6388,700,18,2025-10-26,2026-09-01,On Trip,Good,True,True,True
+VH00021,FL003,VT009,Toyota,Hilux Revo SR5,2023,ISB-VCX-4095,Beige,Diesel,Automatic,5,169994,2023-08-19,18672,1800,35,2026-08-19,2026-03-01,Available,Good,True,True,True
+VH00022,FL002,VT016,Suzuki,APV GL,2024,ISB-CFS-5116,Dark Blue,Petrol,Manual,8,106736,2024-11-19,5946,600,15,2027-11-19,2026-06-01,Available,Good,True,True,True
+VH00023,FL001,VT012,Toyota,Land Cruiser ZX LC300,2020,PKR-ANG-993,White,Diesel,Automatic,8,43103,2020-09-10,34568,3500,70,2024-09-10,2026-10-01,Available,Excellent,True,True,False
+VH00024,FL001,VT018,Toyota,Coaster HZB50 30-Seater,2021,PKR-UKX-4971,Silver,Diesel,Manual,30,90053,2021-10-14,17843,1800,35,2022-10-14,2026-04-01,On Trip,Good,True,True,True
+VH00025,FL001,VT009,Toyota,Hilux Revo V,2021,PKR-CFD-4452,Golden,Diesel,Automatic,5,25633,2021-03-03,16663,1800,35,2024-03-03,2026-05-01,On Trip,Good,True,True,True
+VH00026,FL003,VT001,Suzuki,Alto AGS,2022,ISB-AUM-7345,Blue,Petrol,Manual,5,163440,2022-05-06,4153,400,12,2026-05-06,2026-06-01,Reserved,Good,True,True,True
+VH00027,FL002,VT017,Toyota,Hiace Super GL,2018,ISB-KEJ-8267,Blue,Diesel,Manual,14,23529,2018-11-15,11221,1100,25,2020-11-15,2026-12-01,Reserved,Good,True,False,True
+VH00028,FL003,VT017,Toyota,Hiace Super GL,2022,ISB-WZF-9131,Graphite Grey,Diesel,Manual,14,59967,2022-03-13,15531,1100,25,2024-03-13,2026-07-01,Under Maintenance,Good,False,True,True
+VH00029,FL004,VT008,MG,HS Essence,2024,ISB-FUB-7849,White,Petrol,Automatic,5,109937,2024-12-26,13544,1200,28,2026-12-26,2026-03-01,Available,Good,True,False,True
+VH00030,FL003,VT003,Toyota,Corolla Altis Grande,2023,ISB-YRX-8094,Silver,Petrol,Automatic,5,171863,2023-09-02,5273,700,18,2026-09-02,2026-07-01,Retired,Needs Attention,False,False,True
+VH00031,FL001,VT013,Audi,Audi A5 Sportback,2023,PKR-MPF-4261,Brown,Petrol,Automatic,5,12463,2023-08-09,34292,3000,60,2027-08-09,2026-09-01,Reserved,Excellent,True,True,True
+VH00032,FL001,VT013,Audi,Audi A5 Sportback,2021,PKR-PST-903,Midnight Black,Petrol,Automatic,5,140214,2021-10-24,33829,3000,60,2024-10-24,2026-10-01,Under Maintenance,Fair,True,True,True
+VH00033,FL001,VT018,Toyota,Coaster HZB50 22-Seater,2020,PKR-VGV-7994,Pearl White,Diesel,Manual,30,98792,2020-05-24,19021,1800,35,2024-05-24,2026-04-01,Reserved,Fair,True,False,False
+VH00034,FL001,VT001,Suzuki,Alto AGS,2023,PKR-FBV-5051,Blue,Petrol,Manual,5,40585,2023-11-14,3709,400,12,2024-11-14,2026-02-01,Available,Excellent,False,True,True
+VH00035,FL002,VT008,MG,HS 1.5T,2022,ISB-ZJX-5976,Blue,Petrol,Automatic,5,82320,2022-01-13,12759,1200,28,2023-01-13,2026-02-01,Reserved,Good,True,False,True
+VH00036,FL001,VT001,Suzuki,Alto VXR,2022,PKR-ZNV-1901,Midnight Black,Petrol,Manual,5,16758,2022-11-28,3697,400,12,2025-11-28,2026-10-01,Under Maintenance,Good,True,True,True
+VH00037,FL004,VT017,Toyota,Hiace Super GL,2022,ISB-RAZ-6680,Silver,Diesel,Manual,14,38301,2022-07-22,12941,1100,25,2026-07-22,2026-06-01,Available,Good,True,True,True
+VH00038,FL003,VT014,Mercedes-Benz,E-Class E300,2021,ISB-KTH-5220,Silver,Petrol,Automatic,5,108120,2021-11-09,77911,5000,80,2025-11-09,2026-02-01,Available,Good,True,True,True
+VH00039,FL002,VT012,Toyota,Land Cruiser V8 200 Series,2019,ISB-DMW-5836,Dark Blue,Diesel,Automatic,8,40116,2019-09-12,36439,3500,70,2021-09-12,2026-10-01,Under Maintenance,Good,True,True,False
+VH00040,FL003,VT001,Suzuki,Alto AGS,2019,ISB-NKL-2678,Pearl White,Petrol,Manual,5,95035,2019-06-10,4665,400,12,2020-06-10,2026-03-01,Reserved,Fair,True,True,True
+VH00041,FL001,VT008,MG,ZS EV,2023,PKR-BEY-2348,Pearl White,Petrol,Automatic,5,96015,2023-05-10,12479,1200,28,2027-05-10,2026-03-01,On Trip,Good,True,True,True
+VH00042,FL002,VT011,Toyota,Land Cruiser Prado 4.0,2020,ISB-VYC-1834,Graphite Grey,Petrol,Automatic,7,164369,2020-04-14,24402,2500,50,2021-04-14,2026-12-01,Available,Good,True,True,True
+VH00043,FL001,VT005,Honda,Civic RS 1.5T,2025,PKR-EUM-9336,Brown,Petrol,Automatic,5,157978,2025-10-15,10928,1000,22,2028-10-15,2026-06-01,Under Maintenance,Excellent,True,True,True
+VH00044,FL002,VT015,Land Rover,Range Rover Autobiography,2024,ISB-LVR-5367,Beige,Petrol,Automatic,5,141430,2024-10-16,111314,12000,200,2025-10-16,2026-12-01,Available,Excellent,True,True,True
+VH00045,FL001,VT013,Audi,Audi A6 3.0T,2021,PKR-TRX-2563,Brown,Petrol,Automatic,5,162761,2021-06-03,32645,3000,60,2024-06-03,2026-12-01,Available,Good,True,False,True
+VH00046,FL001,VT010,Toyota,Fortuner 2.7 VVTi,2019,PKR-JUE-2353,Dark Blue,Diesel,Automatic,7,87540,2019-03-03,21222,2000,38,2020-03-03,2026-12-01,Available,Fair,True,True,True
+VH00047,FL003,VT015,Land Rover,Range Rover Sport HSE,2024,ISB-UUF-4018,Golden,Petrol,Automatic,5,132949,2024-05-26,167798,12000,200,2026-05-26,2026-08-01,Available,Good,True,True,True
+VH00048,FL003,VT009,Toyota,Hilux Rocco,2025,ISB-DLY-3737,Midnight Black,Diesel,Automatic,5,16991,2025-08-12,17659,1800,35,2029-08-12,2026-07-01,Available,Needs Attention,True,True,False
+VH00049,FL001,VT007,Hyundai,Tucson 1.6T AWD,2021,PKR-CGH-882,Blue,Petrol,Automatic,5,177497,2021-04-14,14381,1200,28,2025-04-14,2026-10-01,Available,Good,True,False,True
+VH00050,FL002,VT013,Audi,Audi A6 3.0T,2021,ISB-TJB-4050,Beige,Petrol,Automatic,5,174693,2021-12-22,28725,3000,60,2024-12-22,2026-09-01,Available,Good,True,False,True
+VH00051,FL001,VT013,Audi,Audi A6 3.0T,2025,PKR-GUE-5948,Red,Petrol,Automatic,5,97012,2025-01-28,29912,3000,60,2028-01-28,2026-12-01,Available,Good,False,True,True
+VH00052,FL001,VT010,Toyota,Fortuner 2.8 Diesel,2021,PKR-QLS-5859,White,Diesel,Automatic,7,102421,2021-08-02,20074,2000,38,2025-08-02,2026-02-01,Available,Good,True,True,True
+VH00053,FL002,VT005,Honda,Civic Oriel,2025,ISB-YJU-9503,Silver,Petrol,Automatic,5,106193,2025-03-17,10194,1000,22,2028-03-17,2026-01-01,Available,Good,True,True,True
+VH00054,FL003,VT015,Land Rover,Range Rover Sport HSE,2020,ISB-STP-4857,Dark Blue,Petrol,Automatic,5,51289,2020-05-28,153385,12000,200,2022-05-28,2026-04-01,Under Maintenance,Excellent,True,True,True
+VH00055,FL003,VT003,Toyota,Corolla Altis 1.6,2020,ISB-RLS-5744,Pearl White,Petrol,Automatic,5,154520,2020-03-27,7559,700,18,2022-03-27,2026-07-01,Under Maintenance,Good,False,False,True
+VH00056,FL002,VT005,Honda,Civic Oriel,2025,ISB-QCR-9796,Golden,Petrol,Automatic,5,54879,2025-10-05,10976,1000,22,2028-10-05,2026-01-01,Under Maintenance,Fair,True,True,True
+VH00057,FL003,VT013,Audi,Audi A6 3.0T,2021,ISB-BBL-8033,Beige,Petrol,Automatic,5,99179,2021-08-07,32246,3000,60,2024-08-07,2026-12-01,Under Maintenance,Needs Attention,True,True,True
+VH00058,FL003,VT006,Honda,BR-V i-VTEC,2023,ISB-EDZ-7748,Midnight Black,Petrol,Automatic,7,140382,2023-08-10,6057,800,20,2027-08-10,2026-04-01,Available,Good,True,True,True
+VH00059,FL002,VT012,Toyota,Land Cruiser V8 200 Series,2022,ISB-KLP-2046,Beige,Diesel,Automatic,8,113259,2022-03-04,30597,3500,70,2025-03-04,2026-03-01,On Trip,Excellent,True,True,True
+VH00060,FL003,VT010,Toyota,Fortuner 2.8 Diesel,2022,ISB-THV-6135,Brown,Diesel,Automatic,7,38732,2022-06-22,21899,2000,38,2025-06-22,2026-01-01,Under Maintenance,Good,True,False,False
+VH00061,FL004,VT004,Honda,City 1.2 MT,2021,ISB-LLK-3440,Dark Blue,Petrol,Automatic,5,170295,2021-07-17,7841,650,17,2022-07-17,2026-04-01,On Trip,Good,False,True,True
+VH00062,FL001,VT018,Toyota,Coaster HZB50 30-Seater,2019,PKR-YZU-3496,Graphite Grey,Diesel,Manual,30,138189,2019-12-23,16585,1800,35,2022-12-23,2026-05-01,On Trip,Excellent,True,True,False
+VH00063,FL003,VT009,Toyota,Hilux Revo SR5,2022,ISB-CTF-931,Beige,Diesel,Automatic,5,69158,2022-11-17,18551,1800,35,2023-11-17,2026-12-01,Available,Good,True,True,False
+VH00064,FL001,VT002,Suzuki,Cultus VXL,2019,PKR-XEY-6604,Golden,Petrol,Automatic,5,85882,2019-08-06,5815,500,14,2020-08-06,2026-02-01,Available,Fair,True,True,True
+VH00065,FL001,VT011,Toyota,Land Cruiser Prado 2.7,2022,PKR-EWX-7107,Pearl White,Petrol,Automatic,7,32737,2022-09-11,24404,2500,50,2023-09-11,2026-08-01,Available,Good,True,True,True
+VH00066,FL002,VT017,Toyota,Hiace Grand Cabin,2022,ISB-RYJ-3718,Dark Blue,Diesel,Manual,14,135352,2022-04-05,10919,1100,25,2025-04-05,2026-08-01,Available,Fair,False,False,True
+VH00067,FL001,VT011,Toyota,Land Cruiser Prado 2.7,2025,PKR-STM-8461,White,Petrol,Automatic,7,24584,2025-08-26,24720,2500,50,2029-08-26,2026-09-01,Available,Good,False,False,True
+VH00068,FL002,VT005,Honda,Civic VTi,2025,ISB-RLZ-6366,Beige,Petrol,Automatic,5,108958,2025-08-28,10126,1000,22,2027-08-28,2026-02-01,On Trip,Excellent,True,True,True
+VH00069,FL001,VT004,Honda,City Aspire,2018,PKR-LUX-356,Brown,Petrol,Automatic,5,27639,2018-04-07,6201,650,17,2019-04-07,2026-12-01,Available,Fair,True,True,True
+VH00070,FL003,VT017,Toyota,Hiace Super GL,2021,ISB-HBY-2969,Brown,Diesel,Manual,14,121988,2021-11-22,13335,1100,25,2022-11-22,2026-11-01,Retired,Good,True,False,True
+VH00071,FL002,VT005,Honda,Civic RS 1.5T,2023,ISB-GHB-7469,Red,Petrol,Automatic,5,150413,2023-06-03,11173,1000,22,2025-06-03,2026-11-01,Available,Good,True,True,True
+VH00072,FL003,VT008,MG,ZS EV,2025,ISB-SKF-5369,Beige,Petrol,Automatic,5,132224,2025-05-13,14134,1200,28,2028-05-13,2026-09-01,Available,Fair,True,False,True
+VH00073,FL001,VT008,MG,ZS EV,2023,PKR-WMR-5630,Beige,Petrol,Automatic,5,138089,2023-05-25,15866,1200,28,2027-05-25,2026-03-01,Available,Excellent,True,True,True
+VH00074,FL002,VT012,Toyota,Land Cruiser ZX LC300,2018,ISB-RAN-6839,Brown,Diesel,Automatic,8,148783,2018-01-01,35832,3500,70,2021-01-01,2026-07-01,Available,Fair,False,True,True
+VH00075,FL003,VT003,Toyota,Corolla GLI 1.3,2018,ISB-KKM-254,Beige,Petrol,Automatic,5,31675,2018-12-06,6999,700,18,2022-12-06,2026-10-01,On Trip,Needs Attention,False,False,True
+VH00076,FL001,VT007,Hyundai,Tucson 2.0 FWD,2024,PKR-UTK-1360,Dark Blue,Petrol,Automatic,5,157838,2024-05-06,12721,1200,28,2028-05-06,2026-06-01,On Trip,Good,True,False,True
+VH00077,FL001,VT009,Toyota,Hilux Revo V,2025,PKR-FPK-3143,Silver,Diesel,Automatic,5,109633,2025-11-19,16342,1800,35,2028-11-19,2026-02-01,Under Maintenance,Excellent,True,False,True
+VH00078,FL002,VT014,Mercedes-Benz,E-Class E200,2019,ISB-CPQ-5415,Dark Blue,Petrol,Automatic,5,86506,2019-07-01,53621,5000,80,2020-07-01,2026-04-01,On Trip,Good,True,True,True
+VH00079,FL002,VT007,Hyundai,Tucson 2.0 FWD,2023,ISB-DAK-6324,Golden,Petrol,Automatic,5,97749,2023-06-15,13291,1200,28,2025-06-15,2026-12-01,Available,Excellent,True,False,False
+VH00080,FL002,VT018,Toyota,Coaster HZB50 22-Seater,2015,ISB-YFV-1233,Brown,Diesel,Manual,30,140889,2015-07-22,15695,1800,35,2018-07-22,2026-03-01,Available,Good,False,True,False
+VH00081,FL001,VT012,Toyota,Land Cruiser V8 200 Series,2020,PKR-PRR-5532,Dark Blue,Diesel,Automatic,8,12765,2020-07-04,26479,3500,70,2022-07-04,2026-09-01,Available,Good,True,True,True
+VH00082,FL001,VT007,Hyundai,Tucson 1.6T AWD,2024,PKR-JCT-7512,Beige,Petrol,Automatic,5,88712,2024-06-03,12134,1200,28,2025-06-03,2026-11-01,Available,Excellent,False,False,True
+VH00083,FL003,VT007,Hyundai,Tucson 1.6T AWD,2023,ISB-KSE-1125,Silver,Petrol,Automatic,5,150742,2023-10-04,12560,1200,28,2026-10-04,2026-05-01,Available,Good,True,False,True
+VH00084,FL001,VT008,MG,HS 1.5T,2022,PKR-ESN-6952,Dark Blue,Petrol,Automatic,5,160681,2022-10-05,13534,1200,28,2024-10-05,2026-12-01,Available,Fair,False,True,True
+VH00085,FL002,VT016,Suzuki,APV GLX,2023,ISB-KWM-1454,Graphite Grey,Petrol,Manual,8,67810,2023-10-01,5584,600,15,2026-10-01,2026-03-01,Available,Fair,True,False,True
+VH00086,FL004,VT004,Honda,City 1.5 AT,2021,ISB-WAG-1525,Golden,Petrol,Automatic,5,40772,2021-08-28,7551,650,17,2023-08-28,2026-12-01,Available,Good,True,False,True
+VH00087,FL001,VT017,Toyota,Hiace Grand Cabin,2019,PKR-ZUY-4643,Brown,Diesel,Manual,14,44784,2019-11-05,11498,1100,25,2022-11-05,2026-07-01,Under Maintenance,Good,True,True,True
+VH00088,FL003,VT003,Toyota,Corolla Altis 1.6,2025,ISB-WVK-7139,Golden,Petrol,Automatic,5,80395,2025-04-16,6291,700,18,2028-04-16,2026-03-01,Available,Good,True,True,True
+VH00089,FL001,VT009,Toyota,Hilux Rocco,2019,PKR-JBR-2811,Silver,Diesel,Automatic,5,173998,2019-01-13,17222,1800,35,2021-01-13,2026-12-01,Available,Excellent,True,True,True
+VH00090,FL003,VT004,Honda,City 1.5 AT,2019,ISB-JHK-2281,Pearl White,Petrol,Automatic,5,47448,2019-11-22,6136,650,17,2020-11-22,2026-08-01,On Trip,Good,True,False,True
+VH00091,FL001,VT003,Toyota,Corolla Altis 1.6,2021,PKR-USW-5042,White,Petrol,Automatic,5,169102,2021-04-17,7038,700,18,2025-04-17,2026-04-01,Available,Good,True,True,True
+VH00092,FL004,VT003,Toyota,Corolla GLI 1.3,2018,ISB-AFY-6620,Red,Petrol,Automatic,5,174776,2018-09-10,7850,700,18,2022-09-10,2026-02-01,Available,Good,True,True,True
+VH00093,FL002,VT008,MG,HS 1.5T,2020,ISB-CLL-1001,Pearl White,Petrol,Automatic,5,56044,2020-05-22,12477,1200,28,2022-05-22,2026-08-01,On Trip,Needs Attention,True,False,True
+VH00094,FL002,VT003,Toyota,Corolla Altis Grande,2025,ISB-NBW-2834,Dark Blue,Petrol,Automatic,5,76877,2025-06-06,8093,700,18,2026-06-06,2026-01-01,Available,Excellent,False,True,True
+VH00095,FL004,VT011,Toyota,Land Cruiser Prado 2.7,2022,ISB-PCS-962,Blue,Petrol,Automatic,7,145207,2022-03-08,27888,2500,50,2026-03-08,2026-05-01,Available,Fair,True,True,True
+VH00096,FL004,VT001,Suzuki,Alto AGS,2021,ISB-JWX-5588,Dark Blue,Petrol,Manual,5,108638,2021-01-25,4773,400,12,2024-01-25,2026-04-01,Available,Good,False,False,True
+VH00097,FL002,VT013,Audi,Audi A5 Sportback,2019,ISB-LZF-4376,Graphite Grey,Petrol,Automatic,5,113010,2019-06-26,32905,3000,60,2022-06-26,2026-04-01,Available,Excellent,True,False,True
+VH00098,FL001,VT010,Toyota,Fortuner 2.7 VVTi,2017,PKR-WHC-4166,Pearl White,Diesel,Automatic,7,144600,2017-06-13,17244,2000,38,2020-06-13,2026-01-01,Available,Needs Attention,False,False,True
+VH00099,FL001,VT003,Toyota,Corolla GLI 1.3,2018,PKR-ERV-1606,Golden,Petrol,Automatic,5,21192,2018-06-04,8769,700,18,2019-06-04,2026-07-01,Available,Fair,True,True,True
+VH00100,FL002,VT002,Suzuki,Cultus VXR,2018,ISB-KLR-8714,Beige,Petrol,Automatic,5,152516,2018-04-21,5692,500,14,2022-04-21,2026-08-01,Under Maintenance,Good,True,False,True
+VH00101,FL004,VT006,Honda,BR-V S,2021,ISB-RGV-1016,Golden,Petrol,Automatic,7,111822,2021-04-19,6887,800,20,2023-04-19,2026-06-01,Available,Fair,True,False,True
+VH00102,FL001,VT008,MG,ZS EV,2020,PKR-MHQ-2237,Pearl White,Petrol,Automatic,5,56520,2020-06-23,15675,1200,28,2023-06-23,2026-10-01,Available,Good,True,True,True
+VH00103,FL004,VT011,Toyota,Land Cruiser Prado 4.0,2020,ISB-FQE-5126,Golden,Petrol,Automatic,7,87205,2020-12-23,22764,2500,50,2021-12-23,2026-07-01,Reserved,Fair,False,False,True
+VH00104,FL003,VT003,Toyota,Corolla Altis Grande,2023,ISB-AFS-5842,Red,Petrol,Automatic,5,38320,2023-05-26,7881,700,18,2024-05-26,2026-03-01,Available,Fair,True,True,True
+VH00105,FL003,VT006,Honda,BR-V S,2021,ISB-JZX-607,Silver,Petrol,Automatic,7,53253,2021-07-21,7518,800,20,2025-07-21,2026-06-01,Available,Excellent,True,False,True
+VH00106,FL001,VT016,Suzuki,APV GL,2020,PKR-AEH-1442,Brown,Petrol,Manual,8,40279,2020-08-28,5616,600,15,2024-08-28,2026-05-01,Available,Excellent,True,True,True
+VH00107,FL001,VT018,Toyota,Coaster HZB50 30-Seater,2021,PKR-PWV-6958,Silver,Diesel,Manual,30,134472,2021-09-22,17863,1800,35,2023-09-22,2026-07-01,Available,Fair,True,True,True
+VH00108,FL001,VT014,Mercedes-Benz,S-Class S450,2020,PKR-DQH-1197,Dark Blue,Petrol,Automatic,5,155847,2020-02-13,52880,5000,80,2023-02-13,2026-08-01,Under Maintenance,Fair,True,False,True
+VH00109,FL003,VT012,Toyota,Land Cruiser ZX LC300,2024,ISB-KMQ-713,Beige,Diesel,Automatic,8,115637,2024-03-09,27157,3500,70,2028-03-09,2026-12-01,Available,Excellent,True,False,True
+VH00110,FL002,VT011,Toyota,Land Cruiser Prado 4.0,2022,ISB-QCL-6771,Pearl White,Petrol,Automatic,7,145397,2022-12-16,27203,2500,50,2023-12-16,2026-02-01,Available,Good,True,True,True
+VH00111,FL003,VT017,Toyota,Hiace Grand Cabin,2024,ISB-SFM-7408,Graphite Grey,Diesel,Manual,14,134408,2024-03-28,13521,1100,25,2027-03-28,2026-12-01,Available,Fair,True,True,True
+VH00112,FL001,VT006,Honda,BR-V S,2025,PKR-FQY-4611,Brown,Petrol,Automatic,7,101412,2025-07-13,7147,800,20,2027-07-13,2026-09-01,Available,Fair,True,True,True
+VH00113,FL004,VT010,Toyota,Fortuner 2.7 VVTi,2020,ISB-NFB-9930,Graphite Grey,Diesel,Automatic,7,93777,2020-07-22,20403,2000,38,2021-07-22,2026-05-01,On Trip,Fair,True,False,True
+VH00114,FL003,VT018,Toyota,Coaster HZB50 22-Seater,2017,ISB-CDG-9259,Graphite Grey,Diesel,Manual,30,97984,2017-03-22,18272,1800,35,2019-03-22,2026-07-01,Available,Fair,True,True,True
+VH00115,FL001,VT014,Mercedes-Benz,E-Class E300,2023,PKR-DWE-1424,White,Petrol,Automatic,5,175421,2023-08-11,79398,5000,80,2026-08-11,2026-08-01,On Trip,Excellent,False,True,True
+VH00116,FL004,VT011,Toyota,Land Cruiser Prado 2.7,2021,ISB-SRF-5741,White,Petrol,Automatic,7,36924,2021-05-05,24301,2500,50,2024-05-05,2026-05-01,Available,Needs Attention,True,True,True
+VH00117,FL001,VT005,Honda,Civic VTi,2021,PKR-ANC-712,White,Petrol,Automatic,5,77053,2021-07-21,11313,1000,22,2022-07-21,2026-11-01,On Trip,Excellent,False,True,True
+VH00118,FL003,VT014,Mercedes-Benz,E-Class E200,2025,ISB-NQG-1841,Midnight Black,Petrol,Automatic,5,169646,2025-08-07,43988,5000,80,2028-08-07,2026-06-01,Under Maintenance,Good,True,True,True
+VH00119,FL003,VT003,Toyota,Corolla Altis 1.6,2019,ISB-RLZ-4427,Beige,Petrol,Automatic,5,36164,2019-08-02,8252,700,18,2020-08-02,2026-11-01,Under Maintenance,Good,True,True,True
+VH00120,FL001,VT004,Honda,City 1.5 AT,2024,PKR-ZGK-7935,Pearl White,Petrol,Automatic,5,53720,2024-07-21,6226,650,17,2025-07-21,2026-02-01,Retired,Good,True,False,True

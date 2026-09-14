@@ -1,0 +1,11 @@
+category_id,category,description
+EC001,Staff Salaries,Monthly salaries for non-driver staff
+EC002,Driver Salaries,Monthly salaries for drivers
+EC003,Office Rent,Monthly office/depot rental
+EC004,Utilities,"Electricity, water, internet"
+EC005,Marketing,Advertising and promotions
+EC006,Insurance Premium,Vehicle and liability insurance
+EC007,Depreciation,Vehicle depreciation charge
+EC008,Miscellaneous,Petty cash and sundry expenses
+EC009,Communication,"Mobile, internet, telecom"
+EC010,Parking / Garage,Vehicle parking and storage

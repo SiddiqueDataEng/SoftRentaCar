@@ -1,0 +1,14 @@
+charge_type_id,charge_type,sign,description
+CT001,Base Rental Fare,+,Core rental fare based on duration and vehicle type
+CT002,Airport Pickup/Drop,+,Fixed airport surcharge
+CT003,Night Surcharge,+,10% surcharge for pickups between 10pm–6am
+CT004,Extra KM,+,Per-km charge above included mileage
+CT005,Extra Hours,+,Hourly charge for overtime
+CT006,Fuel Surcharge,+,Fuel cost pass-through
+CT007,Toll Charges,+,Highway and motorway tolls
+CT008,Waiting Charges,+,Driver waiting time beyond grace period
+CT009,Outstation Surcharge,+,Additional charge for outstation travel
+CT010,Peak Season Premium,+,High-demand period markup
+CT011,Security Deposit,+,Refundable security deposit
+CT012,Discount,-,Promotional or loyalty discount
+CT013,Driver Allowance,+,Driver daily allowance (outstation)
