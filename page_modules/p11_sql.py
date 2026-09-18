@@ -1,14 +1,119 @@
 """SQL Analytics — 50+ Production-Grade Queries"""
+import html
+import re
 import streamlit as st
 import pandas as pd
 import duckdb
 import plotly.graph_objects as go
-from streamlit_ace import st_ace
 from page_modules._shared import (
     inject, get_data, fmt, sec, alert_box, dark_layout,
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS,
 )
 from app.storytelling import insight
+from app.ai_chat import _resolve_key
+
+
+SQL_CLAUSES = {
+    "ALL", "ALTER", "AND", "AS", "ASC", "BY", "CASE", "CAST", "COALESCE",
+    "COUNT", "CREATE", "DATE", "DATE_DIFF", "DATE_TRUNC", "DELETE", "DESC",
+    "DISTINCT", "ELSE", "END", "EXISTS", "FROM", "GROUP", "HAVING", "IN",
+    "INSERT", "INTO", "IS", "JOIN", "LAG", "LEFT", "LIKE", "LIMIT", "MAX",
+    "MIN", "NULL", "NULLIF", "ON", "OR", "ORDER", "OVER", "PARTITION",
+    "PERCENT_RANK", "QUALIFY", "RANK", "RECURSIVE", "RIGHT", "ROW_NUMBER",
+    "ROWS", "SELECT", "SUM", "THEN", "UNION", "UPDATE", "WHEN", "WHERE",
+    "WITH", "WITHIN", "WINDOW",
+}
+
+
+def highlight_sql(source: str) -> str:
+    """Render SQL with black source text and red SQL clauses."""
+    token_pattern = re.compile(r"(--[^\n]*|'(?:''|[^'])*'|\b[A-Za-z_][A-Za-z_0-9]*\b)")
+    parts = []
+    cursor = 0
+    for match in token_pattern.finditer(source):
+        parts.append(html.escape(source[cursor:match.start()]))
+        token = match.group(0)
+        escaped = html.escape(token)
+        if token.upper() in SQL_CLAUSES:
+            parts.append(f'<span class="sql-clause">{escaped}</span>')
+        else:
+            parts.append(escaped)
+        cursor = match.end()
+    parts.append(html.escape(source[cursor:]))
+    return "".join(parts)
+
+
+def explain_sql_basics(source: str, meta: dict) -> dict:
+    """Build a provider-independent learning guide for the current query."""
+    clauses = [
+        token.upper()
+        for token in re.findall(r"\b[A-Za-z_][A-Za-z_0-9]*\b", source)
+        if token.upper() in SQL_CLAUSES
+    ]
+    unique_clauses = list(dict.fromkeys(clauses))
+    clause_help = {
+        "WITH": "starts a CTE, a named temporary result that makes a complex query easier to read",
+        "SELECT": "chooses the columns or calculated values returned to the reader",
+        "FROM": "identifies the source table or CTE",
+        "JOIN": "combines rows from related tables using a matching condition",
+        "WHERE": "filters rows before grouping and aggregation",
+        "GROUP": "groups rows so aggregate functions calculate one result per group",
+        "HAVING": "filters grouped results after aggregation",
+        "OVER": "defines the rows used by a window function without collapsing the result rows",
+        "PARTITION": "restarts a window calculation for each category",
+        "ORDER": "sorts rows or defines the sequence used by a window calculation",
+        "CASE": "creates conditional business logic similar to if/else",
+        "WHEN": "defines a condition inside CASE",
+        "LAG": "reads a previous row, commonly used for period-over-period comparisons",
+        "RANK": "assigns an ordering position while preserving ties",
+        "DISTINCT": "removes duplicate result rows",
+        "LIMIT": "restricts how many rows are returned",
+        "DATE_TRUNC": "rounds a date to a time period such as month or year",
+        "DATE_DIFF": "calculates the difference between two dates",
+        "NULLIF": "turns a matching value into NULL, often preventing division by zero",
+        "COALESCE": "returns the first non-NULL value from a list",
+    }
+    steps = [clause_help[item] for item in unique_clauses if item in clause_help]
+    return {
+        "purpose": meta.get("description", "Explore the selected SQL query and its result set."),
+        "clauses": unique_clauses,
+        "steps": steps,
+        "dialect": {
+            "DuckDB": "This app runs DuckDB SQL. DATE_TRUNC, DATE_DIFF and QUALIFY are especially convenient here.",
+            "PostgreSQL": "Use DATE_TRUNC directly; replace DATE_DIFF with date subtraction or AGE, depending on the desired unit.",
+            "T-SQL": "Use DATEADD/DATEDIFF instead of DATE_TRUNC/DATE_DIFF, and TOP or OFFSET/FETCH instead of LIMIT.",
+            "pandasql": "Register DataFrames as tables, then call sqldf(sql, locals()). Function support depends on the SQLite engine underneath.",
+        },
+    }
+
+
+def ai_explain_sql(source: str, meta: dict) -> str:
+    """Ask OpenAI for a teaching-oriented explanation when a key is available."""
+    api_key = _resolve_key()
+    if not api_key:
+        return "Add `OPENAI_API_KEY` in Streamlit secrets or the Settings page to enable AI explanations."
+    from openai import OpenAI
+
+    client = OpenAI(api_key=api_key)
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        temperature=0.2,
+        messages=[
+            {
+                "role": "system",
+                "content": "You are a patient SQL teacher. Explain accurately and concisely in Markdown.",
+            },
+            {
+                "role": "user",
+                "content": (
+                    "Explain this query for a learner. Cover purpose, execution order, important clauses, "
+                    "joins/window functions, possible pitfalls, and PostgreSQL, T-SQL, and pandasql alternatives.\n\n"
+                    f"Catalogue description: {meta.get('description', '')}\nSQL:\n{source}"
+                ),
+            },
+        ],
+    )
+    return response.choices[0].message.content or "The AI returned an empty explanation."
 
 inject()
 dfs = get_data()
@@ -1651,6 +1756,13 @@ with col_info:
 sec("✏️ SQL Editor")
 st.caption("Syntax highlighting enabled · default font size 22px")
 
+def reset_sql_editor_style():
+    st.session_state["sql_editor_font_size"] = 22
+
+
+def unhide_sql_learning():
+    st.session_state["show_sql_learning"] = True
+
 editor_controls = st.columns([2, 1, 1, 3])
 editor_font_size = editor_controls[0].slider(
     "Editor font size",
@@ -1660,32 +1772,108 @@ editor_font_size = editor_controls[0].slider(
     step=1,
     key="sql_editor_font_size",
 )
-if editor_controls[1].button("↺ Reset style", key="sql_editor_reset", use_container_width=True):
-    st.session_state["sql_editor_font_size"] = 22
-    st.rerun()
+editor_controls[1].button(
+    "↺ Reset style",
+    key="sql_editor_reset",
+    on_click=reset_sql_editor_style,
+    use_container_width=True,
+)
+if "show_sql_learning" not in st.session_state:
+    st.session_state["show_sql_learning"] = False
+editor_controls[2].button(
+    "▸ Unhide learning view",
+    key="sql_unhide_learning",
+    on_click=unhide_sql_learning,
+    use_container_width=True,
+)
 
 # Clear stale results when user switches query
 if st.session_state.get("_last_sql_q") != sel_query:
     st.session_state.pop("sql_result", None)
     st.session_state.pop("sql_error",  None)
+    st.session_state.pop("sql_ai_explanation", None)
     st.session_state["_last_sql_q"] = sel_query
 
 # Safe widget key — no spaces or special chars
 _safe_key = "".join(c if c.isalnum() else "_" for c in sel_query)[:40]
 
-sql_code = st_ace(
+st.markdown(f"""
+<style>
+div[data-testid="stTextArea"] textarea {{
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: "Courier New", monospace !important;
+    font-size: {editor_font_size}px !important;
+    line-height: 1.45 !important;
+}}
+</style>
+""", unsafe_allow_html=True)
+
+sql_code = st.text_area(
+    "SQL",
     value=query_meta["sql"].strip(),
-    language="sql",
-    theme="github",
     height=360,
-    min_lines=12,
-    font_size=editor_font_size,
-    tab_size=4,
-    wrap=True,
-    show_gutter=True,
-    show_print_margin=False,
     key=f"sq_{_safe_key}",
+    label_visibility="collapsed",
 )
+
+if st.session_state["show_sql_learning"]:
+    st.markdown(f"""
+<div class="sql-highlight-label">CLAUSE HIGHLIGHT</div>
+<pre class="sql-highlight"><code>{highlight_sql(sql_code or "")}</code></pre>
+<style>
+.sql-highlight-label {{
+    color: #111111;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin-top: 8px;
+}}
+.sql-highlight {{
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    color: #000000;
+    font-family: "Courier New", monospace;
+    font-size: {editor_font_size}px;
+    line-height: 1.45;
+    margin: 4px 0 12px;
+    max-height: 360px;
+    overflow: auto;
+    padding: 14px 16px;
+    white-space: pre-wrap;
+}}
+.sql-highlight .sql-clause {{ color: #c00000; font-weight: 700; }}
+</style>
+""", unsafe_allow_html=True)
+
+    learn_tab, ai_tab = st.tabs(["📘 Explanation", "🤖 AI tutor"])
+    learning = explain_sql_basics(sql_code or "", query_meta)
+
+    with learn_tab:
+        st.markdown(f"**What this query does:** {learning['purpose']}")
+        st.markdown("**SQL clauses found:** " + ", ".join(f"`{item}`" for item in learning["clauses"]))
+        st.markdown("**How to read it:**")
+        for step_number, step in enumerate(learning["steps"], 1):
+            st.markdown(f"{step_number}. {step.capitalize()}.")
+        st.markdown("**Dialect alternatives:**")
+        for dialect, note in learning["dialect"].items():
+            st.markdown(f"- **{dialect}:** {note}")
+        st.code(
+            "from pandasql import sqldf\nresult = sqldf(sql, locals())",
+            language="python",
+        )
+
+    with ai_tab:
+        st.markdown("Ask OpenAI to explain the current query, including execution order and equivalent syntax.")
+        if st.button("✨ Explain this query with AI", key="sql_ai_explain", type="secondary"):
+            with st.spinner("Preparing a learner-friendly explanation ..."):
+                try:
+                    st.session_state["sql_ai_explanation"] = ai_explain_sql(sql_code or "", query_meta)
+                except Exception as error:
+                    st.session_state["sql_ai_explanation"] = f"AI explanation failed: {error}"
+        if st.session_state.get("sql_ai_explanation"):
+            st.markdown(st.session_state["sql_ai_explanation"])
 
 run_col, explain_col, dl_col, _ = st.columns([1, 1, 1, 3])
 run_btn     = run_col.button("▶ Run Query",  type="primary",   key="sql_run",     use_container_width=True)
