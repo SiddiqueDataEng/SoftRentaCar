@@ -5,7 +5,6 @@ import streamlit as st
 import pandas as pd
 import duckdb
 import plotly.graph_objects as go
-from streamlit_ace import st_ace
 from page_modules._shared import (
     inject, get_data, fmt, sec, alert_box, dark_layout,
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS,
@@ -28,6 +27,8 @@ SQL_CLAUSES = {
 
 def highlight_sql(source: str) -> str:
     """Render SQL with black source text and red SQL clauses."""
+    if not isinstance(source, str):
+        source = ""
     token_pattern = re.compile(r"(--[^\n]*|'(?:''|[^'])*'|\b[A-Za-z_][A-Za-z_0-9]*\b)")
     parts = []
     cursor = 0
@@ -1760,6 +1761,10 @@ st.caption("Syntax highlighting enabled · default font size 22px")
 def reset_sql_editor_style():
     st.session_state["sql_editor_font_size"] = 22
 
+
+def unhide_sql_learning():
+    st.session_state["show_sql_learning"] = True
+
 editor_controls = st.columns([2, 1, 1, 3])
 editor_font_size = editor_controls[0].slider(
     "Editor font size",
@@ -1775,6 +1780,14 @@ editor_controls[1].button(
     on_click=reset_sql_editor_style,
     use_container_width=True,
 )
+if "show_sql_learning" not in st.session_state:
+    st.session_state["show_sql_learning"] = False
+editor_controls[2].button(
+    "▸ Unhide learning view",
+    key="sql_unhide_learning",
+    on_click=unhide_sql_learning,
+    use_container_width=True,
+)
 
 # Clear stale results when user switches query
 if st.session_state.get("_last_sql_q") != sel_query:
@@ -1786,18 +1799,24 @@ if st.session_state.get("_last_sql_q") != sel_query:
 # Safe widget key — no spaces or special chars
 _safe_key = "".join(c if c.isalnum() else "_" for c in sel_query)[:40]
 
-sql_code = st_ace(
+st.markdown(f"""
+<style>
+div[data-testid="stTextArea"] textarea {{
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: "Courier New", monospace !important;
+    font-size: {editor_font_size}px !important;
+    line-height: 1.45 !important;
+}}
+</style>
+""", unsafe_allow_html=True)
+
+sql_code = st.text_area(
+    "SQL",
     value=query_meta["sql"].strip(),
-    language="sql",
-    theme="chrome",
     height=360,
-    min_lines=12,
-    font_size=editor_font_size,
-    tab_size=4,
-    wrap=True,
-    show_gutter=True,
-    show_print_margin=False,
     key=f"sq_{_safe_key}",
+    label_visibility="collapsed",
 )
 
 st.markdown(f"""
@@ -1829,33 +1848,38 @@ st.markdown(f"""
 </style>
 """, unsafe_allow_html=True)
 
-learn_tab, ai_tab = st.tabs(["📘 Explanation", "🤖 AI tutor"])
-learning = explain_sql_basics(sql_code or "", query_meta)
+if st.session_state["show_sql_learning"]:
+    learn_tab, ai_tab = st.tabs(["📘 Explanation", "🤖 AI tutor"])
+    learning = explain_sql_basics(sql_code or "", query_meta)
 
-with learn_tab:
-    st.markdown(f"**What this query does:** {learning['purpose']}")
-    st.markdown("**SQL clauses found:** " + ", ".join(f"`{item}`" for item in learning["clauses"]))
-    st.markdown("**How to read it:**")
-    for step_number, step in enumerate(learning["steps"], 1):
-        st.markdown(f"{step_number}. {step.capitalize()}.")
-    st.markdown("**Dialect alternatives:**")
-    for dialect, note in learning["dialect"].items():
-        st.markdown(f"- **{dialect}:** {note}")
-    st.code(
-        "from pandasql import sqldf\nresult = sqldf(sql, locals())",
-        language="python",
-    )
+    with learn_tab:
+        st.markdown(f"**What this query does:** {learning['purpose']}")
+        st.markdown("**SQL clauses found:** " + ", ".join(f"`{item}`" for item in learning["clauses"]))
+        st.markdown("**How to read it:**")
+        for step_number, step in enumerate(learning["steps"], 1):
+            st.markdown(f"{step_number}. {step.capitalize()}.")
+        st.markdown("**Dialect alternatives:**")
+        for dialect, note in learning["dialect"].items():
+            st.markdown(f"- **{dialect}:** {note}")
+        st.code(
+            "from pandasql import sqldf\nresult = sqldf(sql, locals())",
+            language="python",
+        )
 
-with ai_tab:
-    st.markdown("Ask OpenAI to explain the current query, including execution order and equivalent syntax.")
-    if st.button("✨ Explain this query with AI", key="sql_ai_explain", type="secondary"):
-        with st.spinner("Preparing a learner-friendly explanation ..."):
-            try:
-                st.session_state["sql_ai_explanation"] = ai_explain_sql(sql_code or "", query_meta)
-            except Exception as error:
-                st.session_state["sql_ai_explanation"] = f"AI explanation failed: {error}"
-    if st.session_state.get("sql_ai_explanation"):
-        st.markdown(st.session_state["sql_ai_explanation"])
+    with ai_tab:
+        if _resolve_key():
+            st.success("OpenAI is configured. Click the button to explain this query.")
+        else:
+            st.warning("OpenAI is not configured. Add OPENAI_API_KEY in Streamlit Cloud Secrets or Settings.")
+        st.markdown("Ask OpenAI to explain the current query, including execution order and equivalent syntax.")
+        if st.button("✨ Explain this query with AI", key="sql_ai_explain", type="secondary"):
+            with st.spinner("Preparing a learner-friendly explanation ..."):
+                try:
+                    st.session_state["sql_ai_explanation"] = ai_explain_sql(sql_code or "", query_meta)
+                except Exception as error:
+                    st.session_state["sql_ai_explanation"] = f"AI explanation failed: {error}"
+        if st.session_state.get("sql_ai_explanation"):
+            st.markdown(st.session_state["sql_ai_explanation"])
 
 run_col, explain_col, dl_col, _ = st.columns([1, 1, 1, 3])
 run_btn     = run_col.button("▶ Run Query",  type="primary",   key="sql_run",     use_container_width=True)
