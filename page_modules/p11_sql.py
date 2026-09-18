@@ -1649,6 +1649,7 @@ with col_info:
 
 # ── SQL editor ─────────────────────────────────────────────────────────
 sec("✏️ SQL Editor")
+st.caption("Syntax highlighting enabled · default font size 22px")
 
 editor_controls = st.columns([2, 1, 1, 3])
 editor_font_size = editor_controls[0].slider(
