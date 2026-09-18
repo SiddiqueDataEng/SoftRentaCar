@@ -1683,6 +1683,9 @@ with col_info:
 sec("✏️ SQL Editor")
 st.caption("Syntax highlighting enabled · default font size 22px")
 
+def reset_sql_editor_style():
+    st.session_state["sql_editor_font_size"] = 22
+
 editor_controls = st.columns([2, 1, 1, 3])
 editor_font_size = editor_controls[0].slider(
     "Editor font size",
@@ -1692,9 +1695,12 @@ editor_font_size = editor_controls[0].slider(
     step=1,
     key="sql_editor_font_size",
 )
-if editor_controls[1].button("↺ Reset style", key="sql_editor_reset", use_container_width=True):
-    st.session_state["sql_editor_font_size"] = 22
-    st.rerun()
+editor_controls[1].button(
+    "↺ Reset style",
+    key="sql_editor_reset",
+    on_click=reset_sql_editor_style,
+    use_container_width=True,
+)
 
 # Clear stale results when user switches query
 if st.session_state.get("_last_sql_q") != sel_query:
