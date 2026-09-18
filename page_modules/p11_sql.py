@@ -5,6 +5,7 @@ import streamlit as st
 import pandas as pd
 import duckdb
 import plotly.graph_objects as go
+from streamlit_ace import st_ace
 from page_modules._shared import (
     inject, get_data, fmt, sec, alert_box, dark_layout,
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS,
@@ -1799,25 +1800,23 @@ if st.session_state.get("_last_sql_q") != sel_query:
 # Safe widget key — no spaces or special chars
 _safe_key = "".join(c if c.isalnum() else "_" for c in sel_query)[:40]
 
-st.markdown(f"""
-<style>
-div[data-testid="stTextArea"] textarea {{
-    background: #ffffff !important;
-    color: #000000 !important;
-    font-family: "Courier New", monospace !important;
-    font-size: {editor_font_size}px !important;
-    line-height: 1.45 !important;
-}}
-</style>
-""", unsafe_allow_html=True)
-
-sql_code = st.text_area(
-    "SQL",
+sql_code = st_ace(
     value=query_meta["sql"].strip(),
+    language="sql",
+    theme="chrome",
+    keybinding="vscode",
     height=360,
+    min_lines=12,
+    font_size=editor_font_size,
+    tab_size=4,
+    wrap=True,
+    show_gutter=True,
+    show_print_margin=False,
+    auto_update=True,
     key=f"sq_{_safe_key}",
-    label_visibility="collapsed",
 )
+if not isinstance(sql_code, str):
+    sql_code = query_meta["sql"].strip()
 
 st.markdown(f"""
 <div class="sql-highlight-label">CLAUSE HIGHLIGHT</div>
