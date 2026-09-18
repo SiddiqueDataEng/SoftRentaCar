@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 import duckdb
 import plotly.graph_objects as go
+from streamlit_ace import st_ace
 from page_modules._shared import (
     inject, get_data, fmt, sec, alert_box, dark_layout,
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS,
@@ -1648,18 +1649,59 @@ with col_info:
 
 # ── SQL editor ─────────────────────────────────────────────────────────
 sec("✏️ SQL Editor")
-sql_code = st.text_area(
-    "SQL",
+
+editor_controls = st.columns([2, 1, 1, 3])
+editor_font_size = editor_controls[0].slider(
+    "Editor font size",
+    min_value=14,
+    max_value=32,
+    value=22,
+    step=1,
+    key="sql_editor_font_size",
+)
+if editor_controls[1].button("↺ Reset style", key="sql_editor_reset", use_container_width=True):
+    st.session_state["sql_editor_font_size"] = 22
+    st.rerun()
+
+# Clear stale results when user switches query
+if st.session_state.get("_last_sql_q") != sel_query:
+    st.session_state.pop("sql_result", None)
+    st.session_state.pop("sql_error",  None)
+    st.session_state["_last_sql_q"] = sel_query
+
+# Safe widget key — no spaces or special chars
+_safe_key = "".join(c if c.isalnum() else "_" for c in sel_query)[:40]
+
+sql_code = st_ace(
     value=query_meta["sql"].strip(),
-    height=280,
-    key=f"sql_editor_{sel_query}",
-    label_visibility="collapsed",
+    language="sql",
+    theme="github",
+    height=360,
+    min_lines=12,
+    font_size=editor_font_size,
+    tab_size=4,
+    wrap=True,
+    show_gutter=True,
+    show_print_margin=False,
+    key=f"sq_{_safe_key}",
 )
 
-run_col, dl_col, _ = st.columns([1, 1, 5])
-run_btn = run_col.button("▶ Run Query", type="primary", key="sql_run", width='stretch')
+run_col, explain_col, dl_col, _ = st.columns([1, 1, 1, 3])
+run_btn     = run_col.button("▶ Run Query",  type="primary",   key="sql_run",     use_container_width=True)
+explain_btn = explain_col.button("🔍 Explain", type="secondary", key="sql_explain", use_container_width=True)
 
 # ── Execute ────────────────────────────────────────────────────────────
+if explain_btn and sql_code.strip():
+    with st.spinner("Generating plan …"):
+        try:
+            plan = conn.execute(f"EXPLAIN {sql_code}").fetchall()
+            plan_text = "\n".join(row[1] for row in plan)
+            st.session_state["sql_result"] = None
+            st.session_state["sql_error"]  = None
+            st.code(plan_text, language="text")
+        except Exception as e:
+            st.error(f"EXPLAIN error: {e}")
+
 if run_btn and sql_code.strip():
     with st.spinner("Executing …"):
         try:
@@ -1678,14 +1720,13 @@ if "sql_result" in st.session_state:
         df_res = st.session_state["sql_result"]
         sec(f"📊 Results — {len(df_res):,} rows × {len(df_res.columns)} columns")
 
-        # Download
-        dl_col.download_button(
-            "⬇ CSV",
+        # Download — use st.download_button directly (dl_col no longer exists)
+        st.download_button(
+            "⬇ Download CSV",
             df_res.to_csv(index=False),
-            f"{sel_query[:30]}.csv",
+            f"{sel_query[:30].replace(' ','_')}.csv",
             "text/csv",
             key="sql_dl",
-            width='stretch',
         )
 
         # Smart auto-visualisation
