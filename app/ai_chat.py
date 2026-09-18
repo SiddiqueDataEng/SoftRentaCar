@@ -16,8 +16,16 @@ import pandas as pd
 # ── Key resolution ────────────────────────────────────────────────────
 
 def _resolve_key() -> str:
-    """Return the best available OpenAI key, or empty string."""
-    # 1. Streamlit secrets (Streamlit Cloud / local secrets.toml)
+    """Return the shared OpenAI key for every AI feature, or empty string."""
+    # 1. Key entered in Settings or the current page for this session
+    try:
+        import streamlit as st
+        key = st.session_state.get("api_keys", {}).get("OPENAI_API_KEY", "")
+        if key and len(key) > 20:
+            return key
+    except Exception:
+        pass
+    # 2. Streamlit secrets (Streamlit Cloud / local secrets.toml)
     try:
         import streamlit as st
         key = st.secrets.get("OPENAI_API_KEY", "")
@@ -25,7 +33,7 @@ def _resolve_key() -> str:
             return key
     except Exception:
         pass
-    # 2. Environment variable (set via UI or shell)
+    # 3. Environment variable (set via UI or shell)
     key = os.getenv("OPENAI_API_KEY", "")
     if key and len(key) > 20:
         return key
