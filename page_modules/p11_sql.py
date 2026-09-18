@@ -1,13 +1,46 @@
 """SQL Analytics — 50+ Production-Grade Queries"""
+import html
+import re
 import streamlit as st
 import pandas as pd
 import duckdb
 import plotly.graph_objects as go
+from streamlit_ace import st_ace
 from page_modules._shared import (
     inject, get_data, fmt, sec, alert_box, dark_layout,
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS,
 )
 from app.storytelling import insight
+
+
+SQL_CLAUSES = {
+    "ALL", "ALTER", "AND", "AS", "ASC", "BY", "CASE", "CAST", "COALESCE",
+    "COUNT", "CREATE", "DATE", "DATE_DIFF", "DATE_TRUNC", "DELETE", "DESC",
+    "DISTINCT", "ELSE", "END", "EXISTS", "FROM", "GROUP", "HAVING", "IN",
+    "INSERT", "INTO", "IS", "JOIN", "LAG", "LEFT", "LIKE", "LIMIT", "MAX",
+    "MIN", "NULL", "NULLIF", "ON", "OR", "ORDER", "OVER", "PARTITION",
+    "PERCENT_RANK", "QUALIFY", "RANK", "RECURSIVE", "RIGHT", "ROW_NUMBER",
+    "ROWS", "SELECT", "SUM", "THEN", "UNION", "UPDATE", "WHEN", "WHERE",
+    "WITH", "WITHIN", "WINDOW",
+}
+
+
+def highlight_sql(source: str) -> str:
+    """Render SQL with black source text and red SQL clauses."""
+    token_pattern = re.compile(r"(--[^\n]*|'(?:''|[^'])*'|\b[A-Za-z_][A-Za-z_0-9]*\b)")
+    parts = []
+    cursor = 0
+    for match in token_pattern.finditer(source):
+        parts.append(html.escape(source[cursor:match.start()]))
+        token = match.group(0)
+        escaped = html.escape(token)
+        if token.upper() in SQL_CLAUSES:
+            parts.append(f'<span class="sql-clause">{escaped}</span>')
+        else:
+            parts.append(escaped)
+        cursor = match.end()
+    parts.append(html.escape(source[cursor:]))
+    return "".join(parts)
 
 inject()
 dfs = get_data()
@@ -1648,6 +1681,20 @@ with col_info:
 
 # ── SQL editor ─────────────────────────────────────────────────────────
 sec("✏️ SQL Editor")
+st.caption("Syntax highlighting enabled · default font size 22px")
+
+editor_controls = st.columns([2, 1, 1, 3])
+editor_font_size = editor_controls[0].slider(
+    "Editor font size",
+    min_value=14,
+    max_value=32,
+    value=22,
+    step=1,
+    key="sql_editor_font_size",
+)
+if editor_controls[1].button("↺ Reset style", key="sql_editor_reset", use_container_width=True):
+    st.session_state["sql_editor_font_size"] = 22
+    st.rerun()
 
 # Clear stale results when user switches query
 if st.session_state.get("_last_sql_q") != sel_query:
@@ -1658,13 +1705,48 @@ if st.session_state.get("_last_sql_q") != sel_query:
 # Safe widget key — no spaces or special chars
 _safe_key = "".join(c if c.isalnum() else "_" for c in sel_query)[:40]
 
-sql_code = st.text_area(
-    "SQL",
+sql_code = st_ace(
     value=query_meta["sql"].strip(),
-    height=280,
+    language="sql",
+    theme="chrome",
+    height=360,
+    min_lines=12,
+    font_size=editor_font_size,
+    tab_size=4,
+    wrap=True,
+    show_gutter=True,
+    show_print_margin=False,
     key=f"sq_{_safe_key}",
-    label_visibility="collapsed",
 )
+
+st.markdown(f"""
+<div class="sql-highlight-label">CLAUSE HIGHLIGHT</div>
+<pre class="sql-highlight"><code>{highlight_sql(sql_code or "")}</code></pre>
+<style>
+.sql-highlight-label {{
+    color: #111111;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin-top: 8px;
+}}
+.sql-highlight {{
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    color: #000000;
+    font-family: "Courier New", monospace;
+    font-size: {editor_font_size}px;
+    line-height: 1.45;
+    margin: 4px 0 12px;
+    max-height: 360px;
+    overflow: auto;
+    padding: 14px 16px;
+    white-space: pre-wrap;
+}}
+.sql-highlight .sql-clause {{ color: #c00000; font-weight: 700; }}
+</style>
+""", unsafe_allow_html=True)
 
 run_col, explain_col, dl_col, _ = st.columns([1, 1, 1, 3])
 run_btn     = run_col.button("▶ Run Query",  type="primary",   key="sql_run",     use_container_width=True)
