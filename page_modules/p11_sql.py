@@ -1799,34 +1799,7 @@ sql_code = st_ace(
 if not isinstance(sql_code, str):
     sql_code = query_meta["sql"].strip()
 
-st.markdown(f"""
-<div class="sql-highlight-label">CLAUSE HIGHLIGHT</div>
-<pre class="sql-highlight"><code>{highlight_sql(sql_code or "")}</code></pre>
-<style>
-.sql-highlight-label {{
-    color: #111111;
-    font-size: .68rem;
-    font-weight: 700;
-    letter-spacing: .08em;
-    margin-top: 8px;
-}}
-.sql-highlight {{
-    background: #ffffff;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    color: #000000;
-    font-family: "Courier New", monospace;
-    font-size: {editor_font_size}px;
-    line-height: 1.45;
-    margin: 4px 0 12px;
-    max-height: 360px;
-    overflow: auto;
-    padding: 14px 16px;
-    white-space: pre-wrap;
-}}
-.sql-highlight .sql-clause {{ color: #c00000; font-weight: 700; }}
-</style>
-""", unsafe_allow_html=True)
+st.code(sql_code or query_meta["sql"].strip(), language="sql", line_numbers=True)
 
 if st.session_state["show_sql_learning"]:
     learn_tab, ai_tab = st.tabs(["📘 Explanation", "🤖 AI tutor"])
