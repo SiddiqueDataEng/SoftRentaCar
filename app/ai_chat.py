@@ -321,3 +321,77 @@ Your role:
         temperature=0.3,
     )
     return resp.choices[0].message.content
+ 
+
+
+def explain_sql(sql: str, api_key: Optional[str] = None) -> str:
+    """Explain SQL for a learner, using OpenAI when configured and a local fallback otherwise."""
+    statement = sql.strip()
+    if not statement:
+        return "Paste a SQL query above and I will explain it step by step."
+
+    key = api_key or os.getenv("OPENAI_API_KEY", "")
+    if key and len(key) > 10:
+        try:
+            from openai import OpenAI
+
+            response = OpenAI(api_key=key).chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            "You are a patient SQL teacher. Explain the supplied SQL for a beginner. "
+                            "Use concise markdown with: purpose, step-by-step execution order, "
+                            "important clauses/functions, expected result shape, and one learning tip. "
+                            "Do not invent schema details that are not present."
+                        ),
+                    },
+                    {"role": "user", "content": statement[:12000]},
+                ],
+                max_tokens=800,
+                temperature=0.2,
+            )
+            return response.choices[0].message.content
+        except Exception:
+            pass
+
+    return _local_sql_explanation(statement)
+
+
+def _local_sql_explanation(sql: str) -> str:
+    """Provide useful SQL teaching points when no external model is available."""
+    normalized = re.sub(r"\s+", " ", sql).strip()
+    upper = normalized.upper()
+    clauses = []
+    for keyword, label in (
+        ("WITH ", "CTE: creates a named temporary result that the main query can reuse"),
+        ("SELECT ", "SELECT: chooses the columns or calculated values to return"),
+        ("FROM ", "FROM: identifies the table or earlier result being read"),
+        ("JOIN ", "JOIN: combines rows from another table using a matching condition"),
+        ("WHERE ", "WHERE: filters rows before grouping"),
+        ("GROUP BY ", "GROUP BY: makes one group per distinct value so aggregates can be calculated"),
+        ("HAVING ", "HAVING: filters grouped results after aggregation"),
+        ("ORDER BY ", "ORDER BY: sorts the final rows"),
+        ("LIMIT ", "LIMIT: caps how many rows are returned"),
+    ):
+        if keyword in upper:
+            clauses.append(f"- **{keyword.strip()}** — {label}.")
+
+    aggregates = sorted(set(re.findall(r"\b(COUNT|SUM|AVG|MIN|MAX)\s*\(", upper)))
+    aggregate_text = (
+        f"It uses aggregate function(s): {', '.join(aggregates)}."
+        if aggregates else
+        "No aggregate function is detected, so the result is row-level data."
+    )
+    result_kind = "a summary or one row per group" if "GROUP BY " in upper else "one row per matching record"
+    return (
+        "### SQL explanation\n\n"
+        f"This query reads data and returns {result_kind}.\n\n"
+        "### How it works\n"
+        + ("\n".join(clauses) if clauses else "- The statement does not match the common read-query clauses.")
+        + f"\n\n{aggregate_text}\n\n"
+        "### Learning tip\n"
+        "SQL is usually understood in this logical order: `FROM` / `JOIN`, `WHERE`, `GROUP BY`, "
+        "`HAVING`, `SELECT`, `ORDER BY`, then `LIMIT`."
+    )
