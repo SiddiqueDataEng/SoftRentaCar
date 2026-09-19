@@ -11,7 +11,6 @@ from page_modules._shared import (
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS,
 )
 from app.storytelling import insight
-from app.ai_chat import _resolve_key
 
 
 SQL_CLAUSES = {
@@ -89,34 +88,6 @@ def explain_sql_basics(source: str, meta: dict) -> dict:
         },
     }
 
-
-def ai_explain_sql(source: str, meta: dict) -> str:
-    """Ask OpenAI for a teaching-oriented explanation when a key is available."""
-    api_key = _resolve_key()
-    if not api_key:
-        return "Add `OPENAI_API_KEY` in Streamlit secrets or the Settings page to enable AI explanations."
-    from openai import OpenAI
-
-    client = OpenAI(api_key=api_key)
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        temperature=0.2,
-        messages=[
-            {
-                "role": "system",
-                "content": "You are a patient SQL teacher. Explain accurately and concisely in Markdown.",
-            },
-            {
-                "role": "user",
-                "content": (
-                    "Explain this query for a learner. Cover purpose, execution order, important clauses, "
-                    "joins/window functions, possible pitfalls, and PostgreSQL, T-SQL, and pandasql alternatives.\n\n"
-                    f"Catalogue description: {meta.get('description', '')}\nSQL:\n{source}"
-                ),
-            },
-        ],
-    )
-    return response.choices[0].message.content or "The AI returned an empty explanation."
 
 inject()
 dfs = get_data()
@@ -1794,7 +1765,6 @@ editor_controls[2].button(
 if st.session_state.get("_last_sql_q") != sel_query:
     st.session_state.pop("sql_result", None)
     st.session_state.pop("sql_error",  None)
-    st.session_state.pop("sql_ai_explanation", None)
     st.session_state["_last_sql_q"] = sel_query
 
 # Safe widget key — no spaces or special chars
@@ -1848,37 +1818,20 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 if st.session_state["show_sql_learning"]:
-    learn_tab, ai_tab = st.tabs(["📘 Explanation", "🤖 AI tutor"])
     learning = explain_sql_basics(sql_code or "", query_meta)
 
-    with learn_tab:
-        st.markdown(f"**What this query does:** {learning['purpose']}")
-        st.markdown("**SQL clauses found:** " + ", ".join(f"`{item}`" for item in learning["clauses"]))
-        st.markdown("**How to read it:**")
-        for step_number, step in enumerate(learning["steps"], 1):
-            st.markdown(f"{step_number}. {step.capitalize()}.")
-        st.markdown("**Dialect alternatives:**")
-        for dialect, note in learning["dialect"].items():
-            st.markdown(f"- **{dialect}:** {note}")
-        st.code(
-            "from pandasql import sqldf\nresult = sqldf(sql, locals())",
-            language="python",
-        )
-
-    with ai_tab:
-        if _resolve_key():
-            st.success("OpenAI is configured. Click the button to explain this query.")
-        else:
-            st.warning("OpenAI is not configured. Add OPENAI_API_KEY in Streamlit Cloud Secrets or Settings.")
-        st.markdown("Ask OpenAI to explain the current query, including execution order and equivalent syntax.")
-        if st.button("✨ Explain this query with AI", key="sql_ai_explain", type="secondary"):
-            with st.spinner("Preparing a learner-friendly explanation ..."):
-                try:
-                    st.session_state["sql_ai_explanation"] = ai_explain_sql(sql_code or "", query_meta)
-                except Exception as error:
-                    st.session_state["sql_ai_explanation"] = f"AI explanation failed: {error}"
-        if st.session_state.get("sql_ai_explanation"):
-            st.markdown(st.session_state["sql_ai_explanation"])
+    st.markdown(f"**What this query does:** {learning['purpose']}")
+    st.markdown("**SQL clauses found:** " + ", ".join(f"`{item}`" for item in learning["clauses"]))
+    st.markdown("**How to read it:**")
+    for step_number, step in enumerate(learning["steps"], 1):
+        st.markdown(f"{step_number}. {step.capitalize()}.")
+    st.markdown("**Dialect alternatives:**")
+    for dialect, note in learning["dialect"].items():
+        st.markdown(f"- **{dialect}:** {note}")
+    st.code(
+        "from pandasql import sqldf\nresult = sqldf(sql, locals())",
+        language="python",
+    )
 
 run_col, explain_col, dl_col, _ = st.columns([1, 1, 1, 3])
 run_btn     = run_col.button("▶ Run Query",  type="primary",   key="sql_run",     use_container_width=True)
