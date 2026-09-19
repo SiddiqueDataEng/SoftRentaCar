@@ -2,17 +2,16 @@
 import streamlit as st
 import os
 from pathlib import Path
-
-st.set_page_config(
-    page_title="Soft Rent a Car",
-    page_icon="🚗",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
-
 from app.auth   import verify, is_logged_in, current_user, current_role, \
                        do_logout, ROLES, get_user_meta
 from app.themes import THEMES, DEFAULT_THEME, get_theme_css, FOOTER_HTML
+            st.Page("page_modules/p10_alerts.py",    title="Alerts & Watchlist",   icon="⚠️"),
+            st.Page("page_modules/p11_sql.py",       title="SQL Learning Studio",  icon="🧠"),
+        ],
+    },
+    position="sidebar",
+)
+>>>>>>> theirs
 
 # ── Session defaults ───────────────────────────────────────────────────
 if "selected_theme" not in st.session_state: st.session_state.selected_theme = DEFAULT_THEME
