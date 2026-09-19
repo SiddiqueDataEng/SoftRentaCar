@@ -17,6 +17,86 @@ import pandas as pd
 
 def _resolve_key() -> str:
     """Return the shared OpenAI key for every AI feature, or empty string."""
+    # 1. Key entered in Settings or the current page for this session
+    try:
+        import streamlit as st
+        key = st.session_state.get("api_keys", {}).get("OPENAI_API_KEY", "")
+        if key and len(key) > 20:
+            return key
+    except Exception:
+        pass
+    # 2. Streamlit secrets (Streamlit Cloud / local secrets.toml)
+    try:
+        import streamlit as st
+        key = st.secrets.get("OPENAI_API_KEY", "")
+        if key and len(key) > 20:
+            return key
+    except Exception:
+        pass
+    # 3. Environment variable (set via UI or shell)
+    key = os.getenv("OPENAI_API_KEY", "")
+    if key and len(key) > 20:
+        return key
+    return ""
+
+
+# ── Intent classifier ─────────────────────────────────────────────────
+
+INTENTS = {
+    "revenue":   ["revenue", "income", "billing", "invoice", "earned", "collected", "pkr", "money", "profit"],
+    "trips":     ["trip", "booking", "ride", "rental", "journey", "travel"],
+    "driver":    ["driver", "driving", "behavior", "behaviour", "safety", "accident", "brake", "speed", "idle"],
+    "vehicle":   ["vehicle", "car", "fleet", "maintenance", "fuel", "efficiency", "status", "tyre"],
+    "customer":  ["customer", "client", "renter", "passenger", "loyalty"],
+    "forecast":  ["forecast", "predict", "next month", "future", "upcoming", "trend"],
+    "top":       ["top", "best", "highest", "most", "lowest", "worst", "ranking", "list"],
+    "alert":     ["alert", "issue", "problem", "risk", "overdue", "expired", "danger"],
+    "city":      ["city", "islamabad", "lahore", "karachi", "rawalpindi", "peshawar", "murree"],
+    "kpi":       ["kpi", "utilisation", "utilization", "rate", "occupancy", "performance", "metric"],
+    "sql":       ["sql", "query", "database", "table", "select", "join", "window", "cte"],
+    "help":      ["help", "what can", "what do you", "capabilities", "commands", "how to"],
+}
+
+GREETINGS = ["hello", "hi", "hey", "salam", "assalamu", "good morning", "good evening",
+             "good afternoon", "howdy", "sup", "yo"]
+
+
+def _detect_intent(text: str) -> list:
+    tl = text.lower()
+    return [k for k, words in INTENTS.items() if any(w in tl for w in words)] or ["general"]
+
+
+def _fmt(v: float) -> str:
+    if v >= 1e9: return f"PKR {v/1e9:.2f}B"
+    if v >= 1e6: return f"PKR {v/1e6:.1f}M"
+    if v >= 1e3: return f"PKR {v/1e3:.0f}K"
+    return f"PKR {v:,.0f}"
+
+
+# ── Rule-based handlers ───────────────────────────────────────────────
+
+def _revenue(dfs):
+    inv = dfs["invoices"]
+    total = inv["total_amount_pkr"].sum()
+    coll  = inv["paid_amount_pkr"].sum()
+    outs  = total - coll
+    latest_m = inv["invoice_date"].dt.to_period("M").max()
+    month_rev = inv[inv["invoice_date"].dt.to_period("M") == latest_m]["total_amount_pkr"].sum()
+    fleet_rev = inv.merge(dfs["fleets"][["fleet_id","fleet_name"]], on="fleet_id", how="left") \
+                   .groupby("fleet_name")["total_amount_pkr"].sum().sort_values(ascending=False)
+    return f"""📊 **Revenue Summary**
+
+- **Total Billed:** {_fmt(total)}
+- **Total Collected:** {_fmt(coll)} ({coll/total*100:.1f}% collection rate)
+- **Outstanding:** {_fmt(outs)}
+- **{str(latest_m)} Revenue:** {_fmt(month_rev)}
+- **Top Fleet:** {fleet_rev.index[0]} — {_fmt(fleet_rev.iloc[0])}
+
+💡 *Finance page has month-by-month trends, P&L waterfall and payment breakdowns.*"""
+
+
+def _trips(dfs):
+    t = dfs["trips"]
     comp = (t["status"] == "Completed").sum()
     canc = (t["status"] == "Cancelled").sum()
     total = len(t)
@@ -241,6 +321,72 @@ Your role:
         temperature=0.3,
     )
     return resp.choices[0].message.content
+
+
+def explain_sql(sql: str, api_key: str = "") -> str:
+    """Explain SQL with OpenAI when configured and a local fallback otherwise."""
+    statement = sql.strip()
+    if not statement:
+        return "Paste a SQL query above and I will explain it step by step."
+
+    key = api_key or _resolve_key()
+    if key:
+        try:
+            from openai import OpenAI
+
+            response = OpenAI(api_key=key).chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            "You are a patient SQL teacher. Explain the supplied SQL for a beginner. "
+                            "Use concise Markdown with purpose, logical execution order, important "
+                            "clauses/functions, expected result shape, pitfalls, and one learning tip. "
+                            "Do not invent schema details."
+                        ),
+                    },
+                    {"role": "user", "content": statement[:12000]},
+                ],
+                max_tokens=800,
+                temperature=0.2,
+            )
+            return response.choices[0].message.content or "The AI returned an empty explanation."
+        except Exception:
+            pass
+
+    normalized = re.sub(r"\s+", " ", statement).strip()
+    upper = normalized.upper()
+    clauses = []
+    for keyword, label in (
+        ("WITH ", "creates a named temporary result that the main query can reuse"),
+        ("SELECT ", "chooses the columns or calculated values to return"),
+        ("FROM ", "identifies the table or earlier result being read"),
+        ("JOIN ", "combines rows from another table using a matching condition"),
+        ("WHERE ", "filters rows before grouping"),
+        ("GROUP BY ", "groups rows so aggregate functions can be calculated"),
+        ("HAVING ", "filters grouped results after aggregation"),
+        ("ORDER BY ", "sorts the final rows"),
+        ("LIMIT ", "caps how many rows are returned"),
+    ):
+        if keyword in upper:
+            clauses.append(f"- **{keyword.strip()}**: {label}.")
+
+    aggregates = sorted(set(re.findall(r"\b(COUNT|SUM|AVG|MIN|MAX)\s*\(", upper)))
+    aggregate_text = (
+        f"It uses aggregate function(s): {', '.join(aggregates)}."
+        if aggregates
+        else "No aggregate function is detected, so the result is row-level data."
+    )
+    result_kind = "a summary or one row per group" if "GROUP BY " in upper else "one row per matching record"
+    return (
+        "### SQL explanation\n\n"
+        f"This query reads data and returns {result_kind}.\n\n"
+        "### How it works\n"
+        + ("\n".join(clauses) if clauses else "- No common read-query clauses were detected.")
+        + f"\n\n{aggregate_text}\n\n"
+        "### Learning tip\n"
+        "SQL is usually understood in this logical order: `FROM` / `JOIN`, `WHERE`, `GROUP BY`, "
+        "`HAVING`, `SELECT`, `ORDER BY`, then `LIMIT`."
+    )
  
-
-

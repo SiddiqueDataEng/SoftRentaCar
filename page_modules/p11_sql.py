@@ -11,6 +11,7 @@ from page_modules._shared import (
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS,
 )
 from app.storytelling import insight
+from app.ai_chat import _resolve_key, explain_sql
 
 
 SQL_CLAUSES = {
@@ -87,6 +88,15 @@ def explain_sql_basics(source: str, meta: dict) -> dict:
             "pandasql": "Register DataFrames as tables, then call sqldf(sql, locals()). Function support depends on the SQLite engine underneath.",
         },
     }
+
+
+def ai_explain_sql(source: str, meta: dict) -> str:
+    """Explain the selected query with the shared SQL tutor helper."""
+    context = (
+        f"Catalogue description: {meta.get('description', '')}\n"
+        f"SQL:\n{source}"
+    )
+    return explain_sql(context)
 
 
 inject()
@@ -1765,6 +1775,7 @@ editor_controls[2].button(
 if st.session_state.get("_last_sql_q") != sel_query:
     st.session_state.pop("sql_result", None)
     st.session_state.pop("sql_error",  None)
+    st.session_state.pop("sql_ai_explanation", None)
     st.session_state["_last_sql_q"] = sel_query
 
 # Safe widget key — no spaces or special chars
@@ -1818,20 +1829,33 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 if st.session_state["show_sql_learning"]:
+    learn_tab, ai_tab = st.tabs(["📘 Explanation", "🤖 AI tutor"])
     learning = explain_sql_basics(sql_code or "", query_meta)
 
-    st.markdown(f"**What this query does:** {learning['purpose']}")
-    st.markdown("**SQL clauses found:** " + ", ".join(f"`{item}`" for item in learning["clauses"]))
-    st.markdown("**How to read it:**")
-    for step_number, step in enumerate(learning["steps"], 1):
-        st.markdown(f"{step_number}. {step.capitalize()}.")
-    st.markdown("**Dialect alternatives:**")
-    for dialect, note in learning["dialect"].items():
-        st.markdown(f"- **{dialect}:** {note}")
-    st.code(
-        "from pandasql import sqldf\nresult = sqldf(sql, locals())",
-        language="python",
-    )
+    with learn_tab:
+        st.markdown(f"**What this query does:** {learning['purpose']}")
+        st.markdown("**SQL clauses found:** " + ", ".join(f"`{item}`" for item in learning["clauses"]))
+        st.markdown("**How to read it:**")
+        for step_number, step in enumerate(learning["steps"], 1):
+            st.markdown(f"{step_number}. {step.capitalize()}.")
+        st.markdown("**Dialect alternatives:**")
+        for dialect, note in learning["dialect"].items():
+            st.markdown(f"- **{dialect}:** {note}")
+        st.code(
+            "from pandasql import sqldf\nresult = sqldf(sql, locals())",
+            language="python",
+        )
+
+    with ai_tab:
+        if _resolve_key():
+            st.success("OpenAI is configured. The tutor will explain the current query.")
+        else:
+            st.info("OpenAI is not configured. The tutor will use its local SQL explanation.")
+        if st.button("✨ Explain this query with AI", key="sql_ai_explain", type="secondary"):
+            with st.spinner("Preparing a learner-friendly explanation ..."):
+                st.session_state["sql_ai_explanation"] = ai_explain_sql(sql_code or "", query_meta)
+        if st.session_state.get("sql_ai_explanation"):
+            st.markdown(st.session_state["sql_ai_explanation"])
 
 run_col, explain_col, dl_col, _ = st.columns([1, 1, 1, 3])
 run_btn     = run_col.button("▶ Run Query",  type="primary",   key="sql_run",     use_container_width=True)
