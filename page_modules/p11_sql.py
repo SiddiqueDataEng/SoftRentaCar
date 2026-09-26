@@ -11,7 +11,7 @@ from page_modules._shared import (
     BRAND, NAVY, STEEL, GREEN, AMBER, ORANGE, TEXT, GRID, BG, COLORS,
 )
 from app.storytelling import insight
-from app.ai_chat import _resolve_key, explain_sql
+from app.ai_chat import _resolve_key
 
 
 SQL_CLAUSES = {
@@ -91,13 +91,32 @@ def explain_sql_basics(source: str, meta: dict) -> dict:
 
 
 def ai_explain_sql(source: str, meta: dict) -> str:
-    """Explain the selected query with the shared SQL tutor helper."""
-    context = (
-        f"Catalogue description: {meta.get('description', '')}\n"
-        f"SQL:\n{source}"
-    )
-    return explain_sql(context)
+    """Ask OpenAI for a teaching-oriented explanation when a key is available."""
+    api_key = _resolve_key()
+    if not api_key:
+        return "Add `OPENAI_API_KEY` in Streamlit secrets or the Settings page to enable AI explanations."
+    from openai import OpenAI
 
+    client = OpenAI(api_key=api_key)
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        temperature=0.2,
+        messages=[
+            {
+                "role": "system",
+                "content": "You are a patient SQL teacher. Explain accurately and concisely in Markdown.",
+            },
+            {
+                "role": "user",
+                "content": (
+                    "Explain this query for a learner. Cover purpose, execution order, important clauses, "
+                    "joins/window functions, possible pitfalls, and PostgreSQL, T-SQL, and pandasql alternatives.\n\n"
+                    f"Catalogue description: {meta.get('description', '')}\nSQL:\n{source}"
+                ),
+            },
+        ],
+    )
+    return response.choices[0].message.content or "The AI returned an empty explanation."
 
 inject()
 dfs = get_data()
@@ -1740,7 +1759,14 @@ with col_info:
 sec("✏️ SQL Editor")
 st.caption("Syntax highlighting enabled · default font size 22px")
 
-editor_controls = st.columns([2, 1, 3])
+def reset_sql_editor_style():
+    st.session_state["sql_editor_font_size"] = 22
+
+
+def unhide_sql_learning():
+    st.session_state["show_sql_learning"] = True
+
+editor_controls = st.columns([2, 1, 1, 3])
 editor_font_size = editor_controls[0].slider(
     "Editor font size",
     min_value=14,
@@ -1748,6 +1774,20 @@ editor_font_size = editor_controls[0].slider(
     value=22,
     step=1,
     key="sql_editor_font_size",
+)
+editor_controls[1].button(
+    "↺ Reset style",
+    key="sql_editor_reset",
+    on_click=reset_sql_editor_style,
+    use_container_width=True,
+)
+if "show_sql_learning" not in st.session_state:
+    st.session_state["show_sql_learning"] = False
+editor_controls[2].button(
+    "▸ Unhide learning view",
+    key="sql_unhide_learning",
+    on_click=unhide_sql_learning,
+    use_container_width=True,
 )
 
 # Clear stale results when user switches query
@@ -1778,26 +1818,67 @@ sql_code = st_ace(
 if not isinstance(sql_code, str):
     sql_code = query_meta["sql"].strip()
 
-learning = explain_sql_basics(sql_code or "", query_meta)
-st.markdown(f"**What this query does:** {learning['purpose']}")
-st.markdown("**SQL clauses found:** " + ", ".join(f"`{item}`" for item in learning["clauses"]))
-st.markdown("**How to read it:**")
-for step_number, step in enumerate(learning["steps"], 1):
-    st.markdown(f"{step_number}. {step.capitalize()}.")
-st.markdown("**Dialect alternatives:**")
-for dialect, note in learning["dialect"].items():
-    st.markdown(f"- **{dialect}:** {note}")
+st.markdown(f"""
+<div class="sql-highlight-label">CLAUSE HIGHLIGHT</div>
+<pre class="sql-highlight"><code>{highlight_sql(sql_code or "")}</code></pre>
+<style>
+.sql-highlight-label {{
+    color: #111111;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    margin-top: 8px;
+}}
+.sql-highlight {{
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    color: #000000;
+    font-family: "Courier New", monospace;
+    font-size: {editor_font_size}px;
+    line-height: 1.45;
+    margin: 4px 0 12px;
+    max-height: 360px;
+    overflow: auto;
+    padding: 14px 16px;
+    white-space: pre-wrap;
+}}
+.sql-highlight .sql-clause {{ color: #c00000; font-weight: 700; }}
+</style>
+""", unsafe_allow_html=True)
 
-st.markdown("### 🤖 AI SQL Tutor")
-if _resolve_key():
-    st.success("OpenAI is configured. Ask the tutor to explain the current query.")
-else:
-    st.info("OpenAI is not configured. The tutor will use its local SQL explanation.")
-if st.button("✨ Explain current SQL", key="sql_ai_explain", type="secondary"):
-    with st.spinner("Preparing a learner-friendly explanation ..."):
-        st.session_state["sql_ai_explanation"] = ai_explain_sql(sql_code or "", query_meta)
-if st.session_state.get("sql_ai_explanation"):
-    st.markdown(st.session_state["sql_ai_explanation"])
+if st.session_state["show_sql_learning"]:
+    learn_tab, ai_tab = st.tabs(["📘 Explanation", "🤖 AI tutor"])
+    learning = explain_sql_basics(sql_code or "", query_meta)
+
+    with learn_tab:
+        st.markdown(f"**What this query does:** {learning['purpose']}")
+        st.markdown("**SQL clauses found:** " + ", ".join(f"`{item}`" for item in learning["clauses"]))
+        st.markdown("**How to read it:**")
+        for step_number, step in enumerate(learning["steps"], 1):
+            st.markdown(f"{step_number}. {step.capitalize()}.")
+        st.markdown("**Dialect alternatives:**")
+        for dialect, note in learning["dialect"].items():
+            st.markdown(f"- **{dialect}:** {note}")
+        st.code(
+            "from pandasql import sqldf\nresult = sqldf(sql, locals())",
+            language="python",
+        )
+
+    with ai_tab:
+        if _resolve_key():
+            st.success("OpenAI is configured. Click the button to explain this query.")
+        else:
+            st.warning("OpenAI is not configured. Add OPENAI_API_KEY in Streamlit Cloud Secrets or Settings.")
+        st.markdown("Ask OpenAI to explain the current query, including execution order and equivalent syntax.")
+        if st.button("✨ Explain this query with AI", key="sql_ai_explain", type="secondary"):
+            with st.spinner("Preparing a learner-friendly explanation ..."):
+                try:
+                    st.session_state["sql_ai_explanation"] = ai_explain_sql(sql_code or "", query_meta)
+                except Exception as error:
+                    st.session_state["sql_ai_explanation"] = f"AI explanation failed: {error}"
+        if st.session_state.get("sql_ai_explanation"):
+            st.markdown(st.session_state["sql_ai_explanation"])
 
 run_col, explain_col, dl_col, _ = st.columns([1, 1, 1, 3])
 run_btn     = run_col.button("▶ Run Query",  type="primary",   key="sql_run",     use_container_width=True)

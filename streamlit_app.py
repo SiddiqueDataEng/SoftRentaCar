@@ -143,7 +143,9 @@ NAV_GROUPS = [
     ("Tools",           [("chat","🤖","AI Chat Assistant"),
                          ("alerts","⚠️","Alerts & Watchlist"),
                          ("sql","🔍","SQL Analytics"),
+                         ("excel_sql","📄","Excel to SQL"),
                          ("settings","⚙️","Settings & API Keys")]),
+    ("Academy",         [("dwh_tutorial","🏫","DWH & ETL Academy")]),
 ]
 
 PAGE_FILES = {
@@ -158,8 +160,10 @@ PAGE_FILES = {
     "chat":      "page_modules/p9_chat.py",
     "alerts":    "page_modules/p10_alerts.py",
     "sql":       "page_modules/p11_sql.py",
+    "excel_sql": "page_modules/p14_excel_sql.py",
     "settings":  "page_modules/p12_settings.py",
-    "reports":   "page_modules/p13_reports.py",
+    "reports":      "page_modules/p13_reports.py",
+    "dwh_tutorial": "page_modules/p15_dwh_tutorial.py",
 }
 
 # ── Sidebar CSS ────────────────────────────────────────────────────────

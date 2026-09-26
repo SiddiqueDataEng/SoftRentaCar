@@ -8,11 +8,13 @@ import streamlit as st
 ROLES = {
     "admin":   {"label":"Administrator","icon":"👑","color":"#E63946","pages":"all"},
     "manager": {"label":"Fleet Manager","icon":"🏢","color":"#457B9D",
-                "pages":["executive","finance","operations","fleet","alerts","map","settings"]},
+                "pages":["executive","finance","operations","fleet","alerts","map",
+                         "settings","dwh_tutorial"]},
     "analyst": {"label":"Data Analyst","icon":"📊","color":"#2A9D8F",
-                "pages":["executive","finance","operations","forecast","stories","sql","chat"]},
+                "pages":["executive","finance","operations","forecast","stories",
+                         "sql","excel_sql","chat","dwh_tutorial"]},
     "viewer":  {"label":"View Only","icon":"👁️","color":"#E9C46A",
-                "pages":["executive","operations"]},
+                "pages":["executive","operations","dwh_tutorial"]},
     "driver":  {"label":"Driver Portal","icon":"🚗","color":"#8AC926",
                 "pages":["drivers"]},
 }
