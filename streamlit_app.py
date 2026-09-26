@@ -134,7 +134,8 @@ NAV_GROUPS = [
     ("Overview",        [("executive","🏠","Executive Dashboard")]),
     ("Finance",         [("finance","💰","Finance & Revenue")]),
     ("Operations",      [("operations","🚗","Operations & Trips"),
-                         ("map","🗺️","Demand Map")]),
+                         ("map","🗺️","Demand Map"),
+                         ("parking","🅿️","Parking Management")]),
     ("People & Safety", [("drivers","🚦","Driver Safety & AI")]),
     ("Fleet",           [("fleet","🔧","Fleet Health")]),
     ("Intelligence",    [("forecast","📈","Forecasting & Trends"),
@@ -153,6 +154,7 @@ PAGE_FILES = {
     "finance":   "page_modules/p2_finance.py",
     "operations":"page_modules/p3_operations.py",
     "map":       "page_modules/p7_map.py",
+    "parking":   "page_modules/p16_parking.py",
     "drivers":   "page_modules/p4_drivers.py",
     "fleet":     "page_modules/p5_fleet.py",
     "forecast":  "page_modules/p6_forecast.py",
@@ -162,7 +164,7 @@ PAGE_FILES = {
     "sql":       "page_modules/p11_sql.py",
     "excel_sql": "page_modules/p14_excel_sql.py",
     "settings":  "page_modules/p12_settings.py",
-    "reports":      "page_modules/p13_reports.py",
+    "reports":   "page_modules/p13_reports.py",
     "dwh_tutorial": "page_modules/p15_dwh_tutorial.py",
 }
 
