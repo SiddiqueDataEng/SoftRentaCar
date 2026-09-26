@@ -2230,7 +2230,9 @@ LIMIT 20""",
                 # Shorten name for button display
                 _btn_label = _qname.replace("[Saved] ", "* ")
                 if st.button(_btn_label, key=f"cat_{_qname}", use_container_width=True):
-                    st.session_state.acad_editor_sql = _filtered[_qname]
+                    # Set BOTH the widget key AND the backup key so the editor updates
+                    st.session_state["sql_editor_area"] = _filtered[_qname]
+                    st.session_state.acad_editor_sql    = _filtered[_qname]
                     st.rerun()
 
         # Delete saved query
@@ -2250,11 +2252,9 @@ LIMIT 20""",
     with _ec2:
         st.markdown(_h3("✏️ SQL Editor", BRAND), unsafe_allow_html=True)
 
-        # Detect if a catalog item was clicked (session state updated)
-        _init_sql = st.session_state.get("acad_editor_sql", "")
-        if not _init_sql:
-            _init_sql = """-- Write your SQL here and click Run
--- All tables are pre-loaded: trips, customers, vehicles, fleets...
+        # Initialize widget state on first load only (don't overwrite if already set)
+        _SQL_DEFAULT = """-- Write your SQL here and click Run
+-- All tables: trips, customers, vehicles, fleets, drivers, invoices, fuel_logs...
 
 SELECT
     booking_type,
@@ -2266,15 +2266,28 @@ WHERE status = 'Completed'
 GROUP BY booking_type
 ORDER BY revenue_pkr DESC"""
 
-        # SQL text area editor
-        _editor_val = st.text_area(
-            "SQL",
-            value=_init_sql,
-            height=260,
-            key="sql_editor_area",
-            label_visibility="collapsed",
-            help="Write DuckDB SQL. Press Ctrl+Enter or click Run Query.",
+        if "sql_editor_area" not in st.session_state:
+            st.session_state["sql_editor_area"] = _SQL_DEFAULT
+
+        # ── ACE editor: SQL with syntax highlighting ───────────────────
+        from streamlit_ace import st_ace as _st_ace
+        _editor_val = _st_ace(
+            value=st.session_state["sql_editor_area"],
+            language="sql",
+            theme="monokai",
+            key="sql_ace_editor",
+            height=300,
+            font_size=14,
+            tab_size=4,
+            show_gutter=True,
+            show_print_margin=False,
+            wrap=False,
+            auto_update=True,
+            placeholder="-- Write your SQL here...",
         )
+        # Keep session state in sync with editor content
+        if _editor_val is not None:
+            st.session_state["sql_editor_area"] = _editor_val
 
         # Row limit
         _rlim_col, _run_col, _save_col, _fmt_col = st.columns([1, 1, 1, 1])
@@ -2666,8 +2679,10 @@ print("Matplotlib chart rendered above.")
         for _pname in _py_filtered:
             _lbl = _pname.replace("[Saved] ", "* ")
             if st.button(_lbl, key=f"py_{hash(_pname)}", use_container_width=True):
-                st.session_state.py_editor_code = _py_filtered[_pname]
-                st.session_state.py_editor_out = None
+                # Set the widget's own session state key directly so it updates immediately
+                st.session_state["py_code_area"]  = _py_filtered[_pname]
+                st.session_state.py_editor_code   = _py_filtered[_pname]
+                st.session_state.py_editor_out    = None
                 st.rerun()
 
         if any(k.startswith("[Saved]") for k in _all_py):
@@ -2681,9 +2696,30 @@ print("Matplotlib chart rendered above.")
     with _pyc2:
         st.markdown(_h3("✏️ Code Editor", BRAND), unsafe_allow_html=True)
 
-        _default_py = st.session_state.py_editor_code or _PY_STARTERS["Hello — basic pandas"]
-        _py_code = st.text_area("Python", value=_default_py, height=280,
-                                key="py_code_area", label_visibility="collapsed")
+        # Initialize widget state on first load only
+        _PY_DEFAULT = _PY_STARTERS["Hello — basic pandas"]
+        if "py_code_area" not in st.session_state:
+            st.session_state["py_code_area"] = _PY_DEFAULT
+
+        # ── ACE editor: Python with syntax highlighting ─────────────────
+        from streamlit_ace import st_ace as _st_ace_py
+        _py_code = _st_ace_py(
+            value=st.session_state["py_code_area"],
+            language="python",
+            theme="monokai",
+            key="py_ace_editor",
+            height=320,
+            font_size=14,
+            tab_size=4,
+            show_gutter=True,
+            show_print_margin=False,
+            wrap=False,
+            auto_update=True,
+            placeholder="# Write Python here...",
+        )
+        # Keep session state in sync
+        if _py_code is not None:
+            st.session_state["py_code_area"] = _py_code
 
         _py_r1, _py_r2, _py_r3, _py_r4 = st.columns(4)
         _py_run  = _py_r1.button("▶ Run", type="primary", use_container_width=True, key="py_run")
@@ -2692,8 +2728,9 @@ print("Matplotlib chart rendered above.")
         _py_dl   = _py_r4.button("⬇ Download", type="secondary", use_container_width=True, key="py_dl")
 
         if _py_clr:
-            st.session_state.py_editor_code = ""
-            st.session_state.py_editor_out  = None
+            st.session_state["py_code_area"] = ""
+            st.session_state.py_editor_code  = ""
+            st.session_state.py_editor_out   = None
             st.rerun()
 
         if _py_dl:
@@ -3524,11 +3561,32 @@ print(result[["full_name","safety_score","behavior_profile"]].to_string(index=Fa
             else "# Write your Python code here\n\n"
         )
         _lang = "sql" if _ex["answer_sql"] is not None else "python"
-        _ex_code = st.text_area(
-            "Your answer:", value=_default_ans, height=200,
-            key=f"ex_code_{_ex['id']}",
-            help=f"Write your {_lang.upper()} answer",
+
+        # ACE editor for exercises — SQL or Python depending on exercise type
+        from streamlit_ace import st_ace as _st_ace_ex
+        _ace_key = f"ex_ace_{_ex['id']}"
+        if _ace_key not in st.session_state:
+            st.session_state[_ace_key] = _default_ans
+        # Reset if exercise changed and saved answer is different
+        if _saved_ans and st.session_state[_ace_key] != _saved_ans:
+            pass  # keep what user typed
+
+        _ex_code = _st_ace_ex(
+            value=st.session_state[_ace_key],
+            language=_lang,
+            theme="monokai",
+            key=_ace_key + "_widget",
+            height=220,
+            font_size=14,
+            tab_size=4,
+            show_gutter=True,
+            show_print_margin=False,
+            wrap=False,
+            auto_update=True,
+            placeholder=f"-- Write your {_lang.upper()} answer here...",
         )
+        if _ex_code is not None:
+            st.session_state[_ace_key] = _ex_code
 
         _chk1, _chk2, _chk3 = st.columns(3)
         _run_ex  = _chk1.button("▶ Run", key=f"run_ex_{_ex['id']}", use_container_width=True)
@@ -3638,9 +3696,23 @@ FROM monthly ORDER BY month""",
     if _xp_sel != "(write your own)":
         st.session_state.xp_code = _xp_default
 
-    _xp_sql = st.text_area("SQL Query:", value=st.session_state.xp_code,
-                           height=160, key="xp_editor")
-    st.session_state.xp_code = _xp_sql
+    from streamlit_ace import st_ace as _st_ace_xp
+    _xp_sql = _st_ace_xp(
+        value=st.session_state.xp_code,
+        language="sql",
+        theme="monokai",
+        key="xp_ace_editor",
+        height=200,
+        font_size=14,
+        tab_size=4,
+        show_gutter=True,
+        show_print_margin=False,
+        wrap=False,
+        auto_update=True,
+        placeholder="-- Paste your SQL query here...",
+    )
+    if _xp_sql is not None:
+        st.session_state.xp_code = _xp_sql
 
     _xp_c1, _xp_c2, _xp_c3 = st.columns(3)
     _run_explain   = _xp_c1.button("⚡ EXPLAIN",            type="primary",   key="run_explain",  use_container_width=True)
